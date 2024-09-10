@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../styles/styles.dart';
+
 class nakuldev extends StatefulWidget {
   const nakuldev({super.key});
 
@@ -17,105 +19,148 @@ class _nakuldevState extends State<nakuldev> {
       //   shape: const BeveledRectangleBorder(
       //       side: BorderSide(color: Colors.black, height: 2)),
       // ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Column(
-              //
-              mainAxisAlignment: MainAxisAlignment.start,
-              //
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      //heading
-                      width: 300,
-                      height: 300,
-                      color: const Color(0xFF428172),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
                     ),
-                    Container(
-                      //name
-                      width: 300,
-                      height: 100,
-                      color: const Color(0xFFA1ADAA),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      //about
-                      width: 300,
-                      height: 300,
-                      color: const Color(0xFF004B76),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
                     ),
-                    Container(
-                      //pic
-                      width: 300,
-                      height: 400,
-                      color: const Color(0xFF838B89),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      //resume
-                      width: 300,
-                      height: 100,
-                      color: const Color(0xFF814242),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
                     ),
-                    Container(
-                      //contact
-                      width: 300,
-                      height: 200,
-                      color: const Color(0xFF5CD0E0),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            Column(
-              //
-              mainAxisAlignment: MainAxisAlignment.start,
-              //
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      //projects
-                      width: 340,
-                      height: 400,
-                      color: const Color(0xFF534281),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
                     ),
-                    Container(
-                      //exp
-                      width: 255,
-                      height: 215,
-                      color: const Color(0xFFB2C155),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      //skills
-                      width: 340,
-                      height: 320,
-                      color: const Color(0xFF9B7AC6),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
                     ),
-                    Container(
-                      //edu
-                      width: 255,
-                      height: 505,
-                      color: const Color(0xFFB2C155),
-                    )
-                  ],
-                ),
-              ],
-            ),
-          ],
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: containerStyle.color,
+                        borderRadius: containerStyle.borderRadius,
+                      ),
+                      margin: containerStyle.margin,
+                      width: containerStyle.width,
+                      child: Text("placeholder for data"),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
