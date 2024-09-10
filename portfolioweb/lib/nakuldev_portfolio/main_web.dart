@@ -22,144 +22,158 @@ class _nakuldevState extends State<nakuldev> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Center(
-          child: Row(
-            children: [
-              Column(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+          child: SizedBox(
+            width: 1320,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                  ],
+                ),
+                Column(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                  ],
+                ),
+                Column(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                  ],
+                ),
+                Column(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: containerStyle.color,
-                        borderRadius: containerStyle.borderRadius,
+                    Expanded(
+                      flex: 4,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: containerStyle.color,
+                          borderRadius: containerStyle.borderRadius,
+                        ),
+                        padding: containerStyle.padding,
+                        margin: containerStyle.margin,
+                        width: containerStyle.width,
+                        child: Text("placeholder for data"),
                       ),
-                      margin: containerStyle.margin,
-                      width: containerStyle.width,
-                      child: Text("placeholder for data"),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
