@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:glossy/glossy.dart';
 
@@ -25,10 +27,16 @@ class _nakuldevState extends State<nakuldev> {
       //   shape: const BeveledRectangleBorder(
       //       side: BorderSide(color: Colors.black, height: 2)),
       // ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/background_image.jpg'), // replace with your image path
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Center(
             child: SizedBox(
               // color: Colors.amber,
