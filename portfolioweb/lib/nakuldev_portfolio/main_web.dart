@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolioweb/mediaquery_value/mQ.dart';
 
 import '../styles/styles.dart';
 
@@ -15,8 +14,8 @@ class _nakuldevState extends State<nakuldev> {
 
   @override
   Widget build(BuildContext context) {
-    double percentage = pixelToPercentage(pixelValue, context, true);
     double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       // appBar: AppBar(
@@ -30,10 +29,12 @@ class _nakuldevState extends State<nakuldev> {
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Center(
-            child: Container(
-              color: Colors.amber,
-              width: deviceWidth < 1500 ? deviceWidth : deviceWidth * 0.84,
+            child: SizedBox(
+              // color: Colors.amber,
+              width:
+                  deviceWidth < 1365 ? deviceWidth * 0.86 : deviceWidth * 0.84,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children: [
