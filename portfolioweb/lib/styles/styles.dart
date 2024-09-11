@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// constants.dart
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius =
