@@ -6,6 +6,6 @@ class containerStyle {
       BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(10);
   static const Color color = Color.fromARGB(255, 72, 72, 72);
-  static const double width = 300;
+  static const double width = 0.19535;
   static const double height = 200;
 }
