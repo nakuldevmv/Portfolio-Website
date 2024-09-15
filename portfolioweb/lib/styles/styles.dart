@@ -18,8 +18,32 @@ class textStyles {
     color: Colors.white,
   );
   static const TextStyle I = TextStyle(
-      fontSize: 30,
-      fontWeight: FontWeight.normal,
-      color: Colors.white,
-      fontStyle: FontStyle.italic);
+    fontSize: 30,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontStyle: FontStyle.italic,
+    backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+  static const TextStyle Name1 = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 255, 255, 255),
+    fontStyle: FontStyle.normal,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+
+  static const TextStyle Name2 = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.normal,
+    color: Color.fromARGB(255, 255, 255, 255),
+    fontStyle: FontStyle.italic,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+  static const TextStyle P1 = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.normal,
+    color: Color.fromARGB(255, 255, 255, 255),
+    fontStyle: FontStyle.normal,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
 }

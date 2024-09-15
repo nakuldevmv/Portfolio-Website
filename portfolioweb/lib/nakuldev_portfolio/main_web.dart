@@ -56,33 +56,44 @@ class _nakuldevState extends State<nakuldev> {
                             padding: containerStyle.padding,
                             margin: containerStyle.margin,
                             width: deviceWidth * containerStyle.width,
-                            child: RichText(
-                              text: TextSpan(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  TextSpan(
-                                    text: "Innovating the ",
-                                    style: GoogleFonts.ibmPlexMono(
-                                        textStyle: textStyles.B),
-                                  ),
-                                  TextSpan(
-                                    text: "Future, ",
-                                    style: GoogleFonts.ibmPlexMono(
-                                        textStyle: textStyles.I),
-                                  ),
-                                  TextSpan(
-                                    text: "\nOne Line of ",
-                                    style: GoogleFonts.ibmPlexMono(
-                                        textStyle: textStyles.B),
-                                  ),
-                                  TextSpan(
-                                    text: "Code",
-                                    style: GoogleFonts.ibmPlexMono(
-                                        textStyle: textStyles.I),
-                                  ),
-                                  TextSpan(
-                                    text: " at a Time",
-                                    style: GoogleFonts.ibmPlexMono(
-                                        textStyle: textStyles.B),
+                                  Icon(Icons.arrow_outward_rounded),
+                                  RichText(
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "Innovating the ",
+                                          style: GoogleFonts.pixelifySans(
+                                              textStyle: textStyles.B),
+                                        ),
+                                        TextSpan(
+                                          text: "Future, ",
+                                          style: GoogleFonts.ibmPlexMono(
+                                              textStyle: textStyles.I),
+                                        ),
+                                        TextSpan(
+                                          text: "\nOne Line of ",
+                                          style: GoogleFonts.pixelifySans(
+                                              textStyle: textStyles.B),
+                                        ),
+                                        TextSpan(
+                                          text: "Code",
+                                          style: GoogleFonts.ibmPlexMono(
+                                              textStyle: textStyles.I),
+                                        ),
+                                        TextSpan(
+                                          text: " at a Time",
+                                          style: GoogleFonts.pixelifySans(
+                                              textStyle: textStyles.B),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -98,7 +109,17 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(Icons.accessibility_new_outlined),
+                              Text(
+                                  style: GoogleFonts.pixelifySans(
+                                      textStyle: textStyles.P1),
+                                  "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development."),
+                            ],
+                          ),
                         ),
                       ),
                       Expanded(
@@ -110,7 +131,7 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
+                          child: Text("Resume"),
                         ),
                       ),
                     ],
@@ -127,20 +148,35 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
+                          child: Center(
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                  text: "Nakul",
+                                  style: GoogleFonts.ibmPlexMono(
+                                      textStyle: textStyles.Name1)),
+                              TextSpan(
+                                  text: " </Dev>",
+                                  style: GoogleFonts.pixelifySans(
+                                      textStyle: textStyles.Name2)),
+                            ])),
+                          ),
                         ),
                       ),
                       Expanded(
                         flex: 3,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
+                        child: AspectRatio(
+                          aspectRatio: 3 / 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: containerStyle.padding,
+                            margin: containerStyle.margin,
+                            width: deviceWidth * containerStyle.width,
+                            child: Image.asset('assets/profile.png'),
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
                         ),
                       ),
                       Expanded(
