@@ -1,8 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:glossy/glossy.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../styles/styles.dart';
 
 class nakuldev extends StatefulWidget {
@@ -50,15 +49,44 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
-                          ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
-                        ),
+                            decoration: BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: containerStyle.padding,
+                            margin: containerStyle.margin,
+                            width: deviceWidth * containerStyle.width,
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Innovating the ",
+                                    style: GoogleFonts.ibmPlexMono(
+                                        textStyle: textStyles.B),
+                                  ),
+                                  TextSpan(
+                                    text: "Future, ",
+                                    style: GoogleFonts.ibmPlexMono(
+                                        textStyle: textStyles.I),
+                                  ),
+                                  TextSpan(
+                                    text: "\nOne Line of ",
+                                    style: GoogleFonts.ibmPlexMono(
+                                        textStyle: textStyles.B),
+                                  ),
+                                  TextSpan(
+                                    text: "Code",
+                                    style: GoogleFonts.ibmPlexMono(
+                                        textStyle: textStyles.I),
+                                  ),
+                                  TextSpan(
+                                    text: " at a Time",
+                                    style: GoogleFonts.ibmPlexMono(
+                                        textStyle: textStyles.B),
+                                  ),
+                                ],
+                              ),
+                            )),
                       ),
                       Expanded(
                         flex: 3,
