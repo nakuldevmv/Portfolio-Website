@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../styles/styles.dart';
 
@@ -123,15 +124,26 @@ class _nakuldevState extends State<nakuldev> {
                         ),
                       ),
                       Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
+                        child: GestureDetector(
+                          // onTap: () {
+                          //   FileDownloader.downloadFile(
+                          //     url:
+                          //         "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9B368B465A4DC909CDB6E799ACB64899B54E731B6D894FA5B080D75DB2F30533/scale?aspectRatio=1.78&format=jpeg",
+                          //     name: "Resume",
+                          //     downloadDestination:
+                          //         DownloadDestinations.appFiles,
+                          //   );
+                          // },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: containerStyle.padding,
+                            margin: containerStyle.margin,
+                            width: deviceWidth * containerStyle.width,
+                            child: Text("Resume"),
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Text("Resume"),
                         ),
                       ),
                     ],
@@ -165,18 +177,17 @@ class _nakuldevState extends State<nakuldev> {
                       ),
                       Expanded(
                         flex: 3,
-                        child: AspectRatio(
-                          aspectRatio: 3 / 4,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: containerStyle.color,
-                              borderRadius: containerStyle.borderRadius,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: containerStyle.color,
+                            borderRadius: containerStyle.borderRadius,
+                            image: DecorationImage(
+                              image: AssetImage('assets/profile.png'),
+                              fit: BoxFit.cover,
                             ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
-                            child: Image.asset('assets/profile.png'),
                           ),
+                          margin: containerStyle.margin,
+                          width: deviceWidth * containerStyle.width,
                         ),
                       ),
                       Expanded(
