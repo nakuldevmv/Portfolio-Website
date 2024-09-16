@@ -1,9 +1,13 @@
+import 'dart:math';
 import 'dart:ui';
 
+import 'package:animated_icon/animated_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolioweb/Data/projects.dart';
+import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
+import 'package:rive_animated_icon/rive_animated_icon.dart';
 import '../styles/styles.dart';
 
 class nakuldev extends StatefulWidget {
@@ -254,73 +258,93 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                            decoration: BoxDecoration(
-                              color: containerStyle.color,
-                              borderRadius: containerStyle.borderRadius,
-                            ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 8.8),
-                                      child: RichText(
-                                        text: TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: 'My ',
-                                              style: GoogleFonts.ibmPlexMono(
-                                                  textStyle: textStyles.B),
-                                            ),
-                                            TextSpan(
-                                              text: 'Project',
-                                              style: GoogleFonts.jetBrainsMono(
-                                                  textStyle: textStyles.I),
-                                            )
-                                          ],
-                                        ),
+                          decoration: BoxDecoration(
+                            color: containerStyle.color,
+                            borderRadius: containerStyle.borderRadius,
+                          ),
+                          padding: containerStyle.padding,
+                          margin: containerStyle.margin,
+                          width: deviceWidth * containerStyle.width,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 12),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'My ',
+                                            style: GoogleFonts.ibmPlexMono(
+                                                textStyle: textStyles.B),
+                                          ),
+                                          TextSpan(
+                                            text: 'Projects',
+                                            style: GoogleFonts.jetBrainsMono(
+                                                textStyle: textStyles.I),
+                                          )
+                                        ],
                                       ),
                                     ),
-                                    Icon(Icons.arrow_outward_rounded)
-                                  ],
-                                ),
-                                Expanded(
-                                  child: ListView(
-                                    shrinkWrap: true,
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.amberAccent,
-                                          borderRadius:
-                                              containerStyle.borderRadius,
-                                        ),
-                                        // padding: containerStyle.padding,
-                                        // margin: containerStyle.margin,
-                                        child: Row(
-                                          children: [
-                                            Icon(Icons.calculate),
-                                            Text(
-                                                style: GoogleFonts.ibmPlexMono(
-                                                    textStyle: textStyles.P2B),
-                                                overflow: TextOverflow.ellipsis,
-                                                "Calculator Using Flutter"),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
                                   ),
-                                )
-                              ],
-                            )),
+                                  Icon(Icons.arrow_outward_rounded)
+                                ],
+                              ),
+                              Expanded(
+                                  child: ListView.builder(
+                                      itemCount: projects.length,
+                                      itemBuilder: (context, index) {
+                                        return Container(
+                                          decoration: BoxDecoration(
+                                            color: ProjectcontainerStyle.color,
+                                            borderRadius:
+                                                containerStyle.borderRadius,
+                                          ),
+                                          padding:
+                                              ProjectcontainerStyle.padding,
+                                          margin: ProjectcontainerStyle.margin,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            right: 8.0),
+                                                    child: Icon(
+                                                        projects[index].icon),
+                                                  ),
+                                                  SizedBox(
+                                                    width: deviceWidth * 0.115,
+                                                    child: Text(
+                                                        style: GoogleFonts
+                                                            .ibmPlexMono(
+                                                                textStyle:
+                                                                    textStyles
+                                                                        .P2B),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        projects[index].title),
+                                                  ),
+                                                ],
+                                              ),
+                                              Icon(Icons
+                                                  .arrow_forward_ios_rounded)
+                                            ],
+                                          ),
+                                        );
+                                      }))
+                            ],
+                          ),
+                        ),
                       ),
                       Expanded(
                         flex: 2,
@@ -332,7 +356,71 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("Skills"),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 12),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'My ',
+                                            style: GoogleFonts.ibmPlexMono(
+                                                textStyle: textStyles.B),
+                                          ),
+                                          TextSpan(
+                                            text: 'Skills',
+                                            style: GoogleFonts.jetBrainsMono(
+                                                textStyle: textStyles.I),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Icon(Icons.arrow_outward_rounded)
+                                ],
+                              ),
+                              Expanded(
+                                ///////////////////////////////////////////
+                                child: GridView.builder(
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 3, // Number of columns
+                                    childAspectRatio:
+                                        1, // Aspect ratio of each child
+                                    crossAxisSpacing:
+                                        10, // Spacing between columns
+                                    mainAxisSpacing: 10, // Spacing between rows
+                                  ),
+                                  itemCount: skills.length, // Number of skills
+                                  itemBuilder: (context, index) {
+                                    return Container(
+                                      decoration: BoxDecoration(
+                                        color: containerStyle.color,
+                                        borderRadius:
+                                            containerStyle.borderRadius,
+                                      ),
+                                      child: Center(
+                                        child: Icon(
+                                          skills[index]
+                                              .icon, // Icon for each skill
+                                          size: 40, // Icon size
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                ///////////////////////////////////////////
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],

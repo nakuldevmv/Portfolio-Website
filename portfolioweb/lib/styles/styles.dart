@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
@@ -7,6 +6,16 @@ class containerStyle {
       BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const double width = 0.19535;
+  static const double height = 200;
+}
+
+class ProjectcontainerStyle {
+  static const EdgeInsets margin = EdgeInsets.only(bottom: 10);
+  static const BorderRadius borderRadius =
+      BorderRadius.all(Radius.circular(10));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 26, 26, 26);
   static const double width = 0.19535;
   static const double height = 200;
 }

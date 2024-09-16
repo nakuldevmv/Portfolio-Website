@@ -39,6 +39,8 @@ dependencies:
   glossy: ^0.0.4
   google_fonts: ^6.2.1
   flutter_file_downloader: ^2.0.0
+  rive_animated_icon: ^2.0.0
+  animated_icon: ^0.0.9
 
 dev_dependencies:
   flutter_test:
