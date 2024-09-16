@@ -230,7 +230,7 @@ class _nakuldevState extends State<nakuldev> {
                                       children: [
                                         TextSpan(
                                           text: 'Contact ',
-                                          style: GoogleFonts.jetBrainsMono(
+                                          style: GoogleFonts.ibmPlexMono(
                                               textStyle: textStyles.B),
                                         ),
                                         TextSpan(
@@ -254,15 +254,73 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
-                          ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Text("Projects"),
-                        ),
+                            decoration: BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: containerStyle.padding,
+                            margin: containerStyle.margin,
+                            width: deviceWidth * containerStyle.width,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 8.8),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'My ',
+                                              style: GoogleFonts.ibmPlexMono(
+                                                  textStyle: textStyles.B),
+                                            ),
+                                            TextSpan(
+                                              text: 'Project',
+                                              style: GoogleFonts.jetBrainsMono(
+                                                  textStyle: textStyles.I),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Icon(Icons.arrow_outward_rounded)
+                                  ],
+                                ),
+                                Expanded(
+                                  child: ListView(
+                                    shrinkWrap: true,
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.amberAccent,
+                                          borderRadius:
+                                              containerStyle.borderRadius,
+                                        ),
+                                        // padding: containerStyle.padding,
+                                        // margin: containerStyle.margin,
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.calculate),
+                                            Text(
+                                                style: GoogleFonts.ibmPlexMono(
+                                                    textStyle: textStyles.P2B),
+                                                overflow: TextOverflow.ellipsis,
+                                                "Calculator Using Flutter"),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            )),
                       ),
                       Expanded(
                         flex: 2,
