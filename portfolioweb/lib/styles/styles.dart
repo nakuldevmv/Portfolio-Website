@@ -5,8 +5,8 @@ class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius =
       BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = Color.fromARGB(255, 72, 72, 72);
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
   static const double height = 200;
 }
@@ -44,6 +44,20 @@ class textStyles {
     fontWeight: FontWeight.normal,
     color: Color.fromARGB(255, 255, 255, 255),
     fontStyle: FontStyle.normal,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+  static const TextStyle P2B = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+  static const TextStyle P2I = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontStyle: FontStyle.italic,
+    backgroundColor: Color.fromARGB(255, 136, 136, 136),
     // backgroundColor: Color.fromARGB(255, 136, 136, 136),
   );
 }

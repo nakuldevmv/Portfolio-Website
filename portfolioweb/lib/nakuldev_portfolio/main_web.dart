@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolioweb/functions/downloadResume.dart';
 import '../styles/styles.dart';
 
 class nakuldev extends StatefulWidget {
@@ -21,17 +22,10 @@ class _nakuldevState extends State<nakuldev> {
     double deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text("Nakul </Dev>"),
-      //   backgroundColor: Colors.grey,
-      //   shape: const BeveledRectangleBorder(
-      //       side: BorderSide(color: Colors.black, height: 2)),
-      // ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                'assets/background_image.jpg'), // replace with your image path
+            image: AssetImage('assets/background_image.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -39,7 +33,6 @@ class _nakuldevState extends State<nakuldev> {
           padding: const EdgeInsets.all(16),
           child: Center(
             child: SizedBox(
-              // color: Colors.amber,
               width:
                   deviceWidth < 1365 ? deviceWidth * 0.86 : deviceWidth * 0.84,
               child: Row(
@@ -57,47 +50,43 @@ class _nakuldevState extends State<nakuldev> {
                             padding: containerStyle.padding,
                             margin: containerStyle.margin,
                             width: deviceWidth * containerStyle.width,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Icon(Icons.arrow_outward_rounded),
-                                  RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: "Innovating the ",
-                                          style: GoogleFonts.pixelifySans(
-                                              textStyle: textStyles.B),
-                                        ),
-                                        TextSpan(
-                                          text: "Future, ",
-                                          style: GoogleFonts.ibmPlexMono(
-                                              textStyle: textStyles.I),
-                                        ),
-                                        TextSpan(
-                                          text: "\nOne Line of ",
-                                          style: GoogleFonts.pixelifySans(
-                                              textStyle: textStyles.B),
-                                        ),
-                                        TextSpan(
-                                          text: "Code",
-                                          style: GoogleFonts.ibmPlexMono(
-                                              textStyle: textStyles.I),
-                                        ),
-                                        TextSpan(
-                                          text: " at a Time",
-                                          style: GoogleFonts.pixelifySans(
-                                              textStyle: textStyles.B),
-                                        ),
-                                      ],
-                                    ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Icon(Icons.arrow_outward_rounded),
+                                RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: "Innovating the ",
+                                        style: GoogleFonts.jetBrainsMono(
+                                            textStyle: textStyles.B),
+                                      ),
+                                      TextSpan(
+                                        text: "Future, ",
+                                        style: GoogleFonts.ibmPlexMono(
+                                            textStyle: textStyles.I),
+                                      ),
+                                      TextSpan(
+                                        text: "\nOne Line of ",
+                                        style: GoogleFonts.jetBrainsMono(
+                                            textStyle: textStyles.B),
+                                      ),
+                                      TextSpan(
+                                        text: "Code",
+                                        style: GoogleFonts.ibmPlexMono(
+                                            textStyle: textStyles.I),
+                                      ),
+                                      TextSpan(
+                                        text: " at a Time",
+                                        style: GoogleFonts.jetBrainsMono(
+                                            textStyle: textStyles.B),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             )),
                       ),
                       Expanded(
@@ -116,24 +105,19 @@ class _nakuldevState extends State<nakuldev> {
                             children: [
                               Icon(Icons.accessibility_new_outlined),
                               Text(
-                                  style: GoogleFonts.pixelifySans(
-                                      textStyle: textStyles.P1),
-                                  "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development."),
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: textStyles.P1),
+                                "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development.",
+                              ),
                             ],
                           ),
                         ),
                       ),
                       Expanded(
                         child: GestureDetector(
-                          // onTap: () {
-                          //   FileDownloader.downloadFile(
-                          //     url:
-                          //         "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9B368B465A4DC909CDB6E799ACB64899B54E731B6D894FA5B080D75DB2F30533/scale?aspectRatio=1.78&format=jpeg",
-                          //     name: "Resume",
-                          //     downloadDestination:
-                          //         DownloadDestinations.appFiles,
-                          //   );
-                          // },
+                          onTap: () {
+                            downloadResume('assets/resume.pdf');
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                               color: containerStyle.color,
@@ -142,7 +126,30 @@ class _nakuldevState extends State<nakuldev> {
                             padding: containerStyle.padding,
                             margin: containerStyle.margin,
                             width: deviceWidth * containerStyle.width,
-                            child: Text("Resume"),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Click Here To Download My",
+                                      style: GoogleFonts.jetBrainsMono(
+                                          textStyle: textStyles.P2B),
+                                    ),
+                                    Text(
+                                      "Resume",
+                                      style: GoogleFonts.ibmPlexMono(
+                                          textStyle: textStyles.P2I),
+                                    ),
+                                  ],
+                                ),
+                                Icon(Icons.download_rounded)
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -168,8 +175,8 @@ class _nakuldevState extends State<nakuldev> {
                                   style: GoogleFonts.ibmPlexMono(
                                       textStyle: textStyles.Name1)),
                               TextSpan(
-                                  text: " </Dev>",
-                                  style: GoogleFonts.pixelifySans(
+                                  text: "</Dev>",
+                                  style: GoogleFonts.jetBrainsMono(
                                       textStyle: textStyles.Name2)),
                             ])),
                           ),
@@ -200,7 +207,44 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("placeholder for data"),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Have some\nQuestions?",
+                                    style: GoogleFonts.jetBrainsMono(
+                                        textStyle: textStyles.P1),
+                                  ),
+                                  Icon(Icons.arrow_outward_rounded),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  RichText(
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: 'Contact ',
+                                          style: GoogleFonts.jetBrainsMono(
+                                              textStyle: textStyles.B),
+                                        ),
+                                        TextSpan(
+                                          text: 'Me',
+                                          style: GoogleFonts.jetBrainsMono(
+                                              textStyle: textStyles.I),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
