@@ -27,7 +27,7 @@ class _nakuldevState extends State<nakuldev> {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/background_image.jpg'),
             fit: BoxFit.cover,
@@ -47,7 +47,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: containerStyle.color,
                               borderRadius: containerStyle.borderRadius,
                             ),
@@ -58,7 +58,7 @@ class _nakuldevState extends State<nakuldev> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Icon(Icons.arrow_outward_rounded),
+                                const Icon(Icons.arrow_outward_rounded),
                                 RichText(
                                   text: TextSpan(
                                     children: [
@@ -96,7 +96,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
@@ -107,7 +107,7 @@ class _nakuldevState extends State<nakuldev> {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(Icons.accessibility_new_outlined),
+                              const Icon(Icons.accessibility_new_outlined),
                               Text(
                                 style: GoogleFonts.jetBrainsMono(
                                     textStyle: textStyles.P1),
@@ -123,7 +123,7 @@ class _nakuldevState extends State<nakuldev> {
                             downloadResume('assets/resume.pdf');
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: containerStyle.color,
                               borderRadius: containerStyle.borderRadius,
                             ),
@@ -151,7 +151,7 @@ class _nakuldevState extends State<nakuldev> {
                                     ),
                                   ],
                                 ),
-                                Icon(Icons.download_rounded)
+                                const Icon(Icons.download_rounded)
                               ],
                             ),
                           ),
@@ -164,7 +164,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 1,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
@@ -189,7 +189,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                             image: DecorationImage(
@@ -204,7 +204,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 2,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
@@ -224,7 +224,7 @@ class _nakuldevState extends State<nakuldev> {
                                     style: GoogleFonts.jetBrainsMono(
                                         textStyle: textStyles.P1),
                                   ),
-                                  Icon(Icons.arrow_outward_rounded),
+                                  const Icon(Icons.arrow_outward_rounded),
                                 ],
                               ),
                               Row(
@@ -258,7 +258,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 3,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
@@ -293,7 +293,7 @@ class _nakuldevState extends State<nakuldev> {
                                       ),
                                     ),
                                   ),
-                                  Icon(Icons.arrow_outward_rounded)
+                                  const Icon(Icons.arrow_outward_rounded)
                                 ],
                               ),
                               Expanded(
@@ -301,7 +301,7 @@ class _nakuldevState extends State<nakuldev> {
                                       itemCount: projects.length,
                                       itemBuilder: (context, index) {
                                         return Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: ProjectcontainerStyle.color,
                                             borderRadius:
                                                 containerStyle.borderRadius,
@@ -336,7 +336,7 @@ class _nakuldevState extends State<nakuldev> {
                                                   ),
                                                 ],
                                               ),
-                                              Icon(Icons
+                                              const Icon(Icons
                                                   .arrow_forward_ios_rounded)
                                             ],
                                           ),
@@ -349,7 +349,7 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 2,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
@@ -384,14 +384,14 @@ class _nakuldevState extends State<nakuldev> {
                                       ),
                                     ),
                                   ),
-                                  Icon(Icons.arrow_outward_rounded)
+                                  const Icon(Icons.arrow_outward_rounded)
                                 ],
                               ),
                               Expanded(
                                 ///////////////////////////////////////////
                                 child: GridView.builder(
                                   gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 3, // Number of columns
                                     childAspectRatio:
                                         1, // Aspect ratio of each child
@@ -402,7 +402,7 @@ class _nakuldevState extends State<nakuldev> {
                                   itemCount: skills.length, // Number of skills
                                   itemBuilder: (context, index) {
                                     return Container(
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: containerStyle.color,
                                         borderRadius:
                                             containerStyle.borderRadius,
@@ -430,27 +430,27 @@ class _nakuldevState extends State<nakuldev> {
                       Expanded(
                         flex: 2,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("Experiance"),
+                          child: const Text("Experiance"),
                         ),
                       ),
                       Expanded(
                         flex: 4,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: Text("Education"),
+                          child: const Text("Education"),
                         ),
                       ),
                     ],
