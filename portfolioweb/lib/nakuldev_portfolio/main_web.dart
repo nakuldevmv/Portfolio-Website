@@ -1,13 +1,9 @@
-import 'dart:math';
-import 'dart:ui';
-
-import 'package:animated_icon/animated_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolioweb/Data/projects.dart';
 import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
-import 'package:rive_animated_icon/rive_animated_icon.dart';
 import '../styles/styles.dart';
 
 class nakuldev extends StatefulWidget {
@@ -58,7 +54,7 @@ class _nakuldevState extends State<nakuldev> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                const Icon(Icons.arrow_outward_rounded),
+                                const Icon(Icons.lightbulb),
                                 RichText(
                                   text: TextSpan(
                                     children: [
@@ -125,7 +121,7 @@ class _nakuldevState extends State<nakuldev> {
                           },
                           child: Container(
                             decoration: const BoxDecoration(
-                              color: containerStyle.color,
+                              color: Color.fromARGB(255, 183, 183, 183),
                               borderRadius: containerStyle.borderRadius,
                             ),
                             padding: containerStyle.padding,
@@ -135,6 +131,8 @@ class _nakuldevState extends State<nakuldev> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
+                                const Icon(Icons.download_rounded,
+                                    color: Colors.black),
                                 Row(
                                   children: [
                                     RichText(
@@ -143,19 +141,23 @@ class _nakuldevState extends State<nakuldev> {
                                           TextSpan(
                                             text: "My ",
                                             style: GoogleFonts.jetBrainsMono(
-                                                textStyle: textStyles.HeadingB),
+                                                textStyle: textStyles.HeadingB,
+                                                color: Colors.black),
                                           ),
                                           TextSpan(
                                             text: "Resume",
                                             style: GoogleFonts.ibmPlexMono(
-                                                textStyle: textStyles.HeadingI),
+                                                textStyle: textStyles.HeadingI,
+                                                color: Colors.black,
+                                                backgroundColor:
+                                                    const Color.fromARGB(
+                                                        255, 119, 119, 119)),
                                           ),
                                         ],
                                       ),
                                     ),
                                   ],
                                 ),
-                                const Icon(Icons.download_rounded)
                               ],
                             ),
                           ),
@@ -260,7 +262,7 @@ class _nakuldevState extends State<nakuldev> {
                   Column(
                     children: [
                       Expanded(
-                        flex: 3,
+                        flex: 4,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: containerStyle.color,
@@ -307,8 +309,8 @@ class _nakuldevState extends State<nakuldev> {
                                         return Container(
                                           decoration: const BoxDecoration(
                                             color: ProjectcontainerStyle.color,
-                                            borderRadius:
-                                                containerStyle.borderRadius,
+                                            borderRadius: ProjectcontainerStyle
+                                                .borderRadius,
                                           ),
                                           padding:
                                               ProjectcontainerStyle.padding,
@@ -351,7 +353,7 @@ class _nakuldevState extends State<nakuldev> {
                         ),
                       ),
                       Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: containerStyle.color,
@@ -375,35 +377,33 @@ class _nakuldevState extends State<nakuldev> {
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
-                                            text: 'My ',
-                                            style: GoogleFonts.ibmPlexMono(
-                                                textStyle: textStyles.HeadingB),
-                                          ),
-                                          TextSpan(
-                                            text: 'Skills',
+                                            text: 'Skilled',
                                             style: GoogleFonts.jetBrainsMono(
                                                 textStyle: textStyles.HeadingI),
+                                          ),
+                                          TextSpan(
+                                            text: ' In',
+                                            style: GoogleFonts.ibmPlexMono(
+                                                textStyle: textStyles.HeadingB),
                                           )
                                         ],
                                       ),
                                     ),
                                   ),
-                                  const Icon(Icons.arrow_outward_rounded)
+                                  const Icon(Icons.check_rounded)
                                 ],
                               ),
                               Expanded(
+                                flex: 2,
                                 ///////////////////////////////////////////
                                 child: GridView.builder(
                                   gridDelegate:
                                       const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3, // Number of columns
-                                    childAspectRatio:
-                                        1, // Aspect ratio of each child
-                                    crossAxisSpacing:
-                                        10, // Spacing between columns
-                                    mainAxisSpacing: 10, // Spacing between rows
+                                    crossAxisCount: 4,
+                                    // crossAxisSpacing: 3,
+                                    // mainAxisSpacing: 3,
                                   ),
-                                  itemCount: skills.length, // Number of skills
+                                  itemCount: skills.length,
                                   itemBuilder: (context, index) {
                                     return Container(
                                       decoration: const BoxDecoration(
@@ -412,12 +412,13 @@ class _nakuldevState extends State<nakuldev> {
                                             containerStyle.borderRadius,
                                       ),
                                       child: Center(
-                                        child: Icon(
-                                          skills[index]
-                                              .icon, // Icon for each skill
-                                          size: 40, // Icon size
-                                        ),
-                                      ),
+                                          child: SvgPicture.asset(
+                                        skills[index],
+                                        // ignore: deprecated_member_use
+                                        color: textStyles.B.color,
+                                        width: deviceWidth * 0.06,
+                                        height: deviceHeight * 0.06,
+                                      )),
                                     );
                                   },
                                 ),
@@ -432,7 +433,7 @@ class _nakuldevState extends State<nakuldev> {
                   Column(
                     children: [
                       Expanded(
-                        flex: 2,
+                        flex: 1,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: containerStyle.color,
@@ -441,7 +442,7 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: const Text("Experiance"),
+                          child: const Text("EXP ❤️"),
                         ),
                       ),
                       Expanded(
@@ -454,7 +455,7 @@ class _nakuldevState extends State<nakuldev> {
                           padding: containerStyle.padding,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
-                          child: const Text("Education"),
+                          child: const Text("Edu 📚"),
                         ),
                       ),
                     ],

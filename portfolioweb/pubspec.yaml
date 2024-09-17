@@ -41,6 +41,7 @@ dependencies:
   flutter_file_downloader: ^2.0.0
   rive_animated_icon: ^2.0.0
   animated_icon: ^0.0.9
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,19 @@ flutter:
      - assets/background_image.jpg
      - assets/profile.png
      - assets/resume.pdf
+     - assets/svg/blender.svg
+     - assets/svg/cpp.svg
+     - assets/svg/css.svg
+     - assets/svg/dart.svg
+     - assets/svg/figma.svg
+     - assets/svg/flutter.svg
+     - assets/svg/html.svg
+     - assets/svg/java.svg
+     - assets/svg/javascript.svg
+     - assets/svg/mysql.svg
+     - assets/svg/python.svg
+     - assets/svg/framer.svg
+     
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

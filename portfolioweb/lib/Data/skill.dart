@@ -6,14 +6,17 @@ class Skill {
   Skill({required this.icon});
 }
 
-List<Skill> skills = [
-  Skill(icon: Icons.html), // C++
-  Skill(icon: Icons.html), // Flutter
-  Skill(icon: Icons.html), // HTML
-  Skill(icon: Icons.css), // CSS
-  Skill(icon: Icons.html), // Python
-  Skill(icon: Icons.html), // Java
-  Skill(icon: Icons.html), // Dart
-  Skill(icon: Icons.html), // MySQL
-  Skill(icon: Icons.javascript), // JavaScript
+List<String> skills = [
+  'assets/svg/flutter.svg',
+  'assets/svg/dart.svg',
+  'assets/svg/python.svg',
+  'assets/svg/cpp.svg',
+  'assets/svg/html.svg',
+  'assets/svg/css.svg',
+  'assets/svg/javascript.svg',
+  'assets/svg/mysql.svg',
+  'assets/svg/java.svg',
+  'assets/svg/blender.svg',
+  'assets/svg/figma.svg',
+  'assets/svg/framer.svg',
 ];
