@@ -33,6 +33,20 @@ class textStyles {
     fontStyle: FontStyle.italic,
     backgroundColor: Color.fromARGB(255, 136, 136, 136),
   );
+
+  static const TextStyle HeadingB = TextStyle(
+    fontSize: 23,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+  static const TextStyle HeadingI = TextStyle(
+    fontSize: 23,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontStyle: FontStyle.italic,
+    backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+
   static const TextStyle Name1 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold,

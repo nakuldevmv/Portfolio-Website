@@ -45,7 +45,7 @@ class _nakuldevState extends State<nakuldev> {
                   Column(
                     children: [
                       Expanded(
-                        flex: 3,
+                        flex: 5,
                         child: Container(
                             decoration: const BoxDecoration(
                               color: containerStyle.color,
@@ -94,7 +94,7 @@ class _nakuldevState extends State<nakuldev> {
                             )),
                       ),
                       Expanded(
-                        flex: 3,
+                        flex: 6,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: containerStyle.color,
@@ -118,6 +118,7 @@ class _nakuldevState extends State<nakuldev> {
                         ),
                       ),
                       Expanded(
+                        flex: 2,
                         child: GestureDetector(
                           onTap: () {
                             downloadResume('assets/resume.pdf');
@@ -130,24 +131,27 @@ class _nakuldevState extends State<nakuldev> {
                             padding: containerStyle.padding,
                             margin: containerStyle.margin,
                             width: deviceWidth * containerStyle.width,
-                            child: Row(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
-                                    Text(
-                                      "Click Here To Download My",
-                                      style: GoogleFonts.jetBrainsMono(
-                                          textStyle: textStyles.P2B),
-                                    ),
-                                    Text(
-                                      "Resume",
-                                      style: GoogleFonts.ibmPlexMono(
-                                          textStyle: textStyles.P2I),
+                                    RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: "My ",
+                                            style: GoogleFonts.jetBrainsMono(
+                                                textStyle: textStyles.HeadingB),
+                                          ),
+                                          TextSpan(
+                                            text: "Resume",
+                                            style: GoogleFonts.ibmPlexMono(
+                                                textStyle: textStyles.HeadingI),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -235,12 +239,12 @@ class _nakuldevState extends State<nakuldev> {
                                         TextSpan(
                                           text: 'Contact ',
                                           style: GoogleFonts.ibmPlexMono(
-                                              textStyle: textStyles.B),
+                                              textStyle: textStyles.HeadingB),
                                         ),
                                         TextSpan(
                                           text: 'Me',
                                           style: GoogleFonts.jetBrainsMono(
-                                              textStyle: textStyles.I),
+                                              textStyle: textStyles.HeadingI),
                                         )
                                       ],
                                     ),
@@ -282,12 +286,12 @@ class _nakuldevState extends State<nakuldev> {
                                           TextSpan(
                                             text: 'My ',
                                             style: GoogleFonts.ibmPlexMono(
-                                                textStyle: textStyles.B),
+                                                textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Projects',
                                             style: GoogleFonts.jetBrainsMono(
-                                                textStyle: textStyles.I),
+                                                textStyle: textStyles.HeadingI),
                                           )
                                         ],
                                       ),
@@ -373,12 +377,12 @@ class _nakuldevState extends State<nakuldev> {
                                           TextSpan(
                                             text: 'My ',
                                             style: GoogleFonts.ibmPlexMono(
-                                                textStyle: textStyles.B),
+                                                textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Skills',
                                             style: GoogleFonts.jetBrainsMono(
-                                                textStyle: textStyles.I),
+                                                textStyle: textStyles.HeadingI),
                                           )
                                         ],
                                       ),
