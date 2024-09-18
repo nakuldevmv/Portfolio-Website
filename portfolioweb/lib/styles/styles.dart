@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class containerStyle {
@@ -7,6 +9,8 @@ class containerStyle {
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
+  // static const double width = 0.2;
+
   static const double height = 200;
 }
 
@@ -17,6 +21,13 @@ class ProjectcontainerStyle {
   static const Color color = Color.fromARGB(255, 26, 26, 26);
   static const double width = 0.19535;
   static const double height = 200;
+}
+
+class EducationcontainerStyle {
+  static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10);
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
+  static const EdgeInsets padding = EdgeInsets.all(10);
+  static const Color color = Color.fromARGB(255, 26, 26, 26);
 }
 
 class textStyles {
@@ -81,5 +92,24 @@ class textStyles {
     fontStyle: FontStyle.italic,
     backgroundColor: Color.fromARGB(255, 136, 136, 136),
     // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+
+  static const TextStyle edu_H_B = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    fontStyle: FontStyle.normal,
+  );
+  static const TextStyle edu_P_L = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: Color.fromARGB(135, 255, 255, 255),
+    fontStyle: FontStyle.normal,
+  );
+  static const TextStyle edu_P_N = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontStyle: FontStyle.normal,
   );
 }

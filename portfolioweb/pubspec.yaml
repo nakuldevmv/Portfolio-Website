@@ -42,6 +42,7 @@ dependencies:
   rive_animated_icon: ^2.0.0
   animated_icon: ^0.0.9
   flutter_svg: ^2.0.10+1
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:
