@@ -113,7 +113,7 @@ class _nakuldevState extends State<nakuldev> {
                         flex: 2,
                         child: GestureDetector(
                           onTap: () {
-                            downloadResume('assets/resume.pdf');
+                            downloadResume('assets/Resume/Resume.pdf');
                           },
                           child: Container(
                             decoration: const BoxDecoration(
