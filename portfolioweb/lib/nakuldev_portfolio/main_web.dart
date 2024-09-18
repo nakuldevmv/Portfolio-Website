@@ -23,7 +23,7 @@ class _nakuldevState extends State<nakuldev> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    const rurl = 'assets/Resume/Resume.pdf';
+    const rurl = 'https://nakuldevmv.github.io/assets/assets/Resume/Resume.pdf';
 
     return Scaffold(
       body: Container(
