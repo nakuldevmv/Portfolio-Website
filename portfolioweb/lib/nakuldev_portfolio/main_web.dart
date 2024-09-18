@@ -23,6 +23,7 @@ class _nakuldevState extends State<nakuldev> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
+    const rurl = 'assets/Resume/Resume.pdf';
 
     return Scaffold(
       body: Container(
@@ -113,7 +114,7 @@ class _nakuldevState extends State<nakuldev> {
                         flex: 2,
                         child: GestureDetector(
                           onTap: () {
-                            downloadResume('assets/Resume/Resume.pdf');
+                            downloadResume(rurl);
                           },
                           child: Container(
                             decoration: const BoxDecoration(
