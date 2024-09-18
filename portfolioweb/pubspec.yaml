@@ -71,7 +71,6 @@ flutter:
   assets:
      - assets/background_image.jpg
      - assets/profile.png
-     - assets/resume.pdf
      - assets/svg/blender.svg
      - assets/svg/cpp.svg
      - assets/svg/css.svg
@@ -84,6 +83,7 @@ flutter:
      - assets/svg/mysql.svg
      - assets/svg/python.svg
      - assets/svg/framer.svg
+     - assets/Resume/Resume.pdf
      
 
   # An image asset can refer to one or more resolution-specific "variants", see
