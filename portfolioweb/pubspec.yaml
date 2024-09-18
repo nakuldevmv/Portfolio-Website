@@ -84,7 +84,6 @@ flutter:
      - assets/svg/mysql.svg
      - assets/svg/python.svg
      - assets/svg/framer.svg
-     - assets/Resume/Resume.pdf
      
 
   # An image asset can refer to one or more resolution-specific "variants", see
