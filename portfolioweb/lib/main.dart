@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioweb/nakuldev_portfolio/mobile.dart';
+import 'package:portfolioweb/nakuldev_portfolio/responsive_layout.dart';
+import 'package:portfolioweb/nakuldev_portfolio/tablet.dart';
 
-import 'nakuldev_portfolio/main_web.dart';
+import 'nakuldev_portfolio/desktop.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(colorScheme: const ColorScheme.dark()),
       debugShowCheckedModeBanner: false,
-      home: nakuldev(),
+      home: const ResponsiveLayout(desktopBody: desktop(), mobileBody: mobile(), tabletBody: tablet()),
     );
   }
 }

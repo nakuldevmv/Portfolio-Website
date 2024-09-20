@@ -9,21 +9,21 @@ import 'package:portfolioweb/functions/downloadResume.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
 
-class nakuldev extends StatefulWidget {
-  const nakuldev({super.key});
+class mobile extends StatefulWidget {
+  const mobile({super.key});
 
   @override
-  State<nakuldev> createState() => _nakuldevState();
+  State<mobile> createState() => _mobileState();
 }
 
-class _nakuldevState extends State<nakuldev> {
+class _mobileState extends State<mobile> {
   double pixelValue = 300;
 
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    const rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
+    const rurl = 'https://github.com/mobilemv/Resume/blob/main/resume.pdf';
 
     return Scaffold(
       body: Container(
@@ -47,7 +47,7 @@ class _nakuldevState extends State<nakuldev> {
                         flex: 5,
                         child: Container(
                             decoration: const BoxDecoration(
-                              color: containerStyle.color,
+                              color: Color.fromARGB(255, 183, 26, 26),
                               borderRadius: containerStyle.borderRadius,
                             ),
                             padding: containerStyle.padding,
