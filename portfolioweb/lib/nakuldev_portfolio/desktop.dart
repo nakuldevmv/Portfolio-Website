@@ -6,6 +6,7 @@ import 'package:portfolioweb/Data/exp.dart';
 import 'package:portfolioweb/Data/projects.dart';
 import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
+import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
 
@@ -43,6 +44,9 @@ class _desktopState extends State<desktop> {
                 children: [
                   Column(
                     children: [
+                      //
+                      //Headline
+                      //
                       Expanded(
                         flex: 5,
                         child: Container(
@@ -87,6 +91,9 @@ class _desktopState extends State<desktop> {
                               ],
                             )),
                       ),
+                      //
+                      //About
+                      //
                       Expanded(
                         flex: 6,
                         child: Container(
@@ -110,6 +117,9 @@ class _desktopState extends State<desktop> {
                           ),
                         ),
                       ),
+                      //
+                      //Resume
+                      //
                       Expanded(
                         flex: 2,
                         child: GestureDetector(
@@ -156,6 +166,9 @@ class _desktopState extends State<desktop> {
                   ),
                   Column(
                     children: [
+                      //
+                      //Name
+                      //
                       Expanded(
                         flex: 1,
                         child: Container(
@@ -175,6 +188,9 @@ class _desktopState extends State<desktop> {
                           ),
                         ),
                       ),
+                      //
+                      //Pfp
+                      //
                       Expanded(
                         flex: 3,
                         child: Container(
@@ -190,49 +206,57 @@ class _desktopState extends State<desktop> {
                           width: deviceWidth * containerStyle.width,
                         ),
                       ),
+                      //
+                      //Contact Me
+                      //
                       Expanded(
                         flex: 2,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
-                          ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "Have some\nQuestions?",
-                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                  ),
-                                  const Icon(Icons.arrow_outward_rounded),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'Contact ',
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                        ),
-                                        TextSpan(
-                                          text: 'Me',
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                        )
-                                      ],
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const ContactMe()));
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: containerStyle.padding,
+                            margin: containerStyle.margin,
+                            width: deviceWidth * containerStyle.width,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Have some\nQuestions?",
+                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    const Icon(Icons.arrow_outward_rounded),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'Contact ',
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                          ),
+                                          TextSpan(
+                                            text: 'Me',
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -240,6 +264,9 @@ class _desktopState extends State<desktop> {
                   ),
                   Column(
                     children: [
+                      //
+                      //Project
+                      //
                       Expanded(
                         flex: 4,
                         child: Container(
@@ -313,6 +340,9 @@ class _desktopState extends State<desktop> {
                           ),
                         ),
                       ),
+                      //
+                      //Skills
+                      //
                       Expanded(
                         flex: 3,
                         child: Container(
@@ -386,6 +416,9 @@ class _desktopState extends State<desktop> {
                   ),
                   Column(
                     children: [
+                      //
+                      //Exp
+                      //
                       Expanded(
                         flex: 3,
                         child: Container(
@@ -502,6 +535,9 @@ class _desktopState extends State<desktop> {
                           ),
                         ),
                       ),
+                      //
+                      //Edu
+                      //
                       Expanded(
                         flex: 9,
                         child: Container(

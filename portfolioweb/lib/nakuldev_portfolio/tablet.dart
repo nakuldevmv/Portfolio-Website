@@ -47,7 +47,7 @@ class _tabletState extends State<tablet> {
                         flex: 5,
                         child: Container(
                             decoration: const BoxDecoration(
-                              color: containerStyle.color,
+                              color: Color.fromARGB(255, 183, 26, 26),
                               borderRadius: containerStyle.borderRadius,
                             ),
                             padding: containerStyle.padding,
@@ -91,7 +91,7 @@ class _tabletState extends State<tablet> {
                         flex: 6,
                         child: Container(
                           decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 22, 69, 212),
+                            color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
                           padding: containerStyle.padding,

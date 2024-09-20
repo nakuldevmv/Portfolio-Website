@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(colorScheme: const ColorScheme.dark()),
       debugShowCheckedModeBanner: false,
-      home: const ResponsiveLayout(desktopBody: desktop(), mobileBody: mobile(), tabletBody: tablet()),
+      home: const desktop(),
+      // home: const ResponsiveLayout(desktopBody: desktop(), mobileBody: mobile(), tabletBody: tablet()),
     );
   }
 }
