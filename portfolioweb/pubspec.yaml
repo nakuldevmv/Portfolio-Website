@@ -44,6 +44,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   timeline_tile: ^2.0.0
   http: ^1.2.2
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,8 @@ flutter:
   assets:
      - assets/background_image.jpg
      - assets/profile.png
+     - assets/location.png
+     - assets/locD.png
      - assets/svg/blender.svg
      - assets/svg/cpp.svg
      - assets/svg/css.svg
@@ -84,6 +87,13 @@ flutter:
      - assets/svg/mysql.svg
      - assets/svg/python.svg
      - assets/svg/framer.svg
+     - assets/svg/x.svg
+     - assets/svg/linkedin.svg
+     - assets/svg/instagram.svg
+     - assets/svg/hackerrank.svg
+     - assets/svg/github.svg
+
+     
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

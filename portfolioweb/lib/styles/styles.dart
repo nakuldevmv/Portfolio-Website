@@ -4,14 +4,34 @@ import 'package:flutter/material.dart';
 
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
-  static const BorderRadius borderRadius =
-      BorderRadius.all(Radius.circular(10));
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
   // static const double width = 0.2;
 
   static const double height = 200;
+}
+
+class ContactMe_containerStyle {
+  static const EdgeInsets margin = EdgeInsets.all(10);
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+
+  //
+  static const double width_mail_Linkedin = 0.215;
+  static const double main_width = 0.63;
+  static const double main_height = 0.5;
+
+  static const double loc_width = 0.25;
+  static const double loc_height = 0.285;
+  static const double bottom_icon_width = 0.1;
+  static const double githubsizeW = 0.1;
+  static const double githubsizeH = 0.182;
+
+  //
 }
 
 class ProjectcontainerStyle {

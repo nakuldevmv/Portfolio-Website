@@ -18,7 +18,7 @@ class desktop extends StatefulWidget {
 }
 
 class _desktopState extends State<desktop> {
-  double pixelValue = 300;
+  // double pixelValue = 300;
 
   @override
   Widget build(BuildContext context) {
@@ -397,13 +397,14 @@ class _desktopState extends State<desktop> {
                                         borderRadius: containerStyle.borderRadius,
                                       ),
                                       child: Center(
-                                          child: SvgPicture.asset(
-                                        skills[index],
-                                        // ignore: deprecated_member_use
-                                        color: textStyles.B.color,
-                                        width: deviceWidth * 0.06,
-                                        height: deviceHeight * 0.06,
-                                      )),
+                                        child: SvgPicture.asset(
+                                          skills[index],
+                                          // ignore: deprecated_member_use
+                                          color: textStyles.B.color,
+                                          width: deviceWidth * 0.06,
+                                          height: deviceHeight * 0.06,
+                                        ),
+                                      ),
                                     );
                                   },
                                 ),
