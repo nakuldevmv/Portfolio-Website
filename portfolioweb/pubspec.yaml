@@ -45,6 +45,8 @@ dependencies:
   timeline_tile: ^2.0.0
   http: ^1.2.2
   url_launcher: ^6.3.0
+  auto_size_text: ^3.0.0
+  webview_flutter: ^4.9.0
 
 dev_dependencies:
   flutter_test:

@@ -46,7 +46,7 @@ Future<void> downloadResume(String url) async {
 
     // Create an anchor element to trigger the download
     final anchorElement = AnchorElement(href: url)
-      ..download = "Nakul_Resume.pdf" // File name for download
+      ..download = "Nakul_Dev_Resume.pdf" // File name for download
       ..click();
 
     // Clean up the object URL after download
@@ -57,6 +57,18 @@ Future<void> downloadResume(String url) async {
 }
 
 
+// snackbarReturn(int responsecode) {
+//   return SnackBar(
+//       backgroundColor: const Color.fromARGB(153, 37, 37, 37),
+//       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+//       content: AutoSizeText(
+//         'Faild To Download The File : $responsecode ',
+//         minFontSize: 10,
+//         maxFontSize: 15,
+//         maxLines: 1,
+//         style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+//       ));
+// }
 
 // import 'dart:html';
 // import 'dart:convert';

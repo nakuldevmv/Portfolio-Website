@@ -6,6 +6,7 @@ import 'package:portfolioweb/Data/exp.dart';
 import 'package:portfolioweb/Data/projects.dart';
 import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
+import 'package:portfolioweb/functions/navigate.dart';
 import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
@@ -24,7 +25,7 @@ class _desktopState extends State<desktop> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    const rurl = 'https://github.com/desktopmv/Resume/blob/main/resume.pdf';
+    const rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
 
     return Scaffold(
       body: Container(
@@ -213,7 +214,7 @@ class _desktopState extends State<desktop> {
                         flex: 2,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const ContactMe()));
+                            navigateTo(context, const ContactMe());
                           },
                           child: Container(
                             decoration: const BoxDecoration(
