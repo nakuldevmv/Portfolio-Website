@@ -8,6 +8,7 @@ import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
 import 'package:portfolioweb/functions/navigate.dart';
 import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
+import 'package:portfolioweb/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
 
@@ -282,58 +283,72 @@ class _desktopState extends State<desktop> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 12),
-                                    child: RichText(
-                                      text: TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: 'My ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                          ),
-                                          TextSpan(
-                                            text: 'Projects',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                          )
-                                        ],
+                              GestureDetector(
+                                onTap: () {
+                                  navigateTo(
+                                      context,
+                                      const myProject(
+                                        initialIndex: 0,
+                                      ));
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(bottom: 12),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'My ',
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            ),
+                                            TextSpan(
+                                              text: 'Projects',
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const Icon(Icons.arrow_outward_rounded)
-                                ],
+                                    const Icon(Icons.arrow_outward_rounded)
+                                  ],
+                                ),
                               ),
                               Expanded(
                                   child: ListView.builder(
                                       itemCount: projects.length,
                                       itemBuilder: (context, index) {
-                                        return Container(
-                                          decoration: const BoxDecoration(
-                                            color: ProjectcontainerStyle.color,
-                                            borderRadius: ProjectcontainerStyle.borderRadius,
-                                          ),
-                                          padding: ProjectcontainerStyle.padding,
-                                          margin: ProjectcontainerStyle.margin,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Padding(
-                                                    padding: const EdgeInsets.only(right: 8.0),
-                                                    child: Icon(projects[index].icon),
-                                                  ),
-                                                  SizedBox(
-                                                    width: deviceWidth * 0.115,
-                                                    child: Text(style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
-                                                  ),
-                                                ],
-                                              ),
-                                              const Icon(Icons.arrow_forward_ios_rounded)
-                                            ],
+                                        return GestureDetector(
+                                          onTap: () {
+                                            navigateTo(context, myProject(initialIndex: index));
+                                          },
+                                          child: Container(
+                                            decoration: const BoxDecoration(
+                                              color: ProjectcontainerStyle.color,
+                                              borderRadius: ProjectcontainerStyle.borderRadius,
+                                            ),
+                                            padding: ProjectcontainerStyle.padding,
+                                            margin: ProjectcontainerStyle.margin,
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(right: 8.0),
+                                                      child: Icon(projects[index].icon),
+                                                    ),
+                                                    SizedBox(
+                                                      width: deviceWidth * 0.115,
+                                                      child: Text(style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
+                                                    ),
+                                                  ],
+                                                ),
+                                                const Icon(Icons.arrow_forward_ios_rounded)
+                                              ],
+                                            ),
                                           ),
                                         );
                                       }))
