@@ -43,6 +43,18 @@ class ProjectcontainerStyle {
   static const double height = 200;
 }
 
+class MyProject_containerStyle {
+  static const EdgeInsets margin = EdgeInsets.all(10);
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 26, 26, 26);
+  static const double width = 0.19535;
+  static const double buttonWidth = 0.07;
+  static const double height = 0.3 + 0.1;
+
+  static const double Long_height = 0.4 + 0.1;
+}
+
 class EducationcontainerStyle {
   static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
@@ -130,6 +142,27 @@ class textStyles {
     fontSize: 15,
     fontWeight: FontWeight.normal,
     color: Colors.white,
+    fontStyle: FontStyle.normal,
+  );
+
+  static const TextStyle projectTitle = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    fontStyle: FontStyle.normal,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+
+  static const TextStyle descriptions = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.normal,
+    color: Color.fromARGB(255, 255, 255, 255),
+    fontStyle: FontStyle.normal,
+  );
+  static const TextStyle Dheadings = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 255, 255, 255),
     fontStyle: FontStyle.normal,
   );
 }

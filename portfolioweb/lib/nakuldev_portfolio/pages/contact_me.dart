@@ -25,10 +25,10 @@ class ContactMe extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Center(
             child: Container(
-              decoration: const BoxDecoration(
-                color: ContactMe_containerStyle.main_color,
-                borderRadius: ContactMe_containerStyle.borderRadius,
-              ),
+              // decoration: const BoxDecoration(
+              //   color: ContactMe_containerStyle.main_color,
+              //   borderRadius: ContactMe_containerStyle.borderRadius,
+              // ),
               padding: ContactMe_containerStyle.padding,
               margin: ContactMe_containerStyle.margin,
               width: deviceWidth * ContactMe_containerStyle.main_width,
@@ -38,20 +38,20 @@ class ContactMe extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Contact ',
-                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.B),
-                          ),
-                          TextSpan(
-                            text: 'Me',
-                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.I),
-                          )
-                        ],
-                      ),
-                    ),
+                    // RichText(
+                    //   text: TextSpan(
+                    //     children: [
+                    //       TextSpan(
+                    //         text: 'Contact ',
+                    //         style: GoogleFonts.ibmPlexMono(textStyle: textStyles.B),
+                    //       ),
+                    //       TextSpan(
+                    //         text: 'Me',
+                    //         style: GoogleFonts.jetBrainsMono(textStyle: textStyles.I),
+                    //       )
+                    //     ],
+                    //   ),
+                    // ),
                     Row(
                       children: [
                         Column(

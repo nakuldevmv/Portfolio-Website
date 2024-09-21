@@ -5,8 +5,10 @@ import 'package:portfolioweb/Data/education.dart';
 import 'package:portfolioweb/Data/exp.dart';
 import 'package:portfolioweb/Data/projects.dart';
 import 'package:portfolioweb/Data/skill.dart';
+import 'package:portfolioweb/functions/copy_text.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
 import 'package:portfolioweb/functions/navigate.dart';
+import 'package:portfolioweb/functions/notifySnackBar.dart';
 import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:portfolioweb/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:timeline_tile/timeline_tile.dart';
@@ -127,6 +129,7 @@ class _desktopState extends State<desktop> {
                         child: GestureDetector(
                           onTap: () {
                             downloadResume(rurl);
+                            notifySnackBar(context);
                           },
                           child: Container(
                             decoration: const BoxDecoration(
