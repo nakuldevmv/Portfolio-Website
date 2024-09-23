@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolioweb/Data/projects.dart';
+import 'package:portfolioweb/functions/Code_Demo_button.dart';
 import 'package:portfolioweb/functions/launch_url.dart';
+import 'package:portfolioweb/functions/notifySnackBar.dart';
 import 'package:portfolioweb/styles/styles.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -102,7 +104,7 @@ class _myProjectState extends State<myProject> {
                                       children: [
                                         GestureDetector(
                                           onTap: () {
-                                            urlLaunch(projects[index].githubLink);
+                                            codeButton(context, projects[index]);
                                           },
                                           child: Container(
                                             decoration: const BoxDecoration(
@@ -134,7 +136,7 @@ class _myProjectState extends State<myProject> {
                                         ),
                                         GestureDetector(
                                           onTap: () {
-                                            urlLaunch(projects[index].demoVideoLink);
+                                            demoButton(context, projects[index]);
                                           },
                                           child: Container(
                                             decoration: const BoxDecoration(
@@ -362,7 +364,7 @@ class _myProjectState extends State<myProject> {
                                       children: [
                                         GestureDetector(
                                           onTap: () {
-                                            urlLaunch(projects[index].githubLink);
+                                            codeButton(context, projects[index]);
                                           },
                                           child: Container(
                                             decoration: const BoxDecoration(
@@ -394,7 +396,7 @@ class _myProjectState extends State<myProject> {
                                         ),
                                         GestureDetector(
                                           onTap: () {
-                                            urlLaunch(projects[index].demoVideoLink);
+                                            demoButton(context, projects[index]);
                                           },
                                           child: Container(
                                             decoration: const BoxDecoration(

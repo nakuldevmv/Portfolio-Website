@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,30 +67,33 @@ class _desktopState extends State<desktop> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 const Icon(Icons.lightbulb),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "Innovating the ",
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                      ),
-                                      TextSpan(
-                                        text: "Future, ",
-                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
-                                      ),
-                                      TextSpan(
-                                        text: "\nOne Line of ",
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                      ),
-                                      TextSpan(
-                                        text: "Code",
-                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
-                                      ),
-                                      TextSpan(
-                                        text: " at a Time",
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                      ),
-                                    ],
+                                FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: RichText(
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "Innovating the ",
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                        ),
+                                        TextSpan(
+                                          text: "\nFuture, ",
+                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                        ),
+                                        TextSpan(
+                                          text: "One \nLine of ",
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                        ),
+                                        TextSpan(
+                                          text: "Code",
+                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                        ),
+                                        TextSpan(
+                                          text: "\nat a Time",
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -113,7 +117,10 @@ class _desktopState extends State<desktop> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Icon(Icons.accessibility_new_outlined),
-                              Text(
+                              AutoSizeText(
+                                minFontSize: 10,
+                                maxFontSize: 15,
+                                maxLines: 10,
                                 style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                                 "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development.",
                               ),
@@ -129,7 +136,7 @@ class _desktopState extends State<desktop> {
                         child: GestureDetector(
                           onTap: () {
                             downloadResume(rurl);
-                            notifySnackBar(context);
+                            notifySnackBar(context, "My Resume Will Be Downloaded Shortly");
                           },
                           child: Container(
                             decoration: const BoxDecoration(
@@ -146,18 +153,21 @@ class _desktopState extends State<desktop> {
                                 const Icon(Icons.download_rounded, color: Colors.black),
                                 Row(
                                   children: [
-                                    RichText(
-                                      text: TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: "My ",
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingB, color: Colors.black),
-                                          ),
-                                          TextSpan(
-                                            text: "Resume",
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
-                                          ),
-                                        ],
+                                    FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      child: RichText(
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: "My ",
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingB, color: Colors.black),
+                                            ),
+                                            TextSpan(
+                                              text: "Resume",
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -185,11 +195,14 @@ class _desktopState extends State<desktop> {
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
                           child: Center(
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(text: "Nakul", style: GoogleFonts.ibmPlexMono(textStyle: textStyles.Name1)),
-                              TextSpan(text: "</Dev>", style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Name2)),
-                            ])),
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(text: "Nakul", style: GoogleFonts.ibmPlexMono(textStyle: textStyles.Name1)),
+                                TextSpan(text: "</Dev>", style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Name2)),
+                              ])),
+                            ),
                           ),
                         ),
                       ),

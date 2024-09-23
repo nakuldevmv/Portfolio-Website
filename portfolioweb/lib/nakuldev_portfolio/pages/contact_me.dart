@@ -1,13 +1,23 @@
+import 'dart:async';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolioweb/functions/copy_text.dart';
 import 'package:portfolioweb/functions/launch_url.dart';
+import 'package:portfolioweb/functions/mailing_fun.dart';
 import 'package:portfolioweb/styles/styles.dart';
 
-class ContactMe extends StatelessWidget {
+class ContactMe extends StatefulWidget {
   const ContactMe({super.key});
+
+  @override
+  State<ContactMe> createState() => _ContactMeState();
+}
+
+class _ContactMeState extends State<ContactMe> {
+  bool isTick = true;
 
   @override
   Widget build(BuildContext context) {
@@ -57,25 +67,29 @@ class ContactMe extends StatelessWidget {
                         Column(
                           children: [
                             //email
-                            GestureDetector(
-                              onTap: () {
-                                copyTextToClipboard(context, 'nakuldev1561@gmail.com');
-                              },
-                              child: Container(
-                                  decoration: const BoxDecoration(
-                                    color: ContactMe_containerStyle.color,
-                                    borderRadius: ContactMe_containerStyle.borderRadius,
-                                  ),
-                                  padding: ContactMe_containerStyle.padding,
-                                  margin: ContactMe_containerStyle.margin,
-                                  width: deviceWidth * ContactMe_containerStyle.width_mail_Linkedin,
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.mail_rounded),
-                                      SizedBox(
-                                        width: deviceWidth * 0.005,
-                                      ),
-                                      Expanded(
+                            Container(
+                                decoration: const BoxDecoration(
+                                  color: ContactMe_containerStyle.color,
+                                  borderRadius: ContactMe_containerStyle.borderRadius,
+                                ),
+                                padding: ContactMe_containerStyle.padding,
+                                margin: ContactMe_containerStyle.margin,
+                                width: deviceWidth * ContactMe_containerStyle.width_mail_Linkedin,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    const Icon(Icons.mail_rounded),
+                                    SizedBox(
+                                      width: deviceWidth * 0.005,
+                                    ),
+                                    GestureDetector(
+                                      onHorizontalDragUpdate: (details) {
+                                        copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                      },
+                                      onTap: () {
+                                        openEmail();
+                                      },
+                                      child: Expanded(
                                         child: AutoSizeText(
                                           'nakuldev1561@gmail.com',
                                           minFontSize: 10,
@@ -85,10 +99,31 @@ class ContactMe extends StatelessWidget {
                                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
                                           // selectable: true,
                                         ),
-                                      )
-                                    ],
-                                  )),
-                            ),
+                                      ),
+                                    ),
+                                    const Spacer(),
+                                    InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          isTick = !isTick;
+                                        });
+                                        copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                        Timer(const Duration(seconds: 2, milliseconds: 500), () {
+                                          setState(() {
+                                            isTick = !isTick;
+                                          });
+                                        });
+                                      },
+                                      child: AnimatedCrossFade(
+                                        firstChild: const Icon(Icons.copy),
+                                        secondChild: const Icon(Icons.check),
+                                        crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+                                        duration: const Duration(milliseconds: 150),
+                                      ),
+                                    )
+                                  ],
+                                )),
+
                             //linkedin
                             GestureDetector(
                               onTap: () {

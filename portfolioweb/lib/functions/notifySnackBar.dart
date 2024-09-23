@@ -4,13 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolioweb/styles/styles.dart';
 
-void notifySnackBar(BuildContext context) {
+void notifySnackBar(BuildContext context, String) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
         backgroundColor: const Color.fromARGB(210, 37, 37, 37),
         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         content: AutoSizeText(
-          'My Resume Will Be Downloaded Shortly!',
+          String,
           minFontSize: 10,
           maxFontSize: 15,
           maxLines: 1,
