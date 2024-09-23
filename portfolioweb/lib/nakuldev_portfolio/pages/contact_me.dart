@@ -115,6 +115,9 @@ class _ContactMeState extends State<ContactMe> {
                                         });
                                       },
                                       child: Icon(isTick ? Icons.copy : Icons.check),
+                                      //TODO
+                                      //issue might be with setstate, inkwell, animatedCrossFade , spacer,
+                                      //
                                       // child: AnimatedCrossFade(
                                       //   firstChild: const Icon(Icons.copy),
                                       //   secondChild: const Icon(Icons.check),
