@@ -114,12 +114,13 @@ class _ContactMeState extends State<ContactMe> {
                                           });
                                         });
                                       },
-                                      child: AnimatedCrossFade(
-                                        firstChild: const Icon(Icons.copy),
-                                        secondChild: const Icon(Icons.check),
-                                        crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                        duration: const Duration(milliseconds: 150),
-                                      ),
+                                      child: Icon(isTick ? Icons.copy : Icons.check),
+                                      // child: AnimatedCrossFade(
+                                      //   firstChild: const Icon(Icons.copy),
+                                      //   secondChild: const Icon(Icons.check),
+                                      //   crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+                                      //   duration: const Duration(milliseconds: 150),
+                                      // ),
                                     )
                                   ],
                                 )),
