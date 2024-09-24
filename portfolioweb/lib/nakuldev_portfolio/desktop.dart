@@ -66,7 +66,10 @@ class _desktopState extends State<desktop> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                const Icon(Icons.lightbulb),
+                                Icon(
+                                  Icons.lightbulb,
+                                  size: deviceWidth * 0.014,
+                                ),
                                 FittedBox(
                                   fit: BoxFit.scaleDown,
                                   child: RichText(
@@ -77,11 +80,11 @@ class _desktopState extends State<desktop> {
                                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                         ),
                                         TextSpan(
-                                          text: "\nFuture, ",
+                                          text: "\nFuture",
                                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
                                         ),
                                         TextSpan(
-                                          text: "One \nLine of ",
+                                          text: ", One \nLine of ",
                                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                         ),
                                         TextSpan(
@@ -116,7 +119,10 @@ class _desktopState extends State<desktop> {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Icon(Icons.accessibility_new_outlined),
+                              Icon(
+                                Icons.accessibility_new_outlined,
+                                size: deviceWidth * 0.014,
+                              ),
                               AutoSizeText(
                                 minFontSize: 10,
                                 maxFontSize: 15,
@@ -150,13 +156,19 @@ class _desktopState extends State<desktop> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                const Icon(Icons.download_rounded, color: Colors.black),
+                                Icon(
+                                  Icons.download_rounded,
+                                  color: Colors.black,
+                                  size: deviceWidth * 0.014,
+                                ),
                                 Row(
                                   children: [
-                                    FittedBox(
-                                      fit: BoxFit.scaleDown,
-                                      child: RichText(
-                                        text: TextSpan(
+                                    Expanded(
+                                      child: AutoSizeText.rich(
+                                        maxFontSize: 23,
+                                        minFontSize: 5,
+                                        maxLines: 1,
+                                        TextSpan(
                                           children: [
                                             TextSpan(
                                               text: "My ",
@@ -248,27 +260,40 @@ class _desktopState extends State<desktop> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "Have some\nQuestions?",
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        "Have some\nQuestions?",
+                                        maxLines: 3,
+                                        maxFontSize: 15,
+                                        minFontSize: 10,
+                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                      ),
                                     ),
-                                    const Icon(Icons.arrow_outward_rounded),
+                                    Icon(
+                                      Icons.arrow_outward_rounded,
+                                      size: deviceWidth * 0.014,
+                                    ),
                                   ],
                                 ),
                                 Row(
                                   children: [
-                                    RichText(
-                                      text: TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: 'Contact ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                          ),
-                                          TextSpan(
-                                            text: 'Me',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                          )
-                                        ],
+                                    Expanded(
+                                      child: AutoSizeText.rich(
+                                        maxFontSize: 23,
+                                        minFontSize: 5,
+                                        maxLines: 1,
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'Contact ',
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            ),
+                                            TextSpan(
+                                              text: 'Me',
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -311,10 +336,12 @@ class _desktopState extends State<desktop> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(bottom: 12),
-                                      child: RichText(
-                                        text: TextSpan(
+                                    Expanded(
+                                      child: AutoSizeText.rich(
+                                        maxFontSize: 23,
+                                        minFontSize: 5,
+                                        maxLines: 1,
+                                        TextSpan(
                                           children: [
                                             TextSpan(
                                               text: 'My ',
@@ -328,10 +355,19 @@ class _desktopState extends State<desktop> {
                                         ),
                                       ),
                                     ),
-                                    const Icon(Icons.arrow_outward_rounded)
+                                    Icon(
+                                      Icons.arrow_outward_rounded,
+                                      size: deviceWidth * 0.014,
+                                    )
                                   ],
                                 ),
                               ),
+
+                              ///padding box
+                              SizedBox(
+                                height: deviceHeight * 0.015,
+                              ),
+                              ////
                               Expanded(
                                   child: ListView.builder(
                                       itemCount: projects.length,
@@ -354,15 +390,21 @@ class _desktopState extends State<desktop> {
                                                   children: [
                                                     Padding(
                                                       padding: const EdgeInsets.only(right: 8.0),
-                                                      child: Icon(projects[index].icon),
+                                                      child: Icon(
+                                                        projects[index].icon,
+                                                        size: deviceWidth * 0.014,
+                                                      ),
                                                     ),
                                                     SizedBox(
                                                       width: deviceWidth * 0.115,
-                                                      child: Text(style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
+                                                      child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
                                                     ),
                                                   ],
                                                 ),
-                                                const Icon(Icons.arrow_forward_ios_rounded)
+                                                Icon(
+                                                  Icons.arrow_forward_ios_rounded,
+                                                  size: deviceWidth * 0.014,
+                                                )
                                               ],
                                             ),
                                           ),
@@ -393,10 +435,12 @@ class _desktopState extends State<desktop> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 12),
-                                    child: RichText(
-                                      text: TextSpan(
+                                  Expanded(
+                                    child: AutoSizeText.rich(
+                                      maxFontSize: 23,
+                                      minFontSize: 5,
+                                      maxLines: 1,
+                                      TextSpan(
                                         children: [
                                           TextSpan(
                                             text: 'Skilled',
@@ -410,9 +454,18 @@ class _desktopState extends State<desktop> {
                                       ),
                                     ),
                                   ),
-                                  const Icon(Icons.lens_blur_rounded)
+                                  Icon(
+                                    Icons.lens_blur_rounded,
+                                    size: deviceWidth * 0.014,
+                                  )
                                 ],
                               ),
+
+                              ///padding box
+                              SizedBox(
+                                height: deviceHeight * 0.015,
+                              ),
+                              ////
                               Expanded(
                                 flex: 2,
                                 child: GridView.builder(
@@ -468,10 +521,12 @@ class _desktopState extends State<desktop> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 12),
-                                    child: RichText(
-                                      text: TextSpan(
+                                  Expanded(
+                                    child: AutoSizeText.rich(
+                                      maxFontSize: 23,
+                                      minFontSize: 5,
+                                      maxLines: 1,
+                                      TextSpan(
                                         children: [
                                           TextSpan(
                                             text: 'My ',
@@ -485,9 +540,18 @@ class _desktopState extends State<desktop> {
                                       ),
                                     ),
                                   ),
-                                  const Icon(Icons.work_history_rounded)
+                                  Icon(
+                                    Icons.work_history_rounded,
+                                    size: deviceWidth * 0.014,
+                                  )
                                 ],
                               ),
+
+                              ///padding box
+                              SizedBox(
+                                height: deviceHeight * 0.015,
+                              ),
+                              ////
                               Expanded(
                                 child: ListView.builder(
                                   itemCount: Experiences.length,
@@ -520,39 +584,51 @@ class _desktopState extends State<desktop> {
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                Experiences[index].role,
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                              FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Text(
+                                                  Experiences[index].role,
+                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                                ),
+                                              ),
+                                              FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Row(
+                                                  children: [
+                                                    Text(
+                                                      Experiences[index].startTime,
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                    Text(
+                                                      ' - ',
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                    Text(
+                                                      Experiences[index].endTime,
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                    Text(
+                                                      ' • ',
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                    Text(
+                                                      Experiences[index].duration,
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    Experiences[index].startTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                  Text(
-                                                    ' - ',
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                  Text(
-                                                    Experiences[index].endTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                  Text(
-                                                    ' • ',
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                  Text(
-                                                    Experiences[index].duration,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    Experiences[index].companyName,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                  SizedBox(
+                                                    width: deviceWidth * 0.1,
+                                                    child: FittedBox(
+                                                      fit: BoxFit.scaleDown,
+                                                      child: Text(
+                                                        Experiences[index].companyName,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                      ),
+                                                    ),
                                                   ),
                                                 ],
                                               )
@@ -587,10 +663,12 @@ class _desktopState extends State<desktop> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 12),
-                                    child: RichText(
-                                      text: TextSpan(
+                                  Expanded(
+                                    child: AutoSizeText.rich(
+                                      maxFontSize: 23,
+                                      minFontSize: 5,
+                                      maxLines: 1,
+                                      TextSpan(
                                         children: [
                                           TextSpan(
                                             text: 'My ',
@@ -604,9 +682,18 @@ class _desktopState extends State<desktop> {
                                       ),
                                     ),
                                   ),
-                                  const Icon(Icons.school_rounded)
+                                  Icon(
+                                    Icons.school_rounded,
+                                    size: deviceWidth * 0.014,
+                                  )
                                 ],
                               ),
+
+                              ///padding box
+                              SizedBox(
+                                height: deviceHeight * 0.015,
+                              ),
+                              ////
                               Expanded(
                                 child: ListView.builder(
                                   itemCount: educations.length,
@@ -640,33 +727,45 @@ class _desktopState extends State<desktop> {
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                educations[index].institutionName,
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                              FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Text(
+                                                  educations[index].institutionName,
+                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                                ),
                                               ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    educations[index].startTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                  const Text(" - "),
-                                                  Text(
-                                                    educations[index].endTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                  ),
-                                                ],
+                                              FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Row(
+                                                  children: [
+                                                    Text(
+                                                      educations[index].startTime,
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                    const Text(" - "),
+                                                    Text(
+                                                      educations[index].endTime,
+                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                               educations[index].department != ''
-                                                  ? Text(
-                                                      educations[index].department,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                  ? FittedBox(
+                                                      fit: BoxFit.scaleDown,
+                                                      child: Text(
+                                                        educations[index].department,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                      ),
                                                     )
                                                   : const Offstage(),
                                               educations[index].grade != ''
-                                                  ? Text(
-                                                      educations[index].grade,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                  ? FittedBox(
+                                                      fit: BoxFit.scaleDown,
+                                                      child: Text(
+                                                        educations[index].grade,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                      ),
                                                     )
                                                   : const Offstage(),
                                             ],

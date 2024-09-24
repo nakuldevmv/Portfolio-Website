@@ -48,20 +48,6 @@ class _ContactMeState extends State<ContactMe> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // RichText(
-                    //   text: TextSpan(
-                    //     children: [
-                    //       TextSpan(
-                    //         text: 'Contact ',
-                    //         style: GoogleFonts.ibmPlexMono(textStyle: textStyles.B),
-                    //       ),
-                    //       TextSpan(
-                    //         text: 'Me',
-                    //         style: GoogleFonts.jetBrainsMono(textStyle: textStyles.I),
-                    //       )
-                    //     ],
-                    //   ),
-                    // ),
                     Row(
                       children: [
                         Column(
@@ -89,41 +75,51 @@ class _ContactMeState extends State<ContactMe> {
                                       onTap: () {
                                         openEmail();
                                       },
-                                      child: Expanded(
-                                        child: AutoSizeText(
-                                          'nakuldev1561@gmail.com',
-                                          minFontSize: 10,
-                                          maxFontSize: 15,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
-                                          // selectable: true,
+                                      child: SizedBox(
+                                        width: deviceWidth * 0.13,
+                                        child: FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Text(
+                                            "nakuldev1561@gmail.com",
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                          ),
                                         ),
                                       ),
+                                      // child: AutoSizeText(
+                                      //   'nakuldev1561@gmail.com',
+                                      //   minFontSize: 5,
+                                      //   maxFontSize: 15,
+                                      //   maxLines: 1,
+                                      //   overflow: TextOverflow.ellipsis,
+                                      //   style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                      //   // selectable: true,
+                                      // ),
                                     ),
                                     const Spacer(),
-                                    InkWell(
+                                    GestureDetector(
                                       onTap: () {
                                         setState(() {
                                           isTick = !isTick;
                                         });
+                                        //
                                         copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                        //
                                         Timer(const Duration(seconds: 2, milliseconds: 500), () {
                                           setState(() {
                                             isTick = !isTick;
                                           });
                                         });
                                       },
-                                      child: Icon(isTick ? Icons.copy : Icons.check),
+                                      // child: Icon(isTick ? Icons.copy : Icons.check),
                                       //TODO
                                       //issue might be with setstate, inkwell, animatedCrossFade , spacer,
                                       //
-                                      // child: AnimatedCrossFade(
-                                      //   firstChild: const Icon(Icons.copy),
-                                      //   secondChild: const Icon(Icons.check),
-                                      //   crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                      //   duration: const Duration(milliseconds: 150),
-                                      // ),
+                                      child: AnimatedCrossFade(
+                                        firstChild: const Icon(Icons.copy),
+                                        secondChild: const Icon(Icons.check),
+                                        crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+                                        duration: const Duration(milliseconds: 150),
+                                      ),
                                     )
                                   ],
                                 )),
@@ -300,61 +296,6 @@ class _ContactMeState extends State<ContactMe> {
                                   ),
                                 ),
                               ),
-                              // Positioned(
-                              //   bottom: 85,
-                              //   left: 153,
-                              //   child: Container(
-                              //     decoration: BoxDecoration(
-                              //       borderRadius: BorderRadius.circular(100),
-                              //       gradient: const LinearGradient(
-                              //         colors: [
-                              //           Color.fromARGB(116, 71, 119, 230),
-                              //           Color.fromARGB(130, 141, 84, 233)
-                              //         ],
-                              //         stops: [
-                              //           0,
-                              //           1
-                              //         ],
-                              //         begin: Alignment.topLeft,
-                              //         end: Alignment.bottomRight,
-                              //       ),
-                              //     ),
-                              //     height: 120,
-                              //     width: 120,
-                              //   ),
-                              // ),
-                              // Positioned(
-                              //   bottom: 85,
-                              //   left: 153,
-                              //   child: Container(
-                              //     decoration: BoxDecoration(
-                              //       borderRadius: BorderRadius.circular(100),
-                              //       gradient: const LinearGradient(
-                              //         colors: [
-                              //           Color.fromARGB(239, 71, 119, 230),
-                              //           Color.fromARGB(239, 141, 84, 233)
-                              //         ],
-                              //         stops: [
-                              //           0,
-                              //           1
-                              //         ],
-                              //         begin: Alignment.topLeft,
-                              //         end: Alignment.bottomRight,
-                              //       ),
-                              //     ),
-                              //     height: 80,
-                              //     width: 80,
-                              //   ),
-                              // ),
-                              // Positioned(
-                              //   bottom: 70,
-                              //   left: 140,
-                              //   child: Image.asset(
-                              //     'assets/i.png',
-                              //     width: 100,
-                              //     height: 100,
-                              //   ),
-                              // ),
                             ],
                           ),
                         ),

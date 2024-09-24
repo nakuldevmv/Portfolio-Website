@@ -16,10 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(colorScheme: const ColorScheme.dark()),
-      debugShowCheckedModeBanner: false,
-      // home: const myProject(initialIndex: 1),
-      home: const ResponsiveLayout(desktopBody: desktop(), mobileBody: mobile(), tabletBody: tablet()),
+      theme: ThemeData(colorScheme: const ColorScheme.dark()), debugShowCheckedModeBanner: false,
+      home: const desktop(),
+      // home: const ResponsiveLayout(desktopBody: desktop(), mobileBody: mobile(), tabletBody: tablet()),
     );
   }
 }

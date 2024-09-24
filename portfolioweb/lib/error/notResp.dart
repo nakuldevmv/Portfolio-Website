@@ -11,7 +11,7 @@ class notResp extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.red, width: 1.0),
+            border: Border.all(color: const Color.fromARGB(255, 244, 54, 54), width: 1.0),
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: const Text(
