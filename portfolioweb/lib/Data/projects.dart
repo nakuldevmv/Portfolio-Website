@@ -40,7 +40,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
-    title: "Tic Tac Toe Game App",
+    title: "Tic Tac Toe Game",
     description: "A classic Tic Tac Toe game with simple design and interactive gameplay.",
     icon: Icons.gamepad_rounded,
     flutterSvg: "assets/svg/flutter.svg",

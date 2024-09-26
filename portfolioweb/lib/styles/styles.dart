@@ -9,7 +9,15 @@ class containerStyle {
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
   // static const double width = 0.2;
-
+  //mobile property
+  static const EdgeInsets margin_mobile = EdgeInsets.only(top: 10, left: 10, right: 5);
+  static const EdgeInsets padding_mobile = EdgeInsets.all(16);
+  static const double width_mobile = 0.455;
+  static const double height_mobile = 0.25;
+  static const double height_mobile_img = 0.32;
+  static const double height_mobile_skill = 0.25;
+  static const double height_mobile_project = 0.4;
+  static const double iconSize = 0.045;
   static const double height = 200;
 }
 

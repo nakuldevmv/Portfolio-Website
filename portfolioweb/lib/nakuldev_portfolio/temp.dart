@@ -6,6 +6,7 @@ import 'package:portfolioweb/Data/education.dart';
 import 'package:portfolioweb/Data/exp.dart';
 import 'package:portfolioweb/Data/projects.dart';
 import 'package:portfolioweb/Data/skill.dart';
+import 'package:portfolioweb/functions/copy_text.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
 import 'package:portfolioweb/functions/navigate.dart';
 import 'package:portfolioweb/functions/notifySnackBar.dart';
@@ -58,9 +59,9 @@ class _desktopState extends State<desktop> {
                               color: containerStyle.color,
                               borderRadius: containerStyle.borderRadius,
                             ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
+                            padding: containerStyle.padding_mobile,
+                            margin: containerStyle.margin_mobile,
+                            width: deviceWidth * containerStyle.width_mobile,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -111,9 +112,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -148,9 +149,9 @@ class _desktopState extends State<desktop> {
                               color: Color.fromARGB(255, 183, 183, 183),
                               borderRadius: containerStyle.borderRadius,
                             ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
+                            padding: containerStyle.padding_mobile,
+                            margin: containerStyle.margin_mobile,
+                            width: deviceWidth * containerStyle.width_mobile,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -202,9 +203,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Center(
                             child: FittedBox(
                               fit: BoxFit.scaleDown,
@@ -231,8 +232,8 @@ class _desktopState extends State<desktop> {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                         ),
                       ),
                       //
@@ -249,9 +250,9 @@ class _desktopState extends State<desktop> {
                               color: containerStyle.color,
                               borderRadius: containerStyle.borderRadius,
                             ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
+                            padding: containerStyle.padding_mobile,
+                            margin: containerStyle.margin_mobile,
+                            width: deviceWidth * containerStyle.width_mobile,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -316,9 +317,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -368,47 +369,49 @@ class _desktopState extends State<desktop> {
                               ),
                               ////
                               Expanded(
-                                  child: ListView.builder(
-                                      itemCount: projects.length,
-                                      itemBuilder: (context, index) {
-                                        return GestureDetector(
-                                          onTap: () {
-                                            navigateTo(context, myProject(initialIndex: index));
-                                          },
-                                          child: Container(
-                                            decoration: const BoxDecoration(
-                                              color: ProjectcontainerStyle.color,
-                                              borderRadius: ProjectcontainerStyle.borderRadius,
-                                            ),
-                                            padding: ProjectcontainerStyle.padding,
-                                            margin: ProjectcontainerStyle.margin,
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                child: ListView.builder(
+                                  itemCount: projects.length,
+                                  itemBuilder: (context, index) {
+                                    return GestureDetector(
+                                      onTap: () {
+                                        navigateTo(context, myProject(initialIndex: index));
+                                      },
+                                      child: Container(
+                                        decoration: const BoxDecoration(
+                                          color: ProjectcontainerStyle.color,
+                                          borderRadius: ProjectcontainerStyle.borderRadius,
+                                        ),
+                                        padding: ProjectcontainerStyle.padding,
+                                        margin: ProjectcontainerStyle.margin,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
                                               children: [
-                                                Row(
-                                                  children: [
-                                                    Padding(
-                                                      padding: const EdgeInsets.only(right: 8.0),
-                                                      child: Icon(
-                                                        projects[index].icon,
-                                                        size: deviceWidth * 0.014,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      width: deviceWidth * 0.115,
-                                                      child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
-                                                    ),
-                                                  ],
+                                                Padding(
+                                                  padding: const EdgeInsets.only(right: 8.0),
+                                                  child: Icon(
+                                                    projects[index].icon,
+                                                    size: deviceWidth * 0.014,
+                                                  ),
                                                 ),
-                                                Icon(
-                                                  Icons.arrow_forward_ios_rounded,
-                                                  size: deviceWidth * 0.014,
-                                                )
+                                                SizedBox(
+                                                  width: deviceWidth * 0.115,
+                                                  child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
+                                                ),
                                               ],
                                             ),
-                                          ),
-                                        );
-                                      }))
+                                            Icon(
+                                              Icons.arrow_forward_ios_rounded,
+                                              size: deviceWidth * 0.014,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -423,9 +426,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -511,9 +514,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Column(
                             children: [
                               Row(
@@ -653,9 +656,9 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
                           child: Column(
                             children: [
                               Row(
