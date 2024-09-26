@@ -11,9 +11,12 @@ class containerStyle {
   // static const double width = 0.2;
   //mobile property
   static const EdgeInsets margin_mobile = EdgeInsets.only(top: 10, left: 10, right: 5);
-  static const EdgeInsets padding_mobile = EdgeInsets.all(16);
+  static const EdgeInsets padding_mobile = EdgeInsets.all(12);
   static const double width_mobile = 0.455;
   static const double height_mobile = 0.25;
+  static const double height_mobile_about = 0.235;
+  static const double height_mobile_exp = 0.182;
+
   static const double height_mobile_img = 0.32;
   static const double height_mobile_skill = 0.25;
   static const double height_mobile_project = 0.4;
@@ -68,6 +71,14 @@ class EducationcontainerStyle {
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
   static const EdgeInsets padding = EdgeInsets.all(10);
   static const Color color = Color.fromARGB(255, 26, 26, 26);
+
+  static const EdgeInsets margin_mobile = EdgeInsets.only(bottom: 10, left: 10);
+  // static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
+  static const EdgeInsets padding_mobile = EdgeInsets.all(10);
+  static const double height_card_edu = 0.125;
+  static const double height_card_exp = 0.09;
+
+  // static const Color color = Color.fromARGB(255, 26, 26, 26);
 }
 
 class textStyles {
@@ -110,6 +121,14 @@ class textStyles {
     fontWeight: FontWeight.normal,
     color: Color.fromARGB(255, 255, 255, 255),
     fontStyle: FontStyle.italic,
+    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+  );
+
+  static const TextStyle P1_mobile = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: Color.fromARGB(255, 255, 255, 255),
+    fontStyle: FontStyle.normal,
     // backgroundColor: Color.fromARGB(255, 136, 136, 136),
   );
   static const TextStyle P1 = TextStyle(

@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolioweb/Data/education.dart';
@@ -9,6 +10,8 @@ import 'package:portfolioweb/Data/skill.dart';
 import 'package:portfolioweb/error/notResp.dart';
 import 'package:portfolioweb/functions/downloadResume.dart';
 import 'package:portfolioweb/functions/navigate.dart';
+import 'package:portfolioweb/functions/notifySnackBar.dart';
+import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:portfolioweb/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
@@ -109,7 +112,7 @@ class _mobileState extends State<mobile> {
                         padding: containerStyle.padding_mobile,
                         margin: containerStyle.margin_mobile,
                         width: deviceWidth * containerStyle.width_mobile,
-                        // height: deviceHeight * containerStyle.height_mobile,
+                        height: deviceHeight * containerStyle.height_mobile_about,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,13 +121,7 @@ class _mobileState extends State<mobile> {
                               Icons.accessibility_new_outlined,
                               size: deviceWidth * containerStyle.iconSize,
                             ),
-                            AutoSizeText(
-                              minFontSize: 10,
-                              maxFontSize: 15,
-                              maxLines: 10,
-                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                              "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development.",
-                            ),
+                            AutoSizeText(minFontSize: 1, maxFontSize: 11, maxLines: 10, style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1_mobile), "Innovative computer engineer solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning in software development."),
                           ],
                         ),
                       ),
@@ -206,7 +203,7 @@ class _mobileState extends State<mobile> {
                                 children: [
                                   Expanded(
                                     child: FittedBox(
-                                      fit: BoxFit.scaleDown,
+                                      fit: BoxFit.contain,
                                       child: RichText(
                                         text: TextSpan(
                                           children: [
@@ -223,10 +220,10 @@ class _mobileState extends State<mobile> {
                                       ),
                                     ),
                                   ),
-                                  Icon(
-                                    Icons.arrow_outward_rounded,
-                                    size: deviceWidth * containerStyle.iconSize,
-                                  )
+                                  // Icon(
+                                  //   Icons.arrow_outward_rounded,
+                                  //   size: deviceWidth * containerStyle.iconSize,
+                                  // )
                                 ],
                               ),
                             ),
@@ -296,6 +293,7 @@ class _mobileState extends State<mobile> {
                         padding: containerStyle.padding_mobile,
                         margin: containerStyle.margin_mobile,
                         width: deviceWidth * containerStyle.width_mobile,
+                        height: deviceHeight * containerStyle.height_mobile_exp,
                         child: Column(
                           children: [
                             Row(
@@ -303,38 +301,41 @@ class _mobileState extends State<mobile> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  child: AutoSizeText.rich(
-                                    maxFontSize: 23,
-                                    minFontSize: 5,
-                                    maxLines: 1,
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'My ',
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                        ),
-                                        TextSpan(
-                                          text: 'Experience',
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                        )
-                                      ],
+                                  child: FittedBox(
+                                    fit: BoxFit.contain,
+                                    child: RichText(
+                                      // maxFontSize: 23,
+                                      // minFontSize: 5,
+                                      // maxLines: 1,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'My ',
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                          ),
+                                          TextSpan(
+                                            text: 'Experience',
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                                Icon(
-                                  Icons.work_history_rounded,
-                                  size: deviceWidth * containerStyle.iconSize,
-                                )
+                                // Icon(
+                                //   Icons.work_history_rounded,
+                                //   size: deviceWidth * containerStyle.iconSize,
+                                // )
                               ],
                             ),
 
                             ///padding box
-                            // SizedBox(
-                            //   height: deviceHeight * 0.015,
-                            // ),
-                            ////
                             SizedBox(
-                              height: 200,
+                              height: deviceHeight * 0.015,
+                            ),
+                            ////
+                            Expanded(
+                              // height: deviceHeight * 0.1,
                               child: ListView.builder(
                                 itemCount: Experiences.length,
                                 itemBuilder: (context, index) {
@@ -356,6 +357,7 @@ class _mobileState extends State<mobile> {
                                     alignment: TimelineAlign.start,
                                     endChild: Expanded(
                                       child: Container(
+                                        height: deviceHeight * EducationcontainerStyle.height_card_exp,
                                         padding: EducationcontainerStyle.padding,
                                         margin: EducationcontainerStyle.margin,
                                         decoration: const BoxDecoration(
@@ -403,7 +405,7 @@ class _mobileState extends State<mobile> {
                                             Row(
                                               children: [
                                                 SizedBox(
-                                                  width: deviceWidth * 0.1,
+                                                  width: deviceWidth * 0.25,
                                                   child: FittedBox(
                                                     fit: BoxFit.scaleDown,
                                                     child: Text(
@@ -425,6 +427,68 @@ class _mobileState extends State<mobile> {
                           ],
                         ),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          navigateTo(context, const ContactMe());
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: containerStyle.color,
+                            borderRadius: containerStyle.borderRadius,
+                          ),
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
+                          height: deviceHeight * (containerStyle.height_mobile_exp) * 0.82,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Expanded(
+                                    child: AutoSizeText(
+                                      "Have some\nQuestions?",
+                                      maxLines: 2,
+                                      maxFontSize: 15,
+                                      minFontSize: 10,
+                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.arrow_outward_rounded,
+                                    size: deviceWidth * containerStyle.iconSize,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: AutoSizeText.rich(
+                                      maxFontSize: 23,
+                                      minFontSize: 5,
+                                      maxLines: 1,
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'Contact ',
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                          ),
+                                          TextSpan(
+                                            text: 'Me',
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   Column(
@@ -443,12 +507,12 @@ class _mobileState extends State<mobile> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              // mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
                                   child: FittedBox(
-                                    fit: BoxFit.scaleDown,
+                                    fit: BoxFit.contain,
                                     child: RichText(
                                       text: TextSpan(
                                         children: [
@@ -465,10 +529,10 @@ class _mobileState extends State<mobile> {
                                     ),
                                   ),
                                 ),
-                                Icon(
-                                  Icons.lens_blur_rounded,
-                                  size: deviceWidth * containerStyle.iconSize,
-                                )
+                                // Icon(
+                                //   Icons.lens_blur_rounded,
+                                //   size: deviceWidth * containerStyle.iconSize,
+                                // )
                               ],
                             ),
 
@@ -548,6 +612,7 @@ class _mobileState extends State<mobile> {
                         padding: containerStyle.padding_mobile,
                         margin: containerStyle.margin_mobile,
                         width: deviceWidth * containerStyle.width_mobile,
+                        height: deviceHeight * containerStyle.height_mobile_project,
                         child: Column(
                           children: [
                             Row(
@@ -555,38 +620,41 @@ class _mobileState extends State<mobile> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  child: AutoSizeText.rich(
-                                    maxFontSize: 23,
-                                    minFontSize: 5,
-                                    maxLines: 1,
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'My ',
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                        ),
-                                        TextSpan(
-                                          text: 'Education',
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                        )
-                                      ],
+                                  child: FittedBox(
+                                    fit: BoxFit.contain,
+                                    child: RichText(
+                                      // maxFontSize: 23,
+                                      // minFontSize: 5,
+                                      // maxLines: 1,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'My ',
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                          ),
+                                          TextSpan(
+                                            text: 'Education',
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                                Icon(
-                                  Icons.school_rounded,
-                                  size: deviceWidth * containerStyle.iconSize,
-                                )
+                                // Icon(
+                                //   Icons.school_rounded,
+                                //   size: deviceWidth * containerStyle.iconSize,
+                                // )
                               ],
                             ),
 
                             ///padding box
-                            // SizedBox(
-                            //   height: deviceHeight * 0.015,
-                            // ),
-                            ////
                             SizedBox(
-                              height: 200,
+                              height: deviceHeight * 0.015,
+                            ),
+                            ////
+                            Expanded(
+                              // height: 200,
                               child: ListView.builder(
                                 itemCount: educations.length,
                                 itemBuilder: (context, index) {
@@ -609,6 +677,7 @@ class _mobileState extends State<mobile> {
                                     endChild: Expanded(
                                       flex: 5,
                                       child: Container(
+                                        height: deviceHeight * EducationcontainerStyle.height_card_edu,
                                         padding: EducationcontainerStyle.padding,
                                         margin: EducationcontainerStyle.margin,
                                         decoration: const BoxDecoration(
@@ -671,9 +740,61 @@ class _mobileState extends State<mobile> {
                           ],
                         ),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          downloadResume(rurl);
+                          notifySnackBar(context, "My Resume Will Be Downloaded Shortly");
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(255, 183, 183, 183),
+                            borderRadius: containerStyle.borderRadius,
+                          ),
+                          padding: containerStyle.padding_mobile,
+                          margin: containerStyle.margin_mobile,
+                          width: deviceWidth * containerStyle.width_mobile,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                Icons.download_rounded,
+                                color: Colors.black,
+                                size: deviceWidth * containerStyle.iconSize,
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: AutoSizeText.rich(
+                                      maxFontSize: 23,
+                                      minFontSize: 5,
+                                      maxLines: 1,
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: "My ",
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingB, color: Colors.black),
+                                          ),
+                                          TextSpan(
+                                            text: "Resume",
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
+              ),
+              SizedBox(
+                height: deviceHeight * 0.02,
               )
               //
             ],

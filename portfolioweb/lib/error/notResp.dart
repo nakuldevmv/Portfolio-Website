@@ -15,7 +15,8 @@ class notResp extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: const Text(
-            "Warning: This webpage is not optimized for mobile devices. Please view in full screen for a better experience.",
+            // "Warning: This webpage is not optimized for mobile devices. Please view in full screen for a better experience.",
+            "Note: This website is currently under development for responsiveness. For the best experience, please view on a mobile device or in full-screen mode on desktop.",
             style: TextStyle(
               fontSize: 16.0,
               color: Color.fromARGB(255, 255, 255, 255),
