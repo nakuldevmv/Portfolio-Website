@@ -18,7 +18,7 @@ List<Experience> Experiences = [
     role: 'Android Developer',
     companyName: 'Prodigy InfoTech',
     startTime: 'Aug 2024',
-    endTime: 'Present',
+    endTime: 'Sep 2024',
     workType: 'Remote',
     duration: '2 mos',
     start: true,
