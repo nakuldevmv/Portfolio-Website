@@ -58,8 +58,7 @@ class _mobileState extends State<mobile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      width: deviceWidth * 0.1,
+                    Expanded(
                       child: Image.asset(
                         'assets/profile.png',
                         fit: BoxFit.contain,
@@ -67,7 +66,7 @@ class _mobileState extends State<mobile> {
                       ),
                     ),
                     Expanded(
-                      // wrap the Column with Expanded
+                      flex: 2,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -98,7 +97,7 @@ class _mobileState extends State<mobile> {
                                     style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
                                   ),
                                   TextSpan(
-                                    text: " , One Line of ",
+                                    text: ",\nOne Line of ",
                                     style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                   ),
                                   TextSpan(
@@ -113,10 +112,13 @@ class _mobileState extends State<mobile> {
                               ),
                             ),
                           ),
+                          const SizedBox(
+                            height: 20,
+                          ),
                           //about
                           AutoSizeText(
-                            minFontSize: 1,
-                            maxFontSize: 9,
+                            minFontSize: 5,
+                            maxFontSize: 12,
                             maxLines: 10,
                             style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1_mobile),
                             "Innovative computer engineer solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning in software development.",
