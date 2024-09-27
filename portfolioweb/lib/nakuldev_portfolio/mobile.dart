@@ -30,7 +30,7 @@ class _mobileState extends State<mobile> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    const rurl = 'https://github.com/mobilemv/Resume/blob/main/resume.pdf';
+    const rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
 
     return Scaffold(
       body: Container(
