@@ -8,7 +8,7 @@ class mobile_containerStyle {
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 1;
-  static const double height = 0.3;
+  static const double height = 0.25;
   static const double iconSize = 0.045;
 }
 
