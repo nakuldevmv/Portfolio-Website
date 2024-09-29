@@ -200,21 +200,267 @@ class _mobileState extends State<mobile> {
                 ),
               ),
               //skilled in
-              AspectRatio(
-                aspectRatio: deviceHeight * (mobile_containerStyle.height * 3.4) / deviceWidth,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: mobile_containerStyle.color,
-                    borderRadius: mobile_containerStyle.borderRadius,
-                  ),
-                  padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
-                  margin: mobile_containerStyle.margin,
-                  width: deviceWidth * mobile_containerStyle.width,
-                  // height: deviceHeight * (mobile_containerStyle.height * .9),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+              Container(
+                decoration: const BoxDecoration(
+                  color: mobile_containerStyle.color,
+                  borderRadius: mobile_containerStyle.borderRadius,
+                ),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                margin: mobile_containerStyle.margin,
+                width: deviceWidth * mobile_containerStyle.width,
+                // height: deviceHeight * (mobile_containerStyle.height * .9),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: AutoSizeText.rich(
+                            maxFontSize: 23,
+                            minFontSize: 5,
+                            maxLines: 1,
+                            TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'Skilled',
+                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                ),
+                                TextSpan(
+                                  text: ' In',
+                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Icon(
+                          Icons.lens_blur_rounded,
+                          size: deviceWidth * mobile_containerStyle.iconSize,
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: deviceHeight * 0.015,
+                    ),
+
+                    //chnage
+
+                    SizedBox(
+                      height: 120,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[0],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[1],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[2],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[3],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[4],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[5],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[6],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[7],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[8],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[9],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[10],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: mobile_SVGContainer.color,
+                                width: deviceWidth * mobile_SVGContainer.width,
+                                //height: deviceWidth * mobile_SVGContainer.height,
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    skills[11],
+                                    // ignore: deprecated_member_use
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    // height: devi * mobile_SVGContainer.height,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          // Add more rows if skills.length > 6
+                          // ...
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //my projects
+              Container(
+                decoration: const BoxDecoration(
+                  color: mobile_containerStyle.color,
+                  borderRadius: mobile_containerStyle.borderRadius,
+                ),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                margin: mobile_containerStyle.margin,
+
+                height: 250,
+                width: deviceWidth * mobile_containerStyle.width,
+                // height: deviceHeight * (mobile_containerStyle.height * 1.2),
+                child: Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        navigateTo(
+                            context,
+                            const myProject(
+                              initialIndex: 0,
+                            ));
+                      },
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -226,130 +472,41 @@ class _mobileState extends State<mobile> {
                               TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: 'Skilled',
-                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                    text: 'My ',
+                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
                                   ),
                                   TextSpan(
-                                    text: ' In',
-                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                  )
+                                    text: 'Projects',
+                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                  ),
                                 ],
                               ),
                             ),
                           ),
                           Icon(
-                            Icons.lens_blur_rounded,
+                            Icons.arrow_outward_rounded,
                             size: deviceWidth * mobile_containerStyle.iconSize,
                           )
                         ],
                       ),
-                      SizedBox(
-                        height: deviceHeight * 0.015,
-                      ),
-                      Expanded(
-                        flex: 3,
-                        child: SingleChildScrollView(
-                          physics: const NeverScrollableScrollPhysics(),
-                          child: GridView.builder(
-                            shrinkWrap: true,
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 6,
-                              crossAxisSpacing: 3,
-                              mainAxisSpacing: 3,
-                            ),
-                            itemCount: skills.length,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                decoration: const BoxDecoration(
-                                  color: containerStyle.color,
-                                  borderRadius: containerStyle.borderRadius,
-                                ),
-                                child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[index],
-                                    // ignore: deprecated_member_use
-                                    color: textStyles.B.color,
-                                    width: deviceWidth * 0.045,
-                                    height: deviceHeight * 0.045,
-                                  ),
-                                ),
-                              );
+                    ),
+                    SizedBox(
+                      height: deviceHeight * 0.015,
+                    ),
+                    SizedBox(
+                      height: 165,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: projects.length,
+                        itemBuilder: (context, index) {
+                          return GestureDetector(
+                            onTap: () {
+                              navigateTo(context, myProject(initialIndex: index));
                             },
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              //my projects
-              AspectRatio(
-                aspectRatio: deviceHeight * (mobile_containerStyle.height * 2.85) / deviceWidth,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: mobile_containerStyle.color,
-                    borderRadius: mobile_containerStyle.borderRadius,
-                  ),
-                  padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
-                  margin: mobile_containerStyle.margin,
-                  width: deviceWidth * mobile_containerStyle.width,
-                  height: deviceHeight * (mobile_containerStyle.height * 1.03),
-                  child: Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          navigateTo(
-                              context,
-                              const myProject(
-                                initialIndex: 0,
-                              ));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: AutoSizeText.rich(
-                                maxFontSize: 23,
-                                minFontSize: 5,
-                                maxLines: 1,
-                                TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'My ',
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                    ),
-                                    TextSpan(
-                                      text: 'Projects',
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_outward_rounded,
-                              size: deviceWidth * mobile_containerStyle.iconSize,
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: deviceHeight * 0.015,
-                      ),
-                      AspectRatio(
-                        aspectRatio: deviceHeight * (mobile_containerStyle.height * 4.2) / deviceWidth,
-                        child: SizedBox(
-                          height: deviceHeight * mobile_ProjectContainer.height,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: projects.length,
-                            itemBuilder: (context, index) {
-                              return GestureDetector(
-                                onTap: () {
-                                  navigateTo(context, myProject(initialIndex: index));
-                                },
-                                child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
                                   decoration: const BoxDecoration(
                                     color: EducationcontainerStyle.color,
                                     borderRadius: mobile_ProjectContainer.borderRadius,
@@ -363,40 +520,46 @@ class _mobileState extends State<mobile> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Icon(Icons.arrow_right_rounded, size: deviceWidth * 0.08),
-                                      Column(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Icon(
-                                            projects[index].icon,
-                                            size: deviceWidth * 0.1,
-                                          ),
-                                          SizedBox(
-                                            height: deviceHeight * 0.01,
-                                          ),
-                                          SizedBox(
-                                            height: deviceHeight * 0.05,
-                                            child: AutoSizeText(
-                                              minFontSize: 1,
-                                              maxFontSize: 15,
-                                              maxLines: 2,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
-                                              // overflow: TextOverflow.ellipsis,
-                                              projects[index].title,
-                                            ),
-                                          ),
-                                        ],
+                                      Center(
+                                        child: Icon(
+                                          projects[index].icon,
+                                          size: deviceWidth * 0.1,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: deviceHeight * 0.015,
                                       ),
                                     ],
                                   ),
                                 ),
-                              );
-                            },
-                          ),
-                        ),
+                                SizedBox(
+                                  height: deviceHeight * 0.01,
+                                ),
+                                Container(
+                                  // decoration: const BoxDecoration(
+                                  //   color: EducationcontainerStyle.color,
+                                  //   borderRadius: mobile_ProjectContainer.borderRadius,
+                                  // ),
+                                  // height: deviceHeight * mobile_ProjectContainer.height,
+                                  width: deviceWidth * mobile_ProjectContainer.width,
+                                  // padding: mobile_ProjectContainer.padding,
+                                  margin: mobile_ProjectContainer.margin,
+                                  child: AutoSizeText(
+                                    minFontSize: 1,
+                                    maxFontSize: 15,
+                                    maxLines: 2,
+                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                    // overflow: TextOverflow.ellipsis,
+                                    projects[index].title,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               //My Edu

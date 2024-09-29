@@ -22,6 +22,13 @@ class mobile_ProjectContainer {
   static const double iconSize = 0.045;
 }
 
+class mobile_SVGContainer {
+  static const double size = 0.09;
+  static const Color color = Color.fromARGB(0, 18, 18, 18);
+  static const double width = size;
+  static const double height = size;
+}
+
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));

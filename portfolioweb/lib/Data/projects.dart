@@ -64,7 +64,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
-    title: "QR Code Scanner App",
+    title: "QR Code Scanner",
     description: "An app to scan and generate QR codes with user-friendly features. Successfully integrated real-time QR scanning capabilities.",
     icon: Icons.qr_code_scanner_rounded,
     flutterSvg: "assets/svg/flutter.svg",
