@@ -1,13 +1,13 @@
 import 'dart:async';
 
+import 'package:Nakul_Dev/functions/copy_text.dart';
+import 'package:Nakul_Dev/functions/launch_url.dart';
+import 'package:Nakul_Dev/functions/mailing_fun.dart';
+import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolioweb/functions/copy_text.dart';
-import 'package:portfolioweb/functions/launch_url.dart';
-import 'package:portfolioweb/functions/mailing_fun.dart';
-import 'package:portfolioweb/styles/styles.dart';
 
 class ContactMe extends StatefulWidget {
   const ContactMe({super.key});
@@ -35,10 +35,6 @@ class _ContactMeState extends State<ContactMe> {
           padding: const EdgeInsets.all(16),
           child: Center(
             child: Container(
-              // decoration: const BoxDecoration(
-              //   color: ContactMe_containerStyle.main_color,
-              //   borderRadius: ContactMe_containerStyle.borderRadius,
-              // ),
               padding: ContactMe_containerStyle.padding,
               margin: ContactMe_containerStyle.margin,
               width: deviceWidth * ContactMe_containerStyle.main_width,
@@ -85,15 +81,6 @@ class _ContactMeState extends State<ContactMe> {
                                           ),
                                         ),
                                       ),
-                                      // child: AutoSizeText(
-                                      //   'nakuldev1561@gmail.com',
-                                      //   minFontSize: 5,
-                                      //   maxFontSize: 15,
-                                      //   maxLines: 1,
-                                      //   overflow: TextOverflow.ellipsis,
-                                      //   style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
-                                      //   // selectable: true,
-                                      // ),
                                     ),
                                     const Spacer(),
                                     GestureDetector(
@@ -110,10 +97,6 @@ class _ContactMeState extends State<ContactMe> {
                                           });
                                         });
                                       },
-                                      // child: Icon(isTick ? Icons.copy : Icons.check),
-                                      //TODO
-                                      //issue might be with setstate, inkwell, animatedCrossFade , spacer,
-                                      //
                                       child: AnimatedCrossFade(
                                         firstChild: const Icon(Icons.copy),
                                         secondChild: const Icon(Icons.check),
@@ -155,7 +138,6 @@ class _ContactMeState extends State<ContactMe> {
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
-                                        // selectable: true,
                                       ),
                                     )
                                   ],
@@ -179,7 +161,6 @@ class _ContactMeState extends State<ContactMe> {
                                     width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
                                     child: SvgPicture.asset(
                                       "assets/svg/instagram.svg",
-                                      // ignore: deprecated_member_use
                                       color: textStyles.B.color,
                                     ),
                                   ),

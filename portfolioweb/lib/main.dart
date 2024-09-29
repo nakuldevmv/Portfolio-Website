@@ -1,12 +1,44 @@
+import 'package:Nakul_Dev/nakuldev_portfolio/toResponsiveLayout.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolioweb/nakuldev_portfolio/mobile.dart';
-import 'package:portfolioweb/nakuldev_portfolio/responsive_layout.dart';
-import 'package:portfolioweb/nakuldev_portfolio/tablet.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:async';
 
-import 'nakuldev_portfolio/desktop.dart';
-
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await preloadAssets();
   runApp(const MyApp());
+}
+
+Future<void> preloadAssets() async {
+  await preloadImages();
+  await preloadSvgs();
+}
+
+Future<void> preloadImages() async {
+  await rootBundle.load('assets/background_image.jpg');
+  await rootBundle.load('assets/profile.png');
+  await rootBundle.load('assets/location.png');
+  await rootBundle.load('assets/locD.png');
+}
+
+Future<void> preloadSvgs() async {
+  await rootBundle.loadString('assets/svg/blender.svg');
+  await rootBundle.loadString('assets/svg/cpp.svg');
+  await rootBundle.loadString('assets/svg/css.svg');
+  await rootBundle.loadString('assets/svg/dart.svg');
+  await rootBundle.loadString('assets/svg/figma.svg');
+  await rootBundle.loadString('assets/svg/flutter.svg');
+  await rootBundle.loadString('assets/svg/html.svg');
+  await rootBundle.loadString('assets/svg/java.svg');
+  await rootBundle.loadString('assets/svg/javascript.svg');
+  await rootBundle.loadString('assets/svg/mysql.svg');
+  await rootBundle.loadString('assets/svg/python.svg');
+  await rootBundle.loadString('assets/svg/framer.svg');
+  await rootBundle.loadString('assets/svg/x.svg');
+  await rootBundle.loadString('assets/svg/linkedin.svg');
+  await rootBundle.loadString('assets/svg/instagram.svg');
+  await rootBundle.loadString('assets/svg/hackerrank.svg');
+  await rootBundle.loadString('assets/svg/github.svg');
 }
 
 class MyApp extends StatelessWidget {
@@ -15,16 +47,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: const ColorScheme.dark(),
-      ),
-      debugShowCheckedModeBanner: false,
-      // home: const mobile()
-      home: const ResponsiveLayout(
-        desktopBody: desktop(),
-        mobileBody: mobile(),
-        tabletBody: tablet(),
-      ),
-    );
+        title: "Nakul Dev",
+        theme: ThemeData(
+          colorScheme: const ColorScheme.dark(),
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const toResponsiveLayout()
+        // home: const splashScreen(),
+        );
   }
 }

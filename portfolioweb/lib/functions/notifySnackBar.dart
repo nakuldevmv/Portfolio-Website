@@ -1,8 +1,7 @@
+import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolioweb/styles/styles.dart';
 
 void notifySnackBar(BuildContext context, String) {
   ScaffoldMessenger.of(context).showSnackBar(

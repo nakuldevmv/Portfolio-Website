@@ -1,11 +1,11 @@
 {
-    "name": "portfolioweb",
-    "short_name": "portfolioweb",
+    "name": "Nakul Dev",
+    "short_name": "Nakul Dev",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

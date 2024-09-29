@@ -7,9 +7,11 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
+
 analyzer:
   errors:
-    unused_import: ignore ignore
+    avoid_web_libraries_in_flutter: ignore
+    camel_case_types: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

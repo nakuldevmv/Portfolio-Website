@@ -1,14 +1,5 @@
+import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolioweb/Data/education.dart';
-import 'package:portfolioweb/Data/exp.dart';
-import 'package:portfolioweb/Data/projects.dart';
-import 'package:portfolioweb/Data/skill.dart';
-import 'package:portfolioweb/error/notResp.dart';
-import 'package:portfolioweb/functions/downloadResume.dart';
-import 'package:timeline_tile/timeline_tile.dart';
-import '../styles/styles.dart';
 
 class tablet extends StatefulWidget {
   const tablet({super.key});

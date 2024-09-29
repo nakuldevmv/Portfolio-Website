@@ -18,21 +18,187 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Hi, I'm Nakul Dev M V, a computer engineer passionate about building innovative tech solutions.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolioweb">
+  <meta name="apple-mobile-web-app-title" content="Nakul Dev">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <title>portfolioweb</title>
+  <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
+  
+  
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  
+  
+  
+  
+  
+  
+  <style id="splash-screen-style">
+    html {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #000000;
+          background-size: 100% 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    body {
+	background: #252525;
+}
+svg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 150px;
+	width: 150px;
+}
+
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+  </script>
+  <script>
+    // Enable code splitting
+    const script = document.createElement('script');
+    script.src = 'main.dart.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    // Enable service worker caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('flutter_service_worker.js');
+    }
+  </script>
+
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <svg viewBox="0 0 100 100">
+    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+      <!-- left line -->
+      <path d="M 21 40 V 59">
+        <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        values="0 21 59; 180 21 59"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <!-- right line -->
+      <path d="M 79 40 V 59">
+        <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        values="0 79 59; -180 79 59"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <!-- top line -->
+      <path d="M 50 21 V 40">
+        <animate
+        attributeName="d"
+        values="M 50 21 V 40; M 50 59 V 40"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <!-- btm line -->
+      <path d="M 50 60 V 79">
+        <animate
+        attributeName="d"
+        values="M 50 60 V 79; M 50 98 V 79"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <!-- top box -->
+      <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+      <animate
+        attributeName="stroke"
+        values="rgba(255,255,255,1); rgba(100,100,100,0)"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <!-- mid box -->
+      <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
+      <!-- btm box -->
+      <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+      <animate
+        attributeName="stroke"
+        values="rgba(100,100,100,0); rgba(255,255,255,1)"
+        dur="2s"
+        repeatCount="indefinite" />
+      </path>
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        values="0 0; 0 -19"
+        dur="2s"
+        repeatCount="indefinite" />
+    </g>
+  </svg>
+  <script src="flutter_bootstrap.js" async=""></script>
+
 </body>
 </html>

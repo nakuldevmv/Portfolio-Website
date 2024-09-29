@@ -1,4 +1,3 @@
-import 'package:portfolioweb/functions/launch_url.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void openEmail() async {

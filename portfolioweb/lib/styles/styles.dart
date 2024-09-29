@@ -6,7 +6,7 @@ class mobile_containerStyle {
   static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16, right: 16);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const Color color = Color(0xFF252525);
   static const double width = 1;
   static const double height = 0.25;
   static const double iconSize = 0.045;

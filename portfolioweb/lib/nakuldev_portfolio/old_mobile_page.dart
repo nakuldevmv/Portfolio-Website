@@ -1,18 +1,16 @@
+import 'package:Nakul_Dev/Data/education.dart';
+import 'package:Nakul_Dev/Data/exp.dart';
+import 'package:Nakul_Dev/Data/projects.dart';
+import 'package:Nakul_Dev/Data/skill.dart';
+import 'package:Nakul_Dev/functions/downloadResume.dart';
+import 'package:Nakul_Dev/functions/navigate.dart';
+import 'package:Nakul_Dev/functions/notifySnackBar.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolioweb/Data/education.dart';
-import 'package:portfolioweb/Data/exp.dart';
-import 'package:portfolioweb/Data/projects.dart';
-import 'package:portfolioweb/Data/skill.dart';
-import 'package:portfolioweb/error/notResp.dart';
-import 'package:portfolioweb/functions/downloadResume.dart';
-import 'package:portfolioweb/functions/navigate.dart';
-import 'package:portfolioweb/functions/notifySnackBar.dart';
-import 'package:portfolioweb/nakuldev_portfolio/pages/contact_me.dart';
-import 'package:portfolioweb/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../styles/styles.dart';
 

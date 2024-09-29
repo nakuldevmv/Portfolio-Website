@@ -1,14 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:Nakul_Dev/Data/projects.dart';
+import 'package:Nakul_Dev/functions/Code_Demo_button.dart';
+import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolioweb/Data/projects.dart';
-import 'package:portfolioweb/functions/Code_Demo_button.dart';
-import 'package:portfolioweb/functions/launch_url.dart';
-import 'package:portfolioweb/functions/notifySnackBar.dart';
-import 'package:portfolioweb/styles/styles.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class myProject extends StatefulWidget {
