@@ -255,8 +255,8 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[0],
-                                    // ignore: deprecated_member_use
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -268,7 +268,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[1],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -281,7 +281,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[2],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -294,7 +294,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[3],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -307,7 +307,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[4],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -320,7 +320,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[5],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -341,7 +341,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[6],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
@@ -355,7 +355,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[7],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
@@ -369,7 +369,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[8],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
@@ -383,7 +383,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[9],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
@@ -397,7 +397,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[10],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
@@ -411,7 +411,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[11],
-                                    // ignore: deprecated_member_use
+
                                     color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     // height: devi * mobile_SVGContainer.height,

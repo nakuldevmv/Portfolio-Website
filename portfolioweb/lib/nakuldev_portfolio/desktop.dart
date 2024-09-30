@@ -494,7 +494,6 @@ class _desktopState extends State<desktop> {
                                       child: Center(
                                         child: SvgPicture.asset(
                                           skills[index],
-                                          // ignore: deprecated_member_use
                                           color: textStyles.B.color,
                                           width: deviceWidth * 0.06,
                                           height: deviceHeight * 0.06,
