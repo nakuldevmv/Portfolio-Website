@@ -17,8 +17,9 @@ class mobile_ProjectContainer {
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(10);
   static const Color color = Color.fromARGB(255, 18, 18, 18);
-  static const double width = 0.3;
-  static const double height = 0.169;
+  static const double width = 130;
+
+  static const double height = 130;
   static const double iconSize = 0.045;
 }
 

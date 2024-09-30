@@ -32,13 +32,7 @@
   <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
   
-  
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  
-  
-  
-  
-  
   
   <style id="splash-screen-style">
     html {
@@ -49,7 +43,7 @@
       margin: 0;
       min-height: 100%;
       background-color: #000000;
-          background-size: 100% 100%;
+      background-size: 100% 100%;
     }
 
     .center {
@@ -99,18 +93,18 @@
     }
 
     body {
-	background: #252525;
-}
-svg {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 150px;
-	width: 150px;
-}
-
+      background: #252525;
+    }
+    svg {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 150px;
+      width: 150px;
+    }
   </style>
+
   <script id="splash-screen-script">
     function removeSplashFromWeb() {
       document.getElementById("splash")?.remove();
@@ -118,18 +112,9 @@ svg {
       document.body.style.background = "transparent";
     }
   </script>
-  <script>
-    // Enable code splitting
-    const script = document.createElement('script');
-    script.src = 'main.dart.js';
-    script.defer = true;
-    document.head.appendChild(script);
 
-    // Enable service worker caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('flutter_service_worker.js');
-    }
-  </script>
+  <!-- Include the Flutter web bootstrap script -->
+  <script src="flutter.js" defer></script>
 
 </head>
 <body>
@@ -138,56 +123,56 @@ svg {
       <!-- left line -->
       <path d="M 21 40 V 59">
         <animateTransform
-        attributeName="transform"
-        attributeType="XML"
-        type="rotate"
-        values="0 21 59; 180 21 59"
-        dur="2s"
-        repeatCount="indefinite" />
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          values="0 21 59; 180 21 59"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <!-- right line -->
       <path d="M 79 40 V 59">
         <animateTransform
-        attributeName="transform"
-        attributeType="XML"
-        type="rotate"
-        values="0 79 59; -180 79 59"
-        dur="2s"
-        repeatCount="indefinite" />
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          values="0 79 59; -180 79 59"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <!-- top line -->
       <path d="M 50 21 V 40">
         <animate
-        attributeName="d"
-        values="M 50 21 V 40; M 50 59 V 40"
-        dur="2s"
-        repeatCount="indefinite" />
+          attributeName="d"
+          values="M 50 21 V 40; M 50 59 V 40"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <!-- btm line -->
       <path d="M 50 60 V 79">
         <animate
-        attributeName="d"
-        values="M 50 60 V 79; M 50 98 V 79"
-        dur="2s"
-        repeatCount="indefinite" />
+          attributeName="d"
+          values="M 50 60 V 79; M 50 98 V 79"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <!-- top box -->
       <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
-      <animate
-        attributeName="stroke"
-        values="rgba(255,255,255,1); rgba(100,100,100,0)"
-        dur="2s"
-        repeatCount="indefinite" />
+        <animate
+          attributeName="stroke"
+          values="rgba(255,255,255,1); rgba(100,100,100,0)"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <!-- mid box -->
       <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
       <!-- btm box -->
       <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
-      <animate
-        attributeName="stroke"
-        values="rgba(100,100,100,0); rgba(255,255,255,1)"
-        dur="2s"
-        repeatCount="indefinite" />
+        <animate
+          attributeName="stroke"
+          values="rgba(100,100,100,0); rgba(255,255,255,1)"
+          dur="2s"
+          repeatCount="indefinite" />
       </path>
       <animateTransform
         attributeName="transform"
@@ -198,7 +183,9 @@ svg {
         repeatCount="indefinite" />
     </g>
   </svg>
-  <script src="flutter_bootstrap.js" async=""></script>
+
+  <!-- Flutter bootstrap script -->
+  <script src="flutter_bootstrap.js" async></script>
 
 </body>
 </html>

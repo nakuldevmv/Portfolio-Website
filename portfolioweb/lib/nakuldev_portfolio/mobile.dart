@@ -434,11 +434,12 @@ class _mobileState extends State<mobile> {
                 ),
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 margin: mobile_containerStyle.margin,
-
-                height: 250,
+//250
+                height: 255,
                 width: deviceWidth * mobile_containerStyle.width,
                 // height: deviceHeight * (mobile_containerStyle.height * 1.2),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -482,10 +483,7 @@ class _mobileState extends State<mobile> {
                       ),
                     ),
                     SizedBox(
-                      height: deviceHeight * 0.015,
-                    ),
-                    SizedBox(
-                      height: 165,
+                      height: 170,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: projects.length,
@@ -502,23 +500,27 @@ class _mobileState extends State<mobile> {
                                     color: EducationcontainerStyle.color,
                                     borderRadius: mobile_ProjectContainer.borderRadius,
                                   ),
-                                  // height: deviceHeight * mobile_ProjectContainer.height,
-                                  width: deviceWidth * mobile_ProjectContainer.width,
+                                  height: mobile_ProjectContainer.height,
+                                  width: mobile_ProjectContainer.width,
                                   padding: mobile_ProjectContainer.padding,
                                   margin: mobile_ProjectContainer.margin,
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(Icons.arrow_right_rounded, size: deviceWidth * 0.08),
-                                      Center(
-                                        child: Icon(
-                                          projects[index].icon,
-                                          size: deviceWidth * 0.1,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: deviceHeight * 0.015,
+                                      const Icon(Icons.arrow_right_rounded, size: 33),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 35),
+                                            child: Icon(
+                                              projects[index].icon,
+                                              size: 42,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
@@ -531,15 +533,16 @@ class _mobileState extends State<mobile> {
                                   //   color: EducationcontainerStyle.color,
                                   //   borderRadius: mobile_ProjectContainer.borderRadius,
                                   // ),
-                                  // height: deviceHeight * mobile_ProjectContainer.height,
-                                  width: deviceWidth * mobile_ProjectContainer.width,
-                                  // padding: mobile_ProjectContainer.padding,
+                                  height: 30,
+                                  width: mobile_ProjectContainer.width,
+                                  padding: const EdgeInsets.only(left: 5),
                                   margin: mobile_ProjectContainer.margin,
-                                  child: AutoSizeText(
-                                    minFontSize: 1,
-                                    maxFontSize: 15,
-                                    maxLines: 2,
-                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                  child: Text(
+                                    // minFontSize: 1,
+                                    // maxFontSize: 15,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
                                     // overflow: TextOverflow.ellipsis,
                                     projects[index].title,
                                   ),
