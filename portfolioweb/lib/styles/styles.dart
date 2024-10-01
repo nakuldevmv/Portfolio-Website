@@ -31,15 +31,18 @@ class mobile_SVGContainer {
 }
 
 class tablet_containerStyle {
-  static const EdgeInsets margin = EdgeInsets.all(0);
+  // static const EdgeInsets margin = EdgeInsets.symmetric(vertical: 16, horizontal: 16);
 
-  // static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16);
+  static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16);
+  static const EdgeInsets marginCol2 = EdgeInsets.only(top: 16, left: 16, right: 16);
+
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color(0xFF252525);
-  static const double width = 0.5;
+  static const double width = 0.46;
   static const double height = 0.25;
-  static const double iconSize = 0.045;
+  static const double iconSizeS = 20;
+  static const double iconSizeL = 25;
   static const double row1 = 255 + 18.5;
   static const double row2 = 255 + 12;
   static const double row3 = 255;

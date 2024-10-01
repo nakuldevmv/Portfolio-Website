@@ -7,12 +7,12 @@ import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
+import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import '../styles/styles.dart';
 
 class tablet extends StatefulWidget {
   const tablet({super.key});
@@ -43,10 +43,12 @@ class _tabletState extends State<tablet> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             //main column
             children: [
               //profile
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     decoration: const BoxDecoration(
@@ -103,7 +105,7 @@ class _tabletState extends State<tablet> {
                                       ),
                                       Icon(
                                         Icons.verified_rounded,
-                                        size: deviceWidth * tablet_containerStyle.iconSize,
+                                        size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                       ),
                                     ],
                                   ),
@@ -165,7 +167,7 @@ class _tabletState extends State<tablet> {
                                           fit: BoxFit.scaleDown,
                                           child: Icon(
                                             Icons.description,
-                                            size: deviceWidth * tablet_containerStyle.iconSize,
+                                            size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                           ),
                                         ),
                                       ),
@@ -204,14 +206,14 @@ class _tabletState extends State<tablet> {
                       borderRadius: tablet_containerStyle.borderRadius,
                     ),
                     padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
-                    margin: tablet_containerStyle.margin,
+                    margin: tablet_containerStyle.marginCol2,
                     width: deviceWidth * tablet_containerStyle.width,
                     height: tablet_containerStyle.row1,
                     child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
@@ -235,15 +237,15 @@ class _tabletState extends State<tablet> {
                             ),
                             Icon(
                               Icons.lens_blur_rounded,
-                              size: deviceWidth * tablet_containerStyle.iconSize,
+                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: deviceHeight * 0.015,
+                        const SizedBox(
+                          height: 15,
                         ),
                         SizedBox(
-                          height: 120,
+                          height: 170,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -433,6 +435,7 @@ class _tabletState extends State<tablet> {
               ),
               //my projects
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     decoration: const BoxDecoration(
@@ -483,7 +486,7 @@ class _tabletState extends State<tablet> {
                                 ),
                                 Icon(
                                   Icons.arrow_outward_rounded,
-                                  size: deviceWidth * tablet_containerStyle.iconSize,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 )
                               ],
                             ),
@@ -570,7 +573,7 @@ class _tabletState extends State<tablet> {
                       borderRadius: tablet_containerStyle.borderRadius,
                     ),
                     padding: const EdgeInsets.only(top: 16, bottom: 16),
-                    margin: tablet_containerStyle.margin,
+                    margin: tablet_containerStyle.marginCol2,
                     width: deviceWidth * tablet_containerStyle.width,
                     height: tablet_containerStyle.row2,
                     child: Column(
@@ -602,7 +605,7 @@ class _tabletState extends State<tablet> {
                               ),
                               Icon(
                                 Icons.school_rounded,
-                                size: deviceWidth * tablet_containerStyle.iconSize,
+                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                               )
                             ],
                           ),
@@ -701,160 +704,161 @@ class _tabletState extends State<tablet> {
                 ],
               ),
               //my exp
-              Row(
-                children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                      color: tablet_containerStyle.color,
-                      borderRadius: tablet_containerStyle.borderRadius,
-                    ),
-                    padding: const EdgeInsets.only(top: 16, bottom: 16),
-                    margin: tablet_containerStyle.margin,
-                    width: deviceWidth * tablet_containerStyle.width,
-                    height: tablet_containerStyle.row3,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, right: 16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: AutoSizeText.rich(
-                                  maxFontSize: 23,
-                                  minFontSize: 5,
-                                  maxLines: 1,
-                                  TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'My ',
-                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                      ),
-                                      TextSpan(
-                                        text: 'Experience',
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Icon(
-                                Icons.work_history_rounded,
-                                size: deviceWidth * tablet_containerStyle.iconSize,
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: deviceHeight * 0.015,
-                        ),
-                        SizedBox(
-                          height: 141,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: Experiences.length,
-                            itemBuilder: (context, index) {
-                              return TimelineTile(
-                                axis: TimelineAxis.horizontal,
-                                // isFirst: Experiences[index].start,
-                                isFirst: true,
-                                // isLast: Experiences[index].end,
-                                isLast: false,
-                                afterLineStyle: const LineStyle(
-                                  thickness: 2,
-                                  color: EducationcontainerStyle.color,
-                                ),
-                                beforeLineStyle: const LineStyle(
-                                  thickness: 2,
-                                  color: EducationcontainerStyle.color,
-                                ),
-                                indicatorStyle: IndicatorStyle(
-                                  color: EducationcontainerStyle.color,
-                                  iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
-                                ),
-                                alignment: TimelineAlign.start,
-                                endChild: Expanded(
-                                  // flex: 5,
-                                  child: Container(
-                                    padding: EducationcontainerStyle.padding,
-                                    margin: EducationcontainerStyle.margin,
-                                    decoration: const BoxDecoration(
-                                      color: EducationcontainerStyle.color,
-                                      borderRadius: EducationcontainerStyle.borderRadius,
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+              Padding(
+                padding: const EdgeInsets.only(bottom: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: tablet_containerStyle.color,
+                        borderRadius: tablet_containerStyle.borderRadius,
+                      ),
+                      padding: const EdgeInsets.only(top: 16, bottom: 16),
+                      margin: tablet_containerStyle.margin,
+                      width: deviceWidth * tablet_containerStyle.width,
+                      height: tablet_containerStyle.row3,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, right: 16),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: AutoSizeText.rich(
+                                    maxFontSize: 23,
+                                    minFontSize: 5,
+                                    maxLines: 1,
+                                    TextSpan(
                                       children: [
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: Text(
-                                            Experiences[index].role,
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
-                                          ),
+                                        TextSpan(
+                                          text: 'My ',
+                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
                                         ),
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                Experiences[index].startTime,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                              Text(
-                                                ' - ',
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                              Text(
-                                                Experiences[index].endTime,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                              Text(
-                                                ' • ',
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                              Text(
-                                                Experiences[index].duration,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: Text(
-                                            Experiences[index].companyName,
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                          ),
+                                        TextSpan(
+                                          text: 'Experience',
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
                                         )
                                       ],
                                     ),
                                   ),
                                 ),
-                              );
-                            },
+                                Icon(
+                                  Icons.work_history_rounded,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            height: deviceHeight * 0.015,
+                          ),
+                          SizedBox(
+                            height: 141,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Experiences.length,
+                              itemBuilder: (context, index) {
+                                return TimelineTile(
+                                  axis: TimelineAxis.horizontal,
+                                  // isFirst: Experiences[index].start,
+                                  isFirst: true,
+                                  // isLast: Experiences[index].end,
+                                  isLast: false,
+                                  afterLineStyle: const LineStyle(
+                                    thickness: 2,
+                                    color: EducationcontainerStyle.color,
+                                  ),
+                                  beforeLineStyle: const LineStyle(
+                                    thickness: 2,
+                                    color: EducationcontainerStyle.color,
+                                  ),
+                                  indicatorStyle: IndicatorStyle(
+                                    color: EducationcontainerStyle.color,
+                                    iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
+                                  ),
+                                  alignment: TimelineAlign.start,
+                                  endChild: Expanded(
+                                    // flex: 5,
+                                    child: Container(
+                                      padding: EducationcontainerStyle.padding,
+                                      margin: EducationcontainerStyle.margin,
+                                      decoration: const BoxDecoration(
+                                        color: EducationcontainerStyle.color,
+                                        borderRadius: EducationcontainerStyle.borderRadius,
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Text(
+                                              Experiences[index].role,
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                            ),
+                                          ),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  Experiences[index].startTime,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                                Text(
+                                                  ' - ',
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                                Text(
+                                                  Experiences[index].endTime,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                                Text(
+                                                  ' • ',
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                                Text(
+                                                  Experiences[index].duration,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Text(
+                                              Experiences[index].companyName,
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  //contact me
-                  GestureDetector(
-                    onTap: () {
-                      navigateTo(context, const ContactMe());
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 16),
+                    //contact me
+                    GestureDetector(
+                      onTap: () {
+                        navigateTo(context, const ContactMe());
+                      },
                       child: Container(
                         decoration: const BoxDecoration(
                           color: containerStyle.color,
                           borderRadius: containerStyle.borderRadius,
                         ),
                         padding: tablet_containerStyle.padding,
-                        margin: tablet_containerStyle.margin,
+                        margin: tablet_containerStyle.marginCol2,
                         width: deviceWidth * tablet_containerStyle.width,
                         height: tablet_containerStyle.row3,
                         child: Column(
@@ -875,7 +879,7 @@ class _tabletState extends State<tablet> {
                                 ),
                                 Icon(
                                   Icons.arrow_outward_rounded,
-                                  size: deviceWidth * tablet_containerStyle.iconSize,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
                               ],
                             ),
@@ -909,8 +913,8 @@ class _tabletState extends State<tablet> {
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
