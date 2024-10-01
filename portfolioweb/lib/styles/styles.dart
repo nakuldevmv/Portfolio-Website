@@ -30,6 +30,28 @@ class mobile_SVGContainer {
   static const double height = size;
 }
 
+class tablet_containerStyle {
+  static const EdgeInsets margin = EdgeInsets.all(0);
+
+  // static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16);
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color(0xFF252525);
+  static const double width = 0.5;
+  static const double height = 0.25;
+  static const double iconSize = 0.045;
+  static const double row1 = 255 + 18.5;
+  static const double row2 = 255 + 12;
+  static const double row3 = 255;
+}
+
+class tablet_SVGContainer {
+  static const double size = 0.09 / 2;
+  static const Color color = Color.fromARGB(0, 18, 18, 18);
+  static const double width = size;
+  static const double height = size;
+}
+
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
