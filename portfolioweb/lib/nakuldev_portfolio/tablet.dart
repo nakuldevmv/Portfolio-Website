@@ -22,8 +22,6 @@ class tablet extends StatefulWidget {
 }
 
 class _tabletState extends State<tablet> {
-  double pixelValue = 300;
-
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
@@ -157,17 +155,17 @@ class _tabletState extends State<tablet> {
                                   ),
                                   padding: const EdgeInsets.all(5),
                                   margin: const EdgeInsets.only(bottom: 16),
-                                  width: deviceWidth * 0.25,
+                                  width: deviceWidth < 900 ? 100 : 120,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Expanded(
+                                      const Expanded(
                                         child: FittedBox(
                                           fit: BoxFit.scaleDown,
                                           child: Icon(
                                             Icons.description,
-                                            size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                            size: tablet_containerStyle.iconSizeL,
                                           ),
                                         ),
                                       ),
@@ -610,9 +608,9 @@ class _tabletState extends State<tablet> {
                             ],
                           ),
                         ),
-                        // SizedBox(
-                        //   height: deviceHeight * 0.015,
-                        // ),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         SizedBox(
                           height: 171,
                           child: ListView.builder(
@@ -638,59 +636,62 @@ class _tabletState extends State<tablet> {
                                 alignment: TimelineAlign.start,
                                 endChild: Expanded(
                                   flex: 5,
-                                  child: Container(
-                                    padding: EducationcontainerStyle.padding,
-                                    margin: EducationcontainerStyle.margin,
-                                    decoration: const BoxDecoration(
-                                      color: EducationcontainerStyle.color,
-                                      borderRadius: EducationcontainerStyle.borderRadius,
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: Text(
-                                            educations[index].institutionName,
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 5),
+                                    child: Container(
+                                      padding: EducationcontainerStyle.padding,
+                                      margin: EducationcontainerStyle.margin,
+                                      decoration: const BoxDecoration(
+                                        color: EducationcontainerStyle.color,
+                                        borderRadius: EducationcontainerStyle.borderRadius,
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Text(
+                                              educations[index].institutionName,
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                            ),
                                           ),
-                                        ),
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: Row(
-                                            children: [
-                                              Text(
-                                                educations[index].startTime,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                              const Text(" - "),
-                                              Text(
-                                                educations[index].endTime,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                              ),
-                                            ],
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Row(
+                                              children: [
+                                                Text(
+                                                  educations[index].startTime,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                                const Text(" - "),
+                                                Text(
+                                                  educations[index].endTime,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        educations[index].department != ''
-                                            ? FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Text(
-                                                  educations[index].department,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                                ),
-                                              )
-                                            : const Offstage(),
-                                        educations[index].grade != ''
-                                            ? FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Text(
-                                                  educations[index].grade,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                                ),
-                                              )
-                                            : const Offstage(),
-                                      ],
+                                          educations[index].department != ''
+                                              ? FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Text(
+                                                    educations[index].department,
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                  ),
+                                                )
+                                              : const Offstage(),
+                                          educations[index].grade != ''
+                                              ? FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Text(
+                                                    educations[index].grade,
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                  ),
+                                                )
+                                              : const Offstage(),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -752,8 +753,8 @@ class _tabletState extends State<tablet> {
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: deviceHeight * 0.015,
+                          const SizedBox(
+                            height: 15,
                           ),
                           SizedBox(
                             height: 141,
@@ -782,61 +783,64 @@ class _tabletState extends State<tablet> {
                                   alignment: TimelineAlign.start,
                                   endChild: Expanded(
                                     // flex: 5,
-                                    child: Container(
-                                      padding: EducationcontainerStyle.padding,
-                                      margin: EducationcontainerStyle.margin,
-                                      decoration: const BoxDecoration(
-                                        color: EducationcontainerStyle.color,
-                                        borderRadius: EducationcontainerStyle.borderRadius,
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: Text(
-                                              Experiences[index].role,
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 5),
+                                      child: Container(
+                                        padding: EducationcontainerStyle.padding,
+                                        margin: EducationcontainerStyle.margin,
+                                        decoration: const BoxDecoration(
+                                          color: EducationcontainerStyle.color,
+                                          borderRadius: EducationcontainerStyle.borderRadius,
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            FittedBox(
+                                              fit: BoxFit.scaleDown,
+                                              child: Text(
+                                                Experiences[index].role,
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                              ),
                                             ),
-                                          ),
-                                          FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.start,
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  Experiences[index].startTime,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                ),
-                                                Text(
-                                                  ' - ',
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                ),
-                                                Text(
-                                                  Experiences[index].endTime,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                ),
-                                                Text(
-                                                  ' • ',
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                ),
-                                                Text(
-                                                  Experiences[index].duration,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                ),
-                                              ],
+                                            FittedBox(
+                                              fit: BoxFit.scaleDown,
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    Experiences[index].startTime,
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  ),
+                                                  Text(
+                                                    ' - ',
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  ),
+                                                  Text(
+                                                    Experiences[index].endTime,
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  ),
+                                                  Text(
+                                                    ' • ',
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  ),
+                                                  Text(
+                                                    Experiences[index].duration,
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: Text(
-                                              Experiences[index].companyName,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                            ),
-                                          )
-                                        ],
+                                            FittedBox(
+                                              fit: BoxFit.scaleDown,
+                                              child: Text(
+                                                Experiences[index].companyName,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),

@@ -45,7 +45,7 @@ class tablet_containerStyle {
   static const double iconSizeL = 25;
   static const double row1 = 255 + 18.5;
   static const double row2 = 255 + 12;
-  static const double row3 = 255;
+  static const double row3 = 222;
 }
 
 class tablet_SVGContainer {
