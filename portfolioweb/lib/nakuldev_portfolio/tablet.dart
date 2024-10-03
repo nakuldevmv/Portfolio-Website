@@ -4,6 +4,7 @@ import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
 import 'package:Nakul_Dev/functions/navigate.dart';
+import 'package:Nakul_Dev/functions/next_prev_controller.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
@@ -493,6 +494,7 @@ class _tabletState extends State<tablet> {
                         SizedBox(
                           height: 170,
                           child: ListView.builder(
+                            controller: pgController,
                             scrollDirection: Axis.horizontal,
                             itemCount: projects.length,
                             itemBuilder: (context, index) {
@@ -561,6 +563,20 @@ class _tabletState extends State<tablet> {
                             },
                           ),
                         ),
+                        Row(
+                          children: [
+                            GestureDetector(
+                                onTap: () {
+                                  toPrevious();
+                                },
+                                child: const Icon(Icons.arrow_back_ios_new_rounded)),
+                            GestureDetector(
+                                onTap: () {
+                                  toNext();
+                                },
+                                child: const Icon(Icons.arrow_forward_ios_rounded))
+                          ],
+                        )
                       ],
                     ),
                   ),
