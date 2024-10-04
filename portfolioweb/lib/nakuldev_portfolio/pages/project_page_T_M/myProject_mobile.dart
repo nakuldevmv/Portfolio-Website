@@ -53,104 +53,204 @@ class _myProject_mobileState extends State<myProject_mobile> {
               height: double.infinity,
               child: Column(
                 children: [
-                  // Scrollable Positioned List for Project Details
                   Expanded(
-                    child: ScrollablePositionedList.builder(
-                      itemCount: projects.length,
-                      itemScrollController: _scrollController,
-                      itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            Container(
-                              width: deviceWidth,
-                              height: 250,
-                              margin: const EdgeInsets.only(top: 10, bottom: 10),
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                image: DecorationImage(
-                                  image: AssetImage('assets/background_image.jpg'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.end,
+                    //
+                    child: ScrollConfiguration(
+                      behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                      //
+                      child: ScrollablePositionedList.builder(
+                        itemCount: projects.length,
+                        itemScrollController: _scrollController,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              //SS
+                              Stack(
                                 children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(5),
-                                        margin: const EdgeInsets.only(left: 10, right: 10),
-                                        height: 40,
-                                        width: 80,
-                                        decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(10),
-                                              topRight: Radius.circular(10),
-                                            ),
-                                            color: EducationcontainerStyle.color),
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            codeButton(context, projects[index]);
-                                          },
-                                          child: Row(
-                                            children: [
-                                              AutoSizeText(
-                                                "Code ",
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                                minFontSize: 5,
-                                                maxFontSize: 15,
-                                                maxLines: 1,
-                                              ),
-                                              Icon(
-                                                Icons.code_rounded,
-                                                size: deviceWidth * 0.05,
-                                              )
-                                            ],
-                                          ),
-                                        ),
+                                  Container(
+                                    width: deviceWidth,
+                                    height: 250,
+                                    margin: const EdgeInsets.only(top: 20),
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                      color: Color.fromARGB(127, 0, 0, 0),
+                                    ),
+                                  ),
+                                  Container(
+                                    width: deviceWidth,
+                                    height: 250,
+                                    margin: const EdgeInsets.only(top: 10),
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      image: DecorationImage(
+                                        image: AssetImage('assets/background_image.jpg'),
+                                        fit: BoxFit.cover,
                                       ),
-                                      Container(
-                                        padding: const EdgeInsets.all(5),
-                                        margin: const EdgeInsets.only(left: 10, right: 10),
-                                        height: 40,
-                                        width: 80,
-                                        decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(10),
-                                              topRight: Radius.circular(10),
-                                            ),
-                                            color: EducationcontainerStyle.color),
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            demoButton(context, projects[index]);
-                                          },
-                                          child: Row(
-                                            children: [
-                                              AutoSizeText(
-                                                "Demo ",
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                                minFontSize: 5,
-                                                maxFontSize: 15,
-                                                maxLines: 1,
-                                              ),
-                                              Icon(
-                                                Icons.add_to_home_screen_rounded,
-                                                size: deviceWidth * 0.05,
-                                              )
-                                            ],
-                                          ),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          projects[index].icon,
+                                          size: deviceWidth * 0.1,
+                                          color: Colors.white,
                                         ),
-                                      ),
-                                    ],
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            //code btn
+                                            Container(
+                                              padding: const EdgeInsets.all(5),
+                                              margin: const EdgeInsets.only(left: 10, right: 10),
+                                              height: 40,
+                                              width: 80,
+                                              decoration: const BoxDecoration(
+                                                  borderRadius: BorderRadius.only(
+                                                    topLeft: Radius.circular(10),
+                                                    topRight: Radius.circular(10),
+                                                  ),
+                                                  color: EducationcontainerStyle.color),
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  codeButton(context, projects[index]);
+                                                },
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    AutoSizeText(
+                                                      "Code",
+                                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                                      minFontSize: 5,
+                                                      maxFontSize: 15,
+                                                      maxLines: 1,
+                                                    ),
+                                                    Icon(
+                                                      Icons.code_rounded,
+                                                      size: deviceWidth * 0.05,
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            //demo btn
+                                            Container(
+                                              padding: const EdgeInsets.all(5),
+                                              margin: const EdgeInsets.only(left: 10, right: 10),
+                                              height: 40,
+                                              width: 80,
+                                              decoration: const BoxDecoration(
+                                                  borderRadius: BorderRadius.only(
+                                                    topLeft: Radius.circular(10),
+                                                    topRight: Radius.circular(10),
+                                                  ),
+                                                  color: EducationcontainerStyle.color),
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  demoButton(context, projects[index]);
+                                                },
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    AutoSizeText(
+                                                      "Demo",
+                                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                                      minFontSize: 5,
+                                                      maxFontSize: 15,
+                                                      maxLines: 1,
+                                                    ),
+                                                    Icon(
+                                                      Icons.add_to_home_screen_rounded,
+                                                      size: deviceWidth * 0.05,
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
-                            )
-                          ],
-                        );
-                      },
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 10),
+                                decoration: const BoxDecoration(
+                                  color: Color.fromARGB(127, 0, 0, 0),
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(10),
+                                    bottomRight: Radius.circular(10),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    //title
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                      child: SizedBox(
+                                        child: AutoSizeText(
+                                          projects[index].title,
+                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                          minFontSize: 10,
+                                          maxFontSize: 25,
+                                          maxLines: 1,
+                                        ),
+                                      ),
+                                    ),
+                                    //description
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                      child: SizedBox(
+                                        child: AutoSizeText(
+                                          projects[index].description,
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                          minFontSize: 5,
+                                          maxFontSize: 15,
+                                          maxLines: 3,
+                                        ),
+                                      ),
+                                    ),
+                                    //techstack
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                      child: SizedBox(
+                                        width: 200,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            AutoSizeText(
+                                              "Tech Stack :",
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                              minFontSize: 10,
+                                              maxFontSize: 18,
+                                              maxLines: 1,
+                                            ),
+                                            SvgPicture.asset(
+                                              projects[index].dartSvg,
+                                              color: textStyles.B.color,
+                                              width: 25,
+                                            ),
+                                            SvgPicture.asset(
+                                              projects[index].flutterSvg,
+                                              color: textStyles.B.color,
+                                              width: 25,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ],

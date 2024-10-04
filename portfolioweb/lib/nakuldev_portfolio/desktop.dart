@@ -380,47 +380,50 @@ class _desktopState extends State<desktop> {
                               ),
                               ////
                               Expanded(
-                                  child: ListView.builder(
-                                      itemCount: projects.length,
-                                      itemBuilder: (context, index) {
-                                        return GestureDetector(
-                                          onTap: () {
-                                            navigateTo(context, toResponsiveLayout_project(initialIndex: index));
-                                          },
-                                          child: Container(
-                                            decoration: const BoxDecoration(
-                                              color: ProjectcontainerStyle.color,
-                                              borderRadius: ProjectcontainerStyle.borderRadius,
-                                            ),
-                                            padding: ProjectcontainerStyle.padding,
-                                            margin: ProjectcontainerStyle.margin,
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Padding(
-                                                      padding: const EdgeInsets.only(right: 8.0),
-                                                      child: Icon(
-                                                        projects[index].icon,
-                                                        size: deviceWidth * 0.014,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      width: deviceWidth * 0.115,
-                                                      child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Icon(
-                                                  Icons.arrow_forward_ios_rounded,
-                                                  size: deviceWidth * 0.014,
-                                                )
-                                              ],
-                                            ),
+                                  child: ScrollConfiguration(
+                                behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                                child: ListView.builder(
+                                    itemCount: projects.length,
+                                    itemBuilder: (context, index) {
+                                      return GestureDetector(
+                                        onTap: () {
+                                          navigateTo(context, toResponsiveLayout_project(initialIndex: index));
+                                        },
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                            color: ProjectcontainerStyle.color,
+                                            borderRadius: ProjectcontainerStyle.borderRadius,
                                           ),
-                                        );
-                                      }))
+                                          padding: ProjectcontainerStyle.padding,
+                                          margin: ProjectcontainerStyle.margin,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(right: 8.0),
+                                                    child: Icon(
+                                                      projects[index].icon,
+                                                      size: deviceWidth * 0.014,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: deviceWidth * 0.115,
+                                                    child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
+                                                  ),
+                                                ],
+                                              ),
+                                              Icon(
+                                                Icons.arrow_forward_ios_rounded,
+                                                size: deviceWidth * 0.014,
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      );
+                                    }),
+                              ))
                             ],
                           ),
                         ),
@@ -563,91 +566,94 @@ class _desktopState extends State<desktop> {
                               ),
                               ////
                               Expanded(
-                                child: ListView.builder(
-                                  itemCount: Experiences.length,
-                                  itemBuilder: (context, index) {
-                                    return TimelineTile(
-                                      isFirst: Experiences[index].start,
-                                      isLast: Experiences[index].end,
-                                      afterLineStyle: const LineStyle(
-                                        thickness: 2,
-                                        color: EducationcontainerStyle.color,
-                                      ),
-                                      beforeLineStyle: const LineStyle(
-                                        thickness: 2,
-                                        color: EducationcontainerStyle.color,
-                                      ),
-                                      indicatorStyle: IndicatorStyle(
-                                        color: EducationcontainerStyle.color,
-                                        iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
-                                      ),
-                                      alignment: TimelineAlign.start,
-                                      endChild: Expanded(
-                                        child: Container(
-                                          padding: EducationcontainerStyle.padding,
-                                          margin: EducationcontainerStyle.margin,
-                                          decoration: const BoxDecoration(
-                                            color: EducationcontainerStyle.color,
-                                            borderRadius: EducationcontainerStyle.borderRadius,
-                                          ),
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Text(
-                                                  Experiences[index].role,
-                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                child: ScrollConfiguration(
+                                  behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                                  child: ListView.builder(
+                                    itemCount: Experiences.length,
+                                    itemBuilder: (context, index) {
+                                      return TimelineTile(
+                                        isFirst: Experiences[index].start,
+                                        isLast: Experiences[index].end,
+                                        afterLineStyle: const LineStyle(
+                                          thickness: 2,
+                                          color: EducationcontainerStyle.color,
+                                        ),
+                                        beforeLineStyle: const LineStyle(
+                                          thickness: 2,
+                                          color: EducationcontainerStyle.color,
+                                        ),
+                                        indicatorStyle: IndicatorStyle(
+                                          color: EducationcontainerStyle.color,
+                                          iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
+                                        ),
+                                        alignment: TimelineAlign.start,
+                                        endChild: Expanded(
+                                          child: Container(
+                                            padding: EducationcontainerStyle.padding,
+                                            margin: EducationcontainerStyle.margin,
+                                            decoration: const BoxDecoration(
+                                              color: EducationcontainerStyle.color,
+                                              borderRadius: EducationcontainerStyle.borderRadius,
+                                            ),
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Text(
+                                                    Experiences[index].role,
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                                  ),
                                                 ),
-                                              ),
-                                              FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Row(
+                                                FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Row(
+                                                    children: [
+                                                      Text(
+                                                        Experiences[index].startTime,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                      Text(
+                                                        ' - ',
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                      Text(
+                                                        Experiences[index].endTime,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                      Text(
+                                                        ' • ',
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                      Text(
+                                                        Experiences[index].duration,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Row(
                                                   children: [
-                                                    Text(
-                                                      Experiences[index].startTime,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                    Text(
-                                                      ' - ',
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                    Text(
-                                                      Experiences[index].endTime,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                    Text(
-                                                      ' • ',
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                    Text(
-                                                      Experiences[index].duration,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Row(
-                                                children: [
-                                                  SizedBox(
-                                                    width: deviceWidth * 0.1,
-                                                    child: FittedBox(
-                                                      fit: BoxFit.scaleDown,
-                                                      child: Text(
-                                                        Experiences[index].companyName,
-                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                    SizedBox(
+                                                      width: deviceWidth * 0.1,
+                                                      child: FittedBox(
+                                                        fit: BoxFit.scaleDown,
+                                                        child: Text(
+                                                          Experiences[index].companyName,
+                                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                ],
-                                              )
-                                            ],
+                                                  ],
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    );
-                                  },
+                                      );
+                                    },
+                                  ),
                                 ),
                               ),
                             ],
@@ -705,85 +711,88 @@ class _desktopState extends State<desktop> {
                               ),
                               ////
                               Expanded(
-                                child: ListView.builder(
-                                  itemCount: educations.length,
-                                  itemBuilder: (context, index) {
-                                    return TimelineTile(
-                                      isFirst: educations[index].start,
-                                      isLast: educations[index].end,
-                                      afterLineStyle: const LineStyle(
-                                        thickness: 2,
-                                        color: EducationcontainerStyle.color,
-                                      ),
-                                      beforeLineStyle: const LineStyle(
-                                        thickness: 2,
-                                        color: EducationcontainerStyle.color,
-                                      ),
-                                      indicatorStyle: IndicatorStyle(
-                                        color: EducationcontainerStyle.color,
-                                        iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
-                                      ),
-                                      alignment: TimelineAlign.start,
-                                      endChild: Expanded(
-                                        flex: 5,
-                                        child: Container(
-                                          padding: EducationcontainerStyle.padding,
-                                          margin: EducationcontainerStyle.margin,
-                                          decoration: const BoxDecoration(
-                                            color: EducationcontainerStyle.color,
-                                            borderRadius: EducationcontainerStyle.borderRadius,
-                                          ),
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Text(
-                                                  educations[index].institutionName,
-                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                child: ScrollConfiguration(
+                                  behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                                  child: ListView.builder(
+                                    itemCount: educations.length,
+                                    itemBuilder: (context, index) {
+                                      return TimelineTile(
+                                        isFirst: educations[index].start,
+                                        isLast: educations[index].end,
+                                        afterLineStyle: const LineStyle(
+                                          thickness: 2,
+                                          color: EducationcontainerStyle.color,
+                                        ),
+                                        beforeLineStyle: const LineStyle(
+                                          thickness: 2,
+                                          color: EducationcontainerStyle.color,
+                                        ),
+                                        indicatorStyle: IndicatorStyle(
+                                          color: EducationcontainerStyle.color,
+                                          iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
+                                        ),
+                                        alignment: TimelineAlign.start,
+                                        endChild: Expanded(
+                                          flex: 5,
+                                          child: Container(
+                                            padding: EducationcontainerStyle.padding,
+                                            margin: EducationcontainerStyle.margin,
+                                            decoration: const BoxDecoration(
+                                              color: EducationcontainerStyle.color,
+                                              borderRadius: EducationcontainerStyle.borderRadius,
+                                            ),
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Text(
+                                                    educations[index].institutionName,
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                                  ),
                                                 ),
-                                              ),
-                                              FittedBox(
-                                                fit: BoxFit.scaleDown,
-                                                child: Row(
-                                                  children: [
-                                                    Text(
-                                                      educations[index].startTime,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                    const Text(" - "),
-                                                    Text(
-                                                      educations[index].endTime,
-                                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                                    ),
-                                                  ],
+                                                FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  child: Row(
+                                                    children: [
+                                                      Text(
+                                                        educations[index].startTime,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                      const Text(" - "),
+                                                      Text(
+                                                        educations[index].endTime,
+                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
-                                              ),
-                                              educations[index].department != ''
-                                                  ? FittedBox(
-                                                      fit: BoxFit.scaleDown,
-                                                      child: Text(
-                                                        educations[index].department,
-                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                                      ),
-                                                    )
-                                                  : const Offstage(),
-                                              educations[index].grade != ''
-                                                  ? FittedBox(
-                                                      fit: BoxFit.scaleDown,
-                                                      child: Text(
-                                                        educations[index].grade,
-                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                                      ),
-                                                    )
-                                                  : const Offstage(),
-                                            ],
+                                                educations[index].department != ''
+                                                    ? FittedBox(
+                                                        fit: BoxFit.scaleDown,
+                                                        child: Text(
+                                                          educations[index].department,
+                                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                        ),
+                                                      )
+                                                    : const Offstage(),
+                                                educations[index].grade != ''
+                                                    ? FittedBox(
+                                                        fit: BoxFit.scaleDown,
+                                                        child: Text(
+                                                          educations[index].grade,
+                                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                        ),
+                                                      )
+                                                    : const Offstage(),
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    );
-                                  },
+                                      );
+                                    },
+                                  ),
                                 ),
                               ),
                             ],
