@@ -1,4 +1,3 @@
-import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:flutter/material.dart';
 
 final PageController pgController = PageController();

@@ -6,6 +6,7 @@ import 'package:Nakul_Dev/functions/downloadResume.dart';
 import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/next_prev_controller.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
@@ -455,7 +456,7 @@ class _tabletState extends State<tablet> {
                           onTap: () {
                             navigateTo(
                                 context,
-                                const myProject(
+                                const toResponsiveLayout_project(
                                   initialIndex: 0,
                                 ));
                           },
@@ -501,7 +502,7 @@ class _tabletState extends State<tablet> {
                             itemBuilder: (context, index) {
                               return GestureDetector(
                                 onTap: () {
-                                  navigateTo(context, myProject(initialIndex: index));
+                                  navigateTo(context, toResponsiveLayout_project(initialIndex: index));
                                 },
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
