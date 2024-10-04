@@ -441,7 +441,7 @@ class _tabletState extends State<tablet> {
                       color: tablet_containerStyle.color,
                       borderRadius: tablet_containerStyle.borderRadius,
                     ),
-                    padding: const EdgeInsets.only(top: 16, bottom: 16),
+                    padding: const EdgeInsets.only(top: 16),
                     margin: tablet_containerStyle.margin,
                     //250
                     height: tablet_containerStyle.row2,
@@ -449,6 +449,7 @@ class _tabletState extends State<tablet> {
                     // height: deviceHeight * (tablet_containerStyle.height * 1.2),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         GestureDetector(
                           onTap: () {
@@ -563,19 +564,44 @@ class _tabletState extends State<tablet> {
                             },
                           ),
                         ),
-                        Row(
-                          children: [
-                            GestureDetector(
+                        //prev_next
+                        Container(
+                          padding: const EdgeInsets.all(5),
+                          width: deviceWidth * tablet_containerStyle.widthButton,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: EducationcontainerStyle.color),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              GestureDetector(
                                 onTap: () {
-                                  toPrevious();
+                                  toPrevious(pgController);
                                 },
-                                child: const Icon(Icons.arrow_back_ios_new_rounded)),
-                            GestureDetector(
+                                child: Icon(
+                                  Icons.arrow_back_ios_new_rounded,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                ),
+                              ),
+                              Icon(
+                                Icons.linear_scale_outlined,
+                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                              ),
+                              GestureDetector(
                                 onTap: () {
-                                  toNext();
+                                  toNext(projects.length, pgController);
                                 },
-                                child: const Icon(Icons.arrow_forward_ios_rounded))
-                          ],
+                                child: Icon(
+                                  Icons.arrow_forward_ios_rounded,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                ),
+                              ),
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -586,11 +612,12 @@ class _tabletState extends State<tablet> {
                       color: tablet_containerStyle.color,
                       borderRadius: tablet_containerStyle.borderRadius,
                     ),
-                    padding: const EdgeInsets.only(top: 16, bottom: 16),
+                    padding: const EdgeInsets.only(top: 16),
                     margin: tablet_containerStyle.marginCol2,
                     width: deviceWidth * tablet_containerStyle.width,
                     height: tablet_containerStyle.row2,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 16, right: 16),
@@ -625,11 +652,12 @@ class _tabletState extends State<tablet> {
                           ),
                         ),
                         const SizedBox(
-                          height: 15,
+                          height: 15 - 3,
                         ),
                         SizedBox(
                           height: 171,
                           child: ListView.builder(
+                            controller: pgController2,
                             scrollDirection: Axis.horizontal,
                             itemCount: educations.length,
                             itemBuilder: (context, index) {
@@ -715,6 +743,46 @@ class _tabletState extends State<tablet> {
                             },
                           ),
                         ),
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.all(5),
+                          margin: const EdgeInsets.all(0),
+                          width: deviceWidth * tablet_containerStyle.widthButton,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: EducationcontainerStyle.color),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  toPrevious(pgController2);
+                                },
+                                child: Icon(
+                                  Icons.arrow_back_ios_new_rounded,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                ),
+                              ),
+                              Icon(
+                                Icons.linear_scale_outlined,
+                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  toNext(educations.length, pgController2);
+                                },
+                                child: Icon(
+                                  Icons.arrow_forward_ios_rounded,
+                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),

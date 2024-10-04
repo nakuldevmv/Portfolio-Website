@@ -10,6 +10,7 @@ class mobile_containerStyle {
   static const double width = 1;
   static const double height = 0.25;
   static const double iconSize = 0.045;
+  static const double widthButton = 0.46 / 3;
 }
 
 class mobile_ProjectContainer {
@@ -18,6 +19,7 @@ class mobile_ProjectContainer {
   static const EdgeInsets padding = EdgeInsets.all(10);
   static const Color color = Color.fromARGB(255, 18, 18, 18);
   static const double width = 130;
+  static const double widthButton = 0.46 / 4;
 
   static const double height = 130;
   static const double iconSize = 0.045;
@@ -40,6 +42,7 @@ class tablet_containerStyle {
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const Color color = Color(0xFF252525);
   static const double width = 0.46;
+  static const double widthButton = 0.46 / 4;
   static const double height = 0.25;
   static const double iconSizeS = 20;
   static const double iconSizeL = 25;
@@ -120,7 +123,7 @@ class MyProject_containerStyle {
 }
 
 class EducationcontainerStyle {
-  static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10);
+  static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10, right: 10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
   static const EdgeInsets padding = EdgeInsets.all(10);
   static const Color color = Color.fromARGB(255, 26, 26, 26);

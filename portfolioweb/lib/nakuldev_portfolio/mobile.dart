@@ -5,6 +5,7 @@ import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
 import 'package:Nakul_Dev/functions/navigate.dart';
+import 'package:Nakul_Dev/functions/next_prev_controller.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
@@ -432,14 +433,14 @@ class _mobileState extends State<mobile> {
                   color: mobile_containerStyle.color,
                   borderRadius: mobile_containerStyle.borderRadius,
                 ),
-                padding: const EdgeInsets.only(top: 16, bottom: 16),
+                padding: const EdgeInsets.only(top: 16),
                 margin: mobile_containerStyle.margin,
-//250
-                height: 255,
+                height: 255 + 4.5,
                 width: deviceWidth * mobile_containerStyle.width,
                 // height: deviceHeight * (mobile_containerStyle.height * 1.2),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -482,9 +483,13 @@ class _mobileState extends State<mobile> {
                         ),
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     SizedBox(
                       height: 170,
                       child: ListView.builder(
+                        controller: pgController,
                         scrollDirection: Axis.horizontal,
                         itemCount: projects.length,
                         itemBuilder: (context, index) {
@@ -553,6 +558,45 @@ class _mobileState extends State<mobile> {
                         },
                       ),
                     ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(0),
+                      width: deviceWidth * mobile_containerStyle.widthButton,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
+                          color: EducationcontainerStyle.color),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              toPrevious(pgController);
+                            },
+                            child: Icon(
+                              Icons.arrow_back_ios_new_rounded,
+                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                            ),
+                          ),
+                          Icon(
+                            Icons.linear_scale_outlined,
+                            size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              toNext(projects.length, pgController);
+                            },
+                            child: Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -562,11 +606,12 @@ class _mobileState extends State<mobile> {
                   color: mobile_containerStyle.color,
                   borderRadius: mobile_containerStyle.borderRadius,
                 ),
-                padding: const EdgeInsets.only(top: 16, bottom: 16),
+                padding: const EdgeInsets.only(top: 16),
                 margin: mobile_containerStyle.margin,
                 width: deviceWidth * mobile_containerStyle.width,
-                height: 250,
+                height: 260,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
@@ -600,12 +645,13 @@ class _mobileState extends State<mobile> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: deviceHeight * 0.015,
+                    const SizedBox(
+                      height: 10,
                     ),
                     SizedBox(
                       height: 171,
                       child: ListView.builder(
+                        controller: pgController2,
                         scrollDirection: Axis.horizontal,
                         itemCount: educations.length,
                         itemBuilder: (context, index) {
@@ -688,6 +734,45 @@ class _mobileState extends State<mobile> {
                         },
                       ),
                     ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(0),
+                      width: deviceWidth * mobile_containerStyle.widthButton,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
+                          color: EducationcontainerStyle.color),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              toPrevious(pgController2);
+                            },
+                            child: Icon(
+                              Icons.arrow_back_ios_new_rounded,
+                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                            ),
+                          ),
+                          Icon(
+                            Icons.linear_scale_outlined,
+                            size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              toNext(educations.length, pgController2);
+                            },
+                            child: Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

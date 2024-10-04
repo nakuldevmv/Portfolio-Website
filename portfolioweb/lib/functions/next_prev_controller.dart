@@ -2,12 +2,14 @@ import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:flutter/material.dart';
 
 final PageController pgController = PageController();
+final PageController pgController2 = PageController();
 int currentIndex = 0;
 
-void toNext() {
-  if (currentIndex < projects.length) {
+void toNext(L, cntrl) {
+  if (currentIndex < L) {
     currentIndex++;
-    pgController.animateToPage(
+    print("Next");
+    cntrl.animateToPage(
       currentIndex,
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
@@ -15,10 +17,12 @@ void toNext() {
   }
 }
 
-void toPrevious() {
+void toPrevious(cntrl) {
   if (currentIndex > 0) {
     currentIndex--;
-    pgController.animateToPage(
+    print("Prev");
+
+    cntrl.animateToPage(
       currentIndex,
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
