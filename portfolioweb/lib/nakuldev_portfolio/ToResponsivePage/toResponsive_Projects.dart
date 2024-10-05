@@ -1,10 +1,7 @@
-import 'package:Nakul_Dev/nakuldev_portfolio/desktop.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/mobile.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/project_page_T_M/myProject_mobile.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/project_page_T_M/myProject_tablet.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/project_page_T_M_D/my_projects.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/project_page_T_M_D/myProject_mobile.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/project_page_T_M_D/myProject_tablet.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/responsive_layout.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/tablet.dart';
 import 'package:flutter/material.dart';
 
 class toResponsiveLayout_project extends StatelessWidget {

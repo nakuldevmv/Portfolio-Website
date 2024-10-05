@@ -35,7 +35,6 @@ class _myProject_mobileState extends State<myProject_mobile> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -82,10 +81,10 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                     width: deviceWidth,
                                     height: 250,
                                     margin: const EdgeInsets.only(top: 10),
-                                    decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                                       image: DecorationImage(
-                                        image: AssetImage('assets/background_image.jpg'),
+                                        image: AssetImage(projects[index].image),
                                         fit: BoxFit.cover,
                                       ),
                                     ),

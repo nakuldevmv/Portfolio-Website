@@ -7,7 +7,6 @@ import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/my_projects.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

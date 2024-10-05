@@ -35,7 +35,6 @@ class _myProject_tabletState extends State<myProject_tablet> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -88,10 +87,12 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           width: deviceWidth / 2.179,
                                           height: 250,
                                           // margin: const EdgeInsets.only(top: 10),
-                                          decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                          decoration: BoxDecoration(
+                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
                                             image: DecorationImage(
-                                              image: AssetImage('assets/background_image.jpg'),
+                                              image: AssetImage(
+                                                projects[index * 2].image,
+                                              ),
                                               fit: BoxFit.cover,
                                             ),
                                           ),
@@ -280,10 +281,12 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           width: deviceWidth / 2.179,
                                           height: 250,
                                           // margin: const EdgeInsets.only(top: 10),
-                                          decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                          decoration: BoxDecoration(
+                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
                                             image: DecorationImage(
-                                              image: AssetImage('assets/background_image.jpg'),
+                                              image: AssetImage(
+                                                projects[index * 2 + 1].image,
+                                              ),
                                               fit: BoxFit.cover,
                                             ),
                                           ),

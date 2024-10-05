@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Project {
+  final String image;
+
   final String title;
   final String description;
   final IconData icon;
@@ -13,6 +15,7 @@ class Project {
   final String screenshot2;
 
   Project({
+    required this.image,
     required this.title,
     required this.description,
     required this.icon,
@@ -28,6 +31,7 @@ class Project {
 
 List<Project> projects = [
   Project(
+    image: "assets/ss/appleMusic.jpg",
     title: "Apple Music Clone",
     description: "A clone of the Apple Music app with a clean interface and basic functionalities like browsing music and playlists.",
     icon: Icons.library_music_rounded,
@@ -40,6 +44,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/ticTac.jpg",
     title: "Tic Tac Toe Game",
     description: "A classic Tic Tac Toe game with simple design and interactive gameplay.",
     icon: Icons.gamepad_rounded,
@@ -52,6 +57,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/appleMusic.jpg",
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects, skills, and experience. Made the website fully responsive across all platforms.",
     icon: Icons.web_rounded,
@@ -64,6 +70,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/appleMusic.jpg",
     title: "QR Code Scanner",
     description: "An app to scan and generate QR codes with user-friendly features. Successfully integrated real-time QR scanning capabilities.",
     icon: Icons.qr_code_scanner_rounded,
@@ -76,6 +83,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/weather.jpg",
     title: "Weather App",
     description: "A weather forecasting app providing real-time weather data based on location. Gained hands-on experience with API integration.",
     icon: Icons.wb_cloudy_rounded,
@@ -88,6 +96,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/calc.jpg",
     title: "Calculator App",
     description: "A basic calculator app with standard arithmetic functions. Ensured accurate calculations and error handling.",
     icon: Icons.calculate_rounded,
@@ -100,6 +109,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/toDo.jpg",
     title: "To-Do List App",
     description: "A task management app for creating, editing, and managing daily tasks. Integrated local data storage to maintain task persistence.",
     icon: Icons.checklist_rounded,
@@ -112,6 +122,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
+    image: "assets/ss/stopWatch.jpg",
     title: "Stopwatch App",
     description: "A simple stopwatch app with start, stop, and reset functionality. Focused on accurate time tracking and improved understanding of time-based operations in Flutter.",
     icon: Icons.timer_rounded,
