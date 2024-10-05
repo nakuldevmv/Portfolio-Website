@@ -47,7 +47,7 @@ To run this project locally:
 
 ## Deployment
 
-This website is deployed using github pages. You can visit the live site at https://nakuldevmv.github.io/.
+This website is deployed using github pages. You can visit the live site at [nakuldevmv.github.io](https://nakuldevmv.github.io/).
 
 ## Contributing
 
@@ -56,7 +56,7 @@ While this is a personal project, I'm open to suggestions and improvements. Feel
 
 ## Contact
 
-[Nakul] - [nakuldev1561@gmail.com]
+Nakul - nakuldev1561@gmail.com
 
 Project Link: https://github.com/nakuldevmv/Portfolio-Website
 
