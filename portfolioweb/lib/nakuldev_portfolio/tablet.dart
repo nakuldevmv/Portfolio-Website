@@ -7,7 +7,7 @@ import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/next_prev_controller.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_me.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_page_T_M_D/contact_me.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -494,76 +494,79 @@ class _tabletState extends State<tablet> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 170,
-                            child: ListView.builder(
-                              controller: pgController,
-                              scrollDirection: Axis.horizontal,
-                              itemCount: projects.length,
-                              itemBuilder: (context, index) {
-                                return GestureDetector(
-                                  onTap: () {
-                                    navigateTo(context, toResponsiveLayout_project(initialIndex: index));
-                                  },
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        decoration: const BoxDecoration(
-                                          color: EducationcontainerStyle.color,
-                                          borderRadius: mobile_ProjectContainer.borderRadius,
-                                        ),
-                                        height: mobile_ProjectContainer.height,
-                                        width: mobile_ProjectContainer.width,
-                                        padding: mobile_ProjectContainer.padding,
-                                        margin: mobile_ProjectContainer.margin,
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.end,
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            const Icon(Icons.arrow_right_rounded, size: 33),
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              crossAxisAlignment: CrossAxisAlignment.center,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.only(bottom: 35),
-                                                  child: Icon(
-                                                    projects[index].icon,
-                                                    size: 42,
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: SizedBox(
+                              height: 170,
+                              child: ListView.builder(
+                                controller: pgController,
+                                scrollDirection: Axis.horizontal,
+                                itemCount: projects.length,
+                                itemBuilder: (context, index) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      navigateTo(context, toResponsiveLayout_project(initialIndex: index));
+                                    },
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                            color: EducationcontainerStyle.color,
+                                            borderRadius: mobile_ProjectContainer.borderRadius,
+                                          ),
+                                          height: mobile_ProjectContainer.height,
+                                          width: mobile_ProjectContainer.width,
+                                          padding: mobile_ProjectContainer.padding,
+                                          margin: mobile_ProjectContainer.margin,
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              const Icon(Icons.arrow_right_rounded, size: 33),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(bottom: 35),
+                                                    child: Icon(
+                                                      projects[index].icon,
+                                                      size: 42,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
+                                                ],
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: deviceHeight * 0.01,
-                                      ),
-                                      Container(
-                                        // decoration: const BoxDecoration(
-                                        //   color: EducationcontainerStyle.color,
-                                        //   borderRadius: mobile_ProjectContainer.borderRadius,
-                                        // ),
-                                        height: 30,
-                                        width: mobile_ProjectContainer.width,
-                                        padding: const EdgeInsets.only(left: 5),
-                                        margin: mobile_ProjectContainer.margin,
-                                        child: Text(
-                                          // minFontSize: 1,
-                                          // maxFontSize: 15,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
-                                          // overflow: TextOverflow.ellipsis,
-                                          projects[index].title,
+                                        SizedBox(
+                                          height: deviceHeight * 0.01,
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
+                                        Container(
+                                          // decoration: const BoxDecoration(
+                                          //   color: EducationcontainerStyle.color,
+                                          //   borderRadius: mobile_ProjectContainer.borderRadius,
+                                          // ),
+                                          height: 30,
+                                          width: mobile_ProjectContainer.width,
+                                          padding: const EdgeInsets.only(left: 5),
+                                          margin: mobile_ProjectContainer.margin,
+                                          child: Text(
+                                            // minFontSize: 1,
+                                            // maxFontSize: 15,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
+                                            // overflow: TextOverflow.ellipsis,
+                                            projects[index].title,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                           ),
                           //prev_next

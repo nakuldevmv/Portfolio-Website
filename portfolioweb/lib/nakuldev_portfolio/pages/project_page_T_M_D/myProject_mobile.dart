@@ -71,7 +71,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                   Container(
                                     width: deviceWidth,
                                     height: 250,
-                                    margin: const EdgeInsets.only(top: 20),
+                                    margin: const EdgeInsets.only(top: 10),
                                     decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                                       color: Color.fromARGB(127, 0, 0, 0),

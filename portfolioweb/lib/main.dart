@@ -1,5 +1,4 @@
-import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/toResponsiveLayout.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
@@ -53,10 +52,6 @@ class MyApp extends StatelessWidget {
           colorScheme: const ColorScheme.dark(),
         ),
         debugShowCheckedModeBanner: false,
-        home: const toResponsiveLayout()
-        // home: const toResponsiveLayout_project(
-        //   initialIndex: 0,
-        // ),
-        );
+        home: const toResponsiveLayout());
   }
 }

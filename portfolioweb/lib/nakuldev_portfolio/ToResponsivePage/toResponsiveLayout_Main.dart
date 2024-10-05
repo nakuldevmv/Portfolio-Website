@@ -1,6 +1,6 @@
 import 'package:Nakul_Dev/nakuldev_portfolio/desktop.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/mobile.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/responsive_layout.dart';
+import 'package:Nakul_Dev/functions/responsive_layout.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/tablet.dart';
 import 'package:flutter/material.dart';
 
