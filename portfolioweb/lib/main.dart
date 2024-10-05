@@ -17,8 +17,6 @@ Future<void> preloadAssets() async {
 Future<void> preloadImages() async {
   await rootBundle.load('assets/background_image.jpg');
   await rootBundle.load('assets/profile.png');
-  await rootBundle.load('assets/location.png');
-  await rootBundle.load('assets/locD.png');
 }
 
 Future<void> preloadSvgs() async {
