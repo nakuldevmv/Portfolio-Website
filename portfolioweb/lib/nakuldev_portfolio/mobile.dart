@@ -492,7 +492,7 @@ class _mobileState extends State<mobile> {
                       SizedBox(
                         height: 170,
                         child: ListView.builder(
-                          controller: pgController,
+                          // controller: pgController,
                           scrollDirection: Axis.horizontal,
                           itemCount: projects.length,
                           itemBuilder: (context, index) {
@@ -570,35 +570,35 @@ class _mobileState extends State<mobile> {
                               topLeft: Radius.circular(10),
                               bottomRight: Radius.circular(10),
                             ),
-                            color: EducationcontainerStyle.color),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                toPrevious(pgController);
-                              },
-                              child: Icon(
-                                Icons.arrow_back_ios_new_rounded,
-                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                              ),
-                            ),
-                            Icon(
-                              Icons.linear_scale_outlined,
-                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                toNext(projects.length, pgController);
-                              },
-                              child: Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                              ),
-                            ),
-                          ],
-                        ),
+                            color: Color.fromARGB(0, 26, 26, 26)),
+                        // child: Row(
+                        //   crossAxisAlignment: CrossAxisAlignment.center,
+                        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //   children: [
+                        //     GestureDetector(
+                        //       onTap: () {
+                        //         toPrevious(pgController);
+                        //       },
+                        //       child: Icon(
+                        //         Icons.arrow_back_ios_new_rounded,
+                        //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                        //       ),
+                        //     ),
+                        //     Icon(
+                        //       Icons.linear_scale_outlined,
+                        //       size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                        //     ),
+                        //     GestureDetector(
+                        //       onTap: () {
+                        //         toNext(projects.length, pgController);
+                        //       },
+                        //       child: Icon(
+                        //         Icons.arrow_forward_ios_rounded,
+                        //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                       )
                     ],
                   ),
@@ -654,7 +654,7 @@ class _mobileState extends State<mobile> {
                       SizedBox(
                         height: 171,
                         child: ListView.builder(
-                          controller: pgController2,
+                          // controller: pgController2,
                           scrollDirection: Axis.horizontal,
                           itemCount: educations.length,
                           itemBuilder: (context, index) {
@@ -677,59 +677,62 @@ class _mobileState extends State<mobile> {
                               alignment: TimelineAlign.start,
                               endChild: Expanded(
                                 flex: 5,
-                                child: Container(
-                                  padding: EducationcontainerStyle.padding,
-                                  margin: EducationcontainerStyle.margin,
-                                  decoration: const BoxDecoration(
-                                    color: EducationcontainerStyle.color,
-                                    borderRadius: EducationcontainerStyle.borderRadius,
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: Text(
-                                          educations[index].institutionName,
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Container(
+                                    padding: EducationcontainerStyle.padding,
+                                    margin: EducationcontainerStyle.margin,
+                                    decoration: const BoxDecoration(
+                                      color: EducationcontainerStyle.color,
+                                      borderRadius: EducationcontainerStyle.borderRadius,
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Text(
+                                            educations[index].institutionName,
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                          ),
                                         ),
-                                      ),
-                                      FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              educations[index].startTime,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                            const Text(" - "),
-                                            Text(
-                                              educations[index].endTime,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                          ],
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Row(
+                                            children: [
+                                              Text(
+                                                educations[index].startTime,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                              const Text(" - "),
+                                              Text(
+                                                educations[index].endTime,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      educations[index].department != ''
-                                          ? FittedBox(
-                                              fit: BoxFit.scaleDown,
-                                              child: Text(
-                                                educations[index].department,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                              ),
-                                            )
-                                          : const Offstage(),
-                                      educations[index].grade != ''
-                                          ? FittedBox(
-                                              fit: BoxFit.scaleDown,
-                                              child: Text(
-                                                educations[index].grade,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                              ),
-                                            )
-                                          : const Offstage(),
-                                    ],
+                                        educations[index].department != ''
+                                            ? FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Text(
+                                                  educations[index].department,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                ),
+                                              )
+                                            : const Offstage(),
+                                        educations[index].grade != ''
+                                            ? FittedBox(
+                                                fit: BoxFit.scaleDown,
+                                                child: Text(
+                                                  educations[index].grade,
+                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                ),
+                                              )
+                                            : const Offstage(),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -737,45 +740,46 @@ class _mobileState extends State<mobile> {
                           },
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(5),
-                        margin: const EdgeInsets.all(0),
-                        width: deviceWidth * mobile_containerStyle.widthButton,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(10),
-                              bottomRight: Radius.circular(10),
-                            ),
-                            color: EducationcontainerStyle.color),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                toPrevious(pgController2);
-                              },
-                              child: Icon(
-                                Icons.arrow_back_ios_new_rounded,
-                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                              ),
-                            ),
-                            Icon(
-                              Icons.linear_scale_outlined,
-                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                toNext(educations.length, pgController2);
-                              },
-                              child: Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+
+                      // Container(
+                      //   padding: const EdgeInsets.all(5),
+                      //   margin: const EdgeInsets.all(0),
+                      //   width: deviceWidth * mobile_containerStyle.widthButton,
+                      //   decoration: const BoxDecoration(
+                      //       borderRadius: BorderRadius.only(
+                      //         topLeft: Radius.circular(10),
+                      //         bottomRight: Radius.circular(10),
+                      //       ),
+                      //       color: EducationcontainerStyle.color),
+                      //   child: Row(
+                      //     crossAxisAlignment: CrossAxisAlignment.center,
+                      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //     children: [
+                      //       GestureDetector(
+                      //         onTap: () {
+                      //           toPrevious(pgController2);
+                      //         },
+                      //         child: Icon(
+                      //           Icons.arrow_back_ios_new_rounded,
+                      //           size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                      //         ),
+                      //       ),
+                      //       Icon(
+                      //         Icons.linear_scale_outlined,
+                      //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                      //       ),
+                      //       GestureDetector(
+                      //         onTap: () {
+                      //           toNext(educations.length, pgController2);
+                      //         },
+                      //         child: Icon(
+                      //           Icons.arrow_forward_ios_rounded,
+                      //           size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // )
                     ],
                   ),
                 ),
@@ -834,10 +838,10 @@ class _mobileState extends State<mobile> {
                           itemBuilder: (context, index) {
                             return TimelineTile(
                               axis: TimelineAxis.horizontal,
-                              // isFirst: Experiences[index].start,
-                              isFirst: true,
-                              // isLast: Experiences[index].end,
-                              isLast: false,
+                              isFirst: Experiences[index].start,
+                              // isFirst: true,
+                              isLast: Experiences[index].end,
+                              // isLast: false,
                               afterLineStyle: const LineStyle(
                                 thickness: 2,
                                 color: EducationcontainerStyle.color,
@@ -853,61 +857,64 @@ class _mobileState extends State<mobile> {
                               alignment: TimelineAlign.start,
                               endChild: Expanded(
                                 // flex: 5,
-                                child: Container(
-                                  padding: EducationcontainerStyle.padding,
-                                  margin: EducationcontainerStyle.margin,
-                                  decoration: const BoxDecoration(
-                                    color: EducationcontainerStyle.color,
-                                    borderRadius: EducationcontainerStyle.borderRadius,
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: Text(
-                                          Experiences[index].role,
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Container(
+                                    padding: EducationcontainerStyle.padding,
+                                    margin: EducationcontainerStyle.margin,
+                                    decoration: const BoxDecoration(
+                                      color: EducationcontainerStyle.color,
+                                      borderRadius: EducationcontainerStyle.borderRadius,
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Text(
+                                            Experiences[index].role,
+                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                          ),
                                         ),
-                                      ),
-                                      FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              Experiences[index].startTime,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                            Text(
-                                              ' - ',
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                            Text(
-                                              Experiences[index].endTime,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                            Text(
-                                              ' • ',
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                            Text(
-                                              Experiences[index].duration,
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
-                                            ),
-                                          ],
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                Experiences[index].startTime,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                              Text(
+                                                ' - ',
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                              Text(
+                                                Experiences[index].endTime,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                              Text(
+                                                ' • ',
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                              Text(
+                                                Experiences[index].duration,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: Text(
-                                          Experiences[index].companyName,
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
-                                        ),
-                                      )
-                                    ],
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: Text(
+                                            Experiences[index].companyName,
+                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

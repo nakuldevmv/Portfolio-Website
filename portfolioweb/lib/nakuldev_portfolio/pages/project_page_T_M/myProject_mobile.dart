@@ -127,9 +127,9 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                                       maxFontSize: 15,
                                                       maxLines: 1,
                                                     ),
-                                                    Icon(
+                                                    const Icon(
                                                       Icons.code_rounded,
-                                                      size: deviceWidth * 0.05,
+                                                      size: 30,
                                                     )
                                                   ],
                                                 ),
@@ -161,9 +161,9 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                                       maxFontSize: 15,
                                                       maxLines: 1,
                                                     ),
-                                                    Icon(
+                                                    const Icon(
                                                       Icons.add_to_home_screen_rounded,
-                                                      size: deviceWidth * 0.05,
+                                                      size: 30,
                                                     )
                                                   ],
                                                 ),
@@ -177,6 +177,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                 ],
                               ),
                               Container(
+                                width: deviceWidth,
                                 margin: const EdgeInsets.only(bottom: 10),
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(127, 0, 0, 0),

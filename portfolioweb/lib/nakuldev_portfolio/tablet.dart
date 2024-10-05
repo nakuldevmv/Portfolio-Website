@@ -851,10 +851,10 @@ class _tabletState extends State<tablet> {
                                 itemBuilder: (context, index) {
                                   return TimelineTile(
                                     axis: TimelineAxis.horizontal,
-                                    // isFirst: Experiences[index].start,
-                                    isFirst: true,
-                                    // isLast: Experiences[index].end,
-                                    isLast: false,
+                                    isFirst: Experiences[index].start,
+                                    // isFirst: true,
+                                    isLast: Experiences[index].end,
+                                    // isLast: false,
                                     afterLineStyle: const LineStyle(
                                       thickness: 2,
                                       color: EducationcontainerStyle.color,
