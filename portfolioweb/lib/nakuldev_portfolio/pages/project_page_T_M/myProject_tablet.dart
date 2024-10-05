@@ -67,7 +67,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 8),
+                                padding: const EdgeInsets.only(right: 8, top: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +78,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                         Container(
                                           width: deviceWidth / 2.179,
                                           height: 250,
-                                          margin: const EdgeInsets.only(top: 20),
+                                          // margin: const EdgeInsets.only(top: 20),
                                           decoration: const BoxDecoration(
                                             borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                                             color: Color.fromARGB(127, 0, 0, 0),
@@ -87,7 +87,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                         Container(
                                           width: deviceWidth / 2.179,
                                           height: 250,
-                                          margin: const EdgeInsets.only(top: 10),
+                                          // margin: const EdgeInsets.only(top: 10),
                                           decoration: const BoxDecoration(
                                             borderRadius: BorderRadius.all(Radius.circular(10)),
                                             image: DecorationImage(
@@ -183,6 +183,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       ],
                                     ),
                                     Container(
+                                      height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
                                       decoration: const BoxDecoration(
@@ -258,7 +259,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8),
+                                padding: const EdgeInsets.only(left: 8, top: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -269,7 +270,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                         Container(
                                           width: deviceWidth / 2.179,
                                           height: 250,
-                                          margin: const EdgeInsets.only(top: 20),
+                                          // margin: const EdgeInsets.only(top: 20),
                                           decoration: const BoxDecoration(
                                             borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                                             color: Color.fromARGB(127, 0, 0, 0),
@@ -278,7 +279,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                         Container(
                                           width: deviceWidth / 2.179,
                                           height: 250,
-                                          margin: const EdgeInsets.only(top: 10),
+                                          // margin: const EdgeInsets.only(top: 10),
                                           decoration: const BoxDecoration(
                                             borderRadius: BorderRadius.all(Radius.circular(10)),
                                             image: DecorationImage(
@@ -374,6 +375,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       ],
                                     ),
                                     Container(
+                                      height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
                                       decoration: const BoxDecoration(
