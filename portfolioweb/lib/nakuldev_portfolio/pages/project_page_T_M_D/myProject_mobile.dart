@@ -92,11 +92,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Icon(
-                                          projects[index].icon,
-                                          size: deviceWidth * 0.1,
-                                          color: Colors.white,
-                                        ),
+                                        // s
                                         Row(
                                           mainAxisAlignment: MainAxisAlignment.end,
                                           children: [

@@ -57,7 +57,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
-    image: "assets/ss/appleMusic.jpg",
+    image: "assets/ss/portWeb.jpg",
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects, skills, and experience. Made the website fully responsive across all platforms.",
     icon: Icons.web_rounded,

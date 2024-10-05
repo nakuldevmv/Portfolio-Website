@@ -100,11 +100,11 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
-                                              Icon(
-                                                projects[index * 2].icon,
-                                                size: deviceWidth * 0.1,
-                                                color: Colors.white,
-                                              ),
+                                              // Icon(
+                                              //   projects[index * 2].icon,
+                                              //   size: deviceWidth * 0.1,
+                                              //   color: Colors.white,
+                                              // ),
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.end,
                                                 children: [
@@ -294,11 +294,11 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
-                                              Icon(
-                                                projects[index * 2 + 1].icon,
-                                                size: deviceWidth * 0.1,
-                                                color: Colors.white,
-                                              ),
+                                              // Icon(
+                                              //   projects[index * 2 + 1].icon,
+                                              //   size: deviceWidth * 0.1,
+                                              //   color: Colors.white,
+                                              // ),
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.end,
                                                 children: [
