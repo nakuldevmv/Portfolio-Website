@@ -1,3 +1,4 @@
+import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -45,11 +46,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Nakul Dev",
-        theme: ThemeData(
-          colorScheme: const ColorScheme.dark(),
-        ),
-        debugShowCheckedModeBanner: false,
-        home: const toResponsiveLayout());
+      title: "Nakul Dev",
+      theme: ThemeData(
+        colorScheme: const ColorScheme.dark(),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const toResponsiveLayout(), //Website Enabled
+      // home: const notResp(),// Website Disabled
+    );
   }
 }
