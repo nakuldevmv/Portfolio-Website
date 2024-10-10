@@ -51,8 +51,8 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.dark(),
       ),
       debugShowCheckedModeBanner: false,
-      // home: const toResponsiveLayout(), //Website Enabled
-      home: const notResp(), // Website Disabled
+      home: const toResponsiveLayout(), //Website Enabled
+      // home: const notResp(), // Website Disabled
     );
   }
 }

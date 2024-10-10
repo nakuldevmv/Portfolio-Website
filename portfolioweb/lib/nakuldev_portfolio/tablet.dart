@@ -7,7 +7,7 @@ import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/next_prev_controller.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_page_T_M_D/contact_me.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -943,7 +943,7 @@ class _tabletState extends State<tablet> {
                       //contact me
                       GestureDetector(
                         onTap: () {
-                          navigateTo(context, const ContactMe());
+                          navigateTo(context, const toResponsiveLayout_contactMe());
                         },
                         child: Container(
                           decoration: const BoxDecoration(
