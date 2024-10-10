@@ -80,6 +80,52 @@ class containerStyle {
   static const double height = 200;
 }
 
+class ContactMe_containerStyle_mobile {
+  static const EdgeInsets margin = EdgeInsets.only(
+    top: 10,
+  );
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+
+  //
+  static const double width_mail_Linkedin = 0.59;
+  static const double main_width = 0.8;
+  static const double main_height = 0.5;
+
+  static const double loc_width = 1;
+  static const double loc_height = 0.285;
+  static const double bottom_icon_width = 0.28;
+  static const double githubsizeW = 0.3;
+  // static const double githubsizeH = 0.182;
+
+  //
+}
+
+class ContactMe_containerStyle_tablet {
+  static const EdgeInsets margin = EdgeInsets.only(
+    top: 10,
+  );
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
+  static const EdgeInsets padding = EdgeInsets.all(16);
+  static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+
+  //
+  static const double width_mail_Linkedin = 360;
+  // static const double main_width = 0.8;
+  // static const double main_height = 0.5;
+
+  static const double loc_width = 600;
+  static const double loc_height = 171;
+  static const double bottom_icon_width = 175.2;
+  static const double githubsizeW = 198;
+  // static const double githubsizeH = 0.182;
+
+  //
+}
+
 class ContactMe_containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
