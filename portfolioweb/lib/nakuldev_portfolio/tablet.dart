@@ -146,43 +146,46 @@ class _tabletState extends State<tablet> {
                                   ],
                                 ),
 
-                                GestureDetector(
-                                  onTap: () {
-                                    downloadResume(rurl);
-                                    notifySnackBar(context, "Preparing my resume... it will download shortly.");
-                                  },
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      color: Color.fromARGB(255, 99, 99, 99),
-                                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                                    ),
-                                    padding: const EdgeInsets.all(5),
-                                    margin: const EdgeInsets.only(bottom: 16),
-                                    width: deviceWidth < 900 ? 100 : 120,
-                                    child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        const Expanded(
-                                          child: FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: Icon(
-                                              Icons.description,
-                                              size: tablet_containerStyle.iconSizeL,
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      downloadResume(rurl);
+                                      notifySnackBar(context, "Preparing my resume... it will download shortly.");
+                                    },
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        color: Color.fromARGB(255, 99, 99, 99),
+                                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                                      ),
+                                      padding: const EdgeInsets.all(5),
+                                      margin: const EdgeInsets.only(bottom: 16),
+                                      width: deviceWidth < 900 ? 100 : 120,
+                                      child: Row(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          const Expanded(
+                                            child: FittedBox(
+                                              fit: BoxFit.scaleDown,
+                                              child: Icon(
+                                                Icons.description,
+                                                size: tablet_containerStyle.iconSizeL,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: Text(
-                                              "Resume",
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                          Expanded(
+                                            flex: 2,
+                                            child: FittedBox(
+                                              fit: BoxFit.scaleDown,
+                                              child: Text(
+                                                "Resume",
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -453,44 +456,47 @@ class _tabletState extends State<tablet> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              navigateTo(
-                                  context,
-                                  const toResponsiveLayout_project(
-                                    initialIndex: 0,
-                                  ));
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 16, right: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: AutoSizeText.rich(
-                                      maxFontSize: 23,
-                                      minFontSize: 5,
-                                      maxLines: 1,
-                                      TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: 'My ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                          ),
-                                          TextSpan(
-                                            text: 'Projects',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                          ),
-                                        ],
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () {
+                                navigateTo(
+                                    context,
+                                    const toResponsiveLayout_project(
+                                      initialIndex: 0,
+                                    ));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 16, right: 16),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: AutoSizeText.rich(
+                                        maxFontSize: 23,
+                                        minFontSize: 5,
+                                        maxLines: 1,
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'My ',
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            ),
+                                            TextSpan(
+                                              text: 'Projects',
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Icon(
-                                    Icons.arrow_outward_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                                  )
-                                ],
+                                    Icon(
+                                      Icons.arrow_outward_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -503,66 +509,69 @@ class _tabletState extends State<tablet> {
                                 scrollDirection: Axis.horizontal,
                                 itemCount: projects.length,
                                 itemBuilder: (context, index) {
-                                  return GestureDetector(
-                                    onTap: () {
-                                      navigateTo(context, toResponsiveLayout_project(initialIndex: index));
-                                    },
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          decoration: const BoxDecoration(
-                                            color: EducationcontainerStyle.color,
-                                            borderRadius: mobile_ProjectContainer.borderRadius,
-                                          ),
-                                          height: mobile_ProjectContainer.height,
-                                          width: mobile_ProjectContainer.width,
-                                          padding: mobile_ProjectContainer.padding,
-                                          margin: mobile_ProjectContainer.margin,
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.end,
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              const Icon(Icons.arrow_right_rounded, size: 33),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Padding(
-                                                    padding: const EdgeInsets.only(bottom: 35),
-                                                    child: Icon(
-                                                      projects[index].icon,
-                                                      size: 42,
+                                  return MouseRegion(
+                                    cursor: SystemMouseCursors.click,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        navigateTo(context, toResponsiveLayout_project(initialIndex: index));
+                                      },
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            decoration: const BoxDecoration(
+                                              color: EducationcontainerStyle.color,
+                                              borderRadius: mobile_ProjectContainer.borderRadius,
+                                            ),
+                                            height: mobile_ProjectContainer.height,
+                                            width: mobile_ProjectContainer.width,
+                                            padding: mobile_ProjectContainer.padding,
+                                            margin: mobile_ProjectContainer.margin,
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.end,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                const Icon(Icons.arrow_right_rounded, size: 33),
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(bottom: 35),
+                                                      child: Icon(
+                                                        projects[index].icon,
+                                                        size: 42,
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        SizedBox(
-                                          height: deviceHeight * 0.01,
-                                        ),
-                                        Container(
-                                          // decoration: const BoxDecoration(
-                                          //   color: EducationcontainerStyle.color,
-                                          //   borderRadius: mobile_ProjectContainer.borderRadius,
-                                          // ),
-                                          height: 30,
-                                          width: mobile_ProjectContainer.width,
-                                          padding: const EdgeInsets.only(left: 5),
-                                          margin: mobile_ProjectContainer.margin,
-                                          child: Text(
-                                            // minFontSize: 1,
-                                            // maxFontSize: 15,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
-                                            // overflow: TextOverflow.ellipsis,
-                                            projects[index].title,
+                                          SizedBox(
+                                            height: deviceHeight * 0.01,
                                           ),
-                                        ),
-                                      ],
+                                          Container(
+                                            // decoration: const BoxDecoration(
+                                            //   color: EducationcontainerStyle.color,
+                                            //   borderRadius: mobile_ProjectContainer.borderRadius,
+                                            // ),
+                                            height: 30,
+                                            width: mobile_ProjectContainer.width,
+                                            padding: const EdgeInsets.only(left: 5),
+                                            margin: mobile_ProjectContainer.margin,
+                                            child: Text(
+                                              // minFontSize: 1,
+                                              // maxFontSize: 15,
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
+                                              // overflow: TextOverflow.ellipsis,
+                                              projects[index].title,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   );
                                 },
@@ -583,26 +592,32 @@ class _tabletState extends State<tablet> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    toPrevious(pgController);
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_back_ios_new_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      toPrevious(pgController);
+                                    },
+                                    child: Icon(
+                                      Icons.arrow_back_ios_new_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    ),
                                   ),
                                 ),
                                 Icon(
                                   Icons.linear_scale_outlined,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    toNext(projects.length, pgController);
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_forward_ios_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      toNext(projects.length, pgController);
+                                    },
+                                    child: Icon(
+                                      Icons.arrow_forward_ios_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -763,26 +778,32 @@ class _tabletState extends State<tablet> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    toPrevious(pgController2);
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_back_ios_new_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      toPrevious(pgController2);
+                                    },
+                                    child: Icon(
+                                      Icons.arrow_back_ios_new_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    ),
                                   ),
                                 ),
                                 Icon(
                                   Icons.linear_scale_outlined,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    toNext(educations.length, pgController2);
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_forward_ios_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      toNext(educations.length, pgController2);
+                                    },
+                                    child: Icon(
+                                      Icons.arrow_forward_ios_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -941,68 +962,71 @@ class _tabletState extends State<tablet> {
                         ),
                       ),
                       //contact me
-                      GestureDetector(
-                        onTap: () {
-                          navigateTo(context, const toResponsiveLayout_contactMe());
-                        },
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
-                          ),
-                          padding: tablet_containerStyle.padding,
-                          margin: tablet_containerStyle.marginCol2,
-                          width: deviceWidth * tablet_containerStyle.width,
-                          height: tablet_containerStyle.row3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                    child: AutoSizeText(
-                                      "Have some \nQuestions?",
-                                      maxLines: 3,
-                                      maxFontSize: 15,
-                                      minFontSize: 10,
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.arrow_outward_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: deviceHeight * 0.015,
-                              ),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: AutoSizeText.rich(
-                                      maxFontSize: 23,
-                                      minFontSize: 5,
-                                      maxLines: 1,
-                                      TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: 'Contact ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                          ),
-                                          TextSpan(
-                                            text: 'Me',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                          )
-                                        ],
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            navigateTo(context, const toResponsiveLayout_contactMe());
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: containerStyle.color,
+                              borderRadius: containerStyle.borderRadius,
+                            ),
+                            padding: tablet_containerStyle.padding,
+                            margin: tablet_containerStyle.marginCol2,
+                            width: deviceWidth * tablet_containerStyle.width,
+                            height: tablet_containerStyle.row3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        "Have some \nQuestions?",
+                                        maxLines: 3,
+                                        maxFontSize: 15,
+                                        minFontSize: 10,
+                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    Icon(
+                                      Icons.arrow_outward_rounded,
+                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: deviceHeight * 0.015,
+                                ),
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: AutoSizeText.rich(
+                                        maxFontSize: 23,
+                                        minFontSize: 5,
+                                        maxLines: 1,
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'Contact ',
+                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            ),
+                                            TextSpan(
+                                              text: 'Me',
+                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
