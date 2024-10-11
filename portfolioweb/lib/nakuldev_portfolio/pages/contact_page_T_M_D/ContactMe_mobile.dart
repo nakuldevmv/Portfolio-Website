@@ -4,6 +4,7 @@ import 'package:Nakul_Dev/functions/copy_text.dart';
 import 'package:Nakul_Dev/functions/launch_url.dart';
 import 'package:Nakul_Dev/functions/mailing_fun.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:Nakul_Dev/test_dart_files/GoogleMap_Integration.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -48,15 +49,16 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       decoration: const BoxDecoration(
                         color: ContactMe_containerStyle_mobile.color,
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                        image: DecorationImage(
-                          image: AssetImage('assets/locD.png'),
-                          fit: BoxFit.cover,
-                        ),
+                        // image: DecorationImage(
+                        //   image: AssetImage('assets/locD.png'),
+                        //   fit: BoxFit.cover,
+                        // ),
                       ),
-                      padding: ContactMe_containerStyle_mobile.padding,
+                      // padding: ContactMe_containerStyle_mobile.padding,
                       margin: ContactMe_containerStyle_mobile.margin,
                       width: deviceWidth * ContactMe_containerStyle_mobile.loc_width,
                       height: 250,
+                      child: const ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: RandomLocationMap()),
                       // height: deviceHeight * ContactMe_containerStyle_mobile.loc_height,
                     ),
                     Positioned(
