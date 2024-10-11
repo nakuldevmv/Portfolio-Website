@@ -39,7 +39,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
           //   height: deviceHeight * ContactMe_containerStyle.main_height,
           child: Center(
             child: SizedBox(
-              width: 600,
+              // color: Colors.amber,
+              width: 570,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -205,6 +206,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                   ),
                                   padding: ContactMe_containerStyle_tablet.padding,
                                   margin: ContactMe_containerStyle_tablet.margin,
+                                  // height: ContactMe_containerStyle_tablet.bottom_icon_height,
                                   width: ContactMe_containerStyle_tablet.bottom_icon_width,
                                   child: SvgPicture.asset(
                                     "assets/svg/instagram.svg",

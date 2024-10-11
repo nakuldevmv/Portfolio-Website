@@ -10,7 +10,7 @@ class toResponsiveLayout_contactMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ResponsiveLayout(
-      desktopBody: ContactMe(),
+      desktopBody: ContactMe_tablet(),
       mobileBody: ContactMe_mobile(),
       tabletBody: ContactMe_tablet(),
     );

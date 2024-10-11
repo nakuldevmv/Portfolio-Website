@@ -83,10 +83,10 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                 ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //email
                       Container(
@@ -189,21 +189,23 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //insta
-                          GestureDetector(
-                            onTap: () {
-                              urlLaunch("https://www.instagram.com/jo.cly.n/");
-                            },
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
-                              margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/instagram.svg",
-                                color: textStyles.B.color,
+                          SizedBox(
+                            child: GestureDetector(
+                              onTap: () {
+                                urlLaunch("https://www.instagram.com/jo.cly.n/");
+                              },
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: ContactMe_containerStyle_mobile.color,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                                ),
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                margin: ContactMe_containerStyle_mobile.margin,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                                child: SvgPicture.asset(
+                                  "assets/svg/instagram.svg",
+                                  color: textStyles.B.color,
+                                ),
                               ),
                             ),
                           ),
@@ -211,22 +213,24 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             width: 10,
                           ),
                           //twitter
-                          GestureDetector(
-                            onTap: () {
-                              urlLaunch("https://x.com/");
-                            },
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
-                              margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/x.svg",
-                                // ignore: deprecated_member_use
-                                color: textStyles.B.color,
+                          SizedBox(
+                            child: GestureDetector(
+                              onTap: () {
+                                urlLaunch("https://x.com/");
+                              },
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: ContactMe_containerStyle_mobile.color,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                                ),
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                margin: ContactMe_containerStyle_mobile.margin,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                                child: SvgPicture.asset(
+                                  "assets/svg/x.svg",
+                                  // ignore: deprecated_member_use
+                                  color: textStyles.B.color,
+                                ),
                               ),
                             ),
                           ),
@@ -238,7 +242,6 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     width: 10,
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //github
                       GestureDetector(

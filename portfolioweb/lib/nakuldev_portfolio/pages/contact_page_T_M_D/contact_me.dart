@@ -46,6 +46,49 @@ class _ContactMeState extends State<ContactMe> {
                   children: [
                     Row(
                       children: [
+                        GestureDetector(
+                          onTap: () {
+                            urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
+                          },
+                          child: Stack(
+                            children: [
+                              Container(
+                                decoration: const BoxDecoration(
+                                  color: ContactMe_containerStyle.color,
+                                  borderRadius: ContactMe_containerStyle.borderRadius,
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/locD.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                padding: ContactMe_containerStyle.padding,
+                                margin: ContactMe_containerStyle.margin,
+                                width: deviceWidth * ContactMe_containerStyle.loc_width,
+                                height: deviceHeight * ContactMe_containerStyle.loc_height,
+                              ),
+                              Positioned(
+                                bottom: 20,
+                                left: 20,
+                                child: Container(
+                                  decoration: const BoxDecoration(
+                                    color: Color.fromARGB(130, 167, 167, 167),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                                  ),
+                                  padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
+                                  child: Row(
+                                    children: [
+                                      const Icon(Icons.place_rounded),
+                                      Text(
+                                        ' Kerala, India',
+                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                         Column(
                           children: [
                             //email
@@ -236,49 +279,6 @@ class _ContactMeState extends State<ContactMe> {
                               ),
                             ),
                           ],
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
-                          },
-                          child: Stack(
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(
-                                  color: ContactMe_containerStyle.color,
-                                  borderRadius: ContactMe_containerStyle.borderRadius,
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/locD.png'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                padding: ContactMe_containerStyle.padding,
-                                margin: ContactMe_containerStyle.margin,
-                                width: deviceWidth * ContactMe_containerStyle.loc_width,
-                                height: deviceHeight * ContactMe_containerStyle.loc_height,
-                              ),
-                              Positioned(
-                                bottom: 20,
-                                left: 20,
-                                child: Container(
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(130, 167, 167, 167),
-                                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                                  ),
-                                  padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.place_rounded),
-                                      Text(
-                                        ' Kerala, India',
-                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
                         ),
                       ],
                     )
