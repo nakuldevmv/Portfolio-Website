@@ -1,3 +1,4 @@
+import 'package:Nakul_Dev/Data/profilepic.dart';
 import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
@@ -19,7 +20,7 @@ Future<void> preloadAssets() async {
 
 Future<void> preloadImages() async {
   await rootBundle.load('assets/background_image.jpg');
-  await rootBundle.load('assets/profile.png');
+  await rootBundle.load(profilepic);
 }
 
 Future<void> preloadSvgs() async {

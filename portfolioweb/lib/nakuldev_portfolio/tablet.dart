@@ -1,5 +1,6 @@
 import 'package:Nakul_Dev/Data/education.dart';
 import 'package:Nakul_Dev/Data/exp.dart';
+import 'package:Nakul_Dev/Data/profilepic.dart';
 import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
@@ -70,7 +71,7 @@ class _tabletState extends State<tablet> {
                         children: [
                           Expanded(
                             child: Image.asset(
-                              'assets/profile.png',
+                              profilepic,
                               fit: BoxFit.fitHeight,
                               alignment: Alignment.bottomCenter,
                               // scale: 3.0, // scale the image by a factor of 2
