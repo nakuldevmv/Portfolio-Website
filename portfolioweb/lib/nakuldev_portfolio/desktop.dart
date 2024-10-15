@@ -30,11 +30,7 @@ class _desktopState extends State<desktop> {
     double isdeviceWidth = MediaQuery.of(context).size.width;
     // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
-    double deviceHeight = 729.5999755859375;
-    print("======================================================================================");
-    print(deviceHeight);
-    print(deviceWidth);
-    print("======================================================================================");
+    double deviceHeight = 729.5;
 
     const rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
 
