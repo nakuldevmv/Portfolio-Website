@@ -69,13 +69,19 @@ class _tabletState extends State<tablet> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Expanded(
-                            child: Image.asset(
-                              profilepic,
-                              fit: BoxFit.fitHeight,
-                              alignment: Alignment.bottomCenter,
-                              // scale: 3.0, // scale the image by a factor of 2
-                            ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Image.asset(
+                                  profilepic,
+                                  fit: BoxFit.fitWidth,
+                                  width: deviceWidth * 0.14,
+                                  alignment: Alignment.topCenter,
+                                  // scale: 3.0, // scale the image by a factor of 2
+                                ),
+                              ),
+                            ],
                           ),
                           SizedBox(
                             width: deviceWidth * 0.02,
