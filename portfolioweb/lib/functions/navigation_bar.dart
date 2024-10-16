@@ -107,11 +107,11 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         tabs: const [
                           GButton(
                             // iconColor: Colors.amberAccent,
-                            icon: Icons.home,
+                            icon: Icons.home_filled,
                             text: 'Home',
                           ),
                           GButton(
-                            icon: Icons.engineering,
+                            icon: Icons.folder,
                             text: 'Projects',
                           ),
                           GButton(
@@ -119,7 +119,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                             text: 'About Me',
                           ),
                           GButton(
-                            icon: Icons.contact_mail,
+                            icon: Icons.mail,
                             text: 'Contact Me',
                           ),
                         ],

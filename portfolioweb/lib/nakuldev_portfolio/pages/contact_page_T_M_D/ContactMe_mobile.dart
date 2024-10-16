@@ -24,7 +24,6 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
