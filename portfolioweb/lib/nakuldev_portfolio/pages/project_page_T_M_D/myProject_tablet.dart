@@ -74,6 +74,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                   children: [
                                     //SS
                                     Stack(
+                                      alignment: Alignment.center,
                                       children: [
                                         Container(
                                           width: deviceWidth / 2.179,
@@ -85,8 +86,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                         ),
                                         Container(
-                                          width: deviceWidth / 2.179,
-                                          height: 250,
+                                          width: (deviceWidth / 2.179) - 40,
+                                          height: 250 - 40,
                                           // margin: const EdgeInsets.only(top: 10),
                                           decoration: BoxDecoration(
                                             borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -96,6 +97,14 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               ),
                                               fit: BoxFit.cover,
                                             ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black.withOpacity(0.2), // Shadow color with some transparency
+                                                spreadRadius: 1, // How far the shadow spreads
+                                                blurRadius: 5, // Smoothness of the shadow
+                                                offset: const Offset(2, 2), // Horizontal and vertical offset
+                                              ),
+                                            ],
                                           ),
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.end,
@@ -268,6 +277,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                   children: [
                                     //SS
                                     Stack(
+                                      alignment: Alignment.center,
                                       children: [
                                         Container(
                                           width: deviceWidth / 2.179,
@@ -279,8 +289,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                         ),
                                         Container(
-                                          width: deviceWidth / 2.179,
-                                          height: 250,
+                                          width: (deviceWidth / 2.179) - 40,
+                                          height: 250 - 40,
                                           // margin: const EdgeInsets.only(top: 10),
                                           decoration: BoxDecoration(
                                             borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -290,6 +300,14 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               ),
                                               fit: BoxFit.cover,
                                             ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black.withOpacity(0.2), // Shadow color with some transparency
+                                                spreadRadius: 1, // How far the shadow spreads
+                                                blurRadius: 5, // Smoothness of the shadow
+                                                offset: const Offset(2, 2), // Horizontal and vertical offset
+                                              ),
+                                            ],
                                           ),
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.end,
