@@ -152,51 +152,5 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
         ],
       ),
     );
-    // bottomNavigationBar: Padding(
-    //   padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-    //   child: widget.showNavBar
-    //       ? GNav(
-    //           tabs: const [
-    //             GButton(
-    //               // iconColor: Colors.amberAccent,
-    //               icon: Icons.home,
-    //               text: 'Home',
-    //             ),
-    //             GButton(
-    //               icon: Icons.engineering,
-    //               text: 'My Projects',
-    //             ),
-    //             GButton(
-    //               icon: Icons.contact_mail,
-    //               text: 'Contact Me',
-    //             ),
-    //             GButton(
-    //               icon: Icons.person,
-    //               text: 'About Me',
-    //             ),
-    //           ],
-    //           selectedIndex: _selectedIndex,
-    //           onTabChange: (index) {
-    //             setState(() {
-    //               _selectedIndex = index;
-    //             });
-    //             switch (index) {
-    //               case 0:
-    //                 navigateTo(context, const toResponsiveLayout(currentIndex: 0));
-    //                 break;
-    //               case 1:
-    //                 navigateTo(context, const toResponsiveLayout_project(initialIndex: 0, currentIndex: 1));
-    //                 break;
-    //               case 2:
-    //                 navigateTo(context, const toResponsiveLayout_contactMe(currentIndex: 2));
-    //                 break;
-    //               case 3:
-    //                 navigateTo(context, const toResponsiveLayout_AboutMe(currentIndex: 3));
-    //                 break;
-    //             }
-    //           },
-    //         )
-    //       : null,
-    // ));
   }
 }
