@@ -1,5 +1,6 @@
 import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/functions/Code_Demo_button.dart';
+import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';

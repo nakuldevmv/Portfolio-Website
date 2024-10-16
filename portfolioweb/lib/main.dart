@@ -2,7 +2,7 @@ import 'package:Nakul_Dev/Data/profilepic.dart';
 import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
-import 'package:Nakul_Dev/test_dart_files/GoogleMap_Integration.dart';
+import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
@@ -43,9 +43,14 @@ Future<void> preloadSvgs() async {
   await rootBundle.loadString('assets/svg/github.svg');
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -2,6 +2,15 @@
 
 import 'package:flutter/material.dart';
 
+class navigation_containerStyle {
+  // static const BorderRadius borderRadius = BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20));
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(18));
+  static const EdgeInsets padding = EdgeInsets.symmetric(vertical: 10, horizontal: 15);
+  static const Color color = Color.fromARGB(255, 19, 19, 19);
+  static const double width = 1;
+  static const double height = 70;
+}
+
 class mobile_containerStyle {
   static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16, right: 16);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));

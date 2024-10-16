@@ -28,7 +28,8 @@ class _ContactMeState extends State<ContactMe> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/background_image.jpg'),
-            fit: BoxFit.cover,
+            fit: BoxFit.fitHeight,
+            //change all to fitHeight
           ),
         ),
         child: Padding(

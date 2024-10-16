@@ -520,7 +520,9 @@ class _tabletState extends State<tablet> {
                                     cursor: SystemMouseCursors.click,
                                     child: GestureDetector(
                                       onTap: () {
-                                        navigateTo(context, toResponsiveLayout_project(initialIndex: index));
+                                        int newIndex = (index ~/ 2); // Divides index by 2 and discards the remainder
+
+                                        navigateTo(context, toResponsiveLayout_project(initialIndex: newIndex));
                                       },
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
