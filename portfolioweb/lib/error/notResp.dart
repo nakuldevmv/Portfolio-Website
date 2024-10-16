@@ -26,6 +26,7 @@ class NotResp extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   'assets/svg/404.svg',
+                  color: Colors.white,
                   height: 200,
                 ),
                 const SizedBox(height: 24),

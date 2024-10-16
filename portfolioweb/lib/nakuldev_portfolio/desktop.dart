@@ -147,47 +147,50 @@ class _desktopState extends State<desktop> {
                             downloadResume(rurl);
                             notifySnackBar(context, "My Resume Will Be Downloaded Shortly");
                           },
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 183, 183, 183),
-                              borderRadius: containerStyle.borderRadius,
-                            ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(
-                                  Icons.download_rounded,
-                                  color: Colors.black,
-                                  size: deviceWidth * 0.014,
-                                ),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: AutoSizeText.rich(
-                                        maxFontSize: 23,
-                                        minFontSize: 5,
-                                        maxLines: 1,
-                                        TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: "My ",
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingB, color: Colors.black),
-                                            ),
-                                            TextSpan(
-                                              text: "Resume",
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
-                                            ),
-                                          ],
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 183, 183, 183),
+                                borderRadius: containerStyle.borderRadius,
+                              ),
+                              padding: containerStyle.padding,
+                              margin: containerStyle.margin,
+                              width: deviceWidth * containerStyle.width,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(
+                                    Icons.download_rounded,
+                                    color: Colors.black,
+                                    size: deviceWidth * 0.014,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: AutoSizeText.rich(
+                                          maxFontSize: 23,
+                                          minFontSize: 5,
+                                          maxLines: 1,
+                                          TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: "My ",
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingB, color: Colors.black),
+                                              ),
+                                              TextSpan(
+                                                text: "Resume",
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -259,60 +262,63 @@ class _desktopState extends State<desktop> {
                           onTap: () {
                             navigateTo(context, const toResponsiveLayout_contactMe());
                           },
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              color: containerStyle.color,
-                              borderRadius: containerStyle.borderRadius,
-                            ),
-                            padding: containerStyle.padding,
-                            margin: containerStyle.margin,
-                            width: deviceWidth * containerStyle.width,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Expanded(
-                                      child: AutoSizeText(
-                                        "Have some\nQuestions?",
-                                        maxLines: 3,
-                                        maxFontSize: 15,
-                                        minFontSize: 10,
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.arrow_outward_rounded,
-                                      size: deviceWidth * 0.014,
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: AutoSizeText.rich(
-                                        maxFontSize: 23,
-                                        minFontSize: 5,
-                                        maxLines: 1,
-                                        TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: 'Contact ',
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                            ),
-                                            TextSpan(
-                                              text: 'Me',
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                            )
-                                          ],
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: containerStyle.color,
+                                borderRadius: containerStyle.borderRadius,
+                              ),
+                              padding: containerStyle.padding,
+                              margin: containerStyle.margin,
+                              width: deviceWidth * containerStyle.width,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Expanded(
+                                        child: AutoSizeText(
+                                          "Have some\nQuestions?",
+                                          maxLines: 3,
+                                          maxFontSize: 15,
+                                          minFontSize: 10,
+                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                      Icon(
+                                        Icons.arrow_outward_rounded,
+                                        size: deviceWidth * 0.014,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: AutoSizeText.rich(
+                                          maxFontSize: 23,
+                                          minFontSize: 5,
+                                          maxLines: 1,
+                                          TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: 'Contact ',
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                              ),
+                                              TextSpan(
+                                                text: 'Me',
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -331,7 +337,7 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
+                          padding: containerStyle.paddingNew,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
                           child: Column(
@@ -346,34 +352,37 @@ class _desktopState extends State<desktop> {
                                         initialIndex: 0,
                                       ));
                                 },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: AutoSizeText.rich(
-                                        maxFontSize: 23,
-                                        minFontSize: 5,
-                                        maxLines: 1,
-                                        TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: 'My ',
-                                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                                            ),
-                                            TextSpan(
-                                              text: 'Projects',
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
-                                            )
-                                          ],
+                                child: MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: AutoSizeText.rich(
+                                          maxFontSize: 23,
+                                          minFontSize: 5,
+                                          maxLines: 1,
+                                          TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: 'My ',
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                              ),
+                                              TextSpan(
+                                                text: 'Projects',
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Icon(
-                                      Icons.arrow_outward_rounded,
-                                      size: deviceWidth * 0.014,
-                                    )
-                                  ],
+                                      Icon(
+                                        Icons.arrow_outward_rounded,
+                                        size: deviceWidth * 0.014,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
 
@@ -392,36 +401,39 @@ class _desktopState extends State<desktop> {
                                         onTap: () {
                                           navigateTo(context, toResponsiveLayout_project(initialIndex: index));
                                         },
-                                        child: Container(
-                                          decoration: const BoxDecoration(
-                                            color: ProjectcontainerStyle.color,
-                                            borderRadius: ProjectcontainerStyle.borderRadius,
-                                          ),
-                                          padding: ProjectcontainerStyle.padding,
-                                          margin: ProjectcontainerStyle.margin,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Padding(
-                                                    padding: const EdgeInsets.only(right: 8.0),
-                                                    child: Icon(
-                                                      projects[index].icon,
-                                                      size: deviceWidth * 0.014,
+                                        child: MouseRegion(
+                                          cursor: SystemMouseCursors.click,
+                                          child: Container(
+                                            decoration: const BoxDecoration(
+                                              color: ProjectcontainerStyle.color,
+                                              borderRadius: ProjectcontainerStyle.borderRadius,
+                                            ),
+                                            padding: ProjectcontainerStyle.padding,
+                                            margin: ProjectcontainerStyle.margin,
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(right: 8.0),
+                                                      child: Icon(
+                                                        projects[index].icon,
+                                                        size: deviceWidth * 0.014,
+                                                      ),
                                                     ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: deviceWidth * 0.115,
-                                                    child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
-                                                  ),
-                                                ],
-                                              ),
-                                              Icon(
-                                                Icons.arrow_forward_ios_rounded,
-                                                size: deviceWidth * 0.014,
-                                              )
-                                            ],
+                                                    SizedBox(
+                                                      width: deviceWidth * 0.115,
+                                                      child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Icon(
+                                                  Icons.arrow_forward_ios_rounded,
+                                                  size: deviceWidth * 0.014,
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       );
@@ -528,7 +540,7 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
+                          padding: containerStyle.paddingNew,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
                           child: Column(
@@ -673,7 +685,7 @@ class _desktopState extends State<desktop> {
                             color: containerStyle.color,
                             borderRadius: containerStyle.borderRadius,
                           ),
-                          padding: containerStyle.padding,
+                          padding: containerStyle.paddingNew,
                           margin: containerStyle.margin,
                           width: deviceWidth * containerStyle.width,
                           child: Column(
