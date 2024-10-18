@@ -55,23 +55,24 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
           _selectedIndex == 1
               ? Container(
                   width: deviceWidth,
-                  height: navigation_containerStyle.height + 20,
+                  // height: navigation_containerStyle.height,
+
+                  height: navigation_containerStyle.height + 40,
                   decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(0, 0, 0, 0),
-                        Color.fromARGB(201, 0, 0, 0),
-                        Color(0xff000000)
-                      ],
-                      stops: [
-                        0.01,
-                        0.6,
-                        1
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
+                      gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(0, 0, 0, 0),
+                      Color.fromARGB(85, 0, 0, 0),
+                      Color.fromARGB(200, 0, 0, 0)
+                    ],
+                    stops: [
+                      0.33,
+                      0.66,
+                      0.99
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  )),
                 )
               : const Offstage(),
           widget.showNavBar
@@ -79,19 +80,32 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                   padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: navigation_containerStyle.color,
-                      borderRadius: navigation_containerStyle.borderRadius,
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xff614385),
+                          Color(0xff516395)
+                        ],
+                        stops: [
+                          0,
+                          1
+                        ],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                      ),
+                      // color: navigation_containerStyle.color,
+                      borderRadius: containerStyle.borderRadius,
                     ),
                     height: navigation_containerStyle.height,
                     padding: navigation_containerStyle.padding,
                     width: deviceWidth < 412 ? deviceWidth * navigation_containerStyle.width : 412,
                     child: ClipRRect(
-                      borderRadius: navigation_containerStyle.borderRadius,
+                      borderRadius: containerStyle.borderRadius,
                       child: GNav(
+                        tabBorderRadius: 10,
                         haptic: true,
-                        backgroundColor: navigation_containerStyle.color,
-                        gap: 8,
-                        color: Colors.grey[600],
+                        backgroundColor: Colors.transparent,
+                        gap: 8.5,
+                        color: const Color.fromARGB(255, 161, 161, 161),
                         activeColor: Colors.white,
                         rippleColor: Colors.grey[800]!,
                         hoverColor: Colors.grey[700]!,
@@ -102,7 +116,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         ),
                         // textStyle: const TextStyle(fontSize: 16, color: Colors.white),
                         tabBackgroundColor: Colors.grey[900]!,
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                        padding: const EdgeInsets.all(10),
                         duration: const Duration(milliseconds: 800),
                         tabs: const [
                           GButton(
