@@ -532,29 +532,32 @@ class _desktopState extends State<desktop> {
                               ////
                               Expanded(
                                 flex: 2,
-                                child: GridView.builder(
-                                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 4,
-                                    // crossAxisSpacing: 3,
-                                    // mainAxisSpacing: 3,
-                                  ),
-                                  itemCount: skills.length,
-                                  itemBuilder: (context, index) {
-                                    return Container(
-                                      decoration: const BoxDecoration(
-                                        color: containerStyle.color,
-                                        borderRadius: containerStyle.borderRadius,
-                                      ),
-                                      child: Center(
-                                        child: SvgPicture.asset(
-                                          skills[index],
-                                          color: textStyles.B.color,
-                                          width: deviceWidth * 0.06,
-                                          height: deviceHeight * 0.06,
+                                child: ScrollConfiguration(
+                                  behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                                  child: GridView.builder(
+                                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 4,
+                                      // crossAxisSpacing: 3,
+                                      // mainAxisSpacing: 3,
+                                    ),
+                                    itemCount: skills.length,
+                                    itemBuilder: (context, index) {
+                                      return Container(
+                                        decoration: const BoxDecoration(
+                                          color: containerStyle.color,
+                                          borderRadius: containerStyle.borderRadius,
                                         ),
-                                      ),
-                                    );
-                                  },
+                                        child: Center(
+                                          child: SvgPicture.asset(
+                                            skills[index],
+                                            color: textStyles.B.color,
+                                            width: deviceWidth * 0.06,
+                                            height: deviceHeight * 0.06,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ),
                               )
                             ],
