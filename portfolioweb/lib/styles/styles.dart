@@ -75,6 +75,8 @@ class containerStyle {
 
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
+  static const double widthAboutme = 0.25;
+
   // static const double width = 0.2;
   //mobile property
   static const EdgeInsets margin_mobile = EdgeInsets.only(top: 10, left: 10, right: 5);

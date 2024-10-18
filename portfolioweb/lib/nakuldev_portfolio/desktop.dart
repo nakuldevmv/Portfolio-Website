@@ -6,8 +6,10 @@ import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
 import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_AboutMe.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -79,7 +81,7 @@ class _desktopState extends State<desktop> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: "Innovating the ",
+                                          text: "Building the   ",
                                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                         ),
                                         TextSpan(
@@ -110,30 +112,63 @@ class _desktopState extends State<desktop> {
                       //
                       Expanded(
                         flex: 6,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            color: containerStyle.color,
-                            borderRadius: containerStyle.borderRadius,
-                          ),
-                          padding: containerStyle.padding,
-                          margin: containerStyle.margin,
-                          width: deviceWidth * containerStyle.width,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.accessibility_new_outlined,
-                                size: deviceWidth * 0.014,
+                        child: GestureDetector(
+                          onTap: () {
+                            navigateTo(context, const toResponsiveLayout_AboutMe());
+                          },
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: containerStyle.color,
+                                borderRadius: containerStyle.borderRadius,
                               ),
-                              AutoSizeText(
-                                minFontSize: 10,
-                                maxFontSize: 15,
-                                maxLines: 10,
-                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                "Innovative and results-driven computer engineer focused on solving complex problems and delivering impactful solutions. Passionate about technology and continuous learning to stay ahead in software development.",
+                              padding: containerStyle.padding,
+                              margin: containerStyle.margin,
+                              width: deviceWidth * containerStyle.width,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: AutoSizeText.rich(
+                                          maxFontSize: 23,
+                                          minFontSize: 5,
+                                          maxLines: 1,
+                                          TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: 'About ',
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                              ),
+                                              TextSpan(
+                                                text: 'Me',
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_outward_rounded,
+                                        size: deviceWidth * 0.014,
+                                      )
+                                    ],
+                                  ),
+                                  AutoSizeText(
+                                    minFontSize: 10,
+                                    maxFontSize: 15,
+                                    maxLines: 10,
+                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                    "Computer engineer with a strong foundation in problem-solving and software development. Committed to building efficient, reliable solutions and continuously expanding my skills to stay current with evolving technologies.",
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
                       ),

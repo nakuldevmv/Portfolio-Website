@@ -127,7 +127,7 @@ class _tabletState extends State<tablet> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: "Innovating the ",
+                                              text: "Building the ",
                                               style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                             ),
                                             TextSpan(

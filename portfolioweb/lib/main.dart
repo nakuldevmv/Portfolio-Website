@@ -3,6 +3,7 @@ import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
 import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
+import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
@@ -59,7 +60,8 @@ class _MyAppState extends State<MyApp> {
         colorScheme: const ColorScheme.dark(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const toResponsiveLayout(), //Website Enabled
+      home: const AboutMe(),
+      // home: const toResponsiveLayout(), //Website Enabled
       // home: const notResp(), // Website Disabled
     );
   }

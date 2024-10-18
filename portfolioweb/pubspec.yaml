@@ -93,6 +93,7 @@ flutter:
      - assets/locD.png
      - assets/i.png
      - assets/pfp2.png
+     - assets/book.png
      - assets/svg/blender.svg
      - assets/svg/cpp.svg
      - assets/svg/css.svg

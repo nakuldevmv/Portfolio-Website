@@ -116,7 +116,7 @@ class _mobileState extends State<mobile> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: "Innovating the ",
+                                          text: "Building the ",
                                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
                                         ),
                                         TextSpan(
