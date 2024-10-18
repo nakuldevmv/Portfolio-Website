@@ -71,7 +71,7 @@ class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const EdgeInsets paddingNew = EdgeInsets.only(top: 16, left: 16, right: 16);
+  static const EdgeInsets paddingNew = EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
 
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;
