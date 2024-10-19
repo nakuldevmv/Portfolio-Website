@@ -95,6 +95,14 @@ flutter:
      - assets/i.png
      - assets/pfp2.png
      - assets/book.png
+
+     - assets/emoji/Airplane.png
+     - assets/emoji/Book.png
+     - assets/emoji/Brain.png
+     - assets/emoji/Gym.png
+     - assets/emoji/Magnifier.png
+     - assets/emoji/Moon.png
+
      - assets/svg/blender.svg
      - assets/svg/cpp.svg
      - assets/svg/css.svg
@@ -113,6 +121,13 @@ flutter:
      - assets/svg/hackerrank.svg
      - assets/svg/github.svg
      - assets/svg/404.svg
+
+
+
+
+
+
+
 
 flutter_native_splash:
   android: true

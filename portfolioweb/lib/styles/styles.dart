@@ -1,11 +1,12 @@
 // ignore_for_file: camel_case_types, constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class rotating_container extends StatelessWidget {
   final Color color;
-  final Icon icon;
+  final String emoji;
   final dynamic rotationZ;
   final String text;
   final double width;
@@ -14,7 +15,7 @@ class rotating_container extends StatelessWidget {
     super.key,
     required this.color,
     required this.rotationZ,
-    required this.icon,
+    required this.emoji,
     required this.text,
     required this.width,
   });
@@ -51,7 +52,10 @@ class rotating_container extends StatelessWidget {
               '$text ',
               style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
             ),
-            icon,
+            Image.asset(
+              emoji,
+              width: 24.5,
+            ),
           ],
         ),
       ),

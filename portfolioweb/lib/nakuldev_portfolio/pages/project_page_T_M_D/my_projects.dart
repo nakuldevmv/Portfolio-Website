@@ -1,5 +1,6 @@
 import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/functions/Code_Demo_button.dart';
+import 'package:Nakul_Dev/functions/demo_code_btn_widget.dart';
 import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -84,108 +85,48 @@ class _myProject_mobileState extends State<myProject> {
                                         color: Color.fromARGB(127, 0, 0, 0),
                                       ),
                                     ),
-                                    Container(
-                                      width: (deviceWidth / 4) - 40,
-                                      height: 300 - 40,
-                                      decoration: BoxDecoration(
-                                        borderRadius: const BorderRadius.all(Radius.circular(10)),
-                                        image: DecorationImage(
-                                          image: AssetImage(projects[index].image),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.black.withOpacity(0.2), // Shadow color with some transparency
-                                            spreadRadius: 1, // How far the shadow spreads
-                                            blurRadius: 5, // Smoothness of the shadow
-                                            offset: const Offset(2, 2), // Horizontal and vertical offset
-                                          ),
-                                        ],
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          // Icon(
-                                          //   projects[index].icon,
-                                          //   size: deviceWidth * 0.1,
-                                          //   color: Colors.white,
-                                          // ),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: [
-                                              //code btn
-                                              Container(
-                                                padding: const EdgeInsets.all(5),
-                                                margin: const EdgeInsets.only(left: 10, right: 10),
-                                                height: 40,
-                                                width: 80,
-                                                decoration: const BoxDecoration(
-                                                    borderRadius: BorderRadius.only(
-                                                      topLeft: Radius.circular(10),
-                                                      topRight: Radius.circular(10),
-                                                    ),
-                                                    color: EducationcontainerStyle.color),
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    codeButton(context, projects[index]);
-                                                  },
-                                                  child: Row(
-                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                    children: [
-                                                      AutoSizeText(
-                                                        "Code",
-                                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                                        minFontSize: 5,
-                                                        maxFontSize: 15,
-                                                        maxLines: 1,
-                                                      ),
-                                                      const Icon(
-                                                        Icons.code_rounded,
-                                                        size: 30,
-                                                      )
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              //demo btn
-                                              Container(
-                                                padding: const EdgeInsets.all(5),
-                                                margin: const EdgeInsets.only(left: 10, right: 10),
-                                                height: 40,
-                                                width: 80,
-                                                decoration: const BoxDecoration(
-                                                    borderRadius: BorderRadius.only(
-                                                      topLeft: Radius.circular(10),
-                                                      topRight: Radius.circular(10),
-                                                    ),
-                                                    color: EducationcontainerStyle.color),
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    demoButton(context, projects[index]);
-                                                  },
-                                                  child: Row(
-                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                    children: [
-                                                      AutoSizeText(
-                                                        "Demo",
-                                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                                                        minFontSize: 5,
-                                                        maxFontSize: 15,
-                                                        maxLines: 1,
-                                                      ),
-                                                      const Icon(
-                                                        Icons.add_to_home_screen_rounded,
-                                                        size: 30,
-                                                      )
-                                                    ],
-                                                  ),
-                                                ),
+                                    //////
+                                    Stack(
+                                      alignment: AlignmentDirectional.bottomCenter,
+                                      children: [
+                                        Container(
+                                          width: (deviceWidth / 4) - 40,
+                                          height: 300 - 40,
+                                          decoration: BoxDecoration(
+                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                            image: DecorationImage(
+                                              image: AssetImage(projects[index].image),
+                                              fit: BoxFit.cover,
+                                            ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black.withOpacity(0.2), // Shadow color with some transparency
+                                                spreadRadius: 1, // How far the shadow spreads
+                                                blurRadius: 5, // Smoothness of the shadow
+                                                offset: const Offset(2, 2), // Horizontal and vertical offset
                                               ),
                                             ],
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                        Container(
+                                          width: (deviceWidth / 4) - 39,
+                                          decoration: const BoxDecoration(
+                                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Color.fromARGB(0, 0, 0, 0),
+                                                Color.fromARGB(99, 0, 0, 0),
+                                                Color.fromARGB(199, 0, 0, 0),
+                                                Color.fromARGB(230, 0, 0, 0),
+                                                Color.fromARGB(255, 0, 0, 0)
+                                              ],
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                            ),
+                                          ),
+                                          child: demo_code_button(index: index),
+                                        )
+                                      ],
                                     ),
                                   ],
                                 ),
