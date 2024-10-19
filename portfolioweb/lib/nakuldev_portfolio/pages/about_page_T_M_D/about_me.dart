@@ -59,6 +59,13 @@ class _AboutMeState extends State<AboutMe> {
                   child: Container(
                     decoration: const BoxDecoration(
                       color: containerStyle.color,
+                      gradient: RadialGradient(
+                        colors: [
+                          Color.fromARGB(255, 79, 79, 79),
+                          containerStyle.color
+                        ],
+                        center: Alignment.bottomCenter,
+                      ),
                       borderRadius: containerStyle.borderRadius,
                     ),
                     padding: containerStyle.paddingNew,
@@ -89,11 +96,23 @@ class _AboutMeState extends State<AboutMe> {
                             ),
                           ],
                         ),
-                        Image.asset(
-                          bookPic,
-                          height: 250,
-                          fit: BoxFit.fitWidth,
-                          alignment: Alignment.bottomCenter,
+                        Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.15), // Shadow color
+                                spreadRadius: 1, // Spread radius
+                                blurRadius: 5, // Blur radius
+                                offset: const Offset(0, 3), // Offset in the x and y direction
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                            bookPic,
+                            height: 250,
+                            fit: BoxFit.fitWidth,
+                            alignment: Alignment.bottomCenter,
+                          ),
                         )
                       ],
                     ),
