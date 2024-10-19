@@ -1,6 +1,63 @@
 // ignore_for_file: camel_case_types, constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class rotating_container extends StatelessWidget {
+  final Color color;
+  final Icon icon;
+  final dynamic rotationZ;
+  final String text;
+  final double width;
+
+  const rotating_container({
+    super.key,
+    required this.color,
+    required this.rotationZ,
+    required this.icon,
+    required this.text,
+    required this.width,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Transform(
+      alignment: FractionalOffset.center,
+      transform: Matrix4.identity()
+        ..rotateZ(
+          rotationZ * 3.1415927 / 180,
+        ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(50),
+          ),
+          color: color,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.15), // Shadow color
+              spreadRadius: 1, // Spread radius
+              blurRadius: 5, // Blur radius
+              offset: const Offset(0, 3), // Offset in the x and y direction
+            ),
+          ],
+        ),
+        width: width,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '$text ',
+              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
+            ),
+            icon,
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class navigation_containerStyle {
   // static const BorderRadius borderRadius = BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20));
@@ -72,6 +129,11 @@ class containerStyle {
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(20));
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const EdgeInsets paddingNew = EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
+  static const EdgeInsets paddingNewHeading = EdgeInsets.only(
+    top: 16,
+    left: 16,
+    right: 16,
+  );
 
   static const Color color = Color.fromARGB(255, 37, 37, 37);
   static const double width = 0.19535;

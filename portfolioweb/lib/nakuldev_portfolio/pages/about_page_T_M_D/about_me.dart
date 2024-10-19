@@ -5,6 +5,7 @@ import 'package:Nakul_Dev/functions/launch_url.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:marquee_list/marquee_list.dart';
 
 class AboutMe extends StatefulWidget {
   const AboutMe({super.key});
@@ -19,7 +20,6 @@ class _AboutMeState extends State<AboutMe> {
     double isdeviceWidth = MediaQuery.of(context).size.width;
     // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
-    double deviceHeight = 729.5;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 50, bottom: 100),
@@ -40,8 +40,8 @@ class _AboutMeState extends State<AboutMe> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Beyond Portfolio",
-                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                          "BEYOND PORTFOLIO",
+                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB, fontSize: 18),
                         ),
                         const SizedBox(
                           height: 15,
@@ -283,7 +283,7 @@ class _AboutMeState extends State<AboutMe> {
                     Container(
                       margin: containerStyle.margin,
                       width: deviceWidth * containerStyle.widthAboutme,
-                      height: 250,
+                      height: 200,
                       child: const ClipRRect(
                         borderRadius: containerStyle.borderRadius,
                         child: RandomLocationMap(),
@@ -318,29 +318,112 @@ class _AboutMeState extends State<AboutMe> {
                       color: containerStyle.color,
                       borderRadius: containerStyle.borderRadius,
                     ),
-                    padding: containerStyle.padding,
+                    // padding: containerStyle.padding,
                     margin: containerStyle.margin,
                     width: deviceWidth * containerStyle.widthAboutme,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            const Icon(Icons.flare_rounded),
-                            Text(
-                              " My Persona",
-                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                        Padding(
+                          padding: containerStyle.paddingNewHeading,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  const Icon(Icons.flare_rounded),
+                                  Text(
+                                    " My Persona",
+                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 15,
+                              ),
+                              Text(
+                                "Know me as a person",
+                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                            // color: Colors.black26,
+                            child: const Stack(
+                              children: [
+                                Positioned(
+                                  bottom: 100,
+                                  left: 200, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 169, // Adjusted width
+                                    color: Color(0xFF4A90E2), // Tomato
+                                    rotationZ: -4,
+                                    text: "Curious Mind",
+                                    icon: Icon(Icons.search), // Magnifying Glass
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 60,
+                                  left: 5, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 135, // Adjusted width
+                                    color: Color(0xFFD4AC4B), // Sky Blue
+                                    rotationZ: -15,
+                                    text: "Bookworm",
+                                    icon: Icon(Icons.book), // Books
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 10,
+                                  left: 60, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 135, // Adjusted width
+                                    color: Color(0xFF27AE60), // Dark Orange
+                                    rotationZ: 2,
+                                    text: "Traveler",
+                                    icon: Icon(Icons.flight), // Airplane
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 160,
+                                  left: 180, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 130, // Adjusted width
+                                    color: Color(0xFFC0392B), // Lawn Green
+                                    rotationZ: 12,
+                                    text: "Gym Rat",
+                                    icon: Icon(Icons.fitness_center), // Weightlifter
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 120,
+                                  left: 10, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 190, // Adjusted width
+                                    color: Color(0xFFF39C12), // Medium Purple
+                                    rotationZ: -4,
+                                    text: "Problem Solver",
+                                    icon: Icon(Icons.psychology), // Circle
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 35,
+                                  left: 150, // Adjusted left position
+                                  child: rotating_container(
+                                    width: 215, // Adjusted width
+                                    color: Color(0xFF8E44AD), // Medium Purple
+                                    rotationZ: 18,
+                                    text: "Friendly Ambivert",
+                                    icon: Icon(Icons.circle), // Circle
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          "Know me as a person",
-                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                        ),
-                        // Image.asset(bookPic)
+                          ),
+                        )
                       ],
                     ),
                   ),
