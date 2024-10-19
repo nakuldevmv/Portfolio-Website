@@ -210,75 +210,77 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                                 ),
                                 const SizedBox(
                                   height: 255,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        bottom: 100,
-                                        left: 200, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 169, // Adjusted width
-                                          color: Color(0xFF4A90E2), // Tomato
-                                          rotationZ: -4,
-                                          text: "Curious Mind",
-                                          emoji: "assets/emoji/Magnifier.png", // Magnifying Glass
+                                  child: Center(
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                          bottom: 100,
+                                          left: 200, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 169, // Adjusted width
+                                            color: Color(0xFF4A90E2), // Tomato
+                                            rotationZ: -4,
+                                            text: "Curious Mind",
+                                            emoji: "assets/emoji/Magnifier.png", // Magnifying Glass
+                                          ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        bottom: 60,
-                                        left: 5, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 135, // Adjusted width
-                                          color: Color(0xFFD4AC4B), // Sky Blue
-                                          rotationZ: -15,
-                                          text: "Bookworm",
-                                          emoji: "assets/emoji/Book.png", // Books
+                                        Positioned(
+                                          bottom: 60,
+                                          left: 5, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 135, // Adjusted width
+                                            color: Color(0xFFD4AC4B), // Sky Blue
+                                            rotationZ: -15,
+                                            text: "Bookworm",
+                                            emoji: "assets/emoji/Book.png", // Books
+                                          ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        bottom: 10,
-                                        left: 60, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 135, // Adjusted width
-                                          color: Color(0xFF27AE60), // Dark Orange
-                                          rotationZ: 2,
-                                          text: "Traveler",
-                                          emoji: "assets/emoji/Airplane.png", // Airplane
+                                        Positioned(
+                                          bottom: 10,
+                                          left: 60, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 135, // Adjusted width
+                                            color: Color(0xFF27AE60), // Dark Orange
+                                            rotationZ: 2,
+                                            text: "Traveler",
+                                            emoji: "assets/emoji/Airplane.png", // Airplane
+                                          ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        bottom: 160,
-                                        left: 180, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 130, // Adjusted width
-                                          color: Color(0xFFC0392B), // Lawn Green
-                                          rotationZ: 12,
-                                          text: "Gym Rat",
-                                          emoji: "assets/emoji/Gym.png", // Weightlifter
+                                        Positioned(
+                                          bottom: 160,
+                                          left: 180, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 130, // Adjusted width
+                                            color: Color(0xFFC0392B), // Lawn Green
+                                            rotationZ: 12,
+                                            text: "Gym Rat",
+                                            emoji: "assets/emoji/Gym.png", // Weightlifter
+                                          ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        bottom: 120,
-                                        left: 10, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 190, // Adjusted width
-                                          color: Color(0xFFF39C12), // Medium Purple
-                                          rotationZ: -4,
-                                          text: "Problem Solver",
-                                          emoji: "assets/emoji/Brain.png", // Circle
+                                        Positioned(
+                                          bottom: 120,
+                                          left: 10, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 190, // Adjusted width
+                                            color: Color(0xFFF39C12), // Medium Purple
+                                            rotationZ: -4,
+                                            text: "Problem Solver",
+                                            emoji: "assets/emoji/Brain.png", // Circle
+                                          ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        bottom: 35,
-                                        left: 150, // Adjusted left position
-                                        child: rotating_container(
-                                          width: 215, // Adjusted width
-                                          color: Color(0xFF8E44AD), // Medium Purple
-                                          rotationZ: 18,
-                                          text: "Friendly Ambivert",
-                                          emoji: "assets/emoji/Moon.png", // Circle
+                                        Positioned(
+                                          bottom: 35,
+                                          left: 150, // Adjusted left position
+                                          child: rotating_container(
+                                            width: 215, // Adjusted width
+                                            color: Color(0xFF8E44AD), // Medium Purple
+                                            rotationZ: 18,
+                                            text: "Friendly Ambivert",
+                                            emoji: "assets/emoji/Moon.png", // Circle
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 )
                               ],
@@ -402,7 +404,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                                       ],
                                     ),
                                   ),
-                                  const SizedBox(height: 50),
+                                  const SizedBox(height: 20), // Spacing between sections
                                 ],
                               ),
                             ],
