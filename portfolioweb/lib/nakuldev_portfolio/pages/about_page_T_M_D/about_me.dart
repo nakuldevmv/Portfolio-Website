@@ -61,41 +61,39 @@ class _AboutMeState extends State<AboutMe> {
                       color: containerStyle.color,
                       borderRadius: containerStyle.borderRadius,
                     ),
-                    padding: containerStyle.padding,
+                    padding: containerStyle.paddingNew,
                     margin: containerStyle.margin,
                     width: deviceWidth * containerStyle.widthAboutme,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            const Icon(Icons.flare_rounded),
-                            Text(
-                              " Current Read",
-                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          "Can't Hurt Me • David Goggins",
-                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                        ),
                         Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Row(
+                              children: [
+                                const Icon(Icons.flare_rounded),
+                                Text(
+                                  " Current Read",
+                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                ),
+                              ],
+                            ),
                             const SizedBox(
                               height: 15,
                             ),
-                            Image.asset(
-                              bookPic,
-                              height: 200,
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.bottomCenter,
+                            Text(
+                              "Can't Hurt Me • David Goggins",
+                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                             ),
                           ],
+                        ),
+                        Image.asset(
+                          bookPic,
+                          height: 250,
+                          fit: BoxFit.fitWidth,
+                          alignment: Alignment.bottomCenter,
                         )
                       ],
                     ),
