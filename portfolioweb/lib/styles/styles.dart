@@ -69,7 +69,7 @@ class tablet_SVGContainer {
 
 class containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(20));
   static const EdgeInsets padding = EdgeInsets.all(16);
   static const EdgeInsets paddingNew = EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
 

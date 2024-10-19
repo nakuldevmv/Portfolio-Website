@@ -1,4 +1,4 @@
-import 'package:Nakul_Dev/Data/profilepic.dart';
+import 'package:Nakul_Dev/Data/profilePic_book.dart';
 import 'package:Nakul_Dev/error/notResp.dart';
 import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
 import 'package:Nakul_Dev/functions/launch_url.dart';
@@ -30,12 +30,8 @@ class _AboutMeState extends State<AboutMe> {
             Column(
               children: [
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      // color: containerStyle.color,
-                      borderRadius: containerStyle.borderRadius,
-                    ),
                     padding: containerStyle.padding,
                     margin: containerStyle.margin,
                     width: deviceWidth * containerStyle.widthAboutme,
@@ -47,6 +43,9 @@ class _AboutMeState extends State<AboutMe> {
                           "Beyond Portfolio",
                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
                         ),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         Text(
                           "Let's know more about me",
                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
@@ -56,7 +55,7 @@ class _AboutMeState extends State<AboutMe> {
                   ),
                 ),
                 Expanded(
-                  flex: 5,
+                  flex: 6,
                   child: Container(
                     decoration: const BoxDecoration(
                       color: containerStyle.color,
@@ -77,15 +76,26 @@ class _AboutMeState extends State<AboutMe> {
                             ),
                           ],
                         ),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         Text(
                           "Can't Hurt Me • David Goggins",
                           style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                         ),
-                        Image.asset(
-                          bookPic,
-                          height: 300,
-                          fit: BoxFit.fitWidth,
-                          alignment: Alignment.bottomCenter,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            Image.asset(
+                              bookPic,
+                              height: 200,
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.bottomCenter,
+                            ),
+                          ],
                         )
                       ],
                     ),
@@ -269,44 +279,39 @@ class _AboutMeState extends State<AboutMe> {
             ),
             Column(
               children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: containerStyle.borderRadius,
-                  ),
-                  margin: containerStyle.margin,
-                  width: deviceWidth * containerStyle.widthAboutme,
-                  child: Stack(
-                    children: [
-                      Container(
+                Stack(
+                  alignment: Alignment.bottomLeft,
+                  children: [
+                    Container(
+                      margin: containerStyle.margin,
+                      width: deviceWidth * containerStyle.widthAboutme,
+                      height: 250,
+                      child: const ClipRRect(
+                        borderRadius: containerStyle.borderRadius,
+                        child: RandomLocationMap(),
+                      ),
+                    ),
+                    Padding(
+                      padding: containerStyle.margin,
+                      child: Container(
                         decoration: const BoxDecoration(
-                          borderRadius: containerStyle.borderRadius,
+                          color: Color.fromARGB(130, 167, 167, 167),
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
                         ),
-                        width: deviceWidth * containerStyle.widthAboutme,
-                        height: 250,
-                        child: const ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: RandomLocationMap()),
-                      ),
-                      Positioned(
-                        bottom: 20,
-                        left: 20,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            color: Color.fromARGB(130, 167, 167, 167),
-                            borderRadius: BorderRadius.all(Radius.circular(50)),
-                          ),
-                          padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
-                          child: Row(
-                            children: [
-                              const Icon(Icons.place_rounded),
-                              Text(
-                                ' Kerala, India',
-                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                        margin: containerStyle.margin,
+                        padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.location_on),
+                            Text(
+                              ' Kerala, India',
+                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Expanded(
                   flex: 5,
@@ -329,6 +334,9 @@ class _AboutMeState extends State<AboutMe> {
                               style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
                             ),
                           ],
+                        ),
+                        const SizedBox(
+                          height: 15,
                         ),
                         Text(
                           "Know me as a person",

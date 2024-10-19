@@ -1,6 +1,6 @@
 import 'package:Nakul_Dev/Data/education.dart';
 import 'package:Nakul_Dev/Data/exp.dart';
-import 'package:Nakul_Dev/Data/profilepic.dart';
+import 'package:Nakul_Dev/Data/profilePic_book.dart';
 import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
