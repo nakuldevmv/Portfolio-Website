@@ -90,6 +90,7 @@ class _mobileState extends State<mobile> {
                                   ),
                                 ),
                                 Icon(
+                                  color: textStyles.B.color,
                                   Icons.verified_rounded,
                                   size: deviceWidth * mobile_containerStyle.iconSize,
                                 ),
@@ -152,6 +153,7 @@ class _mobileState extends State<mobile> {
                                   child: FittedBox(
                                     fit: BoxFit.scaleDown,
                                     child: Icon(
+                                      color: textStyles.B.color,
                                       Icons.description,
                                       size: deviceWidth * mobile_containerStyle.iconSize,
                                     ),
@@ -222,6 +224,7 @@ class _mobileState extends State<mobile> {
                         ),
                       ),
                       Icon(
+                        color: textStyles.B.color,
                         Icons.lens_blur_rounded,
                         size: deviceWidth * mobile_containerStyle.iconSize,
                       )
@@ -239,8 +242,7 @@ class _mobileState extends State<mobile> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -252,8 +254,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -265,8 +266,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -278,8 +278,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -291,8 +290,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -304,8 +302,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -325,8 +322,7 @@ class _mobileState extends State<mobile> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -339,8 +335,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -353,8 +348,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -367,8 +361,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -381,8 +374,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -395,8 +387,7 @@ class _mobileState extends State<mobile> {
                                 ),
                               ),
                             ),
-                            Container(
-                              color: mobile_SVGContainer.color,
+                            SizedBox(
                               width: deviceWidth * mobile_SVGContainer.width,
                               //height: deviceWidth * mobile_SVGContainer.height,
                               child: Center(
@@ -466,6 +457,7 @@ class _mobileState extends State<mobile> {
                             ),
                           ),
                           Icon(
+                            color: textStyles.B.color,
                             Icons.arrow_outward_rounded,
                             size: deviceWidth * mobile_containerStyle.iconSize,
                           )
@@ -503,7 +495,7 @@ class _mobileState extends State<mobile> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    const Icon(Icons.arrow_right_rounded, size: 33),
+                                    Icon(color: textStyles.B.color, Icons.arrow_right_rounded, size: 33),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -511,6 +503,7 @@ class _mobileState extends State<mobile> {
                                         Padding(
                                           padding: const EdgeInsets.only(bottom: 35),
                                           child: Icon(
+                                            color: textStyles.B.color,
                                             projects[index].icon,
                                             size: 42,
                                           ),
@@ -566,12 +559,14 @@ class _mobileState extends State<mobile> {
                     //       onTap: () {
                     //         toPrevious(pgController);
                     //       },
-                    //       child: Icon(
+                    //       child: Icon(color: textStyles.B.color,
+
                     //         Icons.arrow_back_ios_new_rounded,
                     //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                     //       ),
                     //     ),
-                    //     Icon(
+                    //     Icon(color: textStyles.B.color,
+
                     //       Icons.linear_scale_outlined,
                     //       size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                     //     ),
@@ -579,7 +574,8 @@ class _mobileState extends State<mobile> {
                     //       onTap: () {
                     //         toNext(projects.length, pgController);
                     //       },
-                    //       child: Icon(
+                    //       child: Icon(color: textStyles.B.color,
+
                     //         Icons.arrow_forward_ios_rounded,
                     //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                     //       ),
@@ -629,6 +625,7 @@ class _mobileState extends State<mobile> {
                           ),
                         ),
                         Icon(
+                          color: textStyles.B.color,
                           Icons.school_rounded,
                           size: deviceWidth * mobile_containerStyle.iconSize,
                         )
@@ -746,12 +743,14 @@ class _mobileState extends State<mobile> {
                   //         onTap: () {
                   //           toPrevious(pgController2);
                   //         },
-                  //         child: Icon(
+                  //         child: Icon(color: textStyles.B.color,
+
                   //           Icons.arrow_back_ios_new_rounded,
                   //           size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                   //         ),
                   //       ),
-                  //       Icon(
+                  //       Icon(color: textStyles.B.color,
+
                   //         Icons.linear_scale_outlined,
                   //         size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                   //       ),
@@ -759,7 +758,8 @@ class _mobileState extends State<mobile> {
                   //         onTap: () {
                   //           toNext(educations.length, pgController2);
                   //         },
-                  //         child: Icon(
+                  //         child: Icon(color: textStyles.B.color,
+
                   //           Icons.arrow_forward_ios_rounded,
                   //           size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                   //         ),
@@ -808,6 +808,7 @@ class _mobileState extends State<mobile> {
                           ),
                         ),
                         Icon(
+                          color: textStyles.B.color,
                           Icons.work_history_rounded,
                           size: deviceWidth * mobile_containerStyle.iconSize,
                         )
@@ -945,6 +946,7 @@ class _mobileState extends State<mobile> {
                             ),
                           ),
                           Icon(
+                            color: textStyles.B.color,
                             Icons.arrow_outward_rounded,
                             size: deviceWidth * mobile_containerStyle.iconSize,
                           ),

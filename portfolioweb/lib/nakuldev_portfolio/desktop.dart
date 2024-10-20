@@ -63,6 +63,7 @@ class _desktopState extends State<desktop> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Icon(
+                              color: textStyles.B.color,
                               Icons.lightbulb,
                               size: deviceWidth * 0.014,
                             ),
@@ -145,6 +146,7 @@ class _desktopState extends State<desktop> {
                                     ),
                                   ),
                                   Icon(
+                                    color: textStyles.B.color,
                                     Icons.arrow_outward_rounded,
                                     size: deviceWidth * 0.014,
                                   )
@@ -177,7 +179,7 @@ class _desktopState extends State<desktop> {
                         cursor: SystemMouseCursors.click,
                         child: Container(
                           decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 183, 183, 183),
+                            color: containerStyle.colorR,
                             borderRadius: containerStyle.borderRadius,
                           ),
                           padding: containerStyle.padding,
@@ -188,8 +190,8 @@ class _desktopState extends State<desktop> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Icon(
+                                color: textStyles.B.color,
                                 Icons.download_rounded,
-                                color: Colors.black,
                                 size: deviceWidth * 0.014,
                               ),
                               Row(
@@ -272,6 +274,7 @@ class _desktopState extends State<desktop> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Icon(
+                            color: textStyles.B.color,
                             Icons.verified_rounded,
                             size: deviceWidth * 0.014,
                           ),
@@ -315,6 +318,7 @@ class _desktopState extends State<desktop> {
                                     ),
                                   ),
                                   Icon(
+                                    color: textStyles.B.color,
                                     Icons.arrow_outward_rounded,
                                     size: deviceWidth * 0.014,
                                   ),
@@ -404,6 +408,7 @@ class _desktopState extends State<desktop> {
                                     ),
                                   ),
                                   Icon(
+                                    color: textStyles.B.color,
                                     Icons.arrow_outward_rounded,
                                     size: deviceWidth * 0.014,
                                   )
@@ -444,6 +449,7 @@ class _desktopState extends State<desktop> {
                                                 Padding(
                                                   padding: const EdgeInsets.only(right: 8.0),
                                                   child: Icon(
+                                                    color: textStyles.B.color,
                                                     projects[index].icon,
                                                     size: deviceWidth * 0.014,
                                                   ),
@@ -455,6 +461,7 @@ class _desktopState extends State<desktop> {
                                               ],
                                             ),
                                             Icon(
+                                              color: textStyles.B.color,
                                               Icons.arrow_forward_ios_rounded,
                                               size: deviceWidth * 0.014,
                                             )
@@ -510,6 +517,7 @@ class _desktopState extends State<desktop> {
                                 ),
                               ),
                               Icon(
+                                color: textStyles.B.color,
                                 Icons.lens_blur_rounded,
                                 size: deviceWidth * 0.014,
                               )
@@ -535,7 +543,7 @@ class _desktopState extends State<desktop> {
                                 itemBuilder: (context, index) {
                                   return Container(
                                     decoration: const BoxDecoration(
-                                      color: containerStyle.color,
+                                      // color: containerStyle.color,
                                       borderRadius: containerStyle.borderRadius,
                                     ),
                                     child: Center(
@@ -598,6 +606,7 @@ class _desktopState extends State<desktop> {
                                 ),
                               ),
                               Icon(
+                                color: textStyles.B.color,
                                 Icons.work_history_rounded,
                                 size: deviceWidth * 0.014,
                               )
@@ -743,6 +752,7 @@ class _desktopState extends State<desktop> {
                                 ),
                               ),
                               Icon(
+                                color: textStyles.B.color,
                                 Icons.school_rounded,
                                 size: deviceWidth * 0.014,
                               )

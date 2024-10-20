@@ -102,6 +102,7 @@ class _tabletState extends State<tablet> {
                                       ),
                                     ),
                                     Icon(
+                                      color: textStyles.B.color,
                                       Icons.verified_rounded,
                                       size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                     ),
@@ -162,10 +163,11 @@ class _tabletState extends State<tablet> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      const Expanded(
+                                      Expanded(
                                         child: FittedBox(
                                           fit: BoxFit.scaleDown,
                                           child: Icon(
+                                            color: textStyles.B.color,
                                             Icons.description,
                                             size: tablet_containerStyle.iconSizeL,
                                           ),
@@ -237,6 +239,7 @@ class _tabletState extends State<tablet> {
                             ),
                           ),
                           Icon(
+                            color: textStyles.B.color,
                             Icons.lens_blur_rounded,
                             size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                           )
@@ -254,8 +257,8 @@ class _tabletState extends State<tablet> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -267,8 +270,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -280,8 +283,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -293,8 +296,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -306,8 +309,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -319,8 +322,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -340,8 +343,8 @@ class _tabletState extends State<tablet> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -354,8 +357,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -368,8 +371,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -382,8 +385,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -396,8 +399,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -410,8 +413,8 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  color: tablet_SVGContainer.color,
+                                SizedBox(
+                                  //color: tablet_SVGContainer.color,
                                   width: deviceWidth * tablet_SVGContainer.width,
                                   //height: deviceWidth * tablet_SVGContainer.height,
                                   child: Center(
@@ -489,6 +492,7 @@ class _tabletState extends State<tablet> {
                                   ),
                                 ),
                                 Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_outward_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 )
@@ -530,7 +534,7 @@ class _tabletState extends State<tablet> {
                                           crossAxisAlignment: CrossAxisAlignment.end,
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
-                                            const Icon(Icons.arrow_right_rounded, size: 33),
+                                            Icon(color: textStyles.B.color, Icons.arrow_right_rounded, size: 33),
                                             Row(
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -538,6 +542,7 @@ class _tabletState extends State<tablet> {
                                                 Padding(
                                                   padding: const EdgeInsets.only(bottom: 35),
                                                   child: Icon(
+                                                    color: textStyles.B.color,
                                                     projects[index].icon,
                                                     size: 42,
                                                   ),
@@ -598,12 +603,14 @@ class _tabletState extends State<tablet> {
                                   toPrevious(pgController);
                                 },
                                 child: Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_back_ios_new_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
                               ),
                             ),
                             Icon(
+                              color: textStyles.B.color,
                               Icons.linear_scale_outlined,
                               size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                             ),
@@ -614,6 +621,7 @@ class _tabletState extends State<tablet> {
                                   toNext(projects.length, pgController);
                                 },
                                 child: Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_forward_ios_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
@@ -664,6 +672,7 @@ class _tabletState extends State<tablet> {
                               ),
                             ),
                             Icon(
+                              color: textStyles.B.color,
                               Icons.school_rounded,
                               size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                             )
@@ -784,12 +793,14 @@ class _tabletState extends State<tablet> {
                                   toPrevious(pgController2);
                                 },
                                 child: Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_back_ios_new_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
                               ),
                             ),
                             Icon(
+                              color: textStyles.B.color,
                               Icons.linear_scale_outlined,
                               size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                             ),
@@ -800,6 +811,7 @@ class _tabletState extends State<tablet> {
                                   toNext(educations.length, pgController2);
                                 },
                                 child: Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_forward_ios_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),
@@ -856,6 +868,7 @@ class _tabletState extends State<tablet> {
                                 ),
                               ),
                               Icon(
+                                color: textStyles.B.color,
                                 Icons.work_history_rounded,
                                 size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                               )
@@ -993,6 +1006,7 @@ class _tabletState extends State<tablet> {
                                   ),
                                 ),
                                 Icon(
+                                  color: textStyles.B.color,
                                   Icons.arrow_outward_rounded,
                                   size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                 ),

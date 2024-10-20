@@ -37,7 +37,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InkWell(
+              GestureDetector(
                 onTap: () {
                   urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
                 },
@@ -71,7 +71,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                         child: Row(
                           children: [
-                            const Icon(Icons.place_rounded),
+                            Icon(color: textStyles.B.color, Icons.place_rounded),
                             Text(
                               ' Kerala, India',
                               style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
@@ -101,7 +101,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              const Icon(Icons.mail_rounded),
+                              Icon(color: textStyles.B.color, Icons.mail_rounded),
                               // SizedBox(
                               //   width:   0.005,
                               // ),
@@ -124,7 +124,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                 ),
                               ),
                               const Spacer(),
-                              InkWell(
+                              GestureDetector(
                                 onTap: () {
                                   setState(() {
                                     isTick = !isTick;
@@ -139,8 +139,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                   });
                                 },
                                 child: AnimatedCrossFade(
-                                  firstChild: const Icon(Icons.copy),
-                                  secondChild: const Icon(Icons.check),
+                                  firstChild: Icon(color: textStyles.B.color, Icons.copy),
+                                  secondChild: Icon(color: textStyles.B.color, Icons.check),
                                   crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
                                   duration: const Duration(milliseconds: 150),
                                 ),
@@ -149,7 +149,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           )),
 
                       //linkedin
-                      InkWell(
+                      GestureDetector(
                         onTap: () {
                           urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                         },
@@ -190,7 +190,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //insta
-                          InkWell(
+                          GestureDetector(
                             onTap: () {
                               urlLaunch("https://www.instagram.com/jo.cly.n/");
                             },
@@ -213,7 +213,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                             width: 10,
                           ),
                           //twitter
-                          InkWell(
+                          GestureDetector(
                             onTap: () {
                               urlLaunch("https://x.com/");
                             },
@@ -243,7 +243,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //github
-                      InkWell(
+                      GestureDetector(
                         onTap: () {
                           urlLaunch("https://github.com/nakuldevmv");
                         },
@@ -267,7 +267,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         ),
                       ),
                       //hackerrank
-                      InkWell(
+                      GestureDetector(
                         onTap: () {
                           urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                         },

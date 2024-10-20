@@ -68,7 +68,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
                     children: [
                       Row(
                         children: [
-                          const Icon(Icons.flare_rounded),
+                          Icon(color: textStyles.B.color, Icons.flare_rounded),
                           Text(
                             " Current Read",
                             style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
@@ -132,7 +132,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
                     padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                     child: Row(
                       children: [
-                        const Icon(Icons.location_on),
+                        Icon(color: textStyles.B.color, Icons.location_on),
                         Text(
                           ' Kerala, India',
                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
@@ -162,7 +162,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.flare_rounded),
+                            Icon(color: textStyles.B.color, Icons.flare_rounded),
                             Text(
                               " My Persona",
                               style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),

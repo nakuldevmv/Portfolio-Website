@@ -28,7 +28,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          InkWell(
+          GestureDetector(
             onTap: () {
               urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
             },
@@ -61,7 +61,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                     child: Row(
                       children: [
-                        const Icon(Icons.place_rounded),
+                        Icon(color: textStyles.B.color, Icons.place_rounded),
                         Text(
                           ' Kerala, India',
                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
@@ -91,7 +91,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          const Icon(Icons.mail_rounded),
+                          Icon(color: textStyles.B.color, Icons.mail_rounded),
                           // SizedBox(
                           //   width: deviceWidth * 0.005,
                           // ),
@@ -114,7 +114,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             ),
                           ),
                           const Spacer(),
-                          InkWell(
+                          GestureDetector(
                             onTap: () {
                               setState(() {
                                 isTick = !isTick;
@@ -129,8 +129,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                               });
                             },
                             child: AnimatedCrossFade(
-                              firstChild: const Icon(Icons.copy),
-                              secondChild: const Icon(Icons.check),
+                              firstChild: Icon(color: textStyles.B.color, Icons.copy),
+                              secondChild: Icon(color: textStyles.B.color, Icons.check),
                               crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
                               duration: const Duration(milliseconds: 150),
                             ),
@@ -139,7 +139,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       )),
 
                   //linkedin
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
                       urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                     },
@@ -181,7 +181,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     children: [
                       //insta
                       SizedBox(
-                        child: InkWell(
+                        child: GestureDetector(
                           onTap: () {
                             urlLaunch("https://www.instagram.com/jo.cly.n/");
                           },
@@ -205,7 +205,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       ),
                       //twitter
                       SizedBox(
-                        child: InkWell(
+                        child: GestureDetector(
                           onTap: () {
                             urlLaunch("https://x.com/");
                           },
@@ -235,7 +235,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
               Column(
                 children: [
                   //github
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
                       urlLaunch("https://github.com/nakuldevmv");
                     },
@@ -259,7 +259,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     ),
                   ),
                   //hackerrank
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
                       urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                     },

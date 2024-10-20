@@ -29,7 +29,7 @@ class demo_code_button extends StatelessWidget {
                 // topLeft: Radius.circular(10),
                 // topRight: Radius.circular(10),
                 Radius.circular(10)), color: EducationcontainerStyle.color),
-            child: InkWell(
+            child: GestureDetector(
               onTap: () {
                 codeButton(context, projects[index]);
               },
@@ -43,7 +43,8 @@ class demo_code_button extends StatelessWidget {
                     maxFontSize: 15,
                     maxLines: 1,
                   ),
-                  const Icon(
+                  Icon(
+                    color: textStyles.B.color,
                     Icons.code_rounded,
                     size: 16,
                   )
@@ -58,7 +59,7 @@ class demo_code_button extends StatelessWidget {
             height: 30,
             width: 90,
             decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: EducationcontainerStyle.color),
-            child: InkWell(
+            child: GestureDetector(
               onTap: () {
                 demoButton(context, projects[index]);
               },
@@ -72,7 +73,8 @@ class demo_code_button extends StatelessWidget {
                     maxFontSize: 15,
                     maxLines: 1,
                   ),
-                  const Icon(
+                  Icon(
+                    color: textStyles.B.color,
                     Icons.add_to_home_screen_rounded,
                     size: 16,
                   )

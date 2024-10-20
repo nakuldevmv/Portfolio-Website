@@ -3,6 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+const Color GlobalColor = Color.fromARGB(127, 37, 37, 37);
+const Color SecondaryColor = Color.fromARGB(255, 37, 37, 37);
+const Color ResumeColor = Color.fromARGB(255, 183, 183, 183);
+const Color FontColor = Colors.white70;
+const Color FontBg = Color.fromARGB(255, 136, 136, 136);
+
 class rotating_container extends StatelessWidget {
   final Color color;
   final String emoji;
@@ -66,7 +72,7 @@ class navigation_containerStyle {
   // static const BorderRadius borderRadius = BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20));
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10.0));
   static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = Color.fromARGB(144, 255, 255, 255);
+  // static const Color color = ResumeColor;
   static const double width = 1;
   static const double height = 60;
 }
@@ -75,7 +81,7 @@ class mobile_containerStyle {
   static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16, right: 16);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color(0xFF252525);
+  static const Color color = GlobalColor;
   static const double width = 1;
   static const double height = 0.25;
   static const double iconSize = 0.045;
@@ -86,7 +92,7 @@ class mobile_ProjectContainer {
   static const EdgeInsets margin = EdgeInsets.only(left: 10, right: 10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = Color.fromARGB(255, 18, 18, 18);
+  static const Color color = GlobalColor;
   static const double width = 130;
   static const double widthButton = 0.46 / 4;
 
@@ -96,7 +102,7 @@ class mobile_ProjectContainer {
 
 class mobile_SVGContainer {
   static const double size = 0.09;
-  static const Color color = Color.fromARGB(0, 18, 18, 18);
+  // static const Color color = Color.fromARGB(0, 18, 18, 18);
   static const double width = size;
   static const double height = size;
 }
@@ -109,7 +115,7 @@ class tablet_containerStyle {
 
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color(0xFF252525);
+  static const Color color = GlobalColor;
   static const double width = 0.46;
   static const double widthButton = 0.46 / 4;
   static const double height = 0.25;
@@ -122,12 +128,14 @@ class tablet_containerStyle {
 
 class tablet_SVGContainer {
   static const double size = 0.09 / 2;
-  static const Color color = Color.fromARGB(0, 18, 18, 18);
+  // static const Color color = GlobalColor;
   static const double width = size;
   static const double height = size;
 }
 
 class containerStyle {
+  static const Color colorR = ResumeColor;
+
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(20));
   static const EdgeInsets padding = EdgeInsets.all(16);
@@ -138,7 +146,7 @@ class containerStyle {
     right: 16,
   );
 
-  static const Color color = Color.fromARGB(255, 37, 37, 37);
+  static const Color color = GlobalColor;
   static const double width = 0.19535;
   static const double widthAboutme = 0.25;
 
@@ -164,8 +172,8 @@ class ContactMe_containerStyle_mobile {
   );
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 37, 37, 37);
-  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static const Color color = GlobalColor;
+  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
   static const double width_mail_Linkedin = 0.59;
@@ -187,8 +195,8 @@ class ContactMe_containerStyle_tablet {
   );
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 37, 37, 37);
-  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static const Color color = GlobalColor;
+  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
   static const double width_mail_Linkedin = 360;
@@ -210,8 +218,8 @@ class ContactMe_containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 37, 37, 37);
-  static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static const Color color = GlobalColor;
+  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
   static const double width_mail_Linkedin = 0.215;
@@ -231,7 +239,7 @@ class ProjectcontainerStyle {
   static const EdgeInsets margin = EdgeInsets.only(bottom: 10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 26, 26, 26);
+  static const Color color = SecondaryColor;
   static const double width = 0.19535;
   static const double height = 200;
 }
@@ -240,7 +248,7 @@ class MyProject_containerStyle {
   static const EdgeInsets margin = EdgeInsets.all(10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
   static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = Color.fromARGB(255, 26, 26, 26);
+  static const Color color = SecondaryColor;
   static const double width = 0.19535;
   static const double buttonWidth = 0.07;
   static const double height = 0.3 + 0.1;
@@ -252,7 +260,7 @@ class EducationcontainerStyle {
   static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10, right: 10);
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
   static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = Color.fromARGB(255, 26, 26, 26);
+  static const Color color = SecondaryColor;
 
   static const EdgeInsets margin_mobile = EdgeInsets.only(bottom: 10, left: 10);
   // static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
@@ -260,118 +268,118 @@ class EducationcontainerStyle {
   static const double height_card_edu = 0.125;
   static const double height_card_exp = 0.09;
 
-  // static const Color color = Color.fromARGB(255, 26, 26, 26);
+  // static const Color color = SecondaryColor;
 }
 
 class textStyles {
   static const TextStyle B = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
+    color: FontColor,
   );
   static const TextStyle I = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.normal,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.italic,
-    backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    backgroundColor: FontBg,
   );
 
   static const TextStyle HeadingB = TextStyle(
     fontSize: 23,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
+    color: FontColor,
   );
   static const TextStyle HeadingI = TextStyle(
     fontSize: 23,
     fontWeight: FontWeight.normal,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.italic,
-    backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    backgroundColor: FontBg,
   );
 
   static const TextStyle Name1 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    // backgroundColor: FontBg,
   );
 
   static const TextStyle Name2 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.italic,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    // backgroundColor: FontBg,
   );
 
   static const TextStyle P1_mobile = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    // backgroundColor: FontBg,
   );
   static const TextStyle P1 = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    // backgroundColor: FontBg,
   );
   static const TextStyle P2B = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    color: FontColor,
+    // backgroundColor: FontBg,
   );
   static const TextStyle P2I = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.italic,
-    backgroundColor: Color.fromARGB(255, 136, 136, 136),
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    backgroundColor: FontBg,
+    // backgroundColor: FontBg,
   );
 
   static const TextStyle edu_H_B = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.normal,
   );
   static const TextStyle edu_P_L = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(135, 255, 255, 255),
+    // color: Color.fromARGB(135, 255, 255, 255),
     fontStyle: FontStyle.normal,
   );
   static const TextStyle edu_P_N = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.normal,
   );
 
   static const TextStyle projectTitle = TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.bold,
-    color: Colors.white,
+    color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: Color.fromARGB(255, 136, 136, 136),
+    // backgroundColor: FontBg,
   );
 
   static const TextStyle descriptions = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.normal,
   );
   static const TextStyle Dheadings = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
-    color: Color.fromARGB(255, 255, 255, 255),
+    color: FontColor,
     fontStyle: FontStyle.normal,
   );
 }

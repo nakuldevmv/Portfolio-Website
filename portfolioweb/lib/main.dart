@@ -16,7 +16,7 @@ Future<void> preloadAssets() async {
 }
 
 Future<void> preloadImages() async {
-  await rootBundle.load('assets/background_image.jpg');
+  await rootBundle.load(bookPic);
   await rootBundle.load(profilepic);
 }
 
