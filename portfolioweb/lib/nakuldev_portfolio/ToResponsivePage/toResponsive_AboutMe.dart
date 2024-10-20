@@ -19,7 +19,7 @@ class toResponsiveLayout_AboutMe extends StatelessWidget {
           const AnimatedGridDotBackground(),
           NavigationWrapper(
             currentIndex: currentIndex,
-            child: const ResponsiveLayout(
+            child: ResponsiveLayout(
               mobileBody: AboutMeMobile(),
               tabletBody: AboutMeTablet(),
               desktopBody: AboutMe(),

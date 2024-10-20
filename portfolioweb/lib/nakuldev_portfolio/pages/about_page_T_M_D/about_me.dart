@@ -17,7 +17,7 @@ class _AboutMeState extends State<AboutMe> {
     double isdeviceWidth = MediaQuery.of(context).size.width;
     // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
-    // return const NotResp();
+    // return  NotResp();
     return Padding(
       padding: const EdgeInsets.only(top: 50, bottom: 100),
       child: Row(
@@ -54,11 +54,11 @@ class _AboutMeState extends State<AboutMe> {
               Expanded(
                 flex: 6,
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: containerStyle.color,
                     gradient: RadialGradient(
                       colors: [
-                        Color.fromARGB(255, 79, 79, 79),
+                        const Color.fromARGB(255, 79, 79, 79),
                         containerStyle.color
                       ],
                       center: Alignment.bottomCenter,
@@ -121,7 +121,7 @@ class _AboutMeState extends State<AboutMe> {
             alignment: Alignment.center,
             children: [
               Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: containerStyle.color,
                   borderRadius: containerStyle.borderRadius,
                 ),
@@ -248,8 +248,8 @@ class _AboutMeState extends State<AboutMe> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
                         colors: [
                           Color.fromARGB(100, 37, 37, 37),
                           Color.fromARGB(245, 37, 37, 37),
@@ -271,8 +271,8 @@ class _AboutMeState extends State<AboutMe> {
                     ),
                   ),
                   Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
                         colors: [
                           Color.fromARGB(90, 37, 37, 37),
                           Color.fromARGB(240, 37, 37, 37),
@@ -300,9 +300,9 @@ class _AboutMeState extends State<AboutMe> {
                     margin: containerStyle.margin,
                     width: deviceWidth * containerStyle.widthAboutme,
                     height: 200,
-                    child: const ClipRRect(
+                    child: ClipRRect(
                       borderRadius: containerStyle.borderRadius,
-                      child: RandomLocationMap(),
+                      child: const RandomLocationMap(),
                     ),
                   ),
                   Padding(
@@ -330,7 +330,7 @@ class _AboutMeState extends State<AboutMe> {
               Expanded(
                 flex: 5,
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: containerStyle.color,
                     borderRadius: containerStyle.borderRadius,
                   ),

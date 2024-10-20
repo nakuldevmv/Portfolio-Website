@@ -38,10 +38,10 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
 
   // List of pages for navigation
   final List<Widget> pages = [
-    const toResponsiveLayout(),
+    toResponsiveLayout(),
     const toResponsiveLayout_project(initialIndex: 0),
-    const toResponsiveLayout_contactMe(),
-    const toResponsiveLayout_AboutMe()
+    toResponsiveLayout_contactMe(),
+    toResponsiveLayout_AboutMe()
   ];
 
   @override
@@ -78,8 +78,8 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
             ? Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
                       colors: [
                         Color(0xff614385),
                         Color(0xff516395)
@@ -113,7 +113,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         textStyle: textStyles.B,
                         fontSize: deviceWidth < 412 ? deviceWidth * 0.037 : 15,
                       ),
-                      // textStyle: const TextStyle(fontSize: 16, color: Colors.white),
+                      // textStyle:  TextStyle(fontSize: 16, color: Colors.white),
                       tabBackgroundColor: Colors.grey[900]!,
                       padding: const EdgeInsets.all(10),
                       duration: const Duration(milliseconds: 800),
@@ -143,17 +143,17 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         });
                         switch (index) {
                           case 0:
-                            navigateTo(context, const toResponsiveLayout(currentIndex: 0));
+                            navigateTo(context, toResponsiveLayout(currentIndex: 0));
                             break;
                           case 1:
                             navigateTo(context, const toResponsiveLayout_project(initialIndex: 0, currentIndex: 1));
                             break;
 
                           case 2:
-                            navigateTo(context, const toResponsiveLayout_AboutMe(currentIndex: 2));
+                            navigateTo(context, toResponsiveLayout_AboutMe(currentIndex: 2));
                             break;
                           case 3:
-                            navigateTo(context, const toResponsiveLayout_contactMe(currentIndex: 3));
+                            navigateTo(context, toResponsiveLayout_contactMe(currentIndex: 3));
                             break;
                         }
                       },

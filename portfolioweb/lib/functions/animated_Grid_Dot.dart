@@ -16,7 +16,7 @@ class _AnimatedGridDotBackgroundState extends State<AnimatedGridDotBackground> w
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 20), // 20 seconds total
+      duration: const Duration(seconds: 15), // 20 seconds total
     );
 
     _animation = TweenSequence<double>([
@@ -60,11 +60,11 @@ class _AnimatedGridDotBackgroundState extends State<AnimatedGridDotBackground> w
 
 class AnimatedDotGridPainter extends CustomPainter {
   final double animationValue;
-  final double spacing = 50.0;
-  final double dotRadius = 2.0;
+  final double spacing = 50;
+  final double dotRadius = 2;
   final List<Color> gradientColors = [
     const Color.fromARGB(255, 0, 47, 255), // Blue
-    const Color.fromARGB(255, 90, 120, 255), // Blue
+    const Color.fromARGB(255, 125, 149, 255), // Blue
     const Color.fromARGB(255, 0, 47, 255), // Blue
   ];
 

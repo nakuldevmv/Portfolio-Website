@@ -35,7 +35,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
             child: Stack(
               children: [
                 Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: ContactMe_containerStyle_mobile.color,
                     borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                     // image: DecorationImage(
@@ -47,7 +47,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   margin: ContactMe_containerStyle_mobile.margin,
                   width: deviceWidth * ContactMe_containerStyle_mobile.loc_width,
                   height: 250,
-                  child: const ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: RandomLocationMap()),
+                  child: ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: const RandomLocationMap()),
                   // height: deviceHeight * ContactMe_containerStyle_mobile.loc_height,
                 ),
                 Positioned(
@@ -81,7 +81,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                 children: [
                   //email
                   Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_mobile.color,
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       ),
@@ -144,7 +144,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                     },
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_mobile.color,
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       ),
@@ -186,7 +186,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             urlLaunch("https://www.instagram.com/jo.cly.n/");
                           },
                           child: Container(
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: ContactMe_containerStyle_mobile.color,
                               borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                             ),
@@ -210,7 +210,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             urlLaunch("https://x.com/");
                           },
                           child: Container(
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: ContactMe_containerStyle_mobile.color,
                               borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                             ),
@@ -240,7 +240,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       urlLaunch("https://github.com/nakuldevmv");
                     },
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_mobile.color,
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       ),
@@ -264,7 +264,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                     },
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_mobile.color,
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       ),

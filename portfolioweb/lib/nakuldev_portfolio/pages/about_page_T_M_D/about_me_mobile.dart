@@ -45,11 +45,11 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
               ),
             ),
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: containerStyle.color,
                 gradient: RadialGradient(
                   colors: [
-                    Color.fromARGB(255, 79, 79, 79),
+                    const Color.fromARGB(255, 79, 79, 79),
                     containerStyle.color
                   ],
                   center: Alignment.bottomCenter,
@@ -115,9 +115,9 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
                   margin: containerStyle.margin,
                   width: deviceWidth,
                   height: 200,
-                  child: const ClipRRect(
+                  child: ClipRRect(
                     borderRadius: containerStyle.borderRadius,
-                    child: RandomLocationMap(),
+                    child: const RandomLocationMap(),
                   ),
                 ),
                 Padding(
@@ -144,7 +144,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
               ],
             ),
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: containerStyle.color,
                 borderRadius: containerStyle.borderRadius,
               ),
@@ -262,7 +262,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
               child: Stack(
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: containerStyle.color,
                       borderRadius: containerStyle.borderRadius,
                     ),
@@ -381,7 +381,7 @@ class _AboutMeMobileState extends State<AboutMeMobile> {
                   Align(
                     alignment: Alignment.topCenter,
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         // gradient: LinearGradient(
                         //   colors: [
                         //     Color.fromARGB(100, 37, 37, 37),

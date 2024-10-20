@@ -53,10 +53,10 @@ class _ContactMeState extends State<ContactMe> {
                         child: Stack(
                           children: [
                             Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
                                 borderRadius: ContactMe_containerStyle.borderRadius,
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage('assets/locD.png'),
                                   fit: BoxFit.cover,
                                 ),
@@ -93,7 +93,7 @@ class _ContactMeState extends State<ContactMe> {
                         children: [
                           //email
                           Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
                                 borderRadius: ContactMe_containerStyle.borderRadius,
                               ),
@@ -156,7 +156,7 @@ class _ContactMeState extends State<ContactMe> {
                               urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                             },
                             child: Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
                                 borderRadius: ContactMe_containerStyle.borderRadius,
                               ),
@@ -195,7 +195,7 @@ class _ContactMeState extends State<ContactMe> {
                                   urlLaunch("https://www.instagram.com/jo.cly.n/");
                                 },
                                 child: Container(
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: ContactMe_containerStyle.color,
                                     borderRadius: ContactMe_containerStyle.borderRadius,
                                   ),
@@ -214,7 +214,7 @@ class _ContactMeState extends State<ContactMe> {
                                   urlLaunch("https://x.com/");
                                 },
                                 child: Container(
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: ContactMe_containerStyle.color,
                                     borderRadius: ContactMe_containerStyle.borderRadius,
                                   ),
@@ -240,7 +240,7 @@ class _ContactMeState extends State<ContactMe> {
                               urlLaunch("https://github.com/nakuldevmv");
                             },
                             child: Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
                                 borderRadius: ContactMe_containerStyle.borderRadius,
                               ),
@@ -262,7 +262,7 @@ class _ContactMeState extends State<ContactMe> {
                               urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                             },
                             child: Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
                                 borderRadius: ContactMe_containerStyle.borderRadius,
                               ),

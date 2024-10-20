@@ -19,7 +19,7 @@ class toResponsiveLayout extends StatelessWidget {
           NavigationWrapper(
             showNavBar: false,
             currentIndex: currentIndex,
-            child: const ResponsiveLayout(
+            child: ResponsiveLayout(
               desktopBody: desktop(),
               mobileBody: mobile(),
               tabletBody: tablet(),

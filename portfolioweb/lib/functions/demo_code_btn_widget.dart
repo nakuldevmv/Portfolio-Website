@@ -25,7 +25,7 @@ class demo_code_button extends StatelessWidget {
             margin: const EdgeInsets.only(right: 10),
             height: 30,
             width: 90,
-            decoration: const BoxDecoration(borderRadius: BorderRadius.all(
+            decoration: BoxDecoration(borderRadius: const BorderRadius.all(
                 // topLeft: Radius.circular(10),
                 // topRight: Radius.circular(10),
                 Radius.circular(10)), color: EducationcontainerStyle.color),
@@ -58,7 +58,7 @@ class demo_code_button extends StatelessWidget {
             margin: const EdgeInsets.only(right: 10),
             height: 30,
             width: 90,
-            decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: EducationcontainerStyle.color),
+            decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: EducationcontainerStyle.color),
             child: GestureDetector(
               onTap: () {
                 demoButton(context, projects[index]);

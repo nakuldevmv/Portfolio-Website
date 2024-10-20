@@ -19,7 +19,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
 
     // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = isdeviceWidth < 872 ? (MediaQuery.of(context).size.width + 225) : 1199;
-    // return const NotResp();
+    // return  NotResp();
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(top: 50, bottom: 100, left: 16, right: 16),
@@ -60,11 +60,11 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                         height: 25,
                       ),
                       Container(
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: containerStyle.color,
                           gradient: RadialGradient(
                             colors: [
-                              Color.fromARGB(255, 79, 79, 79),
+                              const Color.fromARGB(255, 79, 79, 79),
                               containerStyle.color
                             ],
                             center: Alignment.bottomCenter,
@@ -134,9 +134,9 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                             margin: containerStyle.margin,
                             width: deviceWidth / 3,
                             height: 200,
-                            child: const ClipRRect(
+                            child: ClipRRect(
                               borderRadius: containerStyle.borderRadius,
-                              child: RandomLocationMap(),
+                              child: const RandomLocationMap(),
                             ),
                           ),
                           Padding(
@@ -162,7 +162,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                         ],
                       ),
                       Container(
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: containerStyle.color,
                           borderRadius: containerStyle.borderRadius,
                         ),
@@ -284,7 +284,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                 child: Stack(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: containerStyle.color,
                         borderRadius: containerStyle.borderRadius,
                       ),
@@ -403,7 +403,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                     Align(
                       alignment: Alignment.topCenter,
                       child: Container(
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           // gradient: LinearGradient(
                           //   colors: [
                           //     Color.fromARGB(100, 37, 37, 37),

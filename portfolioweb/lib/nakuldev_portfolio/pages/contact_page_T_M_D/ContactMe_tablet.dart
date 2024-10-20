@@ -44,7 +44,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                 child: Stack(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_tablet.color,
                         borderRadius: ContactMe_containerStyle_tablet.borderRadius,
 
@@ -57,7 +57,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                       margin: ContactMe_containerStyle_tablet.margin,
                       width: ContactMe_containerStyle_tablet.loc_width,
                       height: 250,
-                      child: const ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: RandomLocationMap()),
+                      child: ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: const RandomLocationMap()),
                       // height: deviceHeight * ContactMe_containerStyle_tablet.loc_height,
                     ),
                     Positioned(
@@ -91,7 +91,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                     children: [
                       //email
                       Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: ContactMe_containerStyle_tablet.color,
                             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                           ),
@@ -154,7 +154,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                         },
                         child: Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: ContactMe_containerStyle_tablet.color,
                             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                           ),
@@ -195,7 +195,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                               urlLaunch("https://www.instagram.com/jo.cly.n/");
                             },
                             child: Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle_tablet.color,
                                 borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                               ),
@@ -218,7 +218,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                               urlLaunch("https://x.com/");
                             },
                             child: Container(
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: ContactMe_containerStyle_tablet.color,
                                 borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                               ),
@@ -248,7 +248,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           urlLaunch("https://github.com/nakuldevmv");
                         },
                         child: Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: ContactMe_containerStyle_tablet.color,
                             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                           ),
@@ -272,7 +272,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                         },
                         child: Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: ContactMe_containerStyle_tablet.color,
                             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                           ),

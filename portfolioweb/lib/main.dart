@@ -1,9 +1,13 @@
 import 'package:Nakul_Dev/Data/profilePic_book.dart';
 import 'package:Nakul_Dev/error/notResp.dart';
+import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
+import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
+
+import 'package:google_fonts/google_fonts.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,14 +55,20 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    ////
+    double isdeviceWidth = MediaQuery.of(context).size.width;
+    // double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
+    double deviceHeight = 729.5;
+    ////
     return MaterialApp(
       title: "Nakul Dev",
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(),
       ),
       debugShowCheckedModeBanner: false,
-      // home: const toResponsiveLayout(), //Website Enabled
-      home: const NotResp(), // Website Disabled
+      home: const toResponsiveLayout(), //Website Enabled
+      // home:  NotResp(), // Website Disabled
     );
   }
 }

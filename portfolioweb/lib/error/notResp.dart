@@ -55,7 +55,7 @@ class NotResp extends StatelessWidget {
                       urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                     },
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ContactMe_containerStyle_tablet.color,
                         borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                       ),

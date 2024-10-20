@@ -1,13 +1,15 @@
-// ignore_for_file: camel_case_types, constant_identifier_names
+// ignore_for_file: camel_case_types, ant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const Color GlobalColor = Color.fromARGB(127, 37, 37, 37);
-const Color SecondaryColor = Color.fromARGB(255, 37, 37, 37);
-const Color ResumeColor = Color.fromARGB(255, 183, 183, 183);
-const Color FontColor = Colors.white70;
-const Color FontBg = Color.fromARGB(255, 136, 136, 136);
+Color GlobalColor = const Color.fromARGB(127, 37, 37, 37);
+Color SecondaryColor = const Color.fromARGB(255, 37, 37, 37);
+Color ResumeColor = const Color.fromARGB(127, 183, 183, 183);
+Color FontColor = Colors.white70;
+Color FontBg = const Color.fromARGB(255, 136, 136, 136);
+BorderRadius GlobalBorderRadius = const BorderRadius.all(Radius.circular(20));
+BorderRadius SecondaryBorderRadius = const BorderRadius.all(Radius.circular(8));
 
 class rotating_container extends StatelessWidget {
   final Color color;
@@ -69,215 +71,215 @@ class rotating_container extends StatelessWidget {
 }
 
 class navigation_containerStyle {
-  // static const BorderRadius borderRadius = BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20));
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10.0));
-  static const EdgeInsets padding = EdgeInsets.all(10);
-  // static const Color color = ResumeColor;
-  static const double width = 1;
-  static const double height = 60;
+  // static  BorderRadius borderRadius = BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20));
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(10);
+  // static  Color color = ResumeColor;
+  static double width = 1;
+  static double height = 60;
 }
 
 class mobile_containerStyle {
-  static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16, right: 16);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = GlobalColor;
-  static const double width = 1;
-  static const double height = 0.25;
-  static const double iconSize = 0.045;
-  static const double widthButton = 0.46 / 3;
+  static EdgeInsets margin = const EdgeInsets.only(top: 16, left: 16, right: 16);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = GlobalColor;
+  static double width = 1;
+  static double height = 0.25;
+  static double iconSize = 0.045;
+  static double widthButton = 0.46 / 3;
 }
 
 class mobile_ProjectContainer {
-  static const EdgeInsets margin = EdgeInsets.only(left: 10, right: 10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = GlobalColor;
-  static const double width = 130;
-  static const double widthButton = 0.46 / 4;
+  static EdgeInsets margin = const EdgeInsets.only(left: 10, right: 10);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(10);
+  static Color color = GlobalColor;
+  static double width = 130;
+  static double widthButton = 0.46 / 4;
 
-  static const double height = 130;
-  static const double iconSize = 0.045;
+  static double height = 130;
+  static double iconSize = 0.045;
 }
 
 class mobile_SVGContainer {
-  static const double size = 0.09;
-  // static const Color color = Color.fromARGB(0, 18, 18, 18);
-  static const double width = size;
-  static const double height = size;
+  static double size = 0.09;
+  // static  Color color = Color.fromARGB(0, 18, 18, 18);
+  static double width = size;
+  static double height = size;
 }
 
 class tablet_containerStyle {
-  // static const EdgeInsets margin = EdgeInsets.symmetric(vertical: 16, horizontal: 16);
+  // static  EdgeInsets margin = EdgeInsets.symmetric(vertical: 16, horizontal: 16);
 
-  static const EdgeInsets margin = EdgeInsets.only(top: 16, left: 16);
-  static const EdgeInsets marginCol2 = EdgeInsets.only(top: 16, left: 16, right: 16);
+  static EdgeInsets margin = const EdgeInsets.only(top: 16, left: 16);
+  static EdgeInsets marginCol2 = const EdgeInsets.only(top: 16, left: 16, right: 16);
 
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = GlobalColor;
-  static const double width = 0.46;
-  static const double widthButton = 0.46 / 4;
-  static const double height = 0.25;
-  static const double iconSizeS = 20;
-  static const double iconSizeL = 25;
-  static const double row1 = 255 + 18.5;
-  static const double row2 = 255 + 12;
-  static const double row3 = 222;
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = GlobalColor;
+  static double width = 0.46;
+  static double widthButton = 0.46 / 4;
+  static double height = 0.25;
+  static double iconSizeS = 20;
+  static double iconSizeL = 25;
+  static double row1 = 255 + 18.5;
+  static double row2 = 255 + 12;
+  static double row3 = 222;
 }
 
 class tablet_SVGContainer {
-  static const double size = 0.09 / 2;
-  // static const Color color = GlobalColor;
-  static const double width = size;
-  static const double height = size;
+  static double size = 0.09 / 2;
+  // static  Color color = GlobalColor;
+  static double width = size;
+  static double height = size;
 }
 
 class containerStyle {
-  static const Color colorR = ResumeColor;
+  static Color colorR = ResumeColor;
 
-  static const EdgeInsets margin = EdgeInsets.all(10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(20));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const EdgeInsets paddingNew = EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
-  static const EdgeInsets paddingNewHeading = EdgeInsets.only(
+  static EdgeInsets margin = const EdgeInsets.all(10);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static EdgeInsets paddingNew = const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
+  static EdgeInsets paddingNewHeading = const EdgeInsets.only(
     top: 16,
     left: 16,
     right: 16,
   );
 
-  static const Color color = GlobalColor;
-  static const double width = 0.19535;
-  static const double widthAboutme = 0.25;
+  static Color color = GlobalColor;
+  static double width = 0.19535;
+  static double widthAboutme = 0.25;
 
-  // static const double width = 0.2;
+  // static  double width = 0.2;
   //mobile property
-  static const EdgeInsets margin_mobile = EdgeInsets.only(top: 10, left: 10, right: 5);
-  static const EdgeInsets padding_mobile = EdgeInsets.all(12);
-  static const double width_mobile = 0.455;
-  static const double height_mobile = 0.25;
-  static const double height_mobile_about = 0.235;
-  static const double height_mobile_exp = 0.182;
+  static EdgeInsets margin_mobile = const EdgeInsets.only(top: 10, left: 10, right: 5);
+  static EdgeInsets padding_mobile = const EdgeInsets.all(12);
+  static double width_mobile = 0.455;
+  static double height_mobile = 0.25;
+  static double height_mobile_about = 0.235;
+  static double height_mobile_exp = 0.182;
 
-  static const double height_mobile_img = 0.32;
-  static const double height_mobile_skill = 0.25;
-  static const double height_mobile_project = 0.4;
-  static const double iconSize = 0.045;
-  static const double height = 200;
+  static double height_mobile_img = 0.32;
+  static double height_mobile_skill = 0.25;
+  static double height_mobile_project = 0.4;
+  static double iconSize = 0.045;
+  static double height = 200;
 }
 
 class ContactMe_containerStyle_mobile {
-  static const EdgeInsets margin = EdgeInsets.only(
+  static EdgeInsets margin = const EdgeInsets.only(
     top: 10,
   );
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = GlobalColor;
-  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = GlobalColor;
+  // static  Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
-  static const double width_mail_Linkedin = 0.59;
-  static const double main_width = 0.8;
-  static const double main_height = 0.5;
+  static double width_mail_Linkedin = 0.59;
+  static double main_width = 0.8;
+  static double main_height = 0.5;
 
-  static const double loc_width = 1;
-  static const double loc_height = 0.285;
-  static const double bottom_icon_width = 0.28;
-  static const double githubsizeW = 0.3;
-  // static const double githubsizeH = 0.182;
+  static double loc_width = 1;
+  static double loc_height = 0.285;
+  static double bottom_icon_width = 0.28;
+  static double githubsizeW = 0.3;
+  // static  double githubsizeH = 0.182;
 
   //
 }
 
 class ContactMe_containerStyle_tablet {
-  static const EdgeInsets margin = EdgeInsets.only(
+  static EdgeInsets margin = const EdgeInsets.only(
     top: 10,
   );
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = GlobalColor;
-  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = GlobalColor;
+  // static  Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
-  static const double width_mail_Linkedin = 360;
-  // static const double main_width = 0.8;
-  // static const double main_height = 0.5;
+  static double width_mail_Linkedin = 360;
+  // static  double main_width = 0.8;
+  // static  double main_height = 0.5;
 
-  static const double loc_width = 570;
-  static const double loc_height = 180;
-  static const double bottom_icon_width = 175.2;
-  // static const double bottom_icon_height = 70;
+  static double loc_width = 570;
+  static double loc_height = 180;
+  static double bottom_icon_width = 175.2;
+  // static  double bottom_icon_height = 70;
 
-  static const double githubsizeW = 198;
-  // static const double githubsizeH = 0.182;
+  static double githubsizeW = 198;
+  // static  double githubsizeH = 0.182;
 
   //
 }
 
 class ContactMe_containerStyle {
-  static const EdgeInsets margin = EdgeInsets.all(10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = GlobalColor;
-  // static const Color main_color = Color.fromARGB(120, 37, 37, 37);
+  static EdgeInsets margin = const EdgeInsets.all(10);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = GlobalColor;
+  // static  Color main_color = Color.fromARGB(120, 37, 37, 37);
 
   //
-  static const double width_mail_Linkedin = 0.215;
-  static const double main_width = 0.63;
-  static const double main_height = 0.5;
+  static double width_mail_Linkedin = 0.215;
+  static double main_width = 0.63;
+  static double main_height = 0.5;
 
-  static const double loc_width = 0.25;
-  static const double loc_height = 0.285;
-  static const double bottom_icon_width = 0.1;
-  static const double githubsizeW = 0.1;
-  static const double githubsizeH = 0.182;
+  static double loc_width = 0.25;
+  static double loc_height = 0.285;
+  static double bottom_icon_width = 0.1;
+  static double githubsizeW = 0.1;
+  static double githubsizeH = 0.182;
 
   //
 }
 
 class ProjectcontainerStyle {
-  static const EdgeInsets margin = EdgeInsets.only(bottom: 10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = SecondaryColor;
-  static const double width = 0.19535;
-  static const double height = 200;
+  static EdgeInsets margin = const EdgeInsets.only(bottom: 10);
+  static BorderRadius borderRadius = SecondaryBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = SecondaryColor;
+  static double width = 0.19535;
+  static double height = 200;
 }
 
 class MyProject_containerStyle {
-  static const EdgeInsets margin = EdgeInsets.all(10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(10));
-  static const EdgeInsets padding = EdgeInsets.all(16);
-  static const Color color = SecondaryColor;
-  static const double width = 0.19535;
-  static const double buttonWidth = 0.07;
-  static const double height = 0.3 + 0.1;
+  static EdgeInsets margin = const EdgeInsets.all(10);
+  static BorderRadius borderRadius = GlobalBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(16);
+  static Color color = SecondaryColor;
+  static double width = 0.19535;
+  static double buttonWidth = 0.07;
+  static double height = 0.3 + 0.1;
 
-  static const double Long_height = 0.4 + 0.1;
+  static double Long_height = 0.4 + 0.1;
 }
 
 class EducationcontainerStyle {
-  static const EdgeInsets margin = EdgeInsets.only(bottom: 10, left: 10, right: 10);
-  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
-  static const EdgeInsets padding = EdgeInsets.all(10);
-  static const Color color = SecondaryColor;
+  static EdgeInsets margin = const EdgeInsets.only(bottom: 10, left: 10, right: 10);
+  static BorderRadius borderRadius = SecondaryBorderRadius;
+  static EdgeInsets padding = const EdgeInsets.all(10);
+  static Color color = SecondaryColor;
 
-  static const EdgeInsets margin_mobile = EdgeInsets.only(bottom: 10, left: 10);
-  // static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(8));
-  static const EdgeInsets padding_mobile = EdgeInsets.all(10);
-  static const double height_card_edu = 0.125;
-  static const double height_card_exp = 0.09;
+  static EdgeInsets margin_mobile = const EdgeInsets.only(bottom: 10, left: 10);
+  // static  BorderRadius borderRadius =SecondaryBorderRadius;
+  static EdgeInsets padding_mobile = const EdgeInsets.all(10);
+  static double height_card_edu = 0.125;
+  static double height_card_exp = 0.09;
 
-  // static const Color color = SecondaryColor;
+  // static  Color color = SecondaryColor;
 }
 
 class textStyles {
-  static const TextStyle B = TextStyle(
+  static TextStyle B = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
     color: FontColor,
   );
-  static const TextStyle I = TextStyle(
+  static TextStyle I = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.normal,
     color: FontColor,
@@ -285,12 +287,12 @@ class textStyles {
     backgroundColor: FontBg,
   );
 
-  static const TextStyle HeadingB = TextStyle(
+  static TextStyle HeadingB = TextStyle(
     fontSize: 23,
     fontWeight: FontWeight.bold,
     color: FontColor,
   );
-  static const TextStyle HeadingI = TextStyle(
+  static TextStyle HeadingI = TextStyle(
     fontSize: 23,
     fontWeight: FontWeight.normal,
     color: FontColor,
@@ -298,7 +300,7 @@ class textStyles {
     backgroundColor: FontBg,
   );
 
-  static const TextStyle Name1 = TextStyle(
+  static TextStyle Name1 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold,
     color: FontColor,
@@ -306,7 +308,7 @@ class textStyles {
     // backgroundColor: FontBg,
   );
 
-  static const TextStyle Name2 = TextStyle(
+  static TextStyle Name2 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.normal,
     color: FontColor,
@@ -314,27 +316,27 @@ class textStyles {
     // backgroundColor: FontBg,
   );
 
-  static const TextStyle P1_mobile = TextStyle(
+  static TextStyle P1_mobile = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
     // backgroundColor: FontBg,
   );
-  static const TextStyle P1 = TextStyle(
+  static TextStyle P1 = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
     // backgroundColor: FontBg,
   );
-  static const TextStyle P2B = TextStyle(
+  static TextStyle P2B = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
     color: FontColor,
     // backgroundColor: FontBg,
   );
-  static const TextStyle P2I = TextStyle(
+  static TextStyle P2I = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
     color: FontColor,
@@ -343,26 +345,26 @@ class textStyles {
     // backgroundColor: FontBg,
   );
 
-  static const TextStyle edu_H_B = TextStyle(
+  static TextStyle edu_H_B = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: FontColor,
     fontStyle: FontStyle.normal,
   );
-  static const TextStyle edu_P_L = TextStyle(
+  static TextStyle edu_P_L = const TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.normal,
     // color: Color.fromARGB(135, 255, 255, 255),
     fontStyle: FontStyle.normal,
   );
-  static const TextStyle edu_P_N = TextStyle(
+  static TextStyle edu_P_N = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
   );
 
-  static const TextStyle projectTitle = TextStyle(
+  static TextStyle projectTitle = TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.bold,
     color: FontColor,
@@ -370,13 +372,13 @@ class textStyles {
     // backgroundColor: FontBg,
   );
 
-  static const TextStyle descriptions = TextStyle(
+  static TextStyle descriptions = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
   );
-  static const TextStyle Dheadings = TextStyle(
+  static TextStyle Dheadings = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: FontColor,
