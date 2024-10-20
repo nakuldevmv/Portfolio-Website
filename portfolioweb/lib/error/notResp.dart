@@ -1,7 +1,7 @@
-import 'package:Nakul_Dev/functions/launch_url.dart'; // Custom function for URL handling
+// Custom function for URL handling
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:url_launcher/url_launcher.dart'; // Import for SVG support
+// Import for SVG support
 
 class NotResp extends StatelessWidget {
   const NotResp({super.key});

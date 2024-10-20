@@ -15,7 +15,7 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
   @override
   Widget build(BuildContext context) {
     double isdeviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
+    // double deviceHeight = MediaQuery.of(context).size.height;
 
     // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = isdeviceWidth < 872 ? (MediaQuery.of(context).size.width + 225) : 1199;

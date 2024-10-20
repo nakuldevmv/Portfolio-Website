@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:Nakul_Dev/functions/copy_text.dart';
 import 'package:Nakul_Dev/functions/launch_url.dart';
 import 'package:Nakul_Dev/functions/mailing_fun.dart';
-import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
 import 'package:auto_size_text/auto_size_text.dart';
