@@ -47,124 +47,122 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          widget.child,
-          _selectedIndex == 1
-              ? Container(
-                  width: deviceWidth,
-                  // height: navigation_containerStyle.height,
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        widget.child,
+        _selectedIndex == 1
+            ? Container(
+                width: deviceWidth,
+                // height: navigation_containerStyle.height,
 
-                  height: navigation_containerStyle.height + 40,
+                height: navigation_containerStyle.height + 40,
+                decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(0, 0, 0, 0),
+                    Color.fromARGB(85, 0, 0, 0),
+                    Color.fromARGB(200, 0, 0, 0)
+                  ],
+                  stops: [
+                    0.33,
+                    0.66,
+                    0.99
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
+              )
+            : const Offstage(),
+        widget.showNavBar
+            ? Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                child: Container(
                   decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                    colors: [
-                      Color.fromARGB(0, 0, 0, 0),
-                      Color.fromARGB(85, 0, 0, 0),
-                      Color.fromARGB(200, 0, 0, 0)
-                    ],
-                    stops: [
-                      0.33,
-                      0.66,
-                      0.99
-                    ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  )),
-                )
-              : const Offstage(),
-          widget.showNavBar
-              ? Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color(0xff614385),
-                          Color(0xff516395)
-                        ],
-                        stops: [
-                          0,
-                          1
-                        ],
-                        begin: Alignment.bottomRight,
-                        end: Alignment.topLeft,
-                      ),
-                      // color: navigation_containerStyle.color,
-                      borderRadius: containerStyle.borderRadius,
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xff614385),
+                        Color(0xff516395)
+                      ],
+                      stops: [
+                        0,
+                        1
+                      ],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
                     ),
-                    height: navigation_containerStyle.height,
-                    padding: navigation_containerStyle.padding,
-                    width: deviceWidth < 412 ? deviceWidth * navigation_containerStyle.width : 412,
-                    child: ClipRRect(
-                      borderRadius: containerStyle.borderRadius,
-                      child: GNav(
-                        tabBorderRadius: 10,
-                        haptic: true,
-                        backgroundColor: Colors.transparent,
-                        gap: 8.5,
-                        color: const Color.fromARGB(255, 161, 161, 161),
-                        activeColor: Colors.white,
-                        rippleColor: Colors.grey[800]!,
-                        hoverColor: Colors.grey[700]!,
-                        iconSize: deviceWidth < 412 ? deviceWidth * 0.05 : 20,
-                        textStyle: GoogleFonts.jetBrainsMono(
-                          textStyle: textStyles.B,
-                          fontSize: deviceWidth < 412 ? deviceWidth * 0.037 : 15,
-                        ),
-                        // textStyle: const TextStyle(fontSize: 16, color: Colors.white),
-                        tabBackgroundColor: Colors.grey[900]!,
-                        padding: const EdgeInsets.all(10),
-                        duration: const Duration(milliseconds: 800),
-                        tabs: const [
-                          GButton(
-                            // iconColor: Colors.amberAccent,
-                            icon: Icons.home_filled,
-                            text: 'Home',
-                          ),
-                          GButton(
-                            icon: Icons.folder,
-                            text: 'Projects',
-                          ),
-                          GButton(
-                            icon: Icons.person,
-                            text: 'About Me',
-                          ),
-                          GButton(
-                            icon: Icons.mail,
-                            text: 'Contact Me',
-                          ),
-                        ],
-                        selectedIndex: _selectedIndex,
-                        onTabChange: (index) {
-                          setState(() {
-                            _selectedIndex = index;
-                          });
-                          switch (index) {
-                            case 0:
-                              navigateTo(context, const toResponsiveLayout(currentIndex: 0));
-                              break;
-                            case 1:
-                              navigateTo(context, const toResponsiveLayout_project(initialIndex: 0, currentIndex: 1));
-                              break;
-
-                            case 2:
-                              navigateTo(context, const toResponsiveLayout_AboutMe(currentIndex: 2));
-                              break;
-                            case 3:
-                              navigateTo(context, const toResponsiveLayout_contactMe(currentIndex: 3));
-                              break;
-                          }
-                        },
+                    // color: navigation_containerStyle.color,
+                    borderRadius: containerStyle.borderRadius,
+                  ),
+                  height: navigation_containerStyle.height,
+                  padding: navigation_containerStyle.padding,
+                  width: deviceWidth < 412 ? deviceWidth * navigation_containerStyle.width : 412,
+                  child: ClipRRect(
+                    borderRadius: containerStyle.borderRadius,
+                    child: GNav(
+                      tabBorderRadius: 10,
+                      haptic: true,
+                      backgroundColor: Colors.transparent,
+                      gap: 8.5,
+                      color: const Color.fromARGB(255, 161, 161, 161),
+                      activeColor: Colors.white,
+                      rippleColor: Colors.grey[800]!,
+                      hoverColor: Colors.grey[700]!,
+                      iconSize: deviceWidth < 412 ? deviceWidth * 0.05 : 20,
+                      textStyle: GoogleFonts.jetBrainsMono(
+                        textStyle: textStyles.B,
+                        fontSize: deviceWidth < 412 ? deviceWidth * 0.037 : 15,
                       ),
+                      // textStyle: const TextStyle(fontSize: 16, color: Colors.white),
+                      tabBackgroundColor: Colors.grey[900]!,
+                      padding: const EdgeInsets.all(10),
+                      duration: const Duration(milliseconds: 800),
+                      tabs: const [
+                        GButton(
+                          // iconColor: Colors.amberAccent,
+                          icon: Icons.home_filled,
+                          text: 'Home',
+                        ),
+                        GButton(
+                          icon: Icons.folder,
+                          text: 'Projects',
+                        ),
+                        GButton(
+                          icon: Icons.person,
+                          text: 'About Me',
+                        ),
+                        GButton(
+                          icon: Icons.mail,
+                          text: 'Contact Me',
+                        ),
+                      ],
+                      selectedIndex: _selectedIndex,
+                      onTabChange: (index) {
+                        setState(() {
+                          _selectedIndex = index;
+                        });
+                        switch (index) {
+                          case 0:
+                            navigateTo(context, const toResponsiveLayout(currentIndex: 0));
+                            break;
+                          case 1:
+                            navigateTo(context, const toResponsiveLayout_project(initialIndex: 0, currentIndex: 1));
+                            break;
+
+                          case 2:
+                            navigateTo(context, const toResponsiveLayout_AboutMe(currentIndex: 2));
+                            break;
+                          case 3:
+                            navigateTo(context, const toResponsiveLayout_contactMe(currentIndex: 3));
+                            break;
+                        }
+                      },
                     ),
                   ),
-                )
-              : const Offstage()
-        ],
-      ),
+                ),
+              )
+            : const Offstage()
+      ],
     );
   }
 }

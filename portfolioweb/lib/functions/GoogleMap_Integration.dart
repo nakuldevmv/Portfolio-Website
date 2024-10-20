@@ -16,36 +16,34 @@ class _RandomLocationMapState extends State<RandomLocationMap> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FlutterMap(
-        options: MapOptions(
-          initialCenter: location,
-          initialZoom: 9,
-          interactionOptions: const InteractionOptions(
-            flags: InteractiveFlag.all,
-          ),
+    return FlutterMap(
+      options: MapOptions(
+        initialCenter: location,
+        initialZoom: 9,
+        interactionOptions: const InteractionOptions(
+          flags: InteractiveFlag.all,
         ),
-        children: [
-          TileLayer(
-            tileProvider: CancellableNetworkTileProvider(),
-            urlTemplate: 'https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=7msW9bJeQdpwarKYuDzB',
-          ),
-          MarkerLayer(
-            markers: [
-              Marker(
-                point: location,
+      ),
+      children: [
+        TileLayer(
+          tileProvider: CancellableNetworkTileProvider(),
+          urlTemplate: 'https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=7msW9bJeQdpwarKYuDzB',
+        ),
+        MarkerLayer(
+          markers: [
+            Marker(
+              point: location,
+              width: 200,
+              height: 200,
+              child: Image.asset(
+                'assets/i.png',
                 width: 200,
                 height: 200,
-                child: Image.asset(
-                  'assets/i.png',
-                  width: 200,
-                  height: 200,
-                ),
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

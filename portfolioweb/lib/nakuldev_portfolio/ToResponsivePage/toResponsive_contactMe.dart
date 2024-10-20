@@ -1,3 +1,4 @@
+import 'package:Nakul_Dev/functions/animated_Grid_Dot.dart';
 import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_page_T_M_D/ContactMe_mobile.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/contact_page_T_M_D/ContactMe_tablet.dart';
@@ -10,12 +11,19 @@ class toResponsiveLayout_contactMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationWrapper(
-      currentIndex: currentIndex,
-      child: const ResponsiveLayout(
-        mobileBody: ContactMe_mobile(),
-        tabletBody: ContactMe_tablet(),
-        desktopBody: ContactMe_tablet(),
+    return Scaffold(
+      body: Stack(
+        children: [
+          const AnimatedGridDotBackground(),
+          NavigationWrapper(
+            currentIndex: currentIndex,
+            child: const ResponsiveLayout(
+              mobileBody: ContactMe_mobile(),
+              tabletBody: ContactMe_tablet(),
+              desktopBody: ContactMe_tablet(),
+            ),
+          ),
+        ],
       ),
     );
   }

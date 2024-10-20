@@ -1,3 +1,4 @@
+import 'package:Nakul_Dev/functions/animated_Grid_Dot.dart';
 import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me.dart';
 
@@ -12,12 +13,19 @@ class toResponsiveLayout_AboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationWrapper(
-      currentIndex: currentIndex,
-      child: const ResponsiveLayout(
-        mobileBody: AboutMeMobile(),
-        tabletBody: AboutMeTablet(),
-        desktopBody: AboutMe(),
+    return Scaffold(
+      body: Stack(
+        children: [
+          const AnimatedGridDotBackground(),
+          NavigationWrapper(
+            currentIndex: currentIndex,
+            child: const ResponsiveLayout(
+              mobileBody: AboutMeMobile(),
+              tabletBody: AboutMeTablet(),
+              desktopBody: AboutMe(),
+            ),
+          ),
+        ],
       ),
     );
   }
