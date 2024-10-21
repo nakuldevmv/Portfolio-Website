@@ -55,12 +55,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    ////
-    double isdeviceWidth = MediaQuery.of(context).size.width;
-    // double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
-    double deviceHeight = 729.5;
-    ////
     return MaterialApp(
       title: "Nakul Dev",
       theme: ThemeData(
