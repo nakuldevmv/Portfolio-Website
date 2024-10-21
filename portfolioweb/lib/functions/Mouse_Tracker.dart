@@ -91,7 +91,7 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
                             Positioned.fill(
                               child: BackdropFilter(
                                 filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                                child: Container(color: Colors.black.withOpacity(0.3)),
+                                // child: Container(color: Colors.black.withOpacity(0.3)),
                               ),
                             ),
                           ],
