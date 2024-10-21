@@ -8,7 +8,7 @@ class CursorTracker extends StatefulWidget {
   const CursorTracker({
     super.key,
     required this.child,
-    this.delayFactor = 0.2,
+    this.delayFactor = 0.1,
   });
 
   @override
@@ -64,41 +64,40 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
           return Stack(
             children: [
               // Cursor tracker layer
-              _currentPosition != const Offset(0, 0)
-                  ? Positioned.fill(
-                      child: IgnorePointer(
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: _currentPosition.dx - _circleSize / 2,
-                              top: _currentPosition.dy - _circleSize / 2,
-                              child: Container(
-                                width: _circleSize,
-                                height: _circleSize,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Colors.yellowAccent,
-                                      Colors.redAccent
-                                    ],
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight,
-                                  ),
-                                ),
-                              ),
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: _currentPosition.dx - _circleSize / 2,
+                        top: _currentPosition.dy - _circleSize / 2,
+                        child: Container(
+                          width: _circleSize,
+                          height: _circleSize,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.yellowAccent,
+                                Colors.redAccent
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
                             ),
-                            Positioned.fill(
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                                child: Container(color: Colors.black.withOpacity(0.3)),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
-                    )
-                  : const Offstage(), // Child widget layer
+                      Positioned.fill(
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                          child: Container(color: Colors.black.withOpacity(0.3)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              // Child widget layer
               child!,
             ],
           );
