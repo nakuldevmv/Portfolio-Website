@@ -14,21 +14,16 @@ class toResponsiveLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          const AnimatedGridDotBackground(),
-          CursorTracker(
-            child: NavigationWrapper(
-              showNavBar: false,
-              currentIndex: currentIndex,
-              child: const ResponsiveLayout(
-                desktopBody: desktop(),
-                mobileBody: mobile(),
-                tabletBody: tablet(),
-              ),
-            ),
+      body: CursorTracker(
+        child: NavigationWrapper(
+          showNavBar: false,
+          currentIndex: currentIndex,
+          child: const ResponsiveLayout(
+            desktopBody: desktop(),
+            mobileBody: mobile(),
+            tabletBody: tablet(),
           ),
-        ],
+        ),
       ),
     );
     // return Scaffold(

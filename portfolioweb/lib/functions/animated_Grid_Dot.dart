@@ -61,11 +61,11 @@ class _AnimatedGridDotBackgroundState extends State<AnimatedGridDotBackground> w
 class AnimatedDotGridPainter extends CustomPainter {
   final double animationValue;
   final double spacing = 50;
-  final double dotRadius = 2;
+  final double dotRadius = 3;
   final List<Color> gradientColors = [
-    const Color.fromARGB(255, 0, 47, 255), // Blue
     const Color.fromARGB(255, 125, 149, 255), // Blue
-    const Color.fromARGB(255, 0, 47, 255), // Blue
+    const Color.fromARGB(255, 255, 255, 255), // Blue
+    const Color.fromARGB(255, 125, 149, 255), // Blue
   ];
 
   AnimatedDotGridPainter(this.animationValue);

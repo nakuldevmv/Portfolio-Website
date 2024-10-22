@@ -102,9 +102,9 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Icon(color: textStyles.B.color, Icons.mail_rounded),
-                              // SizedBox(
-                              //   width:   0.005,
-                              // ),
+                              const SizedBox(
+                                width: 0.005,
+                              ),
                               GestureDetector(
                                 onHorizontalDragUpdate: (details) {
                                   copyTextToClipboard(context, 'nakuldev1561@gmail.com');
@@ -162,11 +162,14 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           margin: ContactMe_containerStyle_tablet.margin,
                           width: ContactMe_containerStyle_tablet.width_mail_Linkedin,
                           child: Row(
+                            // mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               SvgPicture.asset(
                                 "assets/svg/linkedin.svg",
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                                 // ignore: deprecated_member_use
-                                color: textStyles.B.color,
+                                // color: textStyles.B.color,
                               ),
                               const SizedBox(
                                 width: 0.005,
@@ -203,9 +206,12 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                               margin: ContactMe_containerStyle_tablet.margin,
                               // height: ContactMe_containerStyle_tablet.bottom_icon_height,
                               width: ContactMe_containerStyle_tablet.bottom_icon_width,
+
                               child: SvgPicture.asset(
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                                 "assets/svg/instagram.svg",
-                                color: textStyles.B.color,
+                                // color: textStyles.B.color,
                               ),
                             ),
                           ),
@@ -215,7 +221,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           //twitter
                           GestureDetector(
                             onTap: () {
-                              urlLaunch("https://x.com/");
+                              urlLaunch("https://leetcode.com/u/nakuldev1561/");
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -226,9 +232,10 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                               margin: ContactMe_containerStyle_tablet.margin,
                               width: ContactMe_containerStyle_tablet.bottom_icon_width,
                               child: SvgPicture.asset(
-                                "assets/svg/x.svg",
+                                "assets/svg/x.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                                 // ignore: deprecated_member_use
-                                color: textStyles.B.color,
+                                // color: textStyles.B.color,
                               ),
                             ),
                           ),
@@ -249,7 +256,9 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                            color: ContactMe_containerStyle_tablet.color,
+                            color: containerStyle.colorR,
+
+                            // color: ContactMe_containerStyle_tablet.color,
                             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_tablet.padding,
@@ -260,7 +269,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           child: SvgPicture.asset(
                             "assets/svg/github.svg",
                             // ignore: deprecated_member_use
-                            color: textStyles.B.color,
+                            // color: textStyles.B.color,
                             // width:   0.06,
                             // height: deviceHeight * 0.06,
                           ),
@@ -280,9 +289,10 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           margin: ContactMe_containerStyle_tablet.margin,
                           width: ContactMe_containerStyle_tablet.githubsizeW,
                           child: SvgPicture.asset(
-                            "assets/svg/hackerrank.svg",
+                            "assets/svg/hackerrank.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                             // ignore: deprecated_member_use
-                            color: textStyles.B.color,
+                            // color: textStyles.B.color,
                             // width:   0.06,
                             // height: deviceHeight * 0.06,
                           ),

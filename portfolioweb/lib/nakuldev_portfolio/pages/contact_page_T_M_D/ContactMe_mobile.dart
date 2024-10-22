@@ -156,7 +156,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                           SvgPicture.asset(
                             "assets/svg/linkedin.svg",
                             // ignore: deprecated_member_use
-                            color: textStyles.B.color,
+                            // color: textStyles.B.color,
+                            height: ContactMe_containerStyle_tablet.svgcontHeight,
                           ),
                           SizedBox(
                             width: deviceWidth * 0.005,
@@ -195,7 +196,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
                             child: SvgPicture.asset(
                               "assets/svg/instagram.svg",
-                              color: textStyles.B.color,
+                              // color: textStyles.B.color,
+                              height: ContactMe_containerStyle_tablet.svgcontHeight,
                             ),
                           ),
                         ),
@@ -219,8 +221,10 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
                             child: SvgPicture.asset(
                               "assets/svg/x.svg",
+                              height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                               // ignore: deprecated_member_use
-                              color: textStyles.B.color,
+                              // color: textStyles.B.color,
                             ),
                           ),
                         ),
@@ -241,7 +245,9 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: ContactMe_containerStyle_mobile.color,
+                        // color: ContactMe_containerStyle_mobile.color,
+                        color: containerStyle.colorR,
+
                         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       ),
                       padding: ContactMe_containerStyle_mobile.padding,
@@ -252,7 +258,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       child: SvgPicture.asset(
                         "assets/svg/github.svg",
                         // ignore: deprecated_member_use
-                        color: textStyles.B.color,
+                        // color: textStyles.B.color,
                         // width: deviceWidth * 0.06,
                         // height: deviceHeight * 0.06,
                       ),
@@ -272,9 +278,11 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       margin: ContactMe_containerStyle_mobile.margin,
                       width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
                       child: SvgPicture.asset(
+                        height: ContactMe_containerStyle_tablet.svgcontHeight,
+
                         "assets/svg/hackerrank.svg",
                         // ignore: deprecated_member_use
-                        color: textStyles.B.color,
+                        // color: textStyles.B.color,
                         // width: deviceWidth * 0.06,
                         // height: deviceHeight * 0.06,
                       ),

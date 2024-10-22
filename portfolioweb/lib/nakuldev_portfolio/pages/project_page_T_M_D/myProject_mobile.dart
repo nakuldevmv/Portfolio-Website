@@ -63,9 +63,9 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                 width: deviceWidth,
                                 height: 250,
                                 margin: const EdgeInsets.only(top: 10),
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                                  color: Color.fromARGB(127, 0, 0, 0),
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                  color: mobile_ProjectContainer.color,
                                 ),
                               ),
                               Stack(
@@ -82,12 +82,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                         fit: BoxFit.cover,
                                       ),
                                       boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.black.withOpacity(0.2), // Shadow color with some transparency
-                                          spreadRadius: 1, // How far the shadow spreads
-                                          blurRadius: 5, // Smoothness of the shadow
-                                          offset: const Offset(2, 2), // Horizontal and vertical offset
-                                        ),
+                                        GlobalShadow
                                       ],
                                     ),
                                   ),
@@ -116,9 +111,9 @@ class _myProject_mobileState extends State<myProject_mobile> {
                           Container(
                             width: deviceWidth,
                             margin: const EdgeInsets.only(bottom: 10),
-                            decoration: const BoxDecoration(
-                              color: Color.fromARGB(127, 0, 0, 0),
-                              borderRadius: BorderRadius.only(
+                            decoration: BoxDecoration(
+                              color: mobile_ProjectContainer.color,
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(10),
                                 bottomRight: Radius.circular(10),
                               ),

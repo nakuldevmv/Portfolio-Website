@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, ant_identifier_names
+// ignore_for_file: camel_case_types, ant_identifier_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,6 +10,12 @@ Color FontColor = Colors.white70;
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
 BorderRadius GlobalBorderRadius = const BorderRadius.all(Radius.circular(20));
 BorderRadius SecondaryBorderRadius = const BorderRadius.all(Radius.circular(8));
+BoxShadow GlobalShadow = BoxShadow(
+  color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5), // Shadow color with some transparency
+  spreadRadius: 1, // How far the shadow spreads
+  blurRadius: 5, // Smoothness of the shadow
+  offset: const Offset(2, 2), // Horizontal and vertical offset
+);
 
 class rotating_container extends StatelessWidget {
   final Color color;
@@ -211,7 +217,7 @@ class ContactMe_containerStyle_tablet {
   // static  double bottom_icon_height = 70;
 
   static double githubsizeW = 198;
-  // static  double githubsizeH = 0.182;
+  static double svgcontHeight = 24;
 
   //
 }

@@ -14,71 +14,78 @@ class demo_code_button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const rad = Radius.circular(8);
     return Padding(
       padding: const EdgeInsets.only(top: 20, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           //code btn
-          Container(
-            padding: const EdgeInsets.all(5),
-            margin: const EdgeInsets.only(right: 10),
-            height: 30,
-            width: 90,
-            decoration: BoxDecoration(borderRadius: const BorderRadius.all(
-                // topLeft: Radius.circular(10),
-                // topRight: Radius.circular(10),
-                Radius.circular(10)), color: EducationcontainerStyle.color),
-            child: GestureDetector(
-              onTap: () {
-                codeButton(context, projects[index]);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  AutoSizeText(
-                    "Code",
-                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                    minFontSize: 5,
-                    maxFontSize: 15,
-                    maxLines: 1,
-                  ),
-                  Icon(
-                    color: textStyles.B.color,
-                    Icons.code_rounded,
-                    size: 16,
-                  )
-                ],
+          MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: Container(
+              padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.only(right: 10),
+              height: 30,
+              width: 90,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(rad),
+                color: EducationcontainerStyle.color,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  codeButton(context, projects[index]);
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    AutoSizeText(
+                      "Code",
+                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                      minFontSize: 5,
+                      maxFontSize: 15,
+                      maxLines: 1,
+                    ),
+                    Icon(
+                      color: textStyles.B.color,
+                      Icons.code_rounded,
+                      size: 16,
+                    )
+                  ],
+                ),
               ),
             ),
           ),
           //demo btn
-          Container(
-            padding: const EdgeInsets.all(5),
-            margin: const EdgeInsets.only(right: 10),
-            height: 30,
-            width: 90,
-            decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: EducationcontainerStyle.color),
-            child: GestureDetector(
-              onTap: () {
-                demoButton(context, projects[index]);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  AutoSizeText(
-                    "Demo",
-                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
-                    minFontSize: 5,
-                    maxFontSize: 15,
-                    maxLines: 1,
-                  ),
-                  Icon(
-                    color: textStyles.B.color,
-                    Icons.add_to_home_screen_rounded,
-                    size: 16,
-                  )
-                ],
+          MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: Container(
+              padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.only(right: 10),
+              height: 30,
+              width: 90,
+              decoration: BoxDecoration(borderRadius: const BorderRadius.all(rad), color: EducationcontainerStyle.color),
+              child: GestureDetector(
+                onTap: () {
+                  demoButton(context, projects[index]);
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    AutoSizeText(
+                      "Demo",
+                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                      minFontSize: 5,
+                      maxFontSize: 15,
+                      maxLines: 1,
+                    ),
+                    Icon(
+                      color: textStyles.B.color,
+                      Icons.add_to_home_screen_rounded,
+                      size: 16,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

@@ -1,13 +1,8 @@
 import 'package:Nakul_Dev/Data/profilePic_book.dart';
-import 'package:Nakul_Dev/error/notResp.dart';
-import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
-
-import 'package:google_fonts/google_fonts.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
