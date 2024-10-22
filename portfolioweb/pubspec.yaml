@@ -121,6 +121,8 @@ flutter:
      - assets/svg/hackerrank.svg
      - assets/svg/github.svg
      - assets/svg/404.svg
+     - assets/svg/email.svg
+
 
 
 

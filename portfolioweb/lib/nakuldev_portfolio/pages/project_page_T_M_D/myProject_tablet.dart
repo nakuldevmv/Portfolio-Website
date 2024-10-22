@@ -174,12 +174,12 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               ),
                                               SvgPicture.asset(
                                                 projects[index * 2].dartSvg,
-                                                color: textStyles.B.color,
+                                                // color: textStyles.B.color,
                                                 width: 25,
                                               ),
                                               SvgPicture.asset(
                                                 projects[index * 2].flutterSvg,
-                                                color: textStyles.B.color,
+                                                // color: textStyles.B.color,
                                                 width: 25,
                                               ),
                                             ],
@@ -311,12 +311,12 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               ),
                                               SvgPicture.asset(
                                                 projects[index * 2 + 1].dartSvg,
-                                                color: textStyles.B.color,
+                                                // color: textStyles.B.color,
                                                 width: 25,
                                               ),
                                               SvgPicture.asset(
                                                 projects[index * 2 + 1].flutterSvg,
-                                                color: textStyles.B.color,
+                                                // color: textStyles.B.color,
                                                 width: 25,
                                               ),
                                             ],

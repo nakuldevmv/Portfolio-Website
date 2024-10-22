@@ -71,7 +71,13 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                         child: Row(
                           children: [
-                            Icon(color: textStyles.B.color, Icons.place_rounded),
+                            // SvgPicture.asset(
+                            //   "assets/svg/pin.svg",
+                            //   clipBehavior: Clip.antiAlias,
+                            //   color: textStyles.B.color,
+                            //   // height: ContactMe_containerStyle_tablet.svgcontHeight,
+                            // ),
+                            const Icon(color: Colors.red, Icons.place_rounded),
                             Text(
                               ' Kerala, India',
                               style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
@@ -101,7 +107,13 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Icon(color: textStyles.B.color, Icons.mail_rounded),
+                              SvgPicture.asset(
+                                "assets/svg/email.svg",
+                                clipBehavior: Clip.antiAlias,
+                                color: textStyles.B.color,
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
+                              ),
+                              // Icon(color: textStyles.B.color, Icons.mail_rounded),
                               const SizedBox(
                                 width: 0.005,
                               ),

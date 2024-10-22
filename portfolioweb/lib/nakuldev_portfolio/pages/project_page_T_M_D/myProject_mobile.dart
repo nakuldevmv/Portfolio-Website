@@ -165,12 +165,12 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                         ),
                                         SvgPicture.asset(
                                           projects[index].dartSvg,
-                                          color: textStyles.B.color,
+                                          // color: textStyles.B.color,
                                           width: 25,
                                         ),
                                         SvgPicture.asset(
                                           projects[index].flutterSvg,
-                                          color: textStyles.B.color,
+                                          // color: textStyles.B.color,
                                           width: 25,
                                         ),
                                       ],

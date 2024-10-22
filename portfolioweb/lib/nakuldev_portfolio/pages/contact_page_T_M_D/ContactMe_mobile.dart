@@ -61,7 +61,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                     child: Row(
                       children: [
-                        Icon(color: textStyles.B.color, Icons.place_rounded),
+                        const Icon(color: Colors.red, Icons.place_rounded),
                         Text(
                           ' Kerala, India',
                           style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
@@ -91,8 +91,12 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Icon(color: textStyles.B.color, Icons.mail_rounded),
-                          // SizedBox(
+                          SvgPicture.asset(
+                            "assets/svg/email.svg",
+                            clipBehavior: Clip.antiAlias,
+                            color: textStyles.B.color,
+                            height: ContactMe_containerStyle_tablet.svgcontHeight,
+                          ), // SizedBox(
                           //   width: deviceWidth * 0.005,
                           // ),
                           GestureDetector(

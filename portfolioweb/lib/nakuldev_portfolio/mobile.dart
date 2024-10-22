@@ -256,7 +256,7 @@ class _mobileState extends State<mobile> {
                                 child: Center(
                                   child: SvgPicture.asset(
                                     skills[0],
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -269,7 +269,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[1],
 
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    // color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -281,7 +282,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[2],
 
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    // color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -293,7 +295,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[3],
 
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    // color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -305,7 +308,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[4],
 
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    // color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -317,7 +321,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[5],
 
-                                    color: textStyles.B.color, width: deviceWidth * mobile_SVGContainer.width,
+                                    // color: textStyles.B.color,
+                                    width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -337,7 +342,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[6],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -350,7 +355,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[7],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -363,7 +368,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[8],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -376,7 +381,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[9],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -389,7 +394,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[10],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
@@ -402,7 +407,7 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[11],
 
-                                    color: textStyles.B.color,
+                                    // color: textStyles.B.color,
                                     width: deviceWidth * mobile_SVGContainer.width,
                                     // height: devi * mobile_SVGContainer.height,
                                   ),
