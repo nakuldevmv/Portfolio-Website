@@ -6,37 +6,24 @@ import 'dart:math' as math;
 class CursorTracker extends StatefulWidget {
   final Widget child;
   final List<double> delayFactors;
-  final List<List<Color>> gradientColors;
-  final List<double> circleSizes; // New parameter for controlling circle sizes
+  final List<double> circleSizes; // Controls the sizes of circles
+  final Duration gradientDuration; // New attribute for gradient speed
 
   const CursorTracker({
     super.key,
     required this.child,
     this.delayFactors = const [
+      0.1,
       0.2,
-      0.3,
       0.4
-    ],
-    this.gradientColors = const [
-      [
-        Colors.yellowAccent,
-        Colors.redAccent
-      ],
-      [
-        Color.fromARGB(170, 255, 255, 0),
-        Color.fromARGB(170, 255, 82, 82)
-      ],
-      [
-        Color.fromARGB(99, 0, 0, 0),
-        Color.fromARGB(99, 0, 0, 0)
-      ],
     ],
     this.circleSizes = const [
       200,
-      150,
-      50,
-    ], // Default sizes for three circles
-  }) : assert(delayFactors.length == gradientColors.length && delayFactors.length == circleSizes.length, 'Number of delay factors, gradient colors, and circle sizes must match');
+      64,
+      15
+    ], // Sizes for circles
+    this.gradientDuration = const Duration(seconds: 30), // Default duration
+  }) : assert(delayFactors.length == circleSizes.length, 'Mismatch in delay factors and circle sizes.');
 
   @override
   State<CursorTracker> createState() => _CursorTrackerState();
@@ -46,14 +33,25 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
   List<Offset> _currentPositions = [];
   Offset _targetPosition = Offset.zero;
   late AnimationController _controller;
+  late Animation<double> _rotationAnimation;
+
+  final List<Color> _gradientColors = [
+    const Color(0xFF3EFFE8),
+    const Color(0xFF8C0FEE),
+  ];
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(days: 1),
+      duration: widget.gradientDuration, // Use the gradient duration from the attribute
     )..repeat();
+
+    // Rotation animation from 0 to 2 * pi (full rotation)
+    _rotationAnimation = Tween<double>(begin: 0, end: 2 * math.pi).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.linear),
+    );
 
     _currentPositions = List.generate(
       widget.delayFactors.length,
@@ -83,6 +81,16 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
     return start + (end - start) * t;
   }
 
+  Color _getInterpolatedColor(double t) {
+    // Interpolate between gradient colors
+    int index = (t * (_gradientColors.length - 1)).floor();
+    double localT = (t * (_gradientColors.length - 1)) - index;
+    if (index >= _gradientColors.length - 1) {
+      return _gradientColors.last;
+    }
+    return Color.lerp(_gradientColors[index], _gradientColors[index + 1], localT)!;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
@@ -96,6 +104,8 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
             _currentPositions[i] = _interpolatePosition(t, i);
           }
 
+          double animationProgress = (_controller.value * 9) % 9; // Animation progress for the gradient
+
           return Stack(
             children: [
               const AnimatedGridDotBackground(),
@@ -104,24 +114,36 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
                   child: IgnorePointer(
                     child: Stack(
                       children: [
-                        // Generate circles with different delays, colors, and sizes
-                        for (int i = 0; i < _currentPositions.length; i++)
-                          Positioned(
-                            left: _currentPositions[i].dx - widget.circleSizes[i] / 2,
-                            top: _currentPositions[i].dy - widget.circleSizes[i] / 2,
+                        // Big circle with animated gradient and slow rotation
+                        Positioned(
+                          left: _currentPositions[0].dx - widget.circleSizes[0] / 2,
+                          top: _currentPositions[0].dy - widget.circleSizes[0] / 2,
+                          child: Transform.rotate(
+                            angle: _rotationAnimation.value,
                             child: Container(
-                              width: widget.circleSizes[i],
-                              height: widget.circleSizes[i],
+                              width: widget.circleSizes[0],
+                              height: widget.circleSizes[0],
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 gradient: LinearGradient(
-                                  colors: widget.gradientColors[i],
+                                  colors: [
+                                    _getInterpolatedColor(animationProgress),
+                                    _getInterpolatedColor((animationProgress + 1) % 9),
+                                  ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: _getInterpolatedColor(animationProgress).withOpacity(0.5), // Shadow color based on the gradient
+                                    blurRadius: 60,
+                                    spreadRadius: 10,
+                                  ),
+                                ],
                               ),
                             ),
                           ),
+                        ),
                       ],
                     ),
                   ),
@@ -132,6 +154,33 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
                   child: Container(color: Colors.transparent),
                 ),
               ),
+              // Black outline circle
+              Positioned(
+                left: _currentPositions[1].dx - widget.circleSizes[1] / 2,
+                top: _currentPositions[1].dy - widget.circleSizes[1] / 2,
+                child: Container(
+                  width: widget.circleSizes[1],
+                  height: widget.circleSizes[1],
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+              // Black dot
+              Positioned(
+                left: _currentPositions[2].dx - widget.circleSizes[2] / 2,
+                top: _currentPositions[2].dy - widget.circleSizes[2] / 2,
+                child: Container(
+                  width: widget.circleSizes[2],
+                  height: widget.circleSizes[2],
+                  decoration: const BoxDecoration(
+                    color: Colors.black,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+
               child!,
             ],
           );

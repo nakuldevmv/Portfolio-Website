@@ -1,20 +1,53 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+class BlobConfig {
+  final List<Color> colors;
+  final double baseOpacity;
+  final double dynamicOpacity;
+
+  const BlobConfig({
+    required this.colors,
+    this.baseOpacity = 0.4,
+    this.dynamicOpacity = 0.2,
+  });
+}
+
 class AnimatedBlobBackground extends StatefulWidget {
   final Widget child;
-  final List<Duration> delays;
+  final int numberOfBlobs;
+  final double gravitationalPull;
+  final double baseSpeed;
+  final double blobSizeMultiplier;
+  final double orbitRadius;
+  final List<BlobConfig> blobConfigs;
+
   const AnimatedBlobBackground({
     super.key,
     required this.child,
-    this.delays = const [
-      Duration(seconds: 0),
-      Duration(seconds: 2),
-      Duration(seconds: 4),
-    ],
-  });
+    this.numberOfBlobs = 3,
+    this.gravitationalPull = 1.0,
+    this.baseSpeed = 1.0,
+    this.blobSizeMultiplier = 0.5,
+    this.orbitRadius = 0.2,
+    List<BlobConfig>? blobConfigs,
+  })  : blobConfigs = blobConfigs ??
+            const [
+              BlobConfig(colors: [
+                Colors.purple,
+                Colors.transparent
+              ]),
+              BlobConfig(colors: [
+                Colors.blue,
+                Colors.transparent
+              ]),
+              BlobConfig(colors: [
+                Colors.indigo,
+                Colors.transparent
+              ]),
+            ],
+        assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs, 'Must provide at least as many blob configs as number of blobs');
 
   @override
   State<AnimatedBlobBackground> createState() => _AnimatedBlobBackgroundState();
@@ -23,35 +56,59 @@ class AnimatedBlobBackground extends StatefulWidget {
 class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with TickerProviderStateMixin {
   late final List<AnimationController> _controllers;
   late final List<Animation<double>> _animations;
-  final int numberOfBlobs = 3;
+  late final List<Animation<double>> _secondaryAnimations;
+  late final List<Animation<double>> _tertiaryAnimations;
 
   @override
   void initState() {
     super.initState();
 
-    // Initialize controllers with different speeds
+    // Primary controllers for main orbital movement
     _controllers = List.generate(
-      numberOfBlobs,
+      widget.numberOfBlobs,
       (index) => AnimationController(
-        duration: Duration(seconds: 8 + index * 2), // Longer duration for smoother movement
+        duration: Duration(milliseconds: (12000 / widget.baseSpeed).round() + index * 3000),
         vsync: this,
-      ),
+      )..repeat(), // Start immediately with repeat
     );
 
-    // Start animations with delays
-    for (int i = 0; i < numberOfBlobs; i++) {
-      Future.delayed(widget.delays[i], () {
-        if (mounted) {
-          _controllers[i].repeat();
-        }
-      });
-    }
+    // Secondary controllers for complex movement
+    final secondaryControllers = List.generate(
+      widget.numberOfBlobs,
+      (index) => AnimationController(
+        duration: Duration(milliseconds: (8000 / widget.baseSpeed).round() + index * 2000),
+        vsync: this,
+      )..repeat(), // Start immediately with repeat
+    );
 
-    // Create animations with custom curves for more organic movement
+    // Tertiary controllers for size pulsing
+    final tertiaryControllers = List.generate(
+      widget.numberOfBlobs,
+      (index) => AnimationController(
+        duration: Duration(milliseconds: (15000 / widget.baseSpeed).round() + index * 1500),
+        vsync: this,
+      )..repeat(), // Start immediately with repeat
+    );
+
+    // Custom curved animations for smoother transitions
     _animations = _controllers.map((controller) {
       return CurvedAnimation(
         parent: controller,
-        curve: Curves.easeInOut,
+        curve: const SmoothCurve(),
+      );
+    }).toList();
+
+    _secondaryAnimations = secondaryControllers.map((controller) {
+      return CurvedAnimation(
+        parent: controller,
+        curve: const SmoothCurve(),
+      );
+    }).toList();
+
+    _tertiaryAnimations = tertiaryControllers.map((controller) {
+      return CurvedAnimation(
+        parent: controller,
+        curve: const SmoothCurve(),
       );
     }).toList();
   }
@@ -64,84 +121,85 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
     super.dispose();
   }
 
-  // Calculate blob position based on animation value
-  Offset _calculateBlobPosition(double value, int index, Size size) {
-    // Center point of the screen
+  Offset _calculateBlobPosition(double primaryValue, double secondaryValue, double tertiaryValue, int index, Size size) {
     final centerX = size.width / 2;
     final centerY = size.height / 2;
 
-    // Radius of movement from center
-    final radius = math.min(size.width, size.height) * 0.15;
+    final baseRadius = math.min(size.width, size.height) * widget.orbitRadius;
+    final secondaryRadius = baseRadius * widget.gravitationalPull * 0.3;
 
-    // Calculate angle based on animation value and blob index
-    final angle = value * 2 * math.pi + (2 * math.pi / numberOfBlobs * index);
+    // Smooth continuous rotation
+    final primaryAngle = primaryValue * 2 * math.pi + (2 * math.pi / widget.numberOfBlobs * index);
+    final secondaryAngle = secondaryValue * 4 * math.pi;
 
-    // Add some vertical oscillation
-    final verticalOffset = math.sin(value * 4 * math.pi) * radius * 0.3;
+    // Add smooth tertiary movement
+    final tertiaryOffset = math.sin(tertiaryValue * 2 * math.pi) * (baseRadius * 0.15 * widget.gravitationalPull);
 
-    // Calculate position with circular motion around center
-    final x = centerX + math.cos(angle) * radius;
-    final y = centerY + math.sin(angle) * radius + verticalOffset;
+    final x = centerX + math.cos(primaryAngle) * (baseRadius + tertiaryOffset) + math.cos(secondaryAngle) * secondaryRadius;
 
-    return Offset(x, y);
+    final y = centerY + math.sin(primaryAngle) * (baseRadius + tertiaryOffset) + math.sin(secondaryAngle) * secondaryRadius;
+
+    // Smooth vertical oscillation
+    final oscillation = math.sin(primaryValue * 4 * math.pi) * (size.height * 0.03 * widget.gravitationalPull);
+
+    return Offset(x, y + oscillation);
+  }
+
+  double _calculateBlobSize(Size size, double tertiaryValue) {
+    final baseSize = math.min(size.width, size.height) * widget.blobSizeMultiplier;
+    // Add subtle size pulsing
+    final pulseFactor = 1.0 + (math.sin(tertiaryValue * 2 * math.pi) * 0.1);
+    return baseSize * pulseFactor;
   }
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Stack(
       children: [
-        // Background with specified RadialGradient
-        // Container(
-        //   decoration: const BoxDecoration(
-        //     gradient: RadialGradient(
-        //       colors: [
-        //         Color(0xff7094ff),
-        //         Color(0xff000000)
-        //       ],
-        //       stops: [
-        //         0,
-        //         1
-        //       ],
-        //       center: Alignment.topCenter,
-        //     ),
-        //   ),
-        // ),
+        ...List.generate(widget.numberOfBlobs, (index) {
+          final config = widget.blobConfigs[index % widget.blobConfigs.length];
 
-        // Animated blobs
-        ...List.generate(numberOfBlobs, (index) {
           return AnimatedBuilder(
-            animation: _animations[index],
+            animation: Listenable.merge([
+              _animations[index],
+              _secondaryAnimations[index],
+              _tertiaryAnimations[index],
+            ]),
             builder: (context, child) {
-              final size = MediaQuery.of(context).size;
-              final position = _calculateBlobPosition(_animations[index].value, index, size);
+              final position = _calculateBlobPosition(
+                _animations[index].value,
+                _secondaryAnimations[index].value,
+                _tertiaryAnimations[index].value,
+                index,
+                size,
+              );
+
+              final blobSize = _calculateBlobSize(size, _tertiaryAnimations[index].value);
+              final dynamicOpacity = config.baseOpacity + (_animations[index].value * config.dynamicOpacity);
 
               return Positioned(
-                left: position.dx - 250, // Center the blob (half of width)
-                top: position.dy - 250, // Center the blob (half of height)
+                left: position.dx - (blobSize / 2),
+                top: position.dy - (blobSize / 2),
                 child: Container(
-                  width: 700,
-                  height: 700,
+                  width: blobSize,
+                  height: blobSize,
                   decoration: BoxDecoration(
                     gradient: RadialGradient(
-                      colors: [
-                        // Different colors for each blob
-                        if (index == 0) Colors.purple.withOpacity(0.5) else if (index == 1) Colors.blue.withOpacity(0.5) else Colors.indigo.withOpacity(0.5),
-                        Colors.transparent,
-                      ],
+                      colors: config.colors.map((color) => color.withOpacity(color == Colors.transparent ? 0.0 : dynamicOpacity)).toList(),
                       stops: const [
                         0.2,
                         1.0
-                      ], // Sharper gradient falloff
+                      ],
                     ),
-                    borderRadius: BorderRadius.circular(250),
+                    borderRadius: BorderRadius.circular(blobSize / 2),
                   ),
                 ),
               );
             },
           );
         }),
-
-        // Backdrop filter for the glass effect
         BackdropFilter(
           filter: ImageFilter.blur(
             sigmaX: 30,
@@ -151,5 +209,16 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
         ),
       ],
     );
+  }
+}
+
+// Custom curve for smooth looping animations
+class SmoothCurve extends Curve {
+  const SmoothCurve();
+
+  @override
+  double transform(double t) {
+    // Using sine function for smooth continuous motion
+    return (1 - math.cos(t * 2 * math.pi)) / 2;
   }
 }

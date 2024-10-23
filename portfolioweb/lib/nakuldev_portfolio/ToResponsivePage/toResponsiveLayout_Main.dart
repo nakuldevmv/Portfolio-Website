@@ -1,5 +1,4 @@
 import 'package:Nakul_Dev/functions/Mouse_Tracker.dart';
-import 'package:Nakul_Dev/functions/animated_Grid_Dot.dart';
 import 'package:Nakul_Dev/functions/navigation_bar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/desktop.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/mobile.dart';
@@ -16,6 +15,30 @@ class toResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedBlobBackground(
+        numberOfBlobs: 4,
+        gravitationalPull: 1.0,
+        baseSpeed: 0.5,
+        blobSizeMultiplier: 1,
+        orbitRadius: 0.2,
+        blobConfigs: const [
+          BlobConfig(colors: [
+            Colors.purple,
+            Colors.transparent
+          ]),
+          BlobConfig(colors: [
+            Colors.blue,
+            Colors.transparent
+          ]),
+          BlobConfig(colors: [
+            Colors.purpleAccent,
+            Colors.transparent
+          ]),
+          BlobConfig(colors: [
+            Colors.indigo,
+            Colors.transparent
+          ]),
+        ],
+        ///////////////////////////
         child: CursorTracker(
           child: NavigationWrapper(
             showNavBar: false,

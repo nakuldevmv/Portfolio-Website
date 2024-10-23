@@ -4,7 +4,6 @@ import 'package:Nakul_Dev/Data/profilePic_book.dart';
 import 'package:Nakul_Dev/Data/projects.dart';
 import 'package:Nakul_Dev/Data/skill.dart';
 import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
-import 'package:Nakul_Dev/functions/Theme_Switcher.dart';
 import 'package:Nakul_Dev/functions/downloadResume.dart';
 import 'package:Nakul_Dev/functions/navigate.dart';
 import 'package:Nakul_Dev/functions/notifySnackBar.dart';

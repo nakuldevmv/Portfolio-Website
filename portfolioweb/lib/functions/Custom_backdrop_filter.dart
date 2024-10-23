@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomBox extends StatelessWidget {
