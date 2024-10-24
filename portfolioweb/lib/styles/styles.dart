@@ -9,6 +9,14 @@ Color ResumeColor = const Color.fromARGB(127, 183, 183, 183);
 Color FontColor = Colors.white70;
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
 BorderRadius GlobalBorderRadius = const BorderRadius.all(Radius.circular(20));
+BorderRadius RadUp = const BorderRadius.only(
+  topLeft: Radius.circular(20),
+  topRight: Radius.circular(20),
+);
+BorderRadius RadBottom = const BorderRadius.only(
+  bottomLeft: Radius.circular(20),
+  bottomRight: Radius.circular(20),
+);
 BorderRadius SecondaryBorderRadius = const BorderRadius.all(Radius.circular(8));
 BoxShadow GlobalShadow = BoxShadow(
   color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5), // Shadow color with some transparency
@@ -146,6 +154,8 @@ class containerStyle {
 
   static EdgeInsets margin = const EdgeInsets.all(10);
   static BorderRadius borderRadius = GlobalBorderRadius;
+  static BorderRadius borderRadiusBottom = RadBottom;
+  static BorderRadius borderRadiusRadup = RadUp;
   static EdgeInsets padding = const EdgeInsets.all(16);
   static EdgeInsets paddingNew = const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
   static EdgeInsets paddingNewHeading = const EdgeInsets.only(

@@ -1,4 +1,5 @@
 import 'package:Nakul_Dev/Data/profilePic_book.dart';
+import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
 import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
 import 'package:flutter/material.dart';
@@ -235,7 +236,7 @@ class _AboutMeState extends State<AboutMe> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(height: 50),
+                              const SizedBox(height: 25),
                             ],
                           ),
                         ),
@@ -247,45 +248,45 @@ class _AboutMeState extends State<AboutMe> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [
-                          Color.fromARGB(100, 37, 37, 37),
-                          Color.fromARGB(245, 37, 37, 37),
-                          Color.fromARGB(250, 37, 37, 37),
-                          Color.fromARGB(255, 37, 37, 37)
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                      ),
-                      borderRadius: containerStyle.borderRadius,
-                    ),
-                    padding: containerStyle.paddingNew,
+                  CustomBox(
+                    borderRadius: containerStyle.borderRadiusRadup,
                     margin: containerStyle.margin,
-                    width: deviceWidth * containerStyle.widthAboutme,
-                    height: 60,
-                    child: Text(
-                      "My Coding Journey",
-                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(31, 0, 0, 0),
+                        borderRadius: containerStyle.borderRadiusRadup,
+                      ),
+                      padding: containerStyle.paddingNew,
+                      // margin: containerStyle.margin,
+                      width: deviceWidth * containerStyle.widthAboutme,
+                      height: 60,
+                      child: Text(
+                        "My Coding Journey",
+                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                      ),
                     ),
                   ),
                   Container(
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [
-                          Color.fromARGB(90, 37, 37, 37),
-                          Color.fromARGB(240, 37, 37, 37),
-                          Color.fromARGB(255, 37, 37, 37)
+                          Color.fromARGB(255, 255, 68, 68),
+                          // Color(0xff95008a),
+                          Color.fromARGB(255, 113, 78, 255)
                         ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
+                        // stops: [
+                        //   0,
+                        //   0.5,
+                        //   1
+                        // ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
-                      borderRadius: containerStyle.borderRadius,
+                      borderRadius: containerStyle.borderRadiusBottom,
                     ),
                     margin: containerStyle.margin,
                     width: deviceWidth * containerStyle.widthAboutme,
-                    height: 60,
+                    height: 10,
                   ),
                 ],
               ),
@@ -316,7 +317,7 @@ class _AboutMeState extends State<AboutMe> {
                       padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                       child: Row(
                         children: [
-                          Icon(color: textStyles.B.color, Icons.location_on),
+                          const Icon(color: Colors.red, Icons.place_rounded),
                           Text(
                             ' Kerala, India',
                             style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
