@@ -73,7 +73,7 @@ class demo_code_button extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     AutoSizeText(
-                      "Demo",
+                      "Run",
                       style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
                       minFontSize: 5,
                       maxFontSize: 15,
@@ -81,7 +81,9 @@ class demo_code_button extends StatelessWidget {
                     ),
                     Icon(
                       color: textStyles.B.color,
-                      Icons.add_to_home_screen_rounded,
+                      Icons.play_arrow_rounded,
+                      // Icons.flash_on_rounded,
+
                       size: 16,
                     )
                   ],
