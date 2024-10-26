@@ -213,7 +213,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       SizedBox(
                         child: GestureDetector(
                           onTap: () {
-                            urlLaunch("https://x.com/");
+                            urlLaunch("https://leetcode.com/u/nakuldev1561/");
                           },
                           child: Container(
                             decoration: BoxDecoration(

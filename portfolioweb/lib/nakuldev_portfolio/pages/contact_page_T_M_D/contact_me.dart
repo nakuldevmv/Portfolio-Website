@@ -211,7 +211,7 @@ class _ContactMeState extends State<ContactMe> {
                               //twitter
                               GestureDetector(
                                 onTap: () {
-                                  urlLaunch("https://x.com/");
+                                  urlLaunch("https://leetcode.com/u/nakuldev1561/");
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
