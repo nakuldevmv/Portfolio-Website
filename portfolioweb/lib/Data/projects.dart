@@ -39,7 +39,7 @@ List<Project> projects = [
     dartSvg: "assets/svg/dart.svg",
     keyFeatures: "• Music browsing\n• UI/UX similar to Apple Music\n• dynamic content rendering",
     githubLink: "https://github.com/nakuldevmv/Apple-Music-Clone",
-    demoVideoLink: "",
+    demoVideoLink: "https://clone-app-music-8n3cr7.netlify.app/",
     screenshot1: "assets/ss/first.png",
     screenshot2: "assets/ss/second.png",
   ),
