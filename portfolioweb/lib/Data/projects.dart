@@ -78,7 +78,7 @@ List<Project> projects = [
     dartSvg: "assets/svg/dart.svg",
     keyFeatures: "• Real-time QR scanning\n• QR code generation\n• simple UI",
     githubLink: "https://github.com/nakuldevmv/QR-Code-Scanner",
-    demoVideoLink: "",
+    demoVideoLink: "https://qrcode-scanner-app-2024.netlify.app/",
     screenshot1: "assets/ss/first.png",
     screenshot2: "assets/ss/second.png",
   ),

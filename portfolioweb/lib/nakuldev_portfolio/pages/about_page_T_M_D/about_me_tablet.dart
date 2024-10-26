@@ -2,6 +2,7 @@ import 'package:Nakul_Dev/Data/profilePic_book.dart';
 import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
 import 'package:Nakul_Dev/functions/GoogleMap_Integration.dart';
 import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -114,8 +115,10 @@ class _AboutMeTabletState extends State<AboutMeTablet> {
                                   ),
                                 ],
                               ),
-                              child: Image.asset(
-                                bookPic,
+                              child: CachedNetworkImage(
+                                placeholder: (context, url) => const CircularProgressIndicator(),
+                                errorWidget: (context, url, error) => const Icon(Icons.error),
+                                imageUrl: bookPic,
                                 height: 250,
                                 fit: BoxFit.fitWidth,
                                 alignment: Alignment.bottomCenter,
