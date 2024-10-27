@@ -51,284 +51,293 @@ class _myProject_tabletState extends State<myProject_tablet> {
                     itemCount: (projects.length / 2).ceil(),
                     itemScrollController: _scrollController,
                     itemBuilder: (context, index) {
-                      return Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 8, top: 8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //SS
-                                Stack(
-                                  alignment: Alignment.center,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8, top: 8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      width: deviceWidth / 2.179,
-                                      height: 250,
-                                      // margin: const EdgeInsets.only(top: 20),
-                                      decoration: BoxDecoration(
-                                        borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                                        color: mobile_ProjectContainer.color,
-                                      ),
-                                    ),
+                                    //SS
                                     Stack(
-                                      alignment: Alignment.bottomCenter,
+                                      alignment: Alignment.center,
                                       children: [
                                         Container(
-                                          width: (deviceWidth / 2.179) - 40,
-                                          height: 250 - 40,
-                                          // margin: const EdgeInsets.only(top: 10),
+                                          width: deviceWidth / 2.179,
+                                          height: 250,
+                                          // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
-                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                projects[index * 2].image,
-                                              ),
-                                              fit: BoxFit.cover,
-                                            ),
-                                            boxShadow: [
-                                              GlobalShadow
-                                            ],
+                                            borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                            color: mobile_ProjectContainer.color,
                                           ),
                                         ),
-                                        Container(
-                                          width: (deviceWidth / 2.179) - 39.5,
-                                          decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromARGB(0, 0, 0, 0),
-                                                Color.fromARGB(99, 0, 0, 0),
-                                                Color.fromARGB(199, 0, 0, 0),
-                                                Color.fromARGB(230, 0, 0, 0),
-                                                Color.fromARGB(255, 0, 0, 0)
-                                              ],
-                                              begin: Alignment.topCenter,
-                                              end: Alignment.bottomCenter,
+                                        Stack(
+                                          alignment: Alignment.bottomCenter,
+                                          children: [
+                                            Container(
+                                              width: (deviceWidth / 2.179) - 40,
+                                              height: 250 - 40,
+                                              // margin: const EdgeInsets.only(top: 10),
+                                              decoration: BoxDecoration(
+                                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                    projects[index * 2].image,
+                                                  ),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                boxShadow: [
+                                                  GlobalShadow
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              width: (deviceWidth / 2.179) - 39.5,
+                                              decoration: const BoxDecoration(
+                                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                                gradient: LinearGradient(
+                                                  colors: [
+                                                    Color.fromARGB(0, 0, 0, 0),
+                                                    Color.fromARGB(99, 0, 0, 0),
+                                                    Color.fromARGB(199, 0, 0, 0),
+                                                    Color.fromARGB(230, 0, 0, 0),
+                                                    Color.fromARGB(255, 0, 0, 0)
+                                                  ],
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                ),
+                                              ),
+                                              child: demo_code_button(index: index * 2),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Container(
+                                      height: 170,
+                                      width: deviceWidth / 2.179,
+                                      margin: const EdgeInsets.only(bottom: 10),
+                                      decoration: BoxDecoration(
+                                        color: mobile_ProjectContainer.color,
+                                        borderRadius: const BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          //title
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index * 2].title,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                                minFontSize: 10,
+                                                maxFontSize: 25,
+                                                maxLines: 1,
+                                              ),
                                             ),
                                           ),
-                                          child: demo_code_button(index: index * 2),
-                                        )
-                                      ],
+                                          //description
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index * 2].description,
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                                minFontSize: 5,
+                                                maxFontSize: 15,
+                                                maxLines: 3,
+                                              ),
+                                            ),
+                                          ),
+                                          //techstack
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            child: SizedBox(
+                                              width: 200,
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  AutoSizeText(
+                                                    "Tech Stack :",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                                    minFontSize: 10,
+                                                    maxFontSize: 18,
+                                                    maxLines: 1,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index * 2].dartSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index * 2].flutterSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  height: 170,
-                                  width: deviceWidth / 2.179,
-                                  margin: const EdgeInsets.only(bottom: 10),
-                                  decoration: BoxDecoration(
-                                    color: mobile_ProjectContainer.color,
-                                    borderRadius: const BorderRadius.only(
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10),
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      //title
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
-                                        child: SizedBox(
-                                          child: AutoSizeText(
-                                            projects[index * 2].title,
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
-                                            minFontSize: 10,
-                                            maxFontSize: 25,
-                                            maxLines: 1,
-                                          ),
-                                        ),
-                                      ),
-                                      //description
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
-                                        child: SizedBox(
-                                          child: AutoSizeText(
-                                            projects[index * 2].description,
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
-                                            minFontSize: 5,
-                                            maxFontSize: 15,
-                                            maxLines: 3,
-                                          ),
-                                        ),
-                                      ),
-                                      //techstack
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
-                                        child: SizedBox(
-                                          width: 200,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              AutoSizeText(
-                                                "Tech Stack :",
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
-                                                minFontSize: 10,
-                                                maxFontSize: 18,
-                                                maxLines: 1,
-                                              ),
-                                              SvgPicture.asset(
-                                                projects[index * 2].dartSvg,
-                                                // color: textStyles.B.color,
-                                                width: 25,
-                                              ),
-                                              SvgPicture.asset(
-                                                projects[index * 2].flutterSvg,
-                                                // color: textStyles.B.color,
-                                                width: 25,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8, top: 8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //SS
-                                Stack(
-                                  alignment: Alignment.center,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8, top: 8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      width: deviceWidth / 2.179,
-                                      height: 250,
-                                      // margin: const EdgeInsets.only(top: 20),
-                                      decoration: BoxDecoration(
-                                        borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                                        color: mobile_ProjectContainer.color,
-                                      ),
-                                    ),
+                                    //SS
                                     Stack(
-                                      alignment: Alignment.bottomCenter,
+                                      alignment: Alignment.center,
                                       children: [
                                         Container(
-                                          width: (deviceWidth / 2.179) - 40,
-                                          height: 250 - 40,
-                                          // margin: const EdgeInsets.only(top: 10),
+                                          width: deviceWidth / 2.179,
+                                          height: 250,
+                                          // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
-                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                projects[index * 2 + 1].image,
-                                              ),
-                                              fit: BoxFit.cover,
-                                            ),
-                                            boxShadow: [
-                                              GlobalShadow
-                                            ],
+                                            borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                            color: mobile_ProjectContainer.color,
                                           ),
                                         ),
-                                        Container(
-                                          width: (deviceWidth / 2.179) - 39.5,
-                                          decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromARGB(0, 0, 0, 0),
-                                                Color.fromARGB(99, 0, 0, 0),
-                                                Color.fromARGB(199, 0, 0, 0),
-                                                Color.fromARGB(230, 0, 0, 0),
-                                                Color.fromARGB(255, 0, 0, 0)
-                                              ],
-                                              begin: Alignment.topCenter,
-                                              end: Alignment.bottomCenter,
+                                        Stack(
+                                          alignment: Alignment.bottomCenter,
+                                          children: [
+                                            Container(
+                                              width: (deviceWidth / 2.179) - 40,
+                                              height: 250 - 40,
+                                              // margin: const EdgeInsets.only(top: 10),
+                                              decoration: BoxDecoration(
+                                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                    projects[index * 2 + 1].image,
+                                                  ),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                boxShadow: [
+                                                  GlobalShadow
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              width: (deviceWidth / 2.179) - 39.5,
+                                              decoration: const BoxDecoration(
+                                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                                gradient: LinearGradient(
+                                                  colors: [
+                                                    Color.fromARGB(0, 0, 0, 0),
+                                                    Color.fromARGB(99, 0, 0, 0),
+                                                    Color.fromARGB(199, 0, 0, 0),
+                                                    Color.fromARGB(230, 0, 0, 0),
+                                                    Color.fromARGB(255, 0, 0, 0)
+                                                  ],
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                ),
+                                              ),
+                                              child: demo_code_button(index: index * 2 + 1),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Container(
+                                      height: 170,
+                                      width: deviceWidth / 2.179,
+                                      margin: const EdgeInsets.only(bottom: 10),
+                                      decoration: BoxDecoration(
+                                        color: mobile_ProjectContainer.color,
+                                        borderRadius: const BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          //title
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index * 2 + 1].title,
+                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                                minFontSize: 10,
+                                                maxFontSize: 25,
+                                                maxLines: 1,
+                                              ),
                                             ),
                                           ),
-                                          child: demo_code_button(index: index * 2 + 1),
-                                        )
-                                      ],
+                                          //description
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index * 2 + 1].description,
+                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                                minFontSize: 5,
+                                                maxFontSize: 15,
+                                                maxLines: 3,
+                                              ),
+                                            ),
+                                          ),
+                                          //techstack
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            child: SizedBox(
+                                              width: 200,
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  AutoSizeText(
+                                                    "Tech Stack :",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                                    minFontSize: 10,
+                                                    maxFontSize: 18,
+                                                    maxLines: 1,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index * 2 + 1].dartSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index * 2 + 1].flutterSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  height: 170,
-                                  width: deviceWidth / 2.179,
-                                  margin: const EdgeInsets.only(bottom: 10),
-                                  decoration: BoxDecoration(
-                                    color: mobile_ProjectContainer.color,
-                                    borderRadius: const BorderRadius.only(
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10),
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      //title
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
-                                        child: SizedBox(
-                                          child: AutoSizeText(
-                                            projects[index * 2 + 1].title,
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
-                                            minFontSize: 10,
-                                            maxFontSize: 25,
-                                            maxLines: 1,
-                                          ),
-                                        ),
-                                      ),
-                                      //description
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
-                                        child: SizedBox(
-                                          child: AutoSizeText(
-                                            projects[index * 2 + 1].description,
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
-                                            minFontSize: 5,
-                                            maxFontSize: 15,
-                                            maxLines: 3,
-                                          ),
-                                        ),
-                                      ),
-                                      //techstack
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
-                                        child: SizedBox(
-                                          width: 200,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              AutoSizeText(
-                                                "Tech Stack :",
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
-                                                minFontSize: 10,
-                                                maxFontSize: 18,
-                                                maxLines: 1,
-                                              ),
-                                              SvgPicture.asset(
-                                                projects[index * 2 + 1].dartSvg,
-                                                // color: textStyles.B.color,
-                                                width: 25,
-                                              ),
-                                              SvgPicture.asset(
-                                                projects[index * 2 + 1].flutterSvg,
-                                                // color: textStyles.B.color,
-                                                width: 25,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
+                          index == projects.length - 1
+                              ? const SizedBox(
+                                  height: 20,
+                                )
+                              : const Offstage(),
                         ],
                       );
                     },

@@ -5,12 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Dart",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+        },
+        {
+            "program": "lib/main.dart",
             "name": "portfolioweb",
             "cwd": "portfolioweb",
             "request": "launch",
             "type": "dart"
         },
         {
+            "program": "lib/main.dart",
             "name": "portfolioweb (profile mode)",
             "cwd": "portfolioweb",
             "request": "launch",
@@ -18,6 +26,7 @@
             "flutterMode": "profile"
         },
         {
+            "program": "lib/main.dart",
             "name": "portfolioweb (release mode)",
             "cwd": "portfolioweb",
             "request": "launch",
