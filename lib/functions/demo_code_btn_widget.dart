@@ -23,19 +23,19 @@ class demo_code_button extends StatelessWidget {
           //code btn
           MouseRegion(
             cursor: SystemMouseCursors.click,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.only(right: 10),
-              height: 30,
-              width: 90,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(rad),
-                color: EducationcontainerStyle.color,
-              ),
-              child: GestureDetector(
-                onTap: () {
-                  codeButton(context, projects[index]);
-                },
+            child: GestureDetector(
+              onTap: () {
+                codeButton(context, projects[index]);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                margin: const EdgeInsets.only(right: 10),
+                height: 30,
+                width: 90,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(rad),
+                  color: EducationcontainerStyle.color,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -59,16 +59,16 @@ class demo_code_button extends StatelessWidget {
           //demo btn
           MouseRegion(
             cursor: SystemMouseCursors.click,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.only(right: 10),
-              height: 30,
-              width: 90,
-              decoration: BoxDecoration(borderRadius: const BorderRadius.all(rad), color: EducationcontainerStyle.color),
-              child: GestureDetector(
-                onTap: () {
-                  demoButton(context, projects[index]);
-                },
+            child: GestureDetector(
+              onTap: () {
+                demoButton(context, projects[index]);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                margin: const EdgeInsets.only(right: 10),
+                height: 30,
+                width: 90,
+                decoration: BoxDecoration(borderRadius: const BorderRadius.all(rad), color: EducationcontainerStyle.color),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
