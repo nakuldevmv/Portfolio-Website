@@ -6,6 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 Color GlobalColor = const Color.fromARGB(127, 37, 37, 37);
 Color SecondaryColor = const Color.fromARGB(255, 37, 37, 37);
 Color ResumeColor = const Color.fromARGB(127, 183, 183, 183);
+
+Color IconHClr = const Color.fromARGB(255, 0, 255, 213);
+
 Color FontColor = Colors.white70;
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
 BorderRadius GlobalBorderRadius = const BorderRadius.all(Radius.circular(20));
@@ -299,8 +302,8 @@ class textStyles {
     fontSize: 30,
     fontWeight: FontWeight.normal,
     color: FontColor,
-    fontStyle: FontStyle.italic,
-    backgroundColor: FontBg,
+    //fontStyle: FontStyle.italic,
+    //backgroundColor: FontBg,
   );
 
   static TextStyle HeadingB = TextStyle(
@@ -312,8 +315,8 @@ class textStyles {
     fontSize: 23,
     fontWeight: FontWeight.normal,
     color: FontColor,
-    fontStyle: FontStyle.italic,
-    backgroundColor: FontBg,
+    //fontStyle: FontStyle.italic,
+    //backgroundColor: FontBg,
   );
 
   static TextStyle Name1 = TextStyle(
@@ -321,15 +324,15 @@ class textStyles {
     fontWeight: FontWeight.bold,
     color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
 
   static TextStyle Name2 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.normal,
     color: FontColor,
-    fontStyle: FontStyle.italic,
-    // backgroundColor: FontBg,
+    //fontStyle: FontStyle.italic,
+    // //backgroundColor: FontBg,
   );
 
   static TextStyle P1_mobile = TextStyle(
@@ -337,28 +340,28 @@ class textStyles {
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
   static TextStyle P1 = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.normal,
     color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
   static TextStyle P2B = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
     color: FontColor,
-    // backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
   static TextStyle P2I = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
     color: FontColor,
-    fontStyle: FontStyle.italic,
-    backgroundColor: FontBg,
-    // backgroundColor: FontBg,
+    //fontStyle: FontStyle.italic,
+    //backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
 
   static TextStyle edu_H_B = TextStyle(
@@ -385,7 +388,7 @@ class textStyles {
     fontWeight: FontWeight.bold,
     color: FontColor,
     fontStyle: FontStyle.normal,
-    // backgroundColor: FontBg,
+    // //backgroundColor: FontBg,
   );
 
   static TextStyle descriptions = TextStyle(

@@ -10,6 +10,7 @@ import 'package:Nakul_Dev/functions/notifySnackBar.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_AboutMe.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
 import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
+import 'package:Nakul_Dev/test_dart_files/hover%20effect.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -59,63 +60,131 @@ class _desktopState extends State<desktop> {
                             //
                             SizedBox(
                               height: 248.3,
-                              child: CustomBox(
-                                borderRadius: containerStyle.borderRadius,
-                                margin: containerStyle.margin,
-                                child: Container(
-                                    // constraints: const BoxConstraints(
-                                    //   maxHeight: 248.3,
-                                    //   // maxWidth: 300,
-                                    // ),
-                                    decoration: BoxDecoration(
-                                      color: containerStyle.color,
-                                      borderRadius: containerStyle.borderRadius,
-                                    ),
-                                    padding: containerStyle.padding,
-                                    // height: 248.3,
+                              child: HoverEffect(
+                                childA: CustomBox(
+                                  borderRadius: containerStyle.borderRadius,
+                                  margin: containerStyle.margin,
+                                  child: Container(
+                                      // constraints: const BoxConstraints(
+                                      //   maxHeight: 248.3,
+                                      //   // maxWidth: 300,
+                                      // ),
+                                      decoration: BoxDecoration(
+                                        color: containerStyle.color,
+                                        borderRadius: containerStyle.borderRadius,
+                                      ),
+                                      padding: containerStyle.padding,
+                                      // height: 248.3,
 
-                                    // margin: containerStyle.margin,
-                                    width: deviceWidth * containerStyle.width,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment: CrossAxisAlignment.end,
-                                      children: [
-                                        Icon(
-                                          color: textStyles.B.color,
-                                          Icons.lightbulb,
-                                          size: deviceWidth * 0.014,
-                                        ),
-                                        FittedBox(
-                                          fit: BoxFit.scaleDown,
-                                          child: RichText(
-                                            text: TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: "Building the   ",
-                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                                ),
-                                                TextSpan(
-                                                  text: "\nFuture",
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
-                                                ),
-                                                TextSpan(
-                                                  text: ", One \nLine of ",
-                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                                ),
-                                                TextSpan(
-                                                  text: "Code",
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
-                                                ),
-                                                TextSpan(
-                                                  text: "\nat a Time",
-                                                  style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
-                                                ),
-                                              ],
+                                      // margin: containerStyle.margin,
+                                      width: deviceWidth * containerStyle.width,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Icon(
+                                            color: textStyles.B.color,
+                                            Icons.lightbulb,
+                                            size: deviceWidth * 0.014,
+                                          ),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: RichText(
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "Building the   ",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "\nFuture",
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ", One \nLine of ",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "Code",
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "\nat a Time",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    )),
+                                        ],
+                                      )),
+                                ),
+                                childB: CustomBox(
+                                  borderRadius: containerStyle.borderRadius,
+                                  margin: containerStyle.margin,
+                                  child: Container(
+                                      // constraints: const BoxConstraints(
+                                      //   maxHeight: 248.3,
+                                      //   // maxWidth: 300,
+                                      // ),
+                                      decoration: BoxDecoration(
+                                        color: containerStyle.color,
+                                        borderRadius: containerStyle.borderRadius,
+                                      ),
+                                      padding: containerStyle.padding,
+                                      // height: 248.3,
+
+                                      // margin: containerStyle.margin,
+                                      width: deviceWidth * containerStyle.width,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Icon(
+                                            color: textStyles.B.color,
+                                            Icons.code,
+                                            size: deviceWidth * 0.014,
+                                          ),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: RichText(
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "\nFlutter",
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                                  ),
+                                                  TextSpan(
+                                                    text: " Developer",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "\nB.E.",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: 20),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "CSE",
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I, fontSize: 20),
+                                                  ),
+                                                  TextSpan(
+                                                    text: " Student",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: 20),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "\nKerala",
+                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I, fontSize: kDefaultFontSize),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ", India",
+                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      )),
+                                ),
                               ),
                             ),
                             //
@@ -168,7 +237,7 @@ class _desktopState extends State<desktop> {
                                                 ),
                                               ),
                                               Icon(
-                                                color: textStyles.B.color,
+                                                color: IconHClr,
                                                 Icons.arrow_outward_rounded,
                                                 size: deviceWidth * 0.014,
                                               )
@@ -356,7 +425,7 @@ class _desktopState extends State<desktop> {
                                                 ),
                                               ),
                                               Icon(
-                                                color: textStyles.B.color,
+                                                color: IconHClr,
                                                 Icons.arrow_outward_rounded,
                                                 size: deviceWidth * 0.014,
                                               ),
@@ -450,7 +519,7 @@ class _desktopState extends State<desktop> {
                                                 ),
                                               ),
                                               Icon(
-                                                color: textStyles.B.color,
+                                                color: IconHClr,
                                                 Icons.arrow_outward_rounded,
                                                 size: deviceWidth * 0.014,
                                               )
