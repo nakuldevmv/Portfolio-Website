@@ -51,6 +51,8 @@ class _myProject_mobileState extends State<myProject_mobile> {
                     itemCount: projects.length,
                     itemScrollController: _scrollController,
                     itemBuilder: (context, index) {
+                      final isLastItem = index == projects.length - 1;
+
                       return Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,6 +182,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                               ],
                             ),
                           ),
+                          if (isLastItem) const SizedBox(height: 100)
                         ],
                       );
                     },

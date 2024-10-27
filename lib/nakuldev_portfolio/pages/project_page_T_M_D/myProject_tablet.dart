@@ -51,6 +51,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                     itemCount: (projects.length / 2).ceil(),
                     itemScrollController: _scrollController,
                     itemBuilder: (context, index) {
+                      final isLastItem = index == (projects.length / 2).ceil() - 1;
+
                       return Column(
                         children: [
                           Row(
@@ -333,11 +335,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                               ),
                             ],
                           ),
-                          index == projects.length - 1
-                              ? const SizedBox(
-                                  height: 20,
-                                )
-                              : const Offstage(),
+                          if (isLastItem) const SizedBox(height: 100)
                         ],
                       );
                     },

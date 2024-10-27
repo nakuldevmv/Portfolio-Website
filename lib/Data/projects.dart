@@ -70,7 +70,7 @@ List<Project> projects = [
     screenshot2: "assets/ss/second.png",
   ),
   Project(
-    image: "assets/ss/appleMusic.jpg",
+    image: "assets/ss/qrcode.jpg",
     title: "QR Code Scanner",
     description: "An app to scan and generate QR codes with user-friendly features. Successfully integrated real-time QR scanning capabilities.",
     icon: Icons.qr_code_scanner_rounded,
