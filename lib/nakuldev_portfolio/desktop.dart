@@ -304,7 +304,10 @@ class _desktopState extends State<desktop> {
                                                       ),
                                                       TextSpan(
                                                         text: "Resume",
-                                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingI, color: Colors.black, backgroundColor: const Color.fromARGB(255, 119, 119, 119)),
+                                                        style: GoogleFonts.ibmPlexMono(
+                                                          textStyle: textStyles.HeadingI, color: Colors.black,
+                                                          // backgroundColor: const Color.fromARGB(255, 119, 119, 119)
+                                                        ),
                                                       ),
                                                     ],
                                                   ),
