@@ -1,16 +1,75 @@
-# portfoliowebsite_v2
+# Personal Portfolio Website
 
-A new Flutter project.
+## Overview
+
+This is a personal portfolio website built using Flutter, designed to showcase my skills, projects, education, and experience as a developer. The website features a boxy, glassmorphic design that is fully responsive across all platforms, providing an optimal user experience.
+
+## Features
+
+- **Responsive Design:** The website adapts seamlessly to various screen sizes and devices.
+- **Boxy, Glassmorphic Aesthetic:** A modern design style that enhances visual appeal and usability.
+- **Project Showcase:** 
+  - Live previews of projects, allowing users to interact and explore the code.
+  - Detailed descriptions and insights into each project.
+- **Skills and Experience:** A dedicated section highlighting my technical skills, education, and work history.
+- **Resume Download:** Recruiters can easily download my resume for further consideration.
+
+## Tech Stack
+
+- **Framework:** Flutter
+- **Languages:** Dart, HTML, CSS, JavaScript
+- **Design:** Glassmorphic UI principles
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project locally, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nakuldevmv/Portfolio-Website.git
+   ```
+   
+2. **Navigate to the project directory:**
+   ```bash
+   cd your-repo-name
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. **Install dependencies:**
+   Make sure you have Flutter installed and set up. Run:
+   ```bash
+   flutter pub get
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. **Run the app:**
+   Start the development server with:
+   ```bash
+   flutter run
+   ```
+
+## Project Structure
+
+```
+Portfolio-Website/
+│
+├── lib/
+│   ├── Data/                   # Contains data-related models and services
+│   ├── error/                  # Handles error management
+│   ├── functions/              # Utility functions used throughout the app
+│   ├── nakuldeve_portfolio/    # Main portfolio components and screens
+│   ├── styles/                 # Styles and themes for the app
+│   └── main.dart               # Main entry point of the application
+│
+├── assets/                     # Contains images, fonts, and other assets
+│
+├── pubspec.yaml                # Flutter project configuration file
+└── README.md                   # Project documentation
+
+```
+
+
+## Contact
+
+For any inquiries or feedback, feel free to reach out:
+
+- **Email:** nakuldev1561@gmail.com
+- **GitHub:** [nakuldevmv](https://github.com/nakuldevmv)
