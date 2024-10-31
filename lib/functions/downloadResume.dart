@@ -11,6 +11,7 @@ String convertToRawLink(String url) {
     // Replace 'github.com' with 'raw.githubusercontent.com'
     // and remove the 'blob' part from the link
     String rawLink = url.replaceFirst('github.com', 'raw.githubusercontent.com').replaceFirst('/blob/', '/');
+    print(rawLink);
     return rawLink;
   } else {
     // Return the original URL if it's not in the expected format
@@ -55,59 +56,3 @@ Future<void> downloadResume(String url) async {
     print('Failed to download file: ${response.statusCode}');
   }
 }
-
-
-// snackbarReturn(int responsecode) {
-//   return SnackBar(
-//       backgroundColor: const Color.fromARGB(153, 37, 37, 37),
-//       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-//       content: AutoSizeText(
-//         'Faild To Download The File : $responsecode ',
-//         minFontSize: 10,
-//         maxFontSize: 15,
-//         maxLines: 1,
-//         style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
-//       ));
-// }
-
-// import 'dart:html';
-// import 'dart:convert';
-// import 'dart:typed_data';
-// import 'package:http/http.dart' as http;
-
-// void downloadResume(String url) {
-//   AnchorElement anchorElement = AnchorElement(href: url);
-//   anchorElement.download = "Nakul_Resume.pdf"; // Set the desired file name
-//   anchorElement.target = '_blank'; // Opens the link in a new tab
-//   anchorElement.click();
-// }
-
-
-
-// Future<void> downloadResume(String url) async {
-//   // Fetch the PDF file as bytes
-//   final response = await http.get(Uri.parse(url));
-
-//   if (response.statusCode == 200) {
-//     // Convert the response body to Uint8List
-//     final bytes = Uint8List.fromList(response.bodyBytes);
-
-//     // Create a blob from the bytes
-//     final blob = Blob([
-//       bytes
-//     ]);
-
-//     // Create an object URL for the blob
-//     final url = Url.createObjectUrlFromBlob(blob);
-
-//     // Create an anchor element to trigger the download
-//     final anchorElement = AnchorElement(href: url)
-//       ..download = "Nakul_Resume.pdf" // File name for download
-//       ..click();
-
-//     // Clean up the object URL after download
-//     Url.revokeObjectUrl(url);
-//   } else {
-//     print('Failed to download file: ${response.statusCode}');
-//   }
-// }
