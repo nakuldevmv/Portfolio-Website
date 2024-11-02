@@ -31,10 +31,8 @@
     body {
       margin: 0;
       min-height: 100%;
-      background-color: #000000;
+      background-color: #181818;
       background-size: 100% 100%;
-      /*cursor: url('mouse_pointer.png'), auto;*/
-
     }
 
     .center {
@@ -60,7 +58,7 @@
       object-fit: cover;
     }
 
-    
+
 
     .bottom-message {
       font-size: 15px;
@@ -70,8 +68,9 @@
       width: 100%;
       text-align: center;
       font-style: normal;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Chakra Petch', sans-serif;
     }
+
 
     svg {
       position: fixed;
@@ -93,6 +92,11 @@
 
   <!-- Include the Flutter web bootstrap script -->
   <script src="flutter.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Handjet:wght@100..900&family=Jersey+10&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -135,11 +139,23 @@
     </svg>
   </div>
 
-  <div class="bottom-message">
-    <strong>NB:</strong> This website is currently under development
+  <div class="bottom-message" id="loadingMessage">
+    Loading
   </div>
+
+  <script>
+    const loadingMessage = document.getElementById('loadingMessage');
+    let dots = 0;
+
+    setInterval(() => {
+      // Cycle through the loading states
+      loadingMessage.innerText = 'Loading' + '.'.repeat(dots);
+      dots = (dots + 1) % 4; // Cycle through 0 to 3
+    }, 500); // Change the interval as needed
+  </script>
 
   <!-- Flutter bootstrap script -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>

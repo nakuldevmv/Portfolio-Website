@@ -1,40 +1,24 @@
 // ignore_for_file: camel_case_types, ant_identifier_names, non_constant_identifier_names
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-int rad = 0;
+int rad = 19;
+int Srad = 10;
 
 Color GlobalColor = const Color.fromARGB(127, 37, 37, 37);
 Color SecondaryColor = const Color.fromARGB(255, 37, 37, 37);
 Color ResumeColor = const Color.fromARGB(127, 183, 183, 183);
-
-Color IconHClr = const Color.fromARGB(255, 0, 255, 213);
-
+Color IconHClr = const Color.fromARGB(134, 0, 255, 213);
 Color FontColor = Colors.white70;
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
-//changed here rad as double
-BorderRadius GlobalBorderRadius = BorderRadius.all(Radius.circular(rad as double));
-BorderRadius projectTopLBottomL = const BorderRadius.only(
-  topLeft: Radius.circular(20),
-  bottomLeft: Radius.circular(20),
-);
-BorderRadius projectTopRBottomR = const BorderRadius.only(
-  topRight: Radius.circular(20),
-  bottomRight: Radius.circular(20),
-);
 
-BorderRadius RadUp = const BorderRadius.only(
-  topLeft: Radius.circular(20),
-  topRight: Radius.circular(20),
-);
-BorderRadius RadBottom = const BorderRadius.only(
-  bottomLeft: Radius.circular(20),
-  bottomRight: Radius.circular(20),
-);
-BorderRadius SecondaryBorderRadius = const BorderRadius.all(Radius.circular(8));
+BorderRadius GlobalBorderRadius = BorderRadius.all(Radius.circular(rad as double));
+BorderRadius projectTopLBottomL = BorderRadius.only(topLeft: Radius.circular(rad as double), bottomLeft: Radius.circular(rad as double));
+BorderRadius projectTopRBottomR = BorderRadius.only(topRight: Radius.circular(rad as double), bottomRight: Radius.circular(rad as double));
+BorderRadius RadUp = BorderRadius.only(topLeft: Radius.circular(rad as double), topRight: Radius.circular(rad as double));
+BorderRadius RadBottom = BorderRadius.only(bottomLeft: Radius.circular(rad as double), bottomRight: Radius.circular(rad as double));
+BorderRadius SecondaryBorderRadius = BorderRadius.all(Radius.circular(Srad as double));
 BoxShadow GlobalShadow = BoxShadow(
   color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5), // Shadow color with some transparency
   spreadRadius: 1, // How far the shadow spreads

@@ -65,59 +65,66 @@ class _desktopState extends State<desktop> {
                                   borderRadius: containerStyle.borderRadius,
                                   margin: containerStyle.margin,
                                   child: Container(
-                                      // constraints: const BoxConstraints(
-                                      //   maxHeight: 248.3,
-                                      //   // maxWidth: 300,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: containerStyle.color,
-                                        borderRadius: containerStyle.borderRadius,
-                                      ),
-                                      padding: containerStyle.padding,
-                                      // height: 248.3,
+                                    // constraints: const BoxConstraints(
+                                    //   maxHeight: 248.3,
+                                    //   // maxWidth: 300,
+                                    // ),
+                                    decoration: BoxDecoration(
+                                      color: containerStyle.color,
+                                      borderRadius: containerStyle.borderRadius,
+                                    ),
+                                    padding: containerStyle.padding,
+                                    // height: 248.3,
 
-                                      // margin: containerStyle.margin,
-                                      width: deviceWidth * containerStyle.width,
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Icon(
-                                            color: textStyles.B.color,
-                                            Icons.lightbulb,
-                                            size: deviceWidth * 0.014,
-                                          ),
-                                          FittedBox(
-                                            fit: BoxFit.scaleDown,
-                                            child: RichText(
-                                              text: TextSpan(
-                                                children: [
-                                                  TextSpan(
-                                                    text: "Building the   ",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
-                                                  ),
-                                                  TextSpan(
-                                                    text: "\nFuture",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
-                                                  ),
-                                                  TextSpan(
-                                                    text: ", One \nLine of ",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
-                                                  ),
-                                                  TextSpan(
-                                                    text: "Code",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
-                                                  ),
-                                                  TextSpan(
-                                                    text: "\nat a Time",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
-                                                  ),
-                                                ],
-                                              ),
+                                    // margin: containerStyle.margin,
+                                    width: deviceWidth * containerStyle.width,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            Icon(
+                                              color: textStyles.B.color,
+                                              Icons.lightbulb,
+                                              size: deviceWidth * 0.014,
+                                            ),
+                                          ],
+                                        ),
+                                        FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                          child: RichText(
+                                            text: TextSpan(
+                                              children: [
+                                                TextSpan(
+                                                  text: "Building the",
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                                ),
+                                                TextSpan(
+                                                  text: " Future",
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                                ),
+                                                TextSpan(
+                                                  text: ",\nOne Line of ",
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                                ),
+                                                TextSpan(
+                                                  text: "Code",
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                                ),
+                                                TextSpan(
+                                                  text: "\nat a Time",
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                                ),
+                                              ],
                                             ),
                                           ),
-                                        ],
-                                      )),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                                 childB: CustomBox(
                                   borderRadius: containerStyle.borderRadius,
@@ -155,11 +162,11 @@ class _desktopState extends State<desktop> {
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                                   ),
                                                   TextSpan(
-                                                    text: " Developer",
+                                                    text: " Developer     ",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                   ),
                                                   TextSpan(
-                                                    text: "\nB.E.",
+                                                    text: "\nB.E ",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 20),
                                                   ),
                                                   TextSpan(
