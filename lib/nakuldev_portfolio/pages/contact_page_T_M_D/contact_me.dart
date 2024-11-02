@@ -80,7 +80,7 @@ class _ContactMeState extends State<ContactMe> {
                                     Icon(color: textStyles.B.color, Icons.place_rounded),
                                     Text(
                                       ' Kerala, India',
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
@@ -120,7 +120,7 @@ class _ContactMeState extends State<ContactMe> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           "nakuldev1561@gmail.com",
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                         ),
                                       ),
                                     ),
@@ -180,7 +180,7 @@ class _ContactMeState extends State<ContactMe> {
                                       maxFontSize: 15,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                     ),
                                   )
                                 ],

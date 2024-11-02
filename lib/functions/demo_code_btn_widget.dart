@@ -41,7 +41,7 @@ class demo_code_button extends StatelessWidget {
                   children: [
                     AutoSizeText(
                       "Code",
-                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
                       minFontSize: 5,
                       maxFontSize: 15,
                       maxLines: 1,
@@ -74,7 +74,7 @@ class demo_code_button extends StatelessWidget {
                   children: [
                     AutoSizeText(
                       "Run",
-                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
                       minFontSize: 5,
                       maxFontSize: 15,
                       maxLines: 1,

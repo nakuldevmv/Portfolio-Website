@@ -141,7 +141,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].title,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
                                                 minFontSize: 10,
                                                 maxFontSize: 25,
                                                 maxLines: 1,
@@ -154,7 +154,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].description,
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
                                                 minFontSize: 5,
                                                 maxFontSize: 15,
                                                 maxLines: 3,
@@ -171,7 +171,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                                 children: [
                                                   AutoSizeText(
                                                     "Tech Stack :",
-                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
                                                     minFontSize: 10,
                                                     maxFontSize: 18,
                                                     maxLines: 1,
@@ -278,7 +278,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2 + 1].title,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
                                                 minFontSize: 10,
                                                 maxFontSize: 25,
                                                 maxLines: 1,
@@ -291,7 +291,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2 + 1].description,
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
                                                 minFontSize: 5,
                                                 maxFontSize: 15,
                                                 maxLines: 3,
@@ -308,7 +308,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                                 children: [
                                                   AutoSizeText(
                                                     "Tech Stack :",
-                                                    style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
                                                     minFontSize: 10,
                                                     maxFontSize: 18,
                                                     maxLines: 1,

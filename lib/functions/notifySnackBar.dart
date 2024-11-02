@@ -13,7 +13,7 @@ void notifySnackBar(BuildContext context, String) {
           minFontSize: 10,
           maxFontSize: 15,
           maxLines: 1,
-          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+          style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
         )),
   );
 }

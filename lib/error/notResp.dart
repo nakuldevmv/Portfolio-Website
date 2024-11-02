@@ -72,7 +72,7 @@ class NotResp extends StatelessWidget {
                           const SizedBox(width: 4), // Add some spacing
                           Text(
                             "LinkedIn", // Corrected spelling
-                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                            style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                           ),
                         ],
                       ),

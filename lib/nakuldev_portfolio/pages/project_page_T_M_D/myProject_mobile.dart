@@ -130,7 +130,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                   child: SizedBox(
                                     child: AutoSizeText(
                                       projects[index].title,
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.projectTitle),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
                                       minFontSize: 10,
                                       maxFontSize: 25,
                                       maxLines: 1,
@@ -143,7 +143,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                   child: SizedBox(
                                     child: AutoSizeText(
                                       projects[index].description,
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.descriptions),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
                                       minFontSize: 5,
                                       maxFontSize: 15,
                                       maxLines: 3,
@@ -160,7 +160,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                       children: [
                                         AutoSizeText(
                                           "Tech Stack :",
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Dheadings),
+                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
                                           minFontSize: 10,
                                           maxFontSize: 18,
                                           maxLines: 1,

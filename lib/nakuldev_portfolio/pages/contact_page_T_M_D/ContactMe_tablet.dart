@@ -80,7 +80,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                             const Icon(color: Colors.red, Icons.place_rounded),
                             Text(
                               ' Kerala, India',
-                              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
+                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -130,7 +130,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                     fit: BoxFit.scaleDown,
                                     child: Text(
                                       " nakuldev1561@gmail.com",
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                     ),
                                   ),
                                 ),
@@ -193,7 +193,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                   maxFontSize: 15,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B),
+                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                 ),
                               )
                             ],

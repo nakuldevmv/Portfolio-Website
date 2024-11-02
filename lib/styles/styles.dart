@@ -74,7 +74,7 @@ class rotating_container extends StatelessWidget {
           children: [
             Text(
               '$text ',
-              style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
+              style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
             ),
             Image.asset(
               emoji,

@@ -118,7 +118,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                       activeColor: Colors.white, // Soft aqua for active tab text                      rippleColor: Colors.white54,
                       hoverColor: Colors.white10,
                       iconSize: deviceWidth < 412 ? deviceWidth * 0.07 : 24, // Adjust icon size
-                      textStyle: GoogleFonts.jetBrainsMono(
+                      textStyle: GoogleFonts.chakraPetch(
                         textStyle: textStyles.B,
                         fontSize: deviceWidth < 412 ? deviceWidth * 0.04 : 16, // Adjust text size
                       ),

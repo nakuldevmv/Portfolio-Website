@@ -99,8 +99,8 @@ class _tabletState extends State<tablet> {
                                         child: RichText(
                                           text: TextSpan(
                                             children: [
-                                              TextSpan(text: "Nakul", style: GoogleFonts.ibmPlexMono(textStyle: textStyles.Name1, fontSize: 20)),
-                                              TextSpan(text: "</Dev>", style: GoogleFonts.jetBrainsMono(textStyle: textStyles.Name2, fontSize: 20)),
+                                              TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
+                                              TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2, fontSize: 20)),
                                             ],
                                           ),
                                         ),
@@ -123,23 +123,23 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: "Building the ",
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                           ),
                                           TextSpan(
                                             text: "Future",
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                           ),
                                           TextSpan(
                                             text: ",\nOne Line of ",
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                           ),
                                           TextSpan(
                                             text: "Code",
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.I),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                           ),
                                           TextSpan(
                                             text: "\nat a Time",
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                           ),
                                         ],
                                       ),
@@ -183,7 +183,7 @@ class _tabletState extends State<tablet> {
                                             fit: BoxFit.scaleDown,
                                             child: Text(
                                               "Resume",
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: kDefaultFontSize),
                                             ),
                                           ),
                                         ),
@@ -197,7 +197,7 @@ class _tabletState extends State<tablet> {
                               //   minFontSize: 5,
                               //   maxFontSize: 12,
                               //   maxLines: 10,
-                              //   style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1_mobile),
+                              //   style: GoogleFonts.chakraPetch(textStyle: textStyles.P1_mobile),
                               //   "Solving complex problems as an engineering student with a love for tech and learning.",
                               // ),
                             ],
@@ -236,11 +236,11 @@ class _tabletState extends State<tablet> {
                                   children: [
                                     TextSpan(
                                       text: 'Skilled',
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                     ),
                                     TextSpan(
                                       text: ' In',
-                                      style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                     )
                                   ],
                                 ),
@@ -498,11 +498,11 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: 'My ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Projects',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                           ),
                                         ],
                                       ),
@@ -586,7 +586,7 @@ class _tabletState extends State<tablet> {
                                             // maxFontSize: 15,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.P2B, fontSize: 12),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B, fontSize: 12),
                                             // overflow: TextOverflow.ellipsis,
                                             projects[index].title,
                                           ),
@@ -686,11 +686,11 @@ class _tabletState extends State<tablet> {
                                     children: [
                                       TextSpan(
                                         text: 'My ',
-                                        style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                       ),
                                       TextSpan(
                                         text: 'Education',
-                                        style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                       ),
                                     ],
                                   ),
@@ -750,7 +750,7 @@ class _tabletState extends State<tablet> {
                                             fit: BoxFit.scaleDown,
                                             child: Text(
                                               educations[index].institutionName,
-                                              style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
                                             ),
                                           ),
                                           FittedBox(
@@ -759,12 +759,12 @@ class _tabletState extends State<tablet> {
                                               children: [
                                                 Text(
                                                   educations[index].startTime,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                 ),
                                                 const Text(" - "),
                                                 Text(
                                                   educations[index].endTime,
-                                                  style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                 ),
                                               ],
                                             ),
@@ -774,7 +774,7 @@ class _tabletState extends State<tablet> {
                                                   fit: BoxFit.scaleDown,
                                                   child: Text(
                                                     educations[index].department,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                                   ),
                                                 )
                                               : const Offstage(),
@@ -783,7 +783,7 @@ class _tabletState extends State<tablet> {
                                                   fit: BoxFit.scaleDown,
                                                   child: Text(
                                                     educations[index].grade,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                                   ),
                                                 )
                                               : const Offstage(),
@@ -890,11 +890,11 @@ class _tabletState extends State<tablet> {
                                       children: [
                                         TextSpan(
                                           text: 'My ',
-                                          style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                         ),
                                         TextSpan(
                                           text: 'Experience',
-                                          style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                         )
                                       ],
                                     ),
@@ -955,7 +955,7 @@ class _tabletState extends State<tablet> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 Experiences[index].role,
-                                                style: GoogleFonts.jetBrainsMono(textStyle: textStyles.edu_H_B),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
                                               ),
                                             ),
                                             FittedBox(
@@ -966,23 +966,23 @@ class _tabletState extends State<tablet> {
                                                 children: [
                                                   Text(
                                                     Experiences[index].startTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                   ),
                                                   Text(
                                                     ' - ',
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                   ),
                                                   Text(
                                                     Experiences[index].endTime,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                   ),
                                                   Text(
                                                     ' • ',
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                   ),
                                                   Text(
                                                     Experiences[index].duration,
-                                                    style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_L),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                   ),
                                                 ],
                                               ),
@@ -991,7 +991,7 @@ class _tabletState extends State<tablet> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 Experiences[index].companyName,
-                                                style: GoogleFonts.ibmPlexMono(textStyle: textStyles.edu_P_N),
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                               ),
                                             )
                                           ],
@@ -1039,7 +1039,7 @@ class _tabletState extends State<tablet> {
                                       maxLines: 3,
                                       maxFontSize: 15,
                                       minFontSize: 10,
-                                      style: GoogleFonts.jetBrainsMono(textStyle: textStyles.P1),
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
                                     ),
                                   ),
                                   Icon(
@@ -1063,11 +1063,11 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: 'Contact ',
-                                            style: GoogleFonts.ibmPlexMono(textStyle: textStyles.HeadingB),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Me',
-                                            style: GoogleFonts.jetBrainsMono(textStyle: textStyles.HeadingI),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                           )
                                         ],
                                       ),
