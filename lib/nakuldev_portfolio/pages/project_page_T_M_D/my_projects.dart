@@ -70,10 +70,7 @@ class _myProject_mobileState extends State<myProject> {
                                       width: deviceWidth / 4,
                                       height: 300,
                                       decoration: BoxDecoration(
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          bottomLeft: Radius.circular(10),
-                                        ),
+                                        borderRadius: projectTopLBottomL,
                                         color: mobile_ProjectContainer.color,
                                       ),
                                     ),
@@ -98,7 +95,11 @@ class _myProject_mobileState extends State<myProject> {
                                         Container(
                                           width: (deviceWidth / 4) - 39,
                                           decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                            //dont change
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(10),
+                                              bottomRight: Radius.circular(10),
+                                            ),
                                             gradient: LinearGradient(
                                               colors: [
                                                 Color.fromARGB(0, 0, 0, 0),
@@ -123,10 +124,7 @@ class _myProject_mobileState extends State<myProject> {
                                   // margin: const EdgeInsets.only(bottom: 10),
                                   decoration: BoxDecoration(
                                     color: mobile_ProjectContainer.color,
-                                    borderRadius: const BorderRadius.only(
-                                      topRight: Radius.circular(10),
-                                      bottomRight: Radius.circular(10),
-                                    ),
+                                    borderRadius: projectTopRBottomR,
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.only(left: 10),

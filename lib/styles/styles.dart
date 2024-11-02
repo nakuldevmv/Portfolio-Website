@@ -1,7 +1,11 @@
 // ignore_for_file: camel_case_types, ant_identifier_names, non_constant_identifier_names
 
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+int rad = 0;
 
 Color GlobalColor = const Color.fromARGB(127, 37, 37, 37);
 Color SecondaryColor = const Color.fromARGB(255, 37, 37, 37);
@@ -11,7 +15,17 @@ Color IconHClr = const Color.fromARGB(255, 0, 255, 213);
 
 Color FontColor = Colors.white70;
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
-BorderRadius GlobalBorderRadius = const BorderRadius.all(Radius.circular(20));
+//changed here rad as double
+BorderRadius GlobalBorderRadius = BorderRadius.all(Radius.circular(rad as double));
+BorderRadius projectTopLBottomL = const BorderRadius.only(
+  topLeft: Radius.circular(20),
+  bottomLeft: Radius.circular(20),
+);
+BorderRadius projectTopRBottomR = const BorderRadius.only(
+  topRight: Radius.circular(20),
+  bottomRight: Radius.circular(20),
+);
+
 BorderRadius RadUp = const BorderRadius.only(
   topLeft: Radius.circular(20),
   topRight: Radius.circular(20),

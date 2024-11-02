@@ -74,7 +74,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           height: 250,
                                           // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
-                                            borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                            borderRadius: RadUp,
                                             color: mobile_ProjectContainer.color,
                                           ),
                                         ),
@@ -124,20 +124,14 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
-                                      decoration: BoxDecoration(
-                                        color: mobile_ProjectContainer.color,
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(10),
-                                          bottomRight: Radius.circular(10),
-                                        ),
-                                      ),
+                                      decoration: BoxDecoration(color: mobile_ProjectContainer.color, borderRadius: RadBottom),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           //title
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 15),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].title,
@@ -150,7 +144,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //description
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].description,
@@ -163,7 +157,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //techstack
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10, bottom: 10),
                                             child: SizedBox(
                                               width: 200,
                                               child: Row(
@@ -197,7 +191,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8, top: 8),
+                                padding: const EdgeInsets.only(left: 16, top: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,7 +205,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           height: 250,
                                           // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
-                                            borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                            borderRadius: RadUp,
                                             color: mobile_ProjectContainer.color,
                                           ),
                                         ),
@@ -261,20 +255,14 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
-                                      decoration: BoxDecoration(
-                                        color: mobile_ProjectContainer.color,
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(10),
-                                          bottomRight: Radius.circular(10),
-                                        ),
-                                      ),
+                                      decoration: BoxDecoration(color: mobile_ProjectContainer.color, borderRadius: RadBottom),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           //title
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 15),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2 + 1].title,
@@ -287,7 +275,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //description
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2 + 1].description,
@@ -300,7 +288,7 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //techstack
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10, bottom: 10),
                                             child: SizedBox(
                                               width: 200,
                                               child: Row(

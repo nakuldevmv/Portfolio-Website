@@ -66,7 +66,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                 height: 250,
                                 margin: const EdgeInsets.only(top: 10),
                                 decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                                  borderRadius: RadUp,
                                   color: mobile_ProjectContainer.color,
                                 ),
                               ),
@@ -115,10 +115,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                             margin: const EdgeInsets.only(bottom: 10),
                             decoration: BoxDecoration(
                               color: mobile_ProjectContainer.color,
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
+                              borderRadius: RadBottom,
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -126,7 +123,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                               children: [
                                 //title
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                  padding: const EdgeInsets.only(left: 16, right: 16, top: 5),
                                   child: SizedBox(
                                     child: AutoSizeText(
                                       projects[index].title,
@@ -139,7 +136,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                 ),
                                 //description
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                  padding: const EdgeInsets.only(left: 16, right: 16, top: 10),
                                   child: SizedBox(
                                     child: AutoSizeText(
                                       projects[index].description,
@@ -152,7 +149,7 @@ class _myProject_mobileState extends State<myProject_mobile> {
                                 ),
                                 //techstack
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                  padding: const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 16),
                                   child: SizedBox(
                                     width: 200,
                                     child: Row(
