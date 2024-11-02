@@ -155,31 +155,34 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
                 ),
               ),
               // Black outline circle
-              Positioned(
-                left: _currentPositions[1].dx - widget.circleSizes[1] / 2,
-                top: _currentPositions[1].dy - widget.circleSizes[1] / 2,
-                child: Container(
-                  width: widget.circleSizes[1],
-                  height: widget.circleSizes[1],
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    shape: BoxShape.circle,
+
+              if (_currentPositions.any((pos) => pos != Offset.zero))
+                Positioned(
+                  left: _currentPositions[1].dx - widget.circleSizes[1] / 2,
+                  top: _currentPositions[1].dy - widget.circleSizes[1] / 2,
+                  child: Container(
+                    width: widget.circleSizes[1],
+                    height: widget.circleSizes[1],
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
-              ),
               // Black dot
-              Positioned(
-                left: _currentPositions[2].dx - widget.circleSizes[2] / 2,
-                top: _currentPositions[2].dy - widget.circleSizes[2] / 2,
-                child: Container(
-                  width: widget.circleSizes[2],
-                  height: widget.circleSizes[2],
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    shape: BoxShape.circle,
+              if (_currentPositions.any((pos) => pos != Offset.zero))
+                Positioned(
+                  left: _currentPositions[2].dx - widget.circleSizes[2] / 2,
+                  top: _currentPositions[2].dy - widget.circleSizes[2] / 2,
+                  child: Container(
+                    width: widget.circleSizes[2],
+                    height: widget.circleSizes[2],
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
-              ),
 
               child!,
             ],
