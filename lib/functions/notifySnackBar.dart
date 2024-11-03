@@ -62,10 +62,10 @@ class _AnimatedSnackBarState extends State<AnimatedSnackBar> with SingleTickerPr
           color: Colors.transparent,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.9),
+              color: const Color.fromARGB(255, 28, 28, 28).withOpacity(0.9),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.95),
+                color: const Color.fromARGB(255, 28, 28, 28).withOpacity(0.95),
                 width: 1,
               ),
             ),
@@ -81,8 +81,8 @@ class _AnimatedSnackBarState extends State<AnimatedSnackBar> with SingleTickerPr
                 child: Row(
                   children: [
                     const Icon(
-                      Icons.info_outline,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      Icons.info_outline_rounded,
+                      color: Colors.white,
                       size: 24,
                     ),
                     const SizedBox(width: 10),
