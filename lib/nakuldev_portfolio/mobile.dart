@@ -220,11 +220,11 @@ class _mobileState extends State<mobile> {
                             TextSpan(
                               children: [
                                 TextSpan(
-                                  text: 'Skilled',
+                                  text: 'Tech I',
                                   style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                 ),
                                 TextSpan(
-                                  text: ' In',
+                                  text: ' Love',
                                   style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                 )
                               ],
