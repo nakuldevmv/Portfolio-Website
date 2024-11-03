@@ -509,7 +509,7 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                   Icon(
-                                    color: textStyles.B.color,
+                                    color: IconHClr,
                                     Icons.arrow_outward_rounded,
                                     size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                   )
@@ -1043,7 +1043,7 @@ class _tabletState extends State<tablet> {
                                     ),
                                   ),
                                   Icon(
-                                    color: textStyles.B.color,
+                                    color: IconHClr,
                                     Icons.arrow_outward_rounded,
                                     size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
                                   ),

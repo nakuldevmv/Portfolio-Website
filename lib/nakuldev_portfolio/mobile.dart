@@ -474,7 +474,7 @@ class _mobileState extends State<mobile> {
                               ),
                             ),
                             Icon(
-                              color: textStyles.B.color,
+                              color: IconHClr,
                               Icons.arrow_outward_rounded,
                               size: deviceWidth * mobile_containerStyle.iconSize,
                             )
@@ -975,7 +975,7 @@ class _mobileState extends State<mobile> {
                               ),
                             ),
                             Icon(
-                              color: textStyles.B.color,
+                              color: IconHClr,
                               Icons.arrow_outward_rounded,
                               size: deviceWidth * mobile_containerStyle.iconSize,
                             ),
