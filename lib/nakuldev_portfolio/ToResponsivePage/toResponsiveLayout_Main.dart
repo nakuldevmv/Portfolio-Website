@@ -42,6 +42,7 @@ class toResponsiveLayout extends StatelessWidget {
         child: CursorTracker(
           child: NavigationWrapper(
             showNavBar: false,
+            //
             currentIndex: currentIndex,
             child: const ResponsiveLayout(
               desktopBody: desktop(),
