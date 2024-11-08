@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
   <base href="/">
 
   <meta charset="UTF-8">
@@ -10,74 +11,18 @@
     content="Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.">
 
   <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Nakul Dev">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
 
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-
-  <style id="splash-screen-style">
-    html {
-      height: 100%
-    }
-
-    body {
-      margin: 0;
-      min-height: 100%;
-      background-color: #181818;
-      background-size: 100% 100%;
-      font-family: 'Chakra Petch', sans-serif;
-    }
-
-    .center {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .contain {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .cover {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .bottom-message {
-      font-size: 15px;
-      color: #fff;
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-    }
-
-    svg {
-      position: fixed;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 150px;
-      width: 150px;
-    }
-  </style>
-
+  <!-- ...... -->
   <script id="splash-screen-script">
     function removeSplashFromWeb() {
       document.getElementById("splash")?.remove();
@@ -85,73 +30,130 @@
       document.body.style.background = "transparent";
     }
   </script>
+  <!-- ...... -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Include the Flutter web bootstrap script -->
-  <script src="flutter.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Handjet:wght@100..900&family=Jersey+10&display=swap"
-    rel="stylesheet">
+    body {
+      overflow: hidden;
+    }
+
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading-text {
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .loading-text-words {
+      display: inline-block;
+      margin: 0 5px;
+      color: #fff;
+      font-family:  sans-serif;
+    }
+
+    /* Animation styles remain the same as in previous example */
+    @keyframes blur-text {
+      0% {
+        filter: blur(0px);
+      }
+
+      100% {
+        filter: blur(4px);
+      }
+    }
+
+    /* Individual letter animations */
+    .loading-text-words:nth-child(1) {
+      animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(2) {
+      animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(3) {
+      animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(4) {
+      animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(5) {
+      animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(6) {
+      animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(7) {
+      animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+
+    /* Responsive and accessibility styles */
+    @media (max-width: 600px) {
+      .loading-text {
+        font-size: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loading-text-words {
+        animation: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="center">
-    <svg viewBox="0 0 100 100">
-      <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-        <!-- left line -->
-        <path d="M 21 40 V 59">
-          <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 21 59; 180 21 59"
-            dur="2s" repeatCount="indefinite" />
-        </path>
-        <!-- right line -->
-        <path d="M 79 40 V 59">
-          <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 79 59; -180 79 59"
-            dur="2s" repeatCount="indefinite" />
-        </path>
-        <!-- top line -->
-        <path d="M 50 21 V 40">
-          <animate attributeName="d" values="M 50 21 V 40; M 50 59 V 40" dur="2s" repeatCount="indefinite" />
-        </path>
-        <!-- bottom line -->
-        <path d="M 50 60 V 79">
-          <animate attributeName="d" values="M 50 60 V 79; M 50 98 V 79" dur="2s" repeatCount="indefinite" />
-        </path>
-        <!-- top box -->
-        <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
-          <animate attributeName="stroke" values="rgba(255,255,255,1); rgba(100,100,100,0)" dur="2s"
-            repeatCount="indefinite" />
-        </path>
-        <!-- mid box -->
-        <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z" />
-        <!-- bottom box -->
-        <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
-          <animate attributeName="stroke" values="rgba(100,100,100,0); rgba(255,255,255,1)" dur="2s"
-            repeatCount="indefinite" />
-        </path>
-        <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; 0 -19" dur="2s"
-          repeatCount="indefinite" />
-      </g>
-    </svg>
+  <div id="loading">
+    <div class="loading-text">
+      <span class="loading-text-words">L</span>
+      <span class="loading-text-words">O</span>
+      <span class="loading-text-words">A</span>
+      <span class="loading-text-words">D</span>
+      <span class="loading-text-words">I</span>
+      <span class="loading-text-words">N</span>
+      <span class="loading-text-words">G</span>
+    </div>
   </div>
-
-  <div class="bottom-message" id="loadingMessage">
-    Loading
-  </div>
+  <div id="flutter-app"></div>
 
   <script>
-    const loadingMessage = document.getElementById('loadingMessage');
-    let dots = 0;
-
-    setInterval(() => {
-      // Cycle through the loading states
-      loadingMessage.innerText = 'Loading' + '.'.repeat(dots);
-      dots = (dots + 1) % 4; // Cycle through 0 to 3
-    }, 500); // Change the interval as needed
+    // Wait for Flutter to initialize
+    window.addEventListener('flutter-first-frame', function () {
+      // Remove loading screen when Flutter app is ready
+      const loading = document.getElementById('loading');
+      if (loading) {
+        loading.style.opacity = '0';
+        setTimeout(() => {
+          loading.style.display = 'none';
+        }, 500);
+      }
+    });
   </script>
-
-  <!-- Flutter bootstrap script -->
   <script src="flutter_bootstrap.js" async></script>
+
 </body>
 
 </html>

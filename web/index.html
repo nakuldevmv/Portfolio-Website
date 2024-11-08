@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.">
+  <meta name="description"
+    content="Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,22 +17,143 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
+
   <!-- ...... -->
-    <script id="splash-screen-script">
+  <script id="splash-screen-script">
     function removeSplashFromWeb() {
       document.getElementById("splash")?.remove();
       document.getElementById("splash-branding")?.remove();
       document.body.style.background = "transparent";
     }
   </script>
-    <!-- ...... -->
+  <!-- ...... -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      overflow: hidden;
+    }
+
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading-text {
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .loading-text-words {
+      display: inline-block;
+      margin: 0 5px;
+      color: #fff;
+      font-family:  sans-serif;
+    }
+
+    /* Animation styles remain the same as in previous example */
+    @keyframes blur-text {
+      0% {
+        filter: blur(0px);
+      }
+
+      100% {
+        filter: blur(4px);
+      }
+    }
+
+    /* Individual letter animations */
+    .loading-text-words:nth-child(1) {
+      animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(2) {
+      animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(3) {
+      animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(4) {
+      animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(5) {
+      animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(6) {
+      animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+
+    .loading-text-words:nth-child(7) {
+      animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+
+    /* Responsive and accessibility styles */
+    @media (max-width: 600px) {
+      .loading-text {
+        font-size: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loading-text-words {
+        animation: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div id="loading">
+    <div class="loading-text">
+      <span class="loading-text-words">L</span>
+      <span class="loading-text-words">O</span>
+      <span class="loading-text-words">A</span>
+      <span class="loading-text-words">D</span>
+      <span class="loading-text-words">I</span>
+      <span class="loading-text-words">N</span>
+      <span class="loading-text-words">G</span>
+    </div>
+  </div>
+  <div id="flutter-app"></div>
+
+  <script>
+    // Wait for Flutter to initialize
+    window.addEventListener('flutter-first-frame', function () {
+      // Remove loading screen when Flutter app is ready
+      const loading = document.getElementById('loading');
+      if (loading) {
+        loading.style.opacity = '0';
+        setTimeout(() => {
+          loading.style.display = 'none';
+        }, 500);
+      }
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
+
 </body>
+
 </html>
