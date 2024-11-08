@@ -1,4 +1,5 @@
 import 'package:nakul_dev/Data/projects.dart';
+import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
 import 'package:nakul_dev/functions/demo_code_btn_widget.dart';
 import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -54,8 +55,7 @@ class _myProject_mobileState extends State<myProject> {
                       final isLastItem = index == projects.length - 1;
 
                       return Padding(
-                        padding: const EdgeInsets.only(
-                            top: 8, bottom: 8, left: 16, right: 16),
+                        padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16, right: 16),
                         child: Column(
                           children: [
                             Row(
@@ -67,32 +67,33 @@ class _myProject_mobileState extends State<myProject> {
                                 Stack(
                                   alignment: Alignment.center,
                                   children: [
-                                    Container(
-                                      width: deviceWidth / 4,
-                                      height: 300,
-                                      decoration: BoxDecoration(
-                                        borderRadius: projectTopLBottomL,
-                                        color: mobile_ProjectContainer.color,
+                                    CustomBox(
+                                      borderRadius: projectTopLBottomL,
+                                      child: Container(
+                                        width: deviceWidth / 4,
+                                        height: 300,
+                                        decoration: BoxDecoration(
+                                          borderRadius: projectTopLBottomL,
+                                          color: mobile_ProjectContainer.color,
+                                        ),
                                       ),
                                     ),
                                     //////
                                     Stack(
-                                      alignment:
-                                          AlignmentDirectional.bottomCenter,
+                                      alignment: AlignmentDirectional.bottomCenter,
                                       children: [
                                         Container(
                                           width: (deviceWidth / 4) - 40,
                                           height: 300 - 40,
                                           decoration: BoxDecoration(
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                                    Radius.circular(10)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
                                             image: DecorationImage(
-                                              image: AssetImage(
-                                                  projects[index].image),
+                                              image: AssetImage(projects[index].image),
                                               fit: BoxFit.cover,
                                             ),
-                                            boxShadow: [GlobalShadow],
+                                            boxShadow: [
+                                              GlobalShadow
+                                            ],
                                           ),
                                         ),
                                         Container(
@@ -121,122 +122,102 @@ class _myProject_mobileState extends State<myProject> {
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  height: 300,
-                                  width: deviceWidth / 1.5,
-                                  // margin: const EdgeInsets.only(bottom: 10),
-                                  decoration: BoxDecoration(
-                                    color: mobile_ProjectContainer.color,
-                                    borderRadius: projectTopRBottomR,
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 10),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        //title
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 8, right: 8, top: 15),
-                                          child: SizedBox(
+                                CustomBox(
+                                  borderRadius: projectTopRBottomR,
+                                  child: Container(
+                                    height: 300,
+                                    width: deviceWidth / 1.5,
+                                    // margin: const EdgeInsets.only(bottom: 10),
+                                    decoration: BoxDecoration(
+                                      color: mobile_ProjectContainer.color,
+                                      borderRadius: projectTopRBottomR,
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          //title
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index].title,
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
+                                                minFontSize: 10,
+                                                maxFontSize: 25,
+                                                maxLines: 1,
+                                              ),
+                                            ),
+                                          ),
+                                          //description
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            child: SizedBox(
+                                              child: AutoSizeText(
+                                                projects[index].description,
+                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                                                minFontSize: 5,
+                                                maxFontSize: 15,
+                                                maxLines: 3,
+                                              ),
+                                            ),
+                                          ),
+                                          //key features
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
                                             child: AutoSizeText(
-                                              projects[index].title,
-                                              style: GoogleFonts.chakraPetch(
-                                                  textStyle:
-                                                      textStyles.projectTitle),
+                                              "Key Features",
+                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
                                               minFontSize: 10,
-                                              maxFontSize: 25,
+                                              maxFontSize: 18,
                                               maxLines: 1,
                                             ),
                                           ),
-                                        ),
-                                        //description
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 8, right: 8, top: 10),
-                                          child: SizedBox(
+                                          //keyfetures
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
                                             child: AutoSizeText(
-                                              projects[index].description,
-                                              style: GoogleFonts.chakraPetch(
-                                                  textStyle:
-                                                      textStyles.descriptions),
+                                              projects[index].keyFeatures,
+                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
                                               minFontSize: 5,
                                               maxFontSize: 15,
-                                              maxLines: 3,
+                                              maxLines: 4,
                                             ),
                                           ),
-                                        ),
-                                        //key features
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 8, right: 8, top: 10),
-                                          child: AutoSizeText(
-                                            "Key Features",
-                                            style: GoogleFonts.chakraPetch(
-                                                textStyle:
-                                                    textStyles.Dheadings),
-                                            minFontSize: 10,
-                                            maxFontSize: 18,
-                                            maxLines: 1,
-                                          ),
-                                        ),
-                                        //keyfetures
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 8, right: 8, top: 10),
-                                          child: AutoSizeText(
-                                            projects[index].keyFeatures,
-                                            style: GoogleFonts.chakraPetch(
-                                                textStyle:
-                                                    textStyles.descriptions),
-                                            minFontSize: 5,
-                                            maxFontSize: 15,
-                                            maxLines: 4,
-                                          ),
-                                        ),
 
-                                        //techstack
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 8,
-                                              right: 8,
-                                              top: 10,
-                                              bottom: 8),
-                                          child: SizedBox(
-                                            width: 200,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                AutoSizeText(
-                                                  "Tech Stack :",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle: textStyles
-                                                              .Dheadings),
-                                                  minFontSize: 10,
-                                                  maxFontSize: 18,
-                                                  maxLines: 1,
-                                                ),
-                                                SvgPicture.asset(
-                                                  projects[index].dartSvg,
-                                                  // color: textStyles.B.color,
-                                                  width: 25,
-                                                ),
-                                                SvgPicture.asset(
-                                                  projects[index].flutterSvg,
-                                                  // color: textStyles.B.color,
-                                                  width: 25,
-                                                ),
-                                              ],
+                                          //techstack
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            child: SizedBox(
+                                              width: 200,
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  AutoSizeText(
+                                                    "Tech Stack :",
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                                                    minFontSize: 10,
+                                                    maxFontSize: 18,
+                                                    maxLines: 1,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index].dartSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                  SvgPicture.asset(
+                                                    projects[index].flutterSvg,
+                                                    // color: textStyles.B.color,
+                                                    width: 25,
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
