@@ -30,7 +30,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
         children: [
           GestureDetector(
             onTap: () {
-              urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
+              urlLaunch("https://maps.app.goo.gl/MtXyBejdS8JmWVRk9");
             },
             child: Stack(
               children: [
@@ -65,7 +65,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         children: [
                           const Icon(color: Colors.red, Icons.place_rounded),
                           Text(
-                            ' Kerala, India',
+                            ' HaNoi, VietNam',
                             style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -106,7 +106,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             // ),
                             GestureDetector(
                               onHorizontalDragUpdate: (details) {
-                                copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                               },
                               onTap: () {
                                 openEmail();
@@ -116,7 +116,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                 child: FittedBox(
                                   fit: BoxFit.scaleDown,
                                   child: Text(
-                                    " nakuldev1561@gmail.com",
+                                    " chiennq.dev@gmail.com",
                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                   ),
                                 ),
@@ -129,7 +129,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                   isTick = !isTick;
                                 });
                                 //
-                                copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                                 //
                                 Timer(const Duration(seconds: 2, milliseconds: 500), () {
                                   setState(() {
@@ -149,107 +149,107 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   ),
 
                   //linkedin
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: ContactMe_containerStyle_mobile.color,
-                          borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
-                        margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assets/svg/linkedin.svg",
-                              // ignore: deprecated_member_use
-                              // color: textStyles.B.color,
-                              height: ContactMe_containerStyle_tablet.svgcontHeight,
-                            ),
-                            SizedBox(
-                              width: deviceWidth * 0.005,
-                            ),
-                            Expanded(
-                              child: AutoSizeText(
-                                ' LinkdIn',
-                                minFontSize: 10,
-                                maxFontSize: 15,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                  // MouseRegion(
+                  //   cursor: SystemMouseCursors.click,
+                  //   child: GestureDetector(
+                  //     onTap: () {
+                  //       urlLaunch("https://www.linkedin.com/in/#/");
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         color: ContactMe_containerStyle_mobile.color,
+                  //         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                  //       ),
+                  //       padding: ContactMe_containerStyle_mobile.padding,
+                  //       margin: ContactMe_containerStyle_mobile.margin,
+                  //       width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
+                  //       child: Row(
+                  //         children: [
+                  //           SvgPicture.asset(
+                  //             "assets/svg/linkedin.svg",
+                  //             // ignore: deprecated_member_use
+                  //             // color: textStyles.B.color,
+                  //             height: ContactMe_containerStyle_tablet.svgcontHeight,
+                  //           ),
+                  //           SizedBox(
+                  //             width: deviceWidth * 0.005,
+                  //           ),
+                  //           Expanded(
+                  //             child: AutoSizeText(
+                  //               ' LinkdIn',
+                  //               minFontSize: 10,
+                  //               maxFontSize: 15,
+                  //               maxLines: 1,
+                  //               overflow: TextOverflow.ellipsis,
+                  //               style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                  //             ),
+                  //           )
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //insta
-                      SizedBox(
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () {
-                              urlLaunch("https://www.instagram.com/jo.cly.n/");
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
-                              margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/instagram.svg",
-                                // color: textStyles.B.color,
-                                height: ContactMe_containerStyle_tablet.svgcontHeight,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      //twitter
-                      SizedBox(
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () {
-                              urlLaunch("https://leetcode.com/u/nakuldev1561/");
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
-                              margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/x.svg",
-                                height: ContactMe_containerStyle_tablet.svgcontHeight,
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     //insta
+                  //     SizedBox(
+                  //       child: MouseRegion(
+                  //         cursor: SystemMouseCursors.click,
+                  //         child: GestureDetector(
+                  //           onTap: () {
+                  //             urlLaunch("https://www.instagram.com/#/");
+                  //           },
+                  //           child: Container(
+                  //             decoration: BoxDecoration(
+                  //               color: ContactMe_containerStyle_mobile.color,
+                  //               borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                  //             ),
+                  //             padding: ContactMe_containerStyle_mobile.padding,
+                  //             margin: ContactMe_containerStyle_mobile.margin,
+                  //             width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                  //             child: SvgPicture.asset(
+                  //               "assets/svg/instagram.svg",
+                  //               // color: textStyles.B.color,
+                  //               height: ContactMe_containerStyle_tablet.svgcontHeight,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     const SizedBox(
+                  //       width: 10,
+                  //     ),
+                  //     //twitter
+                  //     SizedBox(
+                  //       child: MouseRegion(
+                  //         cursor: SystemMouseCursors.click,
+                  //         child: GestureDetector(
+                  //           onTap: () {
+                  //             urlLaunch("https://leetcode.com/u/#/");
+                  //           },
+                  //           child: Container(
+                  //             decoration: BoxDecoration(
+                  //               color: ContactMe_containerStyle_mobile.color,
+                  //               borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                  //             ),
+                  //             padding: ContactMe_containerStyle_mobile.padding,
+                  //             margin: ContactMe_containerStyle_mobile.margin,
+                  //             width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                  //             child: SvgPicture.asset(
+                  //               "assets/svg/x.svg",
+                  //               height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                                // ignore: deprecated_member_use
-                                // color: textStyles.B.color,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
+                  //               // ignore: deprecated_member_use
+                  //               // color: textStyles.B.color,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // )
                 ],
               ),
               const SizedBox(
@@ -262,7 +262,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: () {
-                        urlLaunch("https://github.com/nakuldevmv");
+                        urlLaunch("https://m.me/100011524450031");
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -277,7 +277,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         height: 122,
                         // height: deviceHeight * ContactMe_containerStyle_mobile.githubsizeH,
                         child: SvgPicture.asset(
-                          "assets/svg/github.svg",
+                          "assets/svg/facebook-messenger.svg",
                           // ignore: deprecated_member_use
                           // color: textStyles.B.color,
                           // width: deviceWidth * 0.06,
@@ -287,32 +287,32 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     ),
                   ),
                   //hackerrank
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: ContactMe_containerStyle_mobile.color,
-                          borderRadius: ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
-                        margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
-                        child: SvgPicture.asset(
-                          height: ContactMe_containerStyle_tablet.svgcontHeight,
+                  // MouseRegion(
+                  //   cursor: SystemMouseCursors.click,
+                  //   child: GestureDetector(
+                  //     onTap: () {
+                  //       urlLaunch("https://www.hackerrank.com/profile/#");
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         color: ContactMe_containerStyle_mobile.color,
+                  //         borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                  //       ),
+                  //       padding: ContactMe_containerStyle_mobile.padding,
+                  //       margin: ContactMe_containerStyle_mobile.margin,
+                  //       width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
+                  //       child: SvgPicture.asset(
+                  //         height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                          "assets/svg/hackerrank.svg",
-                          // ignore: deprecated_member_use
-                          // color: textStyles.B.color,
-                          // width: deviceWidth * 0.06,
-                          // height: deviceHeight * 0.06,
-                        ),
-                      ),
-                    ),
-                  ),
+                  //         "assets/svg/hackerrank.svg",
+                  //         // ignore: deprecated_member_use
+                  //         // color: textStyles.B.color,
+                  //         // width: deviceWidth * 0.06,
+                  //         // height: deviceHeight * 0.06,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ],

@@ -28,7 +28,7 @@ class _mobileState extends State<mobile> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    String rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
+    String rurl = 'https://xn--chinnq-yi8b.vn/';
 
     return ScrollConfiguration(
       behavior: const ScrollBehavior().copyWith(scrollbars: false),
@@ -87,7 +87,7 @@ class _mobileState extends State<mobile> {
                                     child: RichText(
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
+                                          TextSpan(text: "ChienNQ", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
                                           TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2, fontSize: 20)),
                                         ],
                                       ),
@@ -657,7 +657,7 @@ class _mobileState extends State<mobile> {
                       height: 10,
                     ),
                     SizedBox(
-                      height: 171,
+                      height: 220,
                       child: ListView.builder(
                         // controller: pgController2,
                         scrollDirection: Axis.horizontal,
@@ -804,7 +804,7 @@ class _mobileState extends State<mobile> {
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 // margin: mobile_containerStyle.margin,
                 width: deviceWidth * mobile_containerStyle.width,
-                height: 220,
+                height: 171,
                 child: Column(
                   children: [
                     Padding(

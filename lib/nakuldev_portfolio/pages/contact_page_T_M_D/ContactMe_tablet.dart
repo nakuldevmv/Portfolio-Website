@@ -39,7 +39,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
             children: [
               GestureDetector(
                 onTap: () {
-                  urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
+                  urlLaunch("https://maps.app.goo.gl/MtXyBejdS8JmWVRk9");
                 },
                 child: Stack(
                   children: [
@@ -81,7 +81,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                               // ),
                               const Icon(color: Colors.red, Icons.place_rounded),
                               Text(
-                                ' Kerala, India',
+                                ' HaNoi, VietNam',
                                 style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -124,7 +124,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                 ),
                                 GestureDetector(
                                   onHorizontalDragUpdate: (details) {
-                                    copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                    copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                                   },
                                   onTap: () {
                                     openEmail();
@@ -135,7 +135,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                       fit: BoxFit.scaleDown,
                                       child: Text(
                                         textAlign: TextAlign.left,
-                                        "nakuldev1561@gmail.com",
+                                        "chiennq.dev@gmail.com",
                                         style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                       ),
                                     ),
@@ -148,7 +148,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                       isTick = !isTick;
                                     });
                                     //
-                                    copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                    copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                                     //
                                     Timer(const Duration(seconds: 2, milliseconds: 500), () {
                                       setState(() {
@@ -168,107 +168,107 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                       ),
 
                       //linkedin
-                      MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: GestureDetector(
-                          onTap: () {
-                            urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ContactMe_containerStyle_tablet.color,
-                              borderRadius: ContactMe_containerStyle_tablet.borderRadius,
-                            ),
-                            padding: ContactMe_containerStyle_tablet.padding,
-                            margin: ContactMe_containerStyle_tablet.margin,
-                            width: ContactMe_containerStyle_tablet.width_mail_Linkedin,
-                            child: Row(
-                              // mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/svg/linkedin.svg",
-                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
+                      // MouseRegion(
+                      //   cursor: SystemMouseCursors.click,
+                      //   child: GestureDetector(
+                      //     onTap: () {
+                      //       urlLaunch("https://www.linkedin.com/in/quangchien2503/");
+                      //     },
+                      //     child: Container(
+                      //       decoration: BoxDecoration(
+                      //         color: ContactMe_containerStyle_tablet.color,
+                      //         borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                      //       ),
+                      //       padding: ContactMe_containerStyle_tablet.padding,
+                      //       margin: ContactMe_containerStyle_tablet.margin,
+                      //       width: ContactMe_containerStyle_tablet.width_mail_Linkedin,
+                      //       child: Row(
+                      //         // mainAxisAlignment: MainAxisAlignment.start,
+                      //         children: [
+                      //           SvgPicture.asset(
+                      //             "assets/svg/linkedin.svg",
+                      //             height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                                  // ignore: deprecated_member_use
-                                  // color: textStyles.B.color,
-                                ),
-                                const SizedBox(
-                                  width: 0.005,
-                                ),
-                                Expanded(
-                                  child: AutoSizeText(
-                                    '   LinkdIn',
-                                    minFontSize: 10,
-                                    maxFontSize: 15,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      //             // ignore: deprecated_member_use
+                      //             // color: textStyles.B.color,
+                      //           ),
+                      //           const SizedBox(
+                      //             width: 0.005,
+                      //           ),
+                      //           Expanded(
+                      //             child: AutoSizeText(
+                      //               '   LinkdIn',
+                      //               minFontSize: 10,
+                      //               maxFontSize: 15,
+                      //               maxLines: 1,
+                      //               overflow: TextOverflow.ellipsis,
+                      //               style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                      //             ),
+                      //           )
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          //insta
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: GestureDetector(
-                              onTap: () {
-                                urlLaunch("https://www.instagram.com/jo.cly.n/");
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: ContactMe_containerStyle_tablet.color,
-                                  borderRadius: ContactMe_containerStyle_tablet.borderRadius,
-                                ),
-                                padding: ContactMe_containerStyle_tablet.padding,
-                                margin: ContactMe_containerStyle_tablet.margin,
-                                // height: ContactMe_containerStyle_tablet.bottom_icon_height,
-                                width: ContactMe_containerStyle_tablet.bottom_icon_width,
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: [
+                      //     //insta
+                      //     MouseRegion(
+                      //       cursor: SystemMouseCursors.click,
+                      //       child: GestureDetector(
+                      //         onTap: () {
+                      //           urlLaunch("https://www.instagram.com/jo.cly.n/");
+                      //         },
+                      //         child: Container(
+                      //           decoration: BoxDecoration(
+                      //             color: ContactMe_containerStyle_tablet.color,
+                      //             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                      //           ),
+                      //           padding: ContactMe_containerStyle_tablet.padding,
+                      //           margin: ContactMe_containerStyle_tablet.margin,
+                      //           // height: ContactMe_containerStyle_tablet.bottom_icon_height,
+                      //           width: ContactMe_containerStyle_tablet.bottom_icon_width,
 
-                                child: SvgPicture.asset(
-                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
+                      //           child: SvgPicture.asset(
+                      //             height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                                  "assets/svg/instagram.svg",
-                                  // color: textStyles.B.color,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          //twitter
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: GestureDetector(
-                              onTap: () {
-                                urlLaunch("https://leetcode.com/u/nakuldev1561/");
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: ContactMe_containerStyle_tablet.color,
-                                  borderRadius: ContactMe_containerStyle_tablet.borderRadius,
-                                ),
-                                padding: ContactMe_containerStyle_tablet.padding,
-                                margin: ContactMe_containerStyle_tablet.margin,
-                                width: ContactMe_containerStyle_tablet.bottom_icon_width,
-                                child: SvgPicture.asset(
-                                  "assets/svg/x.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
+                      //             "assets/svg/instagram.svg",
+                      //             // color: textStyles.B.color,
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     const SizedBox(
+                      //       width: 10,
+                      //     ),
+                      //     //twitter
+                      //     MouseRegion(
+                      //       cursor: SystemMouseCursors.click,
+                      //       child: GestureDetector(
+                      //         onTap: () {
+                      //           urlLaunch("https://leetcode.com/u/chiennq.dev/");
+                      //         },
+                      //         child: Container(
+                      //           decoration: BoxDecoration(
+                      //             color: ContactMe_containerStyle_tablet.color,
+                      //             borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                      //           ),
+                      //           padding: ContactMe_containerStyle_tablet.padding,
+                      //           margin: ContactMe_containerStyle_tablet.margin,
+                      //           width: ContactMe_containerStyle_tablet.bottom_icon_width,
+                      //           child: SvgPicture.asset(
+                      //             "assets/svg/x.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                                  // ignore: deprecated_member_use
-                                  // color: textStyles.B.color,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
+                      //             // ignore: deprecated_member_use
+                      //             // color: textStyles.B.color,
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // )
                     ],
                   ),
                   const SizedBox(
@@ -282,7 +282,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         cursor: SystemMouseCursors.click,
                         child: GestureDetector(
                           onTap: () {
-                            urlLaunch("https://github.com/nakuldevmv");
+                            urlLaunch("https://m.me/100011524450031");
                           },
                           child: Container(
                             decoration: BoxDecoration(
@@ -297,7 +297,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                             height: 122,
                             // height: deviceHeight * ContactMe_containerStyle_tablet.githubsizeH,
                             child: SvgPicture.asset(
-                              "assets/svg/github.svg",
+                              "assets/svg/facebook-messenger.svg",
                               // ignore: deprecated_member_use
                               // color: textStyles.B.color,
                               // width:   0.06,
@@ -307,31 +307,31 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                         ),
                       ),
                       //hackerrank
-                      MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: GestureDetector(
-                          onTap: () {
-                            urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ContactMe_containerStyle_tablet.color,
-                              borderRadius: ContactMe_containerStyle_tablet.borderRadius,
-                            ),
-                            padding: ContactMe_containerStyle_tablet.padding,
-                            margin: ContactMe_containerStyle_tablet.margin,
-                            width: ContactMe_containerStyle_tablet.githubsizeW,
-                            child: SvgPicture.asset(
-                              "assets/svg/hackerrank.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
+                      // MouseRegion(
+                      //   cursor: SystemMouseCursors.click,
+                      //   child: GestureDetector(
+                      //     onTap: () {
+                      //       urlLaunch("https://www.hackerrank.com/profile/chiennq.dev");
+                      //     },
+                      //     child: Container(
+                      //       decoration: BoxDecoration(
+                      //         color: ContactMe_containerStyle_tablet.color,
+                      //         borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                      //       ),
+                      //       padding: ContactMe_containerStyle_tablet.padding,
+                      //       margin: ContactMe_containerStyle_tablet.margin,
+                      //       width: ContactMe_containerStyle_tablet.githubsizeW,
+                      //       child: SvgPicture.asset(
+                      //         "assets/svg/hackerrank.svg", height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                              // ignore: deprecated_member_use
-                              // color: textStyles.B.color,
-                              // width:   0.06,
-                              // height: deviceHeight * 0.06,
-                            ),
-                          ),
-                        ),
-                      ),
+                      //         // ignore: deprecated_member_use
+                      //         // color: textStyles.B.color,
+                      //         // width:   0.06,
+                      //         // height: deviceHeight * 0.06,
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ],

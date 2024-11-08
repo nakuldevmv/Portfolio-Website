@@ -36,7 +36,7 @@ class _desktopState extends State<desktop> {
     double deviceHeight = 729.5;
     // print(isdeviceHeight);
 
-    String rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
+    String rurl = 'https://xn--chinnq-yi8b.vn/';
 
     return Center(
       child: ScrollConfiguration(
@@ -158,31 +158,31 @@ class _desktopState extends State<desktop> {
                                               text: TextSpan(
                                                 children: [
                                                   TextSpan(
-                                                    text: "\nFlutter",
+                                                    text: "\nSoftware",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                                   ),
                                                   TextSpan(
-                                                    text: " Developer     ",
+                                                    text: " Engineer     ",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                   ),
                                                   TextSpan(
-                                                    text: "\nB.E ",
+                                                    text: "\nFull",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 20),
                                                   ),
                                                   TextSpan(
-                                                    text: "CSE",
+                                                    text: "Stack",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.I, fontSize: 20),
                                                   ),
                                                   TextSpan(
-                                                    text: " Student",
+                                                    text: "  Developer",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 20),
                                                   ),
                                                   TextSpan(
-                                                    text: "\nKerala",
+                                                    text: "\nHaNoi",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.I, fontSize: kDefaultFontSize),
                                                   ),
                                                   TextSpan(
-                                                    text: ", India",
+                                                    text: ", VietNam",
                                                     style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: kDefaultFontSize),
                                                   ),
                                                 ],
@@ -255,7 +255,7 @@ class _desktopState extends State<desktop> {
                                             maxFontSize: 15,
                                             maxLines: 10,
                                             style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
-                                            "Computer engineer with a strong foundation in problem-solving and software development. Committed to building efficient, reliable solutions and continuously expanding my skills to stay current with evolving technologies.",
+                                            "Updating... ",
                                           ),
                                         ],
                                       ),
@@ -354,7 +354,7 @@ class _desktopState extends State<desktop> {
                                       fit: BoxFit.scaleDown,
                                       child: RichText(
                                           text: TextSpan(children: [
-                                        TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1)),
+                                        TextSpan(text: "ChienNQ", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1)),
                                         TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2)),
                                       ])),
                                     ),
@@ -697,7 +697,7 @@ class _desktopState extends State<desktop> {
                             //Exp
                             //
                             SizedBox(
-                              height: 154.4,
+                              height: 523.2,
                               child: CustomBox(
                                 borderRadius: containerStyle.borderRadius,
                                 margin: containerStyle.margin,
@@ -847,7 +847,7 @@ class _desktopState extends State<desktop> {
                             //Edu
                             //
                             SizedBox(
-                              height: 523.2,
+                              height:  154.4,
                               child: CustomBox(
                                 borderRadius: containerStyle.borderRadius,
                                 margin: containerStyle.margin,

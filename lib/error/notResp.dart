@@ -52,7 +52,7 @@ class NotResp extends StatelessWidget {
                   const SizedBox(height: 12),
                   GestureDetector(
                     onTap: () {
-                      urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
+                      urlLaunch("https://www.linkedin.com/in/quangchien2503/");
                     },
                     child: Container(
                       decoration: BoxDecoration(

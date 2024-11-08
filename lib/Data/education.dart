@@ -19,10 +19,10 @@ class Education {
 
 List<Education> educations = [
   Education(
-      institutionName: 'JCT Institutions',
-      startTime: 'Sep 2023',
-      endTime: 'Jul 2026',
-      department: 'BE.CSE',
+      institutionName: 'TueBa',
+      startTime: 'Sep 2011',
+      endTime: 'Jul 2016',
+      department: '',
       grade: '',
       start: true,
       end: false),
@@ -35,28 +35,28 @@ List<Education> educations = [
   //    start: false,
 
   // ),
-  Education(
-      institutionName: 'M-DIT Polytechnic\nCollege',
-      startTime: 'Sep 2021',
-      endTime: 'Apr 2023',
-      department: 'DCE',
-      grade: '8.66 CGPA',
-      start: false,
-      end: false),
-  Education(
-      institutionName: 'Palora HSS Ulliyeri',
-      startTime: 'Jun 2018',
-      endTime: 'Mar 2020',
-      department: '',
-      grade: '75%',
-      start: false,
-      end: false),
-  Education(
-      institutionName: 'GHSS Kokkallur',
-      startTime: 'Jun 2016',
-      endTime: 'Mar 2018',
-      department: '',
-      grade: '97%',
-      start: false,
-      end: true),
+  // Education(
+  //     institutionName: 'M-DIT Polytechnic\nCollege',
+  //     startTime: 'Sep 2021',
+  //     endTime: 'Apr 2023',
+  //     department: 'DCE',
+  //     grade: '8.66 CGPA',
+  //     start: false,
+  //     end: false),
+  // Education(
+  //     institutionName: 'Palora HSS Ulliyeri',
+  //     startTime: 'Jun 2018',
+  //     endTime: 'Mar 2020',
+  //     department: '',
+  //     grade: '75%',
+  //     start: false,
+  //     end: false),
+  // Education(
+  //     institutionName: 'GHSS Kokkallur',
+  //     startTime: 'Jun 2016',
+  //     endTime: 'Mar 2018',
+  //     department: '',
+  //     grade: '97%',
+  //     start: false,
+  //     end: true),
 ];

@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/nakuldevmv/Portfolio-Website.git
+   git clone https://github.com/chiennq2/Portfolio-Website.git
    ```
    
 2. **Navigate to the project directory:**
@@ -71,5 +71,5 @@ Portfolio-Website/
 
 For any inquiries or feedback, feel free to reach out:
 
-- **Email:** nakuldev1561@gmail.com
-- **GitHub:** [nakuldevmv](https://github.com/nakuldevmv)
+- **Email:** chiennq.dev@gmail.com
+- **GitHub:** [quangchien2503](https://github.com/chiennq2)

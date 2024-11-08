@@ -1,5 +1,5 @@
 name: Nakul_Dev
-description: "Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions."
+description: "Hi, I'm ChienNQ, a computer engineer passionate about building innovative tech solutions."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -111,6 +111,8 @@ flutter:
      - assets/svg/java.svg
      - assets/svg/javascript.svg
      - assets/svg/mysql.svg
+     - assets/svg/nodejs.svg
+     - assets/svg/postgresql.svg
      - assets/svg/python.svg
      - assets/svg/framer.svg
      - assets/svg/x.svg
@@ -120,6 +122,7 @@ flutter:
      - assets/svg/github.svg
      - assets/svg/404.svg
      - assets/svg/email.svg
+     - assets/svg/facebook-messenger.svg
 
 
 

@@ -7,16 +7,16 @@ class Skill {
 }
 
 List<String> skills = [
-  'assets/svg/flutter.svg',
-  'assets/svg/dart.svg',
+  // 'assets/svg/flutter.svg',
+  // 'assets/svg/dart.svg',
   'assets/svg/python.svg',
   'assets/svg/cpp.svg',
   'assets/svg/html.svg',
   'assets/svg/css.svg',
   'assets/svg/javascript.svg',
   'assets/svg/mysql.svg',
-  'assets/svg/java.svg',
-  'assets/svg/blender.svg',
-  'assets/svg/figma.svg',
-  'assets/svg/framer.svg',
+  'assets/svg/nodejs.svg',
+  'assets/svg/postgresql.svg',
+  // 'assets/svg/figma.svg',
+  // 'assets/svg/framer.svg',
 ];

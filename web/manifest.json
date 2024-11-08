@@ -1,11 +1,11 @@
 {
-    "name": "Nakul Dev",
-    "short_name": "Nakul Dev",
+    "name": "ChienNQ Dev",
+    "short_name": "ChienNQ Dev",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.",
+    "description": "Hi, I'm ChienNQ, a computer engineer passionate about building innovative tech solutions.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

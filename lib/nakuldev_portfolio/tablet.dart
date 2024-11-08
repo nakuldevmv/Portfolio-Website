@@ -29,7 +29,7 @@ class _tabletState extends State<tablet> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    String rurl = 'https://github.com/nakuldevmv/Resume/blob/main/resume.pdf';
+    String rurl = 'https://xn--chinnq-yi8b.vn/';
 
     return ScrollConfiguration(
       behavior: const ScrollBehavior().copyWith(scrollbars: false),
@@ -99,7 +99,7 @@ class _tabletState extends State<tablet> {
                                         child: RichText(
                                           text: TextSpan(
                                             children: [
-                                              TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
+                                              TextSpan(text: "ChienNQ", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
                                               TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2, fontSize: 20)),
                                             ],
                                           ),

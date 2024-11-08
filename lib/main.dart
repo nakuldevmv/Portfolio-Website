@@ -31,6 +31,8 @@ Future<void> preloadSvgs() async {
   await rootBundle.loadString('assets/svg/java.svg');
   await rootBundle.loadString('assets/svg/javascript.svg');
   await rootBundle.loadString('assets/svg/mysql.svg');
+  await rootBundle.loadString('assets/svg/nodejs.svg');
+  await rootBundle.loadString('assets/svg/postgresql.svg');
   await rootBundle.loadString('assets/svg/python.svg');
   await rootBundle.loadString('assets/svg/framer.svg');
   await rootBundle.loadString('assets/svg/x.svg');
@@ -51,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Nakul Dev",
+      title: "ChienNQ Dev",
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(),
       ),

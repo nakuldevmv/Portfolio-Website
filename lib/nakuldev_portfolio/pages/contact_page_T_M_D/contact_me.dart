@@ -48,7 +48,7 @@ class _ContactMeState extends State<ContactMe> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
+                          urlLaunch("https://maps.app.goo.gl/MtXyBejdS8JmWVRk9");
                         },
                         child: Stack(
                           children: [
@@ -79,7 +79,7 @@ class _ContactMeState extends State<ContactMe> {
                                   children: [
                                     Icon(color: textStyles.B.color, Icons.place_rounded),
                                     Text(
-                                      ' Kerala, India',
+                                      ' HaNoi, VietNam',
                                       style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -109,7 +109,7 @@ class _ContactMeState extends State<ContactMe> {
                                   ),
                                   GestureDetector(
                                     onHorizontalDragUpdate: (details) {
-                                      copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                      copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                                     },
                                     onTap: () {
                                       openEmail();
@@ -119,7 +119,7 @@ class _ContactMeState extends State<ContactMe> {
                                       child: FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
-                                          "nakuldev1561@gmail.com",
+                                          "chiennq.dev@gmail.com",
                                           style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                         ),
                                       ),
@@ -132,7 +132,7 @@ class _ContactMeState extends State<ContactMe> {
                                         isTick = !isTick;
                                       });
                                       //
-                                      copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                      copyTextToClipboard(context, 'chiennq.dev@gmail.com');
                                       //
                                       Timer(const Duration(seconds: 2, milliseconds: 500), () {
                                         setState(() {
@@ -153,7 +153,7 @@ class _ContactMeState extends State<ContactMe> {
                           //linkedin
                           GestureDetector(
                             onTap: () {
-                              urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
+                              urlLaunch("https://www.linkedin.com/in/#/");
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -192,7 +192,7 @@ class _ContactMeState extends State<ContactMe> {
                               //insta
                               GestureDetector(
                                 onTap: () {
-                                  urlLaunch("https://www.instagram.com/jo.cly.n/");
+                                  urlLaunch("https://www.instagram.com/#/");
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -211,7 +211,7 @@ class _ContactMeState extends State<ContactMe> {
                               //twitter
                               GestureDetector(
                                 onTap: () {
-                                  urlLaunch("https://leetcode.com/u/nakuldev1561/");
+                                  urlLaunch("https://leetcode.com/u/#/");
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -237,7 +237,7 @@ class _ContactMeState extends State<ContactMe> {
                           //github
                           GestureDetector(
                             onTap: () {
-                              urlLaunch("https://github.com/nakuldevmv");
+                              urlLaunch("https://m.me/100011524450031");
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -249,7 +249,7 @@ class _ContactMeState extends State<ContactMe> {
                               width: deviceWidth * ContactMe_containerStyle.githubsizeW,
                               height: deviceHeight * ContactMe_containerStyle.githubsizeH,
                               child: SvgPicture.asset(
-                                "assets/svg/github.svg",
+                                "assets/svg/facebook-messenger.svg",
                                 // ignore: deprecated_member_use
                                 color: textStyles.B.color,
                                 // width: deviceWidth * 0.06,
@@ -257,27 +257,27 @@ class _ContactMeState extends State<ContactMe> {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle.padding,
-                              margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/hackerrank.svg",
-                                // ignore: deprecated_member_use
-                                color: textStyles.B.color,
-                                // width: deviceWidth * 0.06,
-                                // height: deviceHeight * 0.06,
-                              ),
-                            ),
-                          ),
+                          // GestureDetector(
+                          //   onTap: () {
+                          //     urlLaunch("https://www.hackerrank.com/profile/chiennq.dev");
+                          //   },
+                          //   child: Container(
+                          //     decoration: BoxDecoration(
+                          //       color: ContactMe_containerStyle.color,
+                          //       borderRadius: ContactMe_containerStyle.borderRadius,
+                          //     ),
+                          //     padding: ContactMe_containerStyle.padding,
+                          //     margin: ContactMe_containerStyle.margin,
+                          //     width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
+                          //     child: SvgPicture.asset(
+                          //       "assets/svg/hackerrank.svg",
+                          //       // ignore: deprecated_member_use
+                          //       color: textStyles.B.color,
+                          //       // width: deviceWidth * 0.06,
+                          //       // height: deviceHeight * 0.06,
+                          //     ),
+                          //   ),
+                          // ),
                         ],
                       ),
                     ],
