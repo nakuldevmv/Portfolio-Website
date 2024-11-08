@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
 import 'package:nakul_dev/functions/copy_text.dart';
 import 'package:nakul_dev/functions/launch_url.dart';
 import 'package:nakul_dev/functions/mailing_fun.dart';
@@ -45,15 +46,9 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   ),
                   // padding: ContactMe_containerStyle_mobile.padding,
                   margin: ContactMe_containerStyle_mobile.margin,
-                  width:
-                      deviceWidth * ContactMe_containerStyle_mobile.loc_width,
+                  width: deviceWidth * ContactMe_containerStyle_mobile.loc_width,
                   height: 250,
-                  child: ClipRRect(
-                      borderRadius:
-                          ContactMe_containerStyle_tablet.borderRadius,
-                      child: const MouseRegion(
-                          cursor: SystemMouseCursors.grab,
-                          child: RandomLocationMap())),
+                  child: ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: const MouseRegion(cursor: SystemMouseCursors.grab, child: RandomLocationMap())),
                   // height: deviceHeight * ContactMe_containerStyle_mobile.loc_height,
                 ),
                 Positioned(
@@ -66,16 +61,13 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         color: Color.fromARGB(130, 167, 167, 167),
                         borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      padding: const EdgeInsets.only(
-                          left: 8, right: 8, top: 5, bottom: 5),
+                      padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                       child: Row(
                         children: [
                           const Icon(color: Colors.red, Icons.place_rounded),
                           Text(
                             ' Kerala, India',
-                            style: GoogleFonts.chakraPetch(
-                                textStyle: textStyles.edu_P_N,
-                                fontWeight: FontWeight.bold),
+                            style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -94,79 +86,70 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   //email
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: ContactMe_containerStyle_mobile.color,
-                          borderRadius:
-                              ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
-                        margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth *
-                            ContactMe_containerStyle_mobile.width_mail_Linkedin,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SvgPicture.asset(
-                              "assets/svg/email.svg",
-                              clipBehavior: Clip.antiAlias,
-                              color: textStyles.B.color,
-                              height:
-                                  ContactMe_containerStyle_tablet.svgcontHeight,
-                            ), // SizedBox(
-                            //   width: deviceWidth * 0.005,
-                            // ),
-                            GestureDetector(
-                              onHorizontalDragUpdate: (details) {
-                                copyTextToClipboard(
-                                    context, 'nakuldev1561@gmail.com');
-                              },
-                              onTap: () {
-                                openEmail();
-                              },
-                              child: SizedBox(
-                                width: deviceWidth * 0.36,
-                                child: FittedBox(
-                                  fit: BoxFit.scaleDown,
-                                  child: Text(
-                                    " nakuldev1561@gmail.com",
-                                    style: GoogleFonts.chakraPetch(
-                                        textStyle: textStyles.P2B),
+                    child: CustomBox(
+                      borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                      margin: ContactMe_containerStyle_mobile.margin,
+                      child: Container(
+                          decoration: BoxDecoration(
+                            color: ContactMe_containerStyle_mobile.color,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                          ),
+                          padding: ContactMe_containerStyle_mobile.padding,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SvgPicture.asset(
+                                "assets/svg/email.svg",
+                                clipBehavior: Clip.antiAlias,
+                                color: textStyles.B.color,
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
+                              ), // SizedBox(
+                              //   width: deviceWidth * 0.005,
+                              // ),
+                              GestureDetector(
+                                onHorizontalDragUpdate: (details) {
+                                  copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                },
+                                onTap: () {
+                                  openEmail();
+                                },
+                                child: SizedBox(
+                                  width: deviceWidth * 0.36,
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Text(
+                                      " nakuldev1561@gmail.com",
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            const Spacer(),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isTick = !isTick;
-                                });
-                                //
-                                copyTextToClipboard(
-                                    context, 'nakuldev1561@gmail.com');
-                                //
-                                Timer(
-                                    const Duration(
-                                        seconds: 2, milliseconds: 500), () {
+                              const Spacer(),
+                              GestureDetector(
+                                onTap: () {
                                   setState(() {
                                     isTick = !isTick;
                                   });
-                                });
-                              },
-                              child: AnimatedCrossFade(
-                                firstChild:
-                                    Icon(color: textStyles.B.color, Icons.copy),
-                                secondChild: Icon(
-                                    color: textStyles.B.color, Icons.check),
-                                crossFadeState: isTick
-                                    ? CrossFadeState.showFirst
-                                    : CrossFadeState.showSecond,
-                                duration: const Duration(milliseconds: 150),
-                              ),
-                            )
-                          ],
-                        )),
+                                  //
+                                  copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                  //
+                                  Timer(const Duration(seconds: 2, milliseconds: 500), () {
+                                    setState(() {
+                                      isTick = !isTick;
+                                    });
+                                  });
+                                },
+                                child: AnimatedCrossFade(
+                                  firstChild: Icon(color: textStyles.B.color, Icons.copy),
+                                  secondChild: Icon(color: textStyles.B.color, Icons.check),
+                                  crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+                                  duration: const Duration(milliseconds: 150),
+                                ),
+                              )
+                            ],
+                          )),
+                    ),
                   ),
 
                   //linkedin
@@ -176,40 +159,39 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       onTap: () {
                         urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: ContactMe_containerStyle_mobile.color,
-                          borderRadius:
-                              ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
+                      child: CustomBox(
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                         margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth *
-                            ContactMe_containerStyle_mobile.width_mail_Linkedin,
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assets/svg/linkedin.svg",
-                              // ignore: deprecated_member_use
-                              // color: textStyles.B.color,
-                              height:
-                                  ContactMe_containerStyle_tablet.svgcontHeight,
-                            ),
-                            SizedBox(
-                              width: deviceWidth * 0.005,
-                            ),
-                            Expanded(
-                              child: AutoSizeText(
-                                ' LinkdIn',
-                                minFontSize: 10,
-                                maxFontSize: 15,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.chakraPetch(
-                                    textStyle: textStyles.P2B),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: ContactMe_containerStyle_mobile.color,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                          ),
+                          padding: ContactMe_containerStyle_mobile.padding,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/svg/linkedin.svg",
+                                // ignore: deprecated_member_use
+                                // color: textStyles.B.color,
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
                               ),
-                            )
-                          ],
+                              SizedBox(
+                                width: deviceWidth * 0.005,
+                              ),
+                              Expanded(
+                                child: AutoSizeText(
+                                  ' LinkdIn',
+                                  minFontSize: 10,
+                                  maxFontSize: 15,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -226,22 +208,21 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             onTap: () {
                               urlLaunch("https://www.instagram.com/jo.cly.n/");
                             },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile
-                                    .borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
+                            child: CustomBox(
+                              borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                               margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth *
-                                  ContactMe_containerStyle_mobile
-                                      .bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/instagram.svg",
-                                // color: textStyles.B.color,
-                                height: ContactMe_containerStyle_tablet
-                                    .svgcontHeight,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: ContactMe_containerStyle_mobile.color,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                                ),
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                                child: SvgPicture.asset(
+                                  "assets/svg/instagram.svg",
+                                  // color: textStyles.B.color,
+                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
+                                ),
                               ),
                             ),
                           ),
@@ -258,24 +239,23 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             onTap: () {
                               urlLaunch("https://leetcode.com/u/nakuldev1561/");
                             },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: ContactMe_containerStyle_mobile.color,
-                                borderRadius: ContactMe_containerStyle_mobile
-                                    .borderRadius,
-                              ),
-                              padding: ContactMe_containerStyle_mobile.padding,
+                            child: CustomBox(
                               margin: ContactMe_containerStyle_mobile.margin,
-                              width: deviceWidth *
-                                  ContactMe_containerStyle_mobile
-                                      .bottom_icon_width,
-                              child: SvgPicture.asset(
-                                "assets/svg/x.svg",
-                                height: ContactMe_containerStyle_tablet
-                                    .svgcontHeight,
+                              borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: ContactMe_containerStyle_mobile.color,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                                ),
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
+                                child: SvgPicture.asset(
+                                  "assets/svg/x.svg",
+                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                                // ignore: deprecated_member_use
-                                // color: textStyles.B.color,
+                                  // ignore: deprecated_member_use
+                                  // color: textStyles.B.color,
+                                ),
                               ),
                             ),
                           ),
@@ -297,26 +277,27 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       onTap: () {
                         urlLaunch("https://github.com/nakuldevmv");
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          // color: ContactMe_containerStyle_mobile.color,
-                          color: containerStyle.colorR,
-
-                          borderRadius:
-                              ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
+                      child: CustomBox(
                         margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth *
-                            ContactMe_containerStyle_mobile.githubsizeW,
-                        height: 122,
-                        // height: deviceHeight * ContactMe_containerStyle_mobile.githubsizeH,
-                        child: SvgPicture.asset(
-                          "assets/svg/github.svg",
-                          // ignore: deprecated_member_use
-                          // color: textStyles.B.color,
-                          // width: deviceWidth * 0.06,
-                          // height: deviceHeight * 0.06,
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            // color: ContactMe_containerStyle_mobile.color,
+                            color: containerStyle.colorR,
+
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                          ),
+                          padding: ContactMe_containerStyle_mobile.padding,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
+                          height: 122,
+                          // height: deviceHeight * ContactMe_containerStyle_mobile.githubsizeH,
+                          child: SvgPicture.asset(
+                            "assets/svg/github.svg",
+                            // ignore: deprecated_member_use
+                            // color: textStyles.B.color,
+                            // width: deviceWidth * 0.06,
+                            // height: deviceHeight * 0.06,
+                          ),
                         ),
                       ),
                     ),
@@ -326,27 +307,27 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: () {
-                        urlLaunch(
-                            "https://www.hackerrank.com/profile/nakuldev1561");
+                        urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: ContactMe_containerStyle_mobile.color,
-                          borderRadius:
-                              ContactMe_containerStyle_mobile.borderRadius,
-                        ),
-                        padding: ContactMe_containerStyle_mobile.padding,
+                      child: CustomBox(
                         margin: ContactMe_containerStyle_mobile.margin,
-                        width: deviceWidth *
-                            ContactMe_containerStyle_mobile.githubsizeW,
-                        child: SvgPicture.asset(
-                          height: ContactMe_containerStyle_tablet.svgcontHeight,
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: ContactMe_containerStyle_mobile.color,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
+                          ),
+                          padding: ContactMe_containerStyle_mobile.padding,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
+                          child: SvgPicture.asset(
+                            height: ContactMe_containerStyle_tablet.svgcontHeight,
 
-                          "assets/svg/hackerrank.svg",
-                          // ignore: deprecated_member_use
-                          // color: textStyles.B.color,
-                          // width: deviceWidth * 0.06,
-                          // height: deviceHeight * 0.06,
+                            "assets/svg/hackerrank.svg",
+                            // ignore: deprecated_member_use
+                            // color: textStyles.B.color,
+                            // width: deviceWidth * 0.06,
+                            // height: deviceHeight * 0.06,
+                          ),
                         ),
                       ),
                     ),
