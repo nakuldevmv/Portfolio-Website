@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:Nakul_Dev/functions/copy_text.dart';
-import 'package:Nakul_Dev/functions/launch_url.dart';
-import 'package:Nakul_Dev/functions/mailing_fun.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/functions/copy_text.dart';
+import 'package:nakul_dev/functions/launch_url.dart';
+import 'package:nakul_dev/functions/mailing_fun.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -48,14 +48,16 @@ class _ContactMeState extends State<ContactMe> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          urlLaunch("https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
+                          urlLaunch(
+                              "https://maps.app.goo.gl/wXXKmaZZ4ZAK2Zwk8");
                         },
                         child: Stack(
                           children: [
                             Container(
                               decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
+                                borderRadius:
+                                    ContactMe_containerStyle.borderRadius,
                                 image: const DecorationImage(
                                   image: AssetImage('assets/locD.png'),
                                   fit: BoxFit.cover,
@@ -63,8 +65,10 @@ class _ContactMeState extends State<ContactMe> {
                               ),
                               padding: ContactMe_containerStyle.padding,
                               margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.loc_width,
-                              height: deviceHeight * ContactMe_containerStyle.loc_height,
+                              width: deviceWidth *
+                                  ContactMe_containerStyle.loc_width,
+                              height: deviceHeight *
+                                  ContactMe_containerStyle.loc_height,
                             ),
                             Positioned(
                               bottom: 20,
@@ -72,15 +76,21 @@ class _ContactMeState extends State<ContactMe> {
                               child: Container(
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(130, 167, 167, 167),
-                                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50)),
                                 ),
-                                padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
+                                padding: const EdgeInsets.only(
+                                    left: 8, right: 8, top: 5, bottom: 5),
                                 child: Row(
                                   children: [
-                                    Icon(color: textStyles.B.color, Icons.place_rounded),
+                                    Icon(
+                                        color: textStyles.B.color,
+                                        Icons.place_rounded),
                                     Text(
                                       ' Kerala, India',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.edu_P_N,
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
@@ -95,21 +105,26 @@ class _ContactMeState extends State<ContactMe> {
                           Container(
                               decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
+                                borderRadius:
+                                    ContactMe_containerStyle.borderRadius,
                               ),
                               padding: ContactMe_containerStyle.padding,
                               margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.width_mail_Linkedin,
+                              width: deviceWidth *
+                                  ContactMe_containerStyle.width_mail_Linkedin,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Icon(color: textStyles.B.color, Icons.mail_rounded),
+                                  Icon(
+                                      color: textStyles.B.color,
+                                      Icons.mail_rounded),
                                   SizedBox(
                                     width: deviceWidth * 0.005,
                                   ),
                                   GestureDetector(
                                     onHorizontalDragUpdate: (details) {
-                                      copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                      copyTextToClipboard(
+                                          context, 'nakuldev1561@gmail.com');
                                     },
                                     onTap: () {
                                       openEmail();
@@ -120,7 +135,8 @@ class _ContactMeState extends State<ContactMe> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           "nakuldev1561@gmail.com",
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.P2B),
                                         ),
                                       ),
                                     ),
@@ -132,19 +148,30 @@ class _ContactMeState extends State<ContactMe> {
                                         isTick = !isTick;
                                       });
                                       //
-                                      copyTextToClipboard(context, 'nakuldev1561@gmail.com');
+                                      copyTextToClipboard(
+                                          context, 'nakuldev1561@gmail.com');
                                       //
-                                      Timer(const Duration(seconds: 2, milliseconds: 500), () {
+                                      Timer(
+                                          const Duration(
+                                              seconds: 2,
+                                              milliseconds: 500), () {
                                         setState(() {
                                           isTick = !isTick;
                                         });
                                       });
                                     },
                                     child: AnimatedCrossFade(
-                                      firstChild: Icon(color: textStyles.B.color, Icons.copy),
-                                      secondChild: Icon(color: textStyles.B.color, Icons.check),
-                                      crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                      duration: const Duration(milliseconds: 150),
+                                      firstChild: Icon(
+                                          color: textStyles.B.color,
+                                          Icons.copy),
+                                      secondChild: Icon(
+                                          color: textStyles.B.color,
+                                          Icons.check),
+                                      crossFadeState: isTick
+                                          ? CrossFadeState.showFirst
+                                          : CrossFadeState.showSecond,
+                                      duration:
+                                          const Duration(milliseconds: 150),
                                     ),
                                   )
                                 ],
@@ -153,16 +180,19 @@ class _ContactMeState extends State<ContactMe> {
                           //linkedin
                           GestureDetector(
                             onTap: () {
-                              urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
+                              urlLaunch(
+                                  "https://www.linkedin.com/in/nakuldevmv/");
                             },
                             child: Container(
                               decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
+                                borderRadius:
+                                    ContactMe_containerStyle.borderRadius,
                               ),
                               padding: ContactMe_containerStyle.padding,
                               margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.width_mail_Linkedin,
+                              width: deviceWidth *
+                                  ContactMe_containerStyle.width_mail_Linkedin,
                               child: Row(
                                 children: [
                                   SvgPicture.asset(
@@ -180,7 +210,8 @@ class _ContactMeState extends State<ContactMe> {
                                       maxFontSize: 15,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.P2B),
                                     ),
                                   )
                                 ],
@@ -192,16 +223,20 @@ class _ContactMeState extends State<ContactMe> {
                               //insta
                               GestureDetector(
                                 onTap: () {
-                                  urlLaunch("https://www.instagram.com/jo.cly.n/");
+                                  urlLaunch(
+                                      "https://www.instagram.com/jo.cly.n/");
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
                                     color: ContactMe_containerStyle.color,
-                                    borderRadius: ContactMe_containerStyle.borderRadius,
+                                    borderRadius:
+                                        ContactMe_containerStyle.borderRadius,
                                   ),
                                   padding: ContactMe_containerStyle.padding,
                                   margin: ContactMe_containerStyle.margin,
-                                  width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
+                                  width: deviceWidth *
+                                      ContactMe_containerStyle
+                                          .bottom_icon_width,
                                   child: SvgPicture.asset(
                                     "assets/svg/instagram.svg",
                                     color: textStyles.B.color,
@@ -211,16 +246,20 @@ class _ContactMeState extends State<ContactMe> {
                               //twitter
                               GestureDetector(
                                 onTap: () {
-                                  urlLaunch("https://leetcode.com/u/nakuldev1561/");
+                                  urlLaunch(
+                                      "https://leetcode.com/u/nakuldev1561/");
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
                                     color: ContactMe_containerStyle.color,
-                                    borderRadius: ContactMe_containerStyle.borderRadius,
+                                    borderRadius:
+                                        ContactMe_containerStyle.borderRadius,
                                   ),
                                   padding: ContactMe_containerStyle.padding,
                                   margin: ContactMe_containerStyle.margin,
-                                  width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
+                                  width: deviceWidth *
+                                      ContactMe_containerStyle
+                                          .bottom_icon_width,
                                   child: SvgPicture.asset(
                                     "assets/svg/x.svg",
                                     // ignore: deprecated_member_use
@@ -242,12 +281,15 @@ class _ContactMeState extends State<ContactMe> {
                             child: Container(
                               decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
+                                borderRadius:
+                                    ContactMe_containerStyle.borderRadius,
                               ),
                               padding: ContactMe_containerStyle.padding,
                               margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.githubsizeW,
-                              height: deviceHeight * ContactMe_containerStyle.githubsizeH,
+                              width: deviceWidth *
+                                  ContactMe_containerStyle.githubsizeW,
+                              height: deviceHeight *
+                                  ContactMe_containerStyle.githubsizeH,
                               child: SvgPicture.asset(
                                 "assets/svg/github.svg",
                                 // ignore: deprecated_member_use
@@ -259,16 +301,19 @@ class _ContactMeState extends State<ContactMe> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
+                              urlLaunch(
+                                  "https://www.hackerrank.com/profile/nakuldev1561");
                             },
                             child: Container(
                               decoration: BoxDecoration(
                                 color: ContactMe_containerStyle.color,
-                                borderRadius: ContactMe_containerStyle.borderRadius,
+                                borderRadius:
+                                    ContactMe_containerStyle.borderRadius,
                               ),
                               padding: ContactMe_containerStyle.padding,
                               margin: ContactMe_containerStyle.margin,
-                              width: deviceWidth * ContactMe_containerStyle.bottom_icon_width,
+                              width: deviceWidth *
+                                  ContactMe_containerStyle.bottom_icon_width,
                               child: SvgPicture.asset(
                                 "assets/svg/hackerrank.svg",
                                 // ignore: deprecated_member_use

@@ -1,4 +1,4 @@
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 
 void themeSwitcher(void Function(void Function()) setState, bool isDark) {

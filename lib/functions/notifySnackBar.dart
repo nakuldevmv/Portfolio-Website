@@ -1,5 +1,4 @@
-import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +17,8 @@ class AnimatedSnackBar extends StatefulWidget {
   State<AnimatedSnackBar> createState() => _AnimatedSnackBarState();
 }
 
-class _AnimatedSnackBarState extends State<AnimatedSnackBar> with SingleTickerProviderStateMixin {
+class _AnimatedSnackBarState extends State<AnimatedSnackBar>
+    with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
 
@@ -93,7 +93,8 @@ class _AnimatedSnackBarState extends State<AnimatedSnackBar> with SingleTickerPr
                         maxFontSize: 22,
                         maxLines: 2,
                         style: GoogleFonts.chakraPetch(
-                          textStyle: textStyles.P2B.copyWith(color: Colors.white),
+                          textStyle:
+                              textStyles.P2B.copyWith(color: Colors.white),
                         ),
                       ),
                     ),

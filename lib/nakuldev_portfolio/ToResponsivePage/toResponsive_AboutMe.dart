@@ -1,11 +1,11 @@
-import 'package:Nakul_Dev/functions/Mouse_Tracker.dart';
-import 'package:Nakul_Dev/functions/animated_blob.dart';
-import 'package:Nakul_Dev/functions/navigation_bar.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me.dart';
+import 'package:nakul_dev/functions/Mouse_Tracker.dart';
+import 'package:nakul_dev/functions/animated_blob.dart';
+import 'package:nakul_dev/functions/navigation_bar.dart';
+import 'package:nakul_dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me.dart';
 
-import 'package:Nakul_Dev/functions/responsive_layout.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me_mobile.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me_tablet.dart';
+import 'package:nakul_dev/functions/responsive_layout.dart';
+import 'package:nakul_dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me_mobile.dart';
+import 'package:nakul_dev/nakuldev_portfolio/pages/about_page_T_M_D/about_me_tablet.dart';
 import 'package:flutter/material.dart';
 
 class toResponsiveLayout_AboutMe extends StatelessWidget {
@@ -22,22 +22,10 @@ class toResponsiveLayout_AboutMe extends StatelessWidget {
         blobSizeMultiplier: 1,
         orbitRadius: 0.2,
         blobConfigs: const [
-          BlobConfig(colors: [
-            Colors.purple,
-            Colors.transparent
-          ]),
-          BlobConfig(colors: [
-            Colors.blue,
-            Colors.transparent
-          ]),
-          BlobConfig(colors: [
-            Colors.purpleAccent,
-            Colors.transparent
-          ]),
-          BlobConfig(colors: [
-            Colors.indigo,
-            Colors.transparent
-          ]),
+          BlobConfig(colors: [Colors.purple, Colors.transparent]),
+          BlobConfig(colors: [Colors.blue, Colors.transparent]),
+          BlobConfig(colors: [Colors.purpleAccent, Colors.transparent]),
+          BlobConfig(colors: [Colors.indigo, Colors.transparent]),
         ],
         child: CursorTracker(
           child: NavigationWrapper(

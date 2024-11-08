@@ -1,16 +1,16 @@
-import 'package:Nakul_Dev/Data/education.dart';
-import 'package:Nakul_Dev/Data/exp.dart';
-import 'package:Nakul_Dev/Data/profilePic_book.dart';
-import 'package:Nakul_Dev/Data/projects.dart';
-import 'package:Nakul_Dev/Data/skill.dart';
-import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
-import 'package:Nakul_Dev/functions/downloadResume.dart';
-import 'package:Nakul_Dev/functions/navigate.dart';
-import 'package:Nakul_Dev/functions/next_prev_controller.dart';
-import 'package:Nakul_Dev/functions/notifySnackBar.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/Data/education.dart';
+import 'package:nakul_dev/Data/exp.dart';
+import 'package:nakul_dev/Data/profilePic_book.dart';
+import 'package:nakul_dev/Data/projects.dart';
+import 'package:nakul_dev/Data/skill.dart';
+import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
+import 'package:nakul_dev/functions/downloadResume.dart';
+import 'package:nakul_dev/functions/navigate.dart';
+import 'package:nakul_dev/functions/next_prev_controller.dart';
+import 'package:nakul_dev/functions/notifySnackBar.dart';
+import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
+import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -91,16 +91,30 @@ class _tabletState extends State<tablet> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: RichText(
                                           text: TextSpan(
                                             children: [
-                                              TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
-                                              TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2, fontSize: 20)),
+                                              TextSpan(
+                                                  text: "Nakul",
+                                                  style:
+                                                      GoogleFonts.chakraPetch(
+                                                          textStyle:
+                                                              textStyles.Name1,
+                                                          fontSize: 20)),
+                                              TextSpan(
+                                                  text: "</Dev>",
+                                                  style:
+                                                      GoogleFonts.chakraPetch(
+                                                          textStyle:
+                                                              textStyles.Name2,
+                                                          fontSize: 20)),
                                             ],
                                           ),
                                         ),
@@ -108,7 +122,9 @@ class _tabletState extends State<tablet> {
                                       Icon(
                                         color: textStyles.B.color,
                                         Icons.verified_rounded,
-                                        size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                        size: deviceWidth < 900
+                                            ? tablet_containerStyle.iconSizeS
+                                            : tablet_containerStyle.iconSizeL,
                                       ),
                                     ],
                                   ),
@@ -123,23 +139,28 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: "Building the ",
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.B),
                                           ),
                                           TextSpan(
                                             text: "Future",
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.I),
                                           ),
                                           TextSpan(
                                             text: ",\nOne Line of ",
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.B),
                                           ),
                                           TextSpan(
                                             text: "Code",
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.I),
                                           ),
                                           TextSpan(
                                             text: "\nat a Time",
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.B),
                                           ),
                                         ],
                                       ),
@@ -153,19 +174,23 @@ class _tabletState extends State<tablet> {
                                 child: GestureDetector(
                                   onTap: () {
                                     downloadResume(rurl);
-                                    notifySnackBar(context, "Preparing my resume... it will download shortly.");
+                                    notifySnackBar(context,
+                                        "Preparing my resume... it will download shortly.");
                                   },
                                   child: Container(
                                     decoration: const BoxDecoration(
                                       color: Color.fromARGB(255, 99, 99, 99),
-                                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(5)),
                                     ),
                                     padding: const EdgeInsets.all(5),
                                     margin: const EdgeInsets.only(bottom: 16),
                                     width: deviceWidth < 900 ? 100 : 120,
                                     child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Expanded(
                                           child: FittedBox(
@@ -173,7 +198,8 @@ class _tabletState extends State<tablet> {
                                             child: Icon(
                                               color: textStyles.B.color,
                                               Icons.description,
-                                              size: tablet_containerStyle.iconSizeL,
+                                              size: tablet_containerStyle
+                                                  .iconSizeL,
                                             ),
                                           ),
                                         ),
@@ -183,7 +209,9 @@ class _tabletState extends State<tablet> {
                                             fit: BoxFit.scaleDown,
                                             child: Text(
                                               "Resume",
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle: textStyles.B,
+                                                  fontSize: kDefaultFontSize),
                                             ),
                                           ),
                                         ),
@@ -216,7 +244,8 @@ class _tabletState extends State<tablet> {
                       color: tablet_containerStyle.color,
                       borderRadius: tablet_containerStyle.borderRadius,
                     ),
-                    padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                    padding: const EdgeInsets.only(
+                        left: 16, right: 16, top: 16, bottom: 16),
                     // margin: tablet_containerStyle.marginCol2,
                     width: deviceWidth * tablet_containerStyle.width,
                     height: tablet_containerStyle.row1,
@@ -236,11 +265,13 @@ class _tabletState extends State<tablet> {
                                   children: [
                                     TextSpan(
                                       text: 'Tech I',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingI),
                                     ),
                                     TextSpan(
                                       text: ' Love',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingB),
                                     )
                                   ],
                                 ),
@@ -249,7 +280,9 @@ class _tabletState extends State<tablet> {
                             Icon(
                               color: textStyles.B.color,
                               Icons.lens_blur_rounded,
-                              size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                              size: deviceWidth < 900
+                                  ? tablet_containerStyle.iconSizeS
+                                  : tablet_containerStyle.iconSizeL,
                             )
                           ],
                         ),
@@ -263,87 +296,100 @@ class _tabletState extends State<tablet> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[0],
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[1],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[2],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[3],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[4],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[5],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
@@ -354,88 +400,101 @@ class _tabletState extends State<tablet> {
                                 height: 10,
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[6],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[7],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[8],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[9],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[10],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
-                                    width: deviceWidth * tablet_SVGContainer.width,
+                                    width:
+                                        deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
                                       child: SvgPicture.asset(
                                         skills[11],
 
                                         // color: textStyles.B.color,
-                                        width: deviceWidth * tablet_SVGContainer.width,
+                                        width: deviceWidth *
+                                            tablet_SVGContainer.width,
                                         // height: devi * tablet_SVGContainer.height,
                                       ),
                                     ),
@@ -484,9 +543,11 @@ class _tabletState extends State<tablet> {
                                   ));
                             },
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 16, right: 16),
+                              padding:
+                                  const EdgeInsets.only(left: 16, right: 16),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Expanded(
@@ -498,11 +559,13 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: 'My ',
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Projects',
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.HeadingI),
                                           ),
                                         ],
                                       ),
@@ -511,7 +574,9 @@ class _tabletState extends State<tablet> {
                                   Icon(
                                     color: IconHClr,
                                     Icons.arrow_outward_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    size: deviceWidth < 900
+                                        ? tablet_containerStyle.iconSizeS
+                                        : tablet_containerStyle.iconSizeL,
                                   )
                                 ],
                               ),
@@ -531,33 +596,53 @@ class _tabletState extends State<tablet> {
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
                                     onTap: () {
-                                      int newIndex = (index ~/ 2); // Divides index by 2 and discards the remainder
+                                      int newIndex = (index ~/
+                                          2); // Divides index by 2 and discards the remainder
 
-                                      navigateTo(context, toResponsiveLayout_project(initialIndex: newIndex));
+                                      navigateTo(
+                                          context,
+                                          toResponsiveLayout_project(
+                                              initialIndex: newIndex));
                                     },
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: EducationcontainerStyle.color,
-                                            borderRadius: EducationcontainerStyle.borderRadius,
+                                            color:
+                                                EducationcontainerStyle.color,
+                                            borderRadius:
+                                                EducationcontainerStyle
+                                                    .borderRadius,
                                           ),
-                                          height: mobile_ProjectContainer.height,
+                                          height:
+                                              mobile_ProjectContainer.height,
                                           width: mobile_ProjectContainer.width,
-                                          padding: mobile_ProjectContainer.padding,
-                                          margin: mobile_ProjectContainer.margin,
+                                          padding:
+                                              mobile_ProjectContainer.padding,
+                                          margin:
+                                              mobile_ProjectContainer.margin,
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.end,
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Icon(color: textStyles.B.color, Icons.arrow_right_rounded, size: 33),
+                                              Icon(
+                                                  color: textStyles.B.color,
+                                                  Icons.arrow_right_rounded,
+                                                  size: 33),
                                               Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   Padding(
-                                                    padding: const EdgeInsets.only(bottom: 35),
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            bottom: 35),
                                                     child: Icon(
                                                       color: textStyles.B.color,
                                                       projects[index].icon,
@@ -579,14 +664,18 @@ class _tabletState extends State<tablet> {
                                           // ),
                                           height: 30,
                                           width: mobile_ProjectContainer.width,
-                                          padding: const EdgeInsets.only(left: 5),
-                                          margin: mobile_ProjectContainer.margin,
+                                          padding:
+                                              const EdgeInsets.only(left: 5),
+                                          margin:
+                                              mobile_ProjectContainer.margin,
                                           child: Text(
                                             // minFontSize: 1,
                                             // maxFontSize: 15,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B, fontSize: 12),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.P2B,
+                                                fontSize: 12),
                                             // overflow: TextOverflow.ellipsis,
                                             projects[index].title,
                                           ),
@@ -604,7 +693,8 @@ class _tabletState extends State<tablet> {
                           padding: const EdgeInsets.only(right: 5, bottom: 3),
                           child: Container(
                             padding: const EdgeInsets.all(5),
-                            width: deviceWidth * tablet_containerStyle.widthButton,
+                            width:
+                                deviceWidth * tablet_containerStyle.widthButton,
                             decoration: const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
@@ -625,7 +715,9 @@ class _tabletState extends State<tablet> {
                                     child: Icon(
                                       color: textStyles.B.color,
                                       Icons.arrow_back_ios_new_rounded,
-                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                      size: deviceWidth < 900
+                                          ? tablet_containerStyle.iconSizeS
+                                          : tablet_containerStyle.iconSizeL,
                                     ),
                                   ),
                                 ),
@@ -643,7 +735,9 @@ class _tabletState extends State<tablet> {
                                     child: Icon(
                                       color: textStyles.B.color,
                                       Icons.arrow_forward_ios_rounded,
-                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                      size: deviceWidth < 900
+                                          ? tablet_containerStyle.iconSizeS
+                                          : tablet_containerStyle.iconSizeL,
                                     ),
                                   ),
                                 ),
@@ -686,11 +780,13 @@ class _tabletState extends State<tablet> {
                                     children: [
                                       TextSpan(
                                         text: 'My ',
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.HeadingB),
                                       ),
                                       TextSpan(
                                         text: 'Education',
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.HeadingI),
                                       ),
                                     ],
                                   ),
@@ -699,7 +795,9 @@ class _tabletState extends State<tablet> {
                               Icon(
                                 color: textStyles.B.color,
                                 Icons.school_rounded,
-                                size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                size: deviceWidth < 900
+                                    ? tablet_containerStyle.iconSizeS
+                                    : tablet_containerStyle.iconSizeL,
                               )
                             ],
                           ),
@@ -728,7 +826,10 @@ class _tabletState extends State<tablet> {
                                 ),
                                 indicatorStyle: IndicatorStyle(
                                   color: EducationcontainerStyle.color,
-                                  iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
+                                  iconStyle: IconStyle(
+                                      color: Colors.white,
+                                      fontSize: 25,
+                                      iconData: Icons.arrow_drop_down_rounded),
                                 ),
                                 alignment: TimelineAlign.start,
                                 endChild: Expanded(
@@ -740,17 +841,22 @@ class _tabletState extends State<tablet> {
                                       margin: EducationcontainerStyle.margin,
                                       decoration: BoxDecoration(
                                         color: EducationcontainerStyle.color,
-                                        borderRadius: EducationcontainerStyle.borderRadius,
+                                        borderRadius: EducationcontainerStyle
+                                            .borderRadius,
                                       ),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           FittedBox(
                                             fit: BoxFit.scaleDown,
                                             child: Text(
                                               educations[index].institutionName,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_H_B),
                                             ),
                                           ),
                                           FittedBox(
@@ -759,12 +865,18 @@ class _tabletState extends State<tablet> {
                                               children: [
                                                 Text(
                                                   educations[index].startTime,
-                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                  style:
+                                                      GoogleFonts.chakraPetch(
+                                                          textStyle: textStyles
+                                                              .edu_P_L),
                                                 ),
                                                 const Text(" - "),
                                                 Text(
                                                   educations[index].endTime,
-                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                  style:
+                                                      GoogleFonts.chakraPetch(
+                                                          textStyle: textStyles
+                                                              .edu_P_L),
                                                 ),
                                               ],
                                             ),
@@ -773,8 +885,13 @@ class _tabletState extends State<tablet> {
                                               ? FittedBox(
                                                   fit: BoxFit.scaleDown,
                                                   child: Text(
-                                                    educations[index].department,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                                    educations[index]
+                                                        .department,
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_N),
                                                   ),
                                                 )
                                               : const Offstage(),
@@ -783,7 +900,11 @@ class _tabletState extends State<tablet> {
                                                   fit: BoxFit.scaleDown,
                                                   child: Text(
                                                     educations[index].grade,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_N),
                                                   ),
                                                 )
                                               : const Offstage(),
@@ -802,7 +923,8 @@ class _tabletState extends State<tablet> {
                           child: Container(
                             padding: const EdgeInsets.all(5),
                             margin: const EdgeInsets.all(0),
-                            width: deviceWidth * tablet_containerStyle.widthButton,
+                            width:
+                                deviceWidth * tablet_containerStyle.widthButton,
                             decoration: const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
@@ -823,7 +945,9 @@ class _tabletState extends State<tablet> {
                                     child: Icon(
                                       color: textStyles.B.color,
                                       Icons.arrow_back_ios_new_rounded,
-                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                      size: deviceWidth < 900
+                                          ? tablet_containerStyle.iconSizeS
+                                          : tablet_containerStyle.iconSizeL,
                                     ),
                                   ),
                                 ),
@@ -841,7 +965,9 @@ class _tabletState extends State<tablet> {
                                     child: Icon(
                                       color: textStyles.B.color,
                                       Icons.arrow_forward_ios_rounded,
-                                      size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                      size: deviceWidth < 900
+                                          ? tablet_containerStyle.iconSizeS
+                                          : tablet_containerStyle.iconSizeL,
                                     ),
                                   ),
                                 ),
@@ -890,11 +1016,13 @@ class _tabletState extends State<tablet> {
                                       children: [
                                         TextSpan(
                                           text: 'My ',
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.HeadingB),
                                         ),
                                         TextSpan(
                                           text: 'Experience',
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.HeadingI),
                                         )
                                       ],
                                     ),
@@ -903,7 +1031,9 @@ class _tabletState extends State<tablet> {
                                 Icon(
                                   color: textStyles.B.color,
                                   Icons.work_history_rounded,
-                                  size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                  size: deviceWidth < 900
+                                      ? tablet_containerStyle.iconSizeS
+                                      : tablet_containerStyle.iconSizeL,
                                 )
                               ],
                             ),
@@ -933,7 +1063,11 @@ class _tabletState extends State<tablet> {
                                   ),
                                   indicatorStyle: IndicatorStyle(
                                     color: EducationcontainerStyle.color,
-                                    iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
+                                    iconStyle: IconStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        iconData:
+                                            Icons.arrow_drop_down_rounded),
                                   ),
                                   alignment: TimelineAlign.start,
                                   endChild: Expanded(
@@ -941,48 +1075,77 @@ class _tabletState extends State<tablet> {
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5),
                                       child: Container(
-                                        padding: EducationcontainerStyle.padding,
+                                        padding:
+                                            EducationcontainerStyle.padding,
                                         margin: EducationcontainerStyle.margin,
                                         decoration: BoxDecoration(
                                           color: EducationcontainerStyle.color,
-                                          borderRadius: EducationcontainerStyle.borderRadius,
+                                          borderRadius: EducationcontainerStyle
+                                              .borderRadius,
                                         ),
                                         child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             FittedBox(
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 Experiences[index].role,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle:
+                                                        textStyles.edu_H_B),
                                               ),
                                             ),
                                             FittedBox(
                                               fit: BoxFit.scaleDown,
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    Experiences[index].startTime,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                    Experiences[index]
+                                                        .startTime,
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_L),
                                                   ),
                                                   Text(
                                                     ' - ',
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_L),
                                                   ),
                                                   Text(
                                                     Experiences[index].endTime,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_L),
                                                   ),
                                                   Text(
                                                     ' • ',
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_L),
                                                   ),
                                                   Text(
                                                     Experiences[index].duration,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .edu_P_L),
                                                   ),
                                                 ],
                                               ),
@@ -991,7 +1154,9 @@ class _tabletState extends State<tablet> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 Experiences[index].companyName,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle:
+                                                        textStyles.edu_P_N),
                                               ),
                                             )
                                           ],
@@ -1012,7 +1177,8 @@ class _tabletState extends State<tablet> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: () {
-                        navigateTo(context, const toResponsiveLayout_contactMe());
+                        navigateTo(
+                            context, const toResponsiveLayout_contactMe());
                       },
                       child: CustomBox(
                         borderRadius: containerStyle.borderRadius,
@@ -1031,7 +1197,8 @@ class _tabletState extends State<tablet> {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Expanded(
                                     child: AutoSizeText(
@@ -1039,13 +1206,16 @@ class _tabletState extends State<tablet> {
                                       maxLines: 3,
                                       maxFontSize: 15,
                                       minFontSize: 10,
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.P1),
                                     ),
                                   ),
                                   Icon(
                                     color: IconHClr,
                                     Icons.arrow_outward_rounded,
-                                    size: deviceWidth < 900 ? tablet_containerStyle.iconSizeS : tablet_containerStyle.iconSizeL,
+                                    size: deviceWidth < 900
+                                        ? tablet_containerStyle.iconSizeS
+                                        : tablet_containerStyle.iconSizeL,
                                   ),
                                 ],
                               ),
@@ -1063,11 +1233,13 @@ class _tabletState extends State<tablet> {
                                         children: [
                                           TextSpan(
                                             text: 'Contact ',
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.HeadingB),
                                           ),
                                           TextSpan(
                                             text: 'Me',
-                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                            style: GoogleFonts.chakraPetch(
+                                                textStyle: textStyles.HeadingI),
                                           )
                                         ],
                                       ),

@@ -1,6 +1,6 @@
-import 'package:Nakul_Dev/Data/projects.dart';
-import 'package:Nakul_Dev/functions/demo_code_btn_widget.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/Data/projects.dart';
+import 'package:nakul_dev/functions/demo_code_btn_widget.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -51,7 +51,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                     itemCount: (projects.length / 2).ceil(),
                     itemScrollController: _scrollController,
                     itemBuilder: (context, index) {
-                      final isLastItem = index == (projects.length / 2).ceil() - 1;
+                      final isLastItem =
+                          index == (projects.length / 2).ceil() - 1;
 
                       return Column(
                         children: [
@@ -60,7 +61,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 8, top: 8),
+                                padding:
+                                    const EdgeInsets.only(right: 8, top: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +77,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
                                             borderRadius: RadUp,
-                                            color: mobile_ProjectContainer.color,
+                                            color:
+                                                mobile_ProjectContainer.color,
                                           ),
                                         ),
                                         Stack(
@@ -86,35 +89,43 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               height: 250 - 40,
                                               // margin: const EdgeInsets.only(top: 10),
                                               decoration: BoxDecoration(
-                                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                        Radius.circular(10)),
                                                 image: DecorationImage(
                                                   image: AssetImage(
                                                     projects[index * 2].image,
                                                   ),
                                                   fit: BoxFit.cover,
                                                 ),
-                                                boxShadow: [
-                                                  GlobalShadow
-                                                ],
+                                                boxShadow: [GlobalShadow],
                                               ),
                                             ),
                                             Container(
-                                              width: (deviceWidth / 2.179) - 39.5,
+                                              width:
+                                                  (deviceWidth / 2.179) - 39.5,
                                               decoration: const BoxDecoration(
-                                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                                borderRadius: BorderRadius.only(
+                                                    bottomLeft:
+                                                        Radius.circular(10),
+                                                    bottomRight:
+                                                        Radius.circular(10)),
                                                 gradient: LinearGradient(
                                                   colors: [
                                                     Color.fromARGB(0, 0, 0, 0),
                                                     Color.fromARGB(99, 0, 0, 0),
-                                                    Color.fromARGB(199, 0, 0, 0),
-                                                    Color.fromARGB(230, 0, 0, 0),
+                                                    Color.fromARGB(
+                                                        199, 0, 0, 0),
+                                                    Color.fromARGB(
+                                                        230, 0, 0, 0),
                                                     Color.fromARGB(255, 0, 0, 0)
                                                   ],
                                                   begin: Alignment.topCenter,
                                                   end: Alignment.bottomCenter,
                                                 ),
                                               ),
-                                              child: demo_code_button(index: index * 2),
+                                              child: demo_code_button(
+                                                  index: index * 2),
                                             )
                                           ],
                                         ),
@@ -124,18 +135,25 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
-                                      decoration: BoxDecoration(color: mobile_ProjectContainer.color, borderRadius: RadBottom),
+                                      decoration: BoxDecoration(
+                                          color: mobile_ProjectContainer.color,
+                                          borderRadius: RadBottom),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           //title
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 15),
+                                            padding: const EdgeInsets.only(
+                                                left: 16, right: 8, top: 15),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].title,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .projectTitle),
                                                 minFontSize: 10,
                                                 maxFontSize: 25,
                                                 maxLines: 1,
@@ -144,11 +162,14 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //description
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 16, right: 8, top: 10),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2].description,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .descriptions),
                                                 minFontSize: 5,
                                                 maxFontSize: 15,
                                                 maxLines: 3,
@@ -157,15 +178,25 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //techstack
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10, bottom: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 16,
+                                                right: 8,
+                                                top: 10,
+                                                bottom: 10),
                                             child: SizedBox(
                                               width: 200,
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   AutoSizeText(
                                                     "Tech Stack :",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .Dheadings),
                                                     minFontSize: 10,
                                                     maxFontSize: 18,
                                                     maxLines: 1,
@@ -176,7 +207,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                                     width: 25,
                                                   ),
                                                   SvgPicture.asset(
-                                                    projects[index * 2].flutterSvg,
+                                                    projects[index * 2]
+                                                        .flutterSvg,
                                                     // color: textStyles.B.color,
                                                     width: 25,
                                                   ),
@@ -191,7 +223,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 16, top: 8),
+                                padding:
+                                    const EdgeInsets.only(left: 16, top: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -206,7 +239,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           // margin: const EdgeInsets.only(top: 20),
                                           decoration: BoxDecoration(
                                             borderRadius: RadUp,
-                                            color: mobile_ProjectContainer.color,
+                                            color:
+                                                mobile_ProjectContainer.color,
                                           ),
                                         ),
                                         Stack(
@@ -217,35 +251,44 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                               height: 250 - 40,
                                               // margin: const EdgeInsets.only(top: 10),
                                               decoration: BoxDecoration(
-                                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                        Radius.circular(10)),
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                    projects[index * 2 + 1].image,
+                                                    projects[index * 2 + 1]
+                                                        .image,
                                                   ),
                                                   fit: BoxFit.cover,
                                                 ),
-                                                boxShadow: [
-                                                  GlobalShadow
-                                                ],
+                                                boxShadow: [GlobalShadow],
                                               ),
                                             ),
                                             Container(
-                                              width: (deviceWidth / 2.179) - 39.5,
+                                              width:
+                                                  (deviceWidth / 2.179) - 39.5,
                                               decoration: const BoxDecoration(
-                                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                                                borderRadius: BorderRadius.only(
+                                                    bottomLeft:
+                                                        Radius.circular(10),
+                                                    bottomRight:
+                                                        Radius.circular(10)),
                                                 gradient: LinearGradient(
                                                   colors: [
                                                     Color.fromARGB(0, 0, 0, 0),
                                                     Color.fromARGB(99, 0, 0, 0),
-                                                    Color.fromARGB(199, 0, 0, 0),
-                                                    Color.fromARGB(230, 0, 0, 0),
+                                                    Color.fromARGB(
+                                                        199, 0, 0, 0),
+                                                    Color.fromARGB(
+                                                        230, 0, 0, 0),
                                                     Color.fromARGB(255, 0, 0, 0)
                                                   ],
                                                   begin: Alignment.topCenter,
                                                   end: Alignment.bottomCenter,
                                                 ),
                                               ),
-                                              child: demo_code_button(index: index * 2 + 1),
+                                              child: demo_code_button(
+                                                  index: index * 2 + 1),
                                             )
                                           ],
                                         ),
@@ -255,18 +298,25 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                       height: 170,
                                       width: deviceWidth / 2.179,
                                       margin: const EdgeInsets.only(bottom: 10),
-                                      decoration: BoxDecoration(color: mobile_ProjectContainer.color, borderRadius: RadBottom),
+                                      decoration: BoxDecoration(
+                                          color: mobile_ProjectContainer.color,
+                                          borderRadius: RadBottom),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           //title
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 15),
+                                            padding: const EdgeInsets.only(
+                                                left: 16, right: 8, top: 15),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index * 2 + 1].title,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .projectTitle),
                                                 minFontSize: 10,
                                                 maxFontSize: 25,
                                                 maxLines: 1,
@@ -275,11 +325,15 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //description
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 16, right: 8, top: 10),
                                             child: SizedBox(
                                               child: AutoSizeText(
-                                                projects[index * 2 + 1].description,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                                                projects[index * 2 + 1]
+                                                    .description,
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .descriptions),
                                                 minFontSize: 5,
                                                 maxFontSize: 15,
                                                 maxLines: 3,
@@ -288,26 +342,38 @@ class _myProject_tabletState extends State<myProject_tablet> {
                                           ),
                                           //techstack
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 16, right: 8, top: 10, bottom: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 16,
+                                                right: 8,
+                                                top: 10,
+                                                bottom: 10),
                                             child: SizedBox(
                                               width: 200,
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   AutoSizeText(
                                                     "Tech Stack :",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .Dheadings),
                                                     minFontSize: 10,
                                                     maxFontSize: 18,
                                                     maxLines: 1,
                                                   ),
                                                   SvgPicture.asset(
-                                                    projects[index * 2 + 1].dartSvg,
+                                                    projects[index * 2 + 1]
+                                                        .dartSvg,
                                                     // color: textStyles.B.color,
                                                     width: 25,
                                                   ),
                                                   SvgPicture.asset(
-                                                    projects[index * 2 + 1].flutterSvg,
+                                                    projects[index * 2 + 1]
+                                                        .flutterSvg,
                                                     // color: textStyles.B.color,
                                                     width: 25,
                                                   ),

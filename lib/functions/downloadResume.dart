@@ -1,8 +1,10 @@
 // ignore_for_file: unused_local_variable
 
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 import 'dart:typed_data';
 import 'package:http/http.dart' as http;
+import 'package:nakul_dev/functions/notifySnackBar.dart';
 
 // Function to convert normal GitHub link to raw link
 String convertToRawLink(String url) {
@@ -10,7 +12,9 @@ String convertToRawLink(String url) {
   if (url.contains('github.com') && url.contains('/blob/')) {
     // Replace 'github.com' with 'raw.githubusercontent.com'
     // and remove the 'blob' part from the link
-    String rawLink = url.replaceFirst('github.com', 'raw.githubusercontent.com').replaceFirst('/blob/', '/');
+    String rawLink = url
+        .replaceFirst('github.com', 'raw.githubusercontent.com')
+        .replaceFirst('/blob/', '/');
     // print(rawLink);
     return rawLink;
   } else {
@@ -26,7 +30,7 @@ Future<void> downloadResume(String url) async {
 
   // Check if the URL is valid for download
   if (downloadUrl == 'Invalid GitHub file link') {
-    print('Invalid URL format');
+    const AnimatedSnackBar(message: 'Invalid URL format');
     return;
   }
 
@@ -38,9 +42,7 @@ Future<void> downloadResume(String url) async {
     final bytes = Uint8List.fromList(response.bodyBytes);
 
     // Create a blob from the bytes
-    final blob = Blob([
-      bytes
-    ]);
+    final blob = Blob([bytes]);
 
     // Create an object URL for the blob
     final url = Url.createObjectUrlFromBlob(blob);
@@ -53,6 +55,8 @@ Future<void> downloadResume(String url) async {
     // Clean up the object URL after download
     Url.revokeObjectUrl(url);
   } else {
-    print('Failed to download file: ${response.statusCode}');
+    AnimatedSnackBar(
+      message: 'Failed to download file: ${response.statusCode}',
+    );
   }
 }

@@ -10,7 +10,15 @@ class Experience {
   final bool start;
   final bool end;
 
-  Experience({required this.companyName, required this.role, required this.startTime, required this.endTime, required this.workType, required this.start, required this.end, required this.duration});
+  Experience(
+      {required this.companyName,
+      required this.role,
+      required this.startTime,
+      required this.endTime,
+      required this.workType,
+      required this.start,
+      required this.end,
+      required this.duration});
 }
 
 List<Experience> Experiences = [

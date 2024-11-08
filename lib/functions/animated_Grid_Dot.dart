@@ -4,10 +4,12 @@ class AnimatedGridDotBackground extends StatefulWidget {
   const AnimatedGridDotBackground({super.key});
 
   @override
-  _AnimatedGridDotBackgroundState createState() => _AnimatedGridDotBackgroundState();
+  _AnimatedGridDotBackgroundState createState() =>
+      _AnimatedGridDotBackgroundState();
 }
 
-class _AnimatedGridDotBackgroundState extends State<AnimatedGridDotBackground> with TickerProviderStateMixin {
+class _AnimatedGridDotBackgroundState extends State<AnimatedGridDotBackground>
+    with TickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -87,7 +89,8 @@ class AnimatedDotGridPainter extends CustomPainter {
           gradientPosition = ((x / size.width) + (y / size.height)) / 2;
         } else {
           // Second half: Bottom-right to top-left
-          gradientPosition = (((size.width - x) / size.width) + (y / size.height)) / 2;
+          gradientPosition =
+              (((size.width - x) / size.width) + (y / size.height)) / 2;
         }
 
         // Adjust gradient position with the normalized value
@@ -96,9 +99,11 @@ class AnimatedDotGridPainter extends CustomPainter {
         // Interpolate colors between gradient stops
         Color dotColor;
         if (gradientPosition < 0.5) {
-          dotColor = Color.lerp(gradientColors[0], gradientColors[1], gradientPosition * 2)!;
+          dotColor = Color.lerp(
+              gradientColors[0], gradientColors[1], gradientPosition * 2)!;
         } else {
-          dotColor = Color.lerp(gradientColors[1], gradientColors[2], (gradientPosition - 0.5) * 2)!;
+          dotColor = Color.lerp(gradientColors[1], gradientColors[2],
+              (gradientPosition - 0.5) * 2)!;
         }
 
         final Paint paint = Paint()..color = dotColor.withOpacity(0.6);

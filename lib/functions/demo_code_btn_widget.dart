@@ -1,6 +1,6 @@
-import 'package:Nakul_Dev/Data/projects.dart';
-import 'package:Nakul_Dev/functions/Code_Demo_button.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/Data/projects.dart';
+import 'package:nakul_dev/functions/Code_Demo_button.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,7 +68,9 @@ class demo_code_button extends StatelessWidget {
                 margin: const EdgeInsets.only(right: 10),
                 height: 30,
                 width: 90,
-                decoration: BoxDecoration(borderRadius: const BorderRadius.all(rad), color: EducationcontainerStyle.color),
+                decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(rad),
+                    color: EducationcontainerStyle.color),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

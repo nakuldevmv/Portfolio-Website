@@ -1,14 +1,14 @@
-import 'package:Nakul_Dev/Data/education.dart';
-import 'package:Nakul_Dev/Data/exp.dart';
-import 'package:Nakul_Dev/Data/profilePic_book.dart';
-import 'package:Nakul_Dev/Data/projects.dart';
-import 'package:Nakul_Dev/Data/skill.dart';
-import 'package:Nakul_Dev/functions/Custom_backdrop_filter.dart';
-import 'package:Nakul_Dev/functions/downloadResume.dart';
-import 'package:Nakul_Dev/functions/navigate.dart';
-import 'package:Nakul_Dev/functions/notifySnackBar.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:Nakul_Dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
+import 'package:nakul_dev/Data/education.dart';
+import 'package:nakul_dev/Data/exp.dart';
+import 'package:nakul_dev/Data/profilePic_book.dart';
+import 'package:nakul_dev/Data/projects.dart';
+import 'package:nakul_dev/Data/skill.dart';
+import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
+import 'package:nakul_dev/functions/downloadResume.dart';
+import 'package:nakul_dev/functions/navigate.dart';
+import 'package:nakul_dev/functions/notifySnackBar.dart';
+import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
+import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -79,7 +79,8 @@ class _mobileState extends State<mobile> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   FittedBox(
@@ -87,8 +88,16 @@ class _mobileState extends State<mobile> {
                                     child: RichText(
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1, fontSize: 20)),
-                                          TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2, fontSize: 20)),
+                                          TextSpan(
+                                              text: "Nakul",
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle: textStyles.Name1,
+                                                  fontSize: 20)),
+                                          TextSpan(
+                                              text: "</Dev>",
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle: textStyles.Name2,
+                                                  fontSize: 20)),
                                         ],
                                       ),
                                     ),
@@ -96,7 +105,8 @@ class _mobileState extends State<mobile> {
                                   Icon(
                                     color: textStyles.B.color,
                                     Icons.verified_rounded,
-                                    size: deviceWidth * mobile_containerStyle.iconSize,
+                                    size: deviceWidth *
+                                        mobile_containerStyle.iconSize,
                                   ),
                                 ],
                               ),
@@ -111,23 +121,28 @@ class _mobileState extends State<mobile> {
                                     children: [
                                       TextSpan(
                                         text: "Building the ",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.B),
                                       ),
                                       TextSpan(
                                         text: "Future",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.I),
                                       ),
                                       TextSpan(
                                         text: ",\nOne Line of ",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.B),
                                       ),
                                       TextSpan(
                                         text: "Code",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.I),
                                       ),
                                       TextSpan(
                                         text: "\nat a Time",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.B),
                                       ),
                                     ],
                                   ),
@@ -139,12 +154,14 @@ class _mobileState extends State<mobile> {
                           GestureDetector(
                             onTap: () {
                               downloadResume(rurl);
-                              notifySnackBar(context, "Preparing my resume... it will download shortly.");
+                              notifySnackBar(context,
+                                  "Preparing my resume... it will download shortly.");
                             },
                             child: Container(
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 99, 99, 99),
-                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
                               ),
                               padding: const EdgeInsets.all(5),
                               margin: const EdgeInsets.only(bottom: 16),
@@ -159,7 +176,8 @@ class _mobileState extends State<mobile> {
                                       child: Icon(
                                         color: textStyles.B.color,
                                         Icons.description,
-                                        size: deviceWidth * mobile_containerStyle.iconSize,
+                                        size: deviceWidth *
+                                            mobile_containerStyle.iconSize,
                                       ),
                                     ),
                                   ),
@@ -169,7 +187,9 @@ class _mobileState extends State<mobile> {
                                       fit: BoxFit.scaleDown,
                                       child: Text(
                                         "Resume",
-                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: kDefaultFontSize),
+                                        style: GoogleFonts.chakraPetch(
+                                            textStyle: textStyles.B,
+                                            fontSize: kDefaultFontSize),
                                       ),
                                     ),
                                   ),
@@ -201,7 +221,8 @@ class _mobileState extends State<mobile> {
                   color: mobile_containerStyle.color,
                   borderRadius: mobile_containerStyle.borderRadius,
                 ),
-                padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                padding: const EdgeInsets.only(
+                    left: 16, right: 16, top: 16, bottom: 16),
                 // margin: mobile_containerStyle.margin,
                 width: deviceWidth * mobile_containerStyle.width,
                 // height: deviceHeight * (mobile_containerStyle.height * .9),
@@ -221,11 +242,13 @@ class _mobileState extends State<mobile> {
                               children: [
                                 TextSpan(
                                   text: 'Tech I',
-                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                  style: GoogleFonts.chakraPetch(
+                                      textStyle: textStyles.HeadingI),
                                 ),
                                 TextSpan(
                                   text: ' Love',
-                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                  style: GoogleFonts.chakraPetch(
+                                      textStyle: textStyles.HeadingB),
                                 )
                               ],
                             ),
@@ -257,7 +280,8 @@ class _mobileState extends State<mobile> {
                                   child: SvgPicture.asset(
                                     skills[0],
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -270,7 +294,8 @@ class _mobileState extends State<mobile> {
                                     skills[1],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -283,7 +308,8 @@ class _mobileState extends State<mobile> {
                                     skills[2],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -296,7 +322,8 @@ class _mobileState extends State<mobile> {
                                     skills[3],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -309,7 +336,8 @@ class _mobileState extends State<mobile> {
                                     skills[4],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -322,7 +350,8 @@ class _mobileState extends State<mobile> {
                                     skills[5],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -343,7 +372,8 @@ class _mobileState extends State<mobile> {
                                     skills[6],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -356,7 +386,8 @@ class _mobileState extends State<mobile> {
                                     skills[7],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -369,7 +400,8 @@ class _mobileState extends State<mobile> {
                                     skills[8],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -382,7 +414,8 @@ class _mobileState extends State<mobile> {
                                     skills[9],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -395,7 +428,8 @@ class _mobileState extends State<mobile> {
                                     skills[10],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     //height: deviceWidth * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -408,7 +442,8 @@ class _mobileState extends State<mobile> {
                                     skills[11],
 
                                     // color: textStyles.B.color,
-                                    width: deviceWidth * mobile_SVGContainer.width,
+                                    width:
+                                        deviceWidth * mobile_SVGContainer.width,
                                     // height: devi * mobile_SVGContainer.height,
                                   ),
                                 ),
@@ -463,11 +498,13 @@ class _mobileState extends State<mobile> {
                                   children: [
                                     TextSpan(
                                       text: 'My ',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingB),
                                     ),
                                     TextSpan(
                                       text: 'Projects',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingI),
                                     ),
                                   ],
                                 ),
@@ -476,7 +513,8 @@ class _mobileState extends State<mobile> {
                             Icon(
                               color: IconHClr,
                               Icons.arrow_outward_rounded,
-                              size: deviceWidth * mobile_containerStyle.iconSize,
+                              size:
+                                  deviceWidth * mobile_containerStyle.iconSize,
                             )
                           ],
                         ),
@@ -494,7 +532,10 @@ class _mobileState extends State<mobile> {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
-                              navigateTo(context, toResponsiveLayout_project(initialIndex: index));
+                              navigateTo(
+                                  context,
+                                  toResponsiveLayout_project(
+                                      initialIndex: index));
                             },
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -502,7 +543,8 @@ class _mobileState extends State<mobile> {
                                 Container(
                                   decoration: BoxDecoration(
                                     color: EducationcontainerStyle.color,
-                                    borderRadius: EducationcontainerStyle.borderRadius,
+                                    borderRadius:
+                                        EducationcontainerStyle.borderRadius,
                                   ),
                                   height: mobile_ProjectContainer.height,
                                   width: mobile_ProjectContainer.width,
@@ -510,15 +552,22 @@ class _mobileState extends State<mobile> {
                                   margin: mobile_ProjectContainer.margin,
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(color: textStyles.B.color, Icons.arrow_right_rounded, size: 33),
+                                      Icon(
+                                          color: textStyles.B.color,
+                                          Icons.arrow_right_rounded,
+                                          size: 33),
                                       Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: [
                                           Padding(
-                                            padding: const EdgeInsets.only(bottom: 35),
+                                            padding: const EdgeInsets.only(
+                                                bottom: 35),
                                             child: Icon(
                                               color: textStyles.B.color,
                                               projects[index].icon,
@@ -547,7 +596,9 @@ class _mobileState extends State<mobile> {
                                     // maxFontSize: 15,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B, fontSize: 12),
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: textStyles.P2B,
+                                        fontSize: 12),
                                     // overflow: TextOverflow.ellipsis,
                                     projects[index].title,
                                   ),
@@ -635,11 +686,13 @@ class _mobileState extends State<mobile> {
                                 children: [
                                   TextSpan(
                                     text: 'My ',
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: textStyles.HeadingB),
                                   ),
                                   TextSpan(
                                     text: 'Education',
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: textStyles.HeadingI),
                                   ),
                                 ],
                               ),
@@ -677,7 +730,10 @@ class _mobileState extends State<mobile> {
                             ),
                             indicatorStyle: IndicatorStyle(
                               color: EducationcontainerStyle.color,
-                              iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
+                              iconStyle: IconStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  iconData: Icons.arrow_drop_down_rounded),
                             ),
                             alignment: TimelineAlign.start,
                             endChild: Expanded(
@@ -689,17 +745,20 @@ class _mobileState extends State<mobile> {
                                   margin: EducationcontainerStyle.margin,
                                   decoration: BoxDecoration(
                                     color: EducationcontainerStyle.color,
-                                    borderRadius: EducationcontainerStyle.borderRadius,
+                                    borderRadius:
+                                        EducationcontainerStyle.borderRadius,
                                   ),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           educations[index].institutionName,
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.edu_H_B),
                                         ),
                                       ),
                                       FittedBox(
@@ -708,12 +767,16 @@ class _mobileState extends State<mobile> {
                                           children: [
                                             Text(
                                               educations[index].startTime,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                             const Text(" - "),
                                             Text(
                                               educations[index].endTime,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                           ],
                                         ),
@@ -723,7 +786,9 @@ class _mobileState extends State<mobile> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 educations[index].department,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle:
+                                                        textStyles.edu_P_N),
                                               ),
                                             )
                                           : const Offstage(),
@@ -732,7 +797,9 @@ class _mobileState extends State<mobile> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 educations[index].grade,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle:
+                                                        textStyles.edu_P_N),
                                               ),
                                             )
                                           : const Offstage(),
@@ -822,11 +889,13 @@ class _mobileState extends State<mobile> {
                                 children: [
                                   TextSpan(
                                     text: 'My ',
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: textStyles.HeadingB),
                                   ),
                                   TextSpan(
                                     text: 'Experience',
-                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: textStyles.HeadingI),
                                   )
                                 ],
                               ),
@@ -865,7 +934,10 @@ class _mobileState extends State<mobile> {
                             ),
                             indicatorStyle: IndicatorStyle(
                               color: EducationcontainerStyle.color,
-                              iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_drop_down_rounded),
+                              iconStyle: IconStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  iconData: Icons.arrow_drop_down_rounded),
                             ),
                             alignment: TimelineAlign.start,
                             endChild: Expanded(
@@ -877,44 +949,59 @@ class _mobileState extends State<mobile> {
                                   margin: EducationcontainerStyle.margin,
                                   decoration: BoxDecoration(
                                     color: EducationcontainerStyle.color,
-                                    borderRadius: EducationcontainerStyle.borderRadius,
+                                    borderRadius:
+                                        EducationcontainerStyle.borderRadius,
                                   ),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           Experiences[index].role,
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.edu_H_B),
                                         ),
                                       ),
                                       FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               Experiences[index].startTime,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                             Text(
                                               ' - ',
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                             Text(
                                               Experiences[index].endTime,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                             Text(
                                               ' • ',
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                             Text(
                                               Experiences[index].duration,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.edu_P_L),
                                             ),
                                           ],
                                         ),
@@ -923,7 +1010,8 @@ class _mobileState extends State<mobile> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           Experiences[index].companyName,
-                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
+                                          style: GoogleFonts.chakraPetch(
+                                              textStyle: textStyles.edu_P_N),
                                         ),
                                       )
                                     ],
@@ -971,13 +1059,15 @@ class _mobileState extends State<mobile> {
                                 maxLines: 3,
                                 maxFontSize: 15,
                                 minFontSize: 10,
-                                style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
+                                style: GoogleFonts.chakraPetch(
+                                    textStyle: textStyles.P1),
                               ),
                             ),
                             Icon(
                               color: IconHClr,
                               Icons.arrow_outward_rounded,
-                              size: deviceWidth * mobile_containerStyle.iconSize,
+                              size:
+                                  deviceWidth * mobile_containerStyle.iconSize,
                             ),
                           ],
                         ),
@@ -995,11 +1085,13 @@ class _mobileState extends State<mobile> {
                                   children: [
                                     TextSpan(
                                       text: 'Contact ',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingB),
                                     ),
                                     TextSpan(
                                       text: 'Me',
-                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                      style: GoogleFonts.chakraPetch(
+                                          textStyle: textStyles.HeadingI),
                                     )
                                   ],
                                 ),

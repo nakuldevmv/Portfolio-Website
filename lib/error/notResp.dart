@@ -1,7 +1,7 @@
 // Custom function for URL handling
-import 'package:Nakul_Dev/functions/animated_Grid_Dot.dart';
-import 'package:Nakul_Dev/functions/launch_url.dart';
-import 'package:Nakul_Dev/styles/styles.dart';
+import 'package:nakul_dev/functions/animated_Grid_Dot.dart';
+import 'package:nakul_dev/functions/launch_url.dart';
+import 'package:nakul_dev/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -57,7 +57,8 @@ class NotResp extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         color: ContactMe_containerStyle_tablet.color,
-                        borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                        borderRadius:
+                            ContactMe_containerStyle_tablet.borderRadius,
                       ),
                       padding: ContactMe_containerStyle_tablet.padding,
                       margin: ContactMe_containerStyle_tablet.margin,
@@ -72,7 +73,8 @@ class NotResp extends StatelessWidget {
                           const SizedBox(width: 4), // Add some spacing
                           Text(
                             "LinkedIn", // Corrected spelling
-                            style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                            style: GoogleFonts.chakraPetch(
+                                textStyle: textStyles.P2B),
                           ),
                         ],
                       ),
