@@ -121,7 +121,6 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
 
           return Stack(
             children: [
-              // const AnimatedGridDotBackground(),
               if (_currentPositions.any((pos) => pos != Offset.zero))
                 Positioned.fill(
                   child: IgnorePointer(
