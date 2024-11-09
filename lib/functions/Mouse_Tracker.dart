@@ -121,6 +121,7 @@ class _CursorTrackerState extends State<CursorTracker> with SingleTickerProvider
 
           return Stack(
             children: [
+              //AnimatedGridDotBackground() Widget should be place here - i removed it because of the performance issue for some users
               if (_currentPositions.any((pos) => pos != Offset.zero))
                 Positioned.fill(
                   child: IgnorePointer(
