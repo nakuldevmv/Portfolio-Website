@@ -28,6 +28,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+# test
+flutter_web:
+  optimization: true
+  source_maps: false
 
 flutter:
   uses-material-design: true
