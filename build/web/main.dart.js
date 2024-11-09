@@ -70710,7 +70710,7 @@ q.NB$=p
 q.BW$=new A.Yp(A.aQ(t.lZ))
 p=t.N
 o=$.aBP()
-r=new A.Bx("https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=7msW9bJeQdpwarKYuDzB",new A.Z4(q,r,A.v(p,p)),o,s)
+r=new A.Bx("https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=DUBvSrkbVmC82Xow5kfB",new A.Z4(q,r,A.v(p,p)),o,s)
 r.db=B.Os
 r.x=1/0
 r.z=19

@@ -26,7 +26,8 @@ class _RandomLocationMapState extends State<RandomLocationMap> {
       children: [
         TileLayer(
           tileProvider: CancellableNetworkTileProvider(),
-          urlTemplate: 'https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=DUBvSrkbVmC82Xow5kfB',
+          urlTemplate:
+              'https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=DUBvSrkbVmC82Xow5kfB',
         ),
         MarkerLayer(
           markers: [
