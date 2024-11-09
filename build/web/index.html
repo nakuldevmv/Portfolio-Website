@@ -2,158 +2,229 @@
 <html>
 
 <head>
-
   <base href="/">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description"
     content="Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.">
 
   <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Nakul Dev">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
   <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
 
-  <!-- ...... -->
-  <script id="splash-screen-script">
-    function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
-      document.body.style.background = "transparent";
-    }
-  </script>
-  <!-- ...... -->
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* background-color: #212121; */
+    }
+
+    .card {
+      --bg-color: #212121;
+      background-color: var(--bg-color);
+      width: 100vw;
+      /* Full viewport width */
+      height: 100vh;
+      /* Full viewport height */
+      padding: 2rem 3rem;
+      /* border-radius: 1.25rem; */
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
       box-sizing: border-box;
+
+      /* Centering content */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    body {
+
+    .card.hide {
+      opacity: 0;
+      transform: scale(1.1);
+      pointer-events: none;
+    }
+
+    .loader {
+      color: rgb(124, 124, 124);
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+    }
+
+    .words {
       overflow: hidden;
+      height: 40px;
+      position: relative;
     }
 
-    #loading {
+    .words::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(var(--bg-color) 10%,
+          transparent 30%,
+          transparent 70%,
+          var(--bg-color) 90%);
+      pointer-events: none;
+    }
+
+    @media screen and (max-width: 700px) {
+      .words::after {
+        background: none;
+      }
+    }
+
+    .word {
+      display: block;
+      height: 100%;
+      padding-left: 6px;
+      color: #956afa;
+      /* change here */
+      overflow: hidden;
+      animation: spin_4991 10s infinite;
+      line-height: 40px;
+    }
+
+    .loader p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #flutter-container {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: #000;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.5s ease;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease-in;
     }
 
-    .loading-text {
-      text-align: center;
-      width: 100%;
-      height: 100px;
-      line-height: 100px;
+    #flutter-container.show {
+      opacity: 1;
     }
 
-    .loading-text-words {
-      display: inline-block;
-      margin: 0 5px;
-      color: #fff;
-      font-family:  sans-serif;
-    }
-
-    /* Animation styles remain the same as in previous example */
-    @keyframes blur-text {
+    @keyframes spin_4991 {
       0% {
-        filter: blur(0px);
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+      }
+
+      10% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+
+      20% {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+      }
+
+      30% {
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+      }
+
+      40% {
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
+      }
+
+      50% {
+        -webkit-transform: translateY(-500%);
+        transform: translateY(-500%);
+      }
+
+      60% {
+        -webkit-transform: translateY(-600%);
+        transform: translateY(-600%);
+      }
+
+      70% {
+        -webkit-transform: translateY(-700%);
+        transform: translateY(-700%);
+      }
+
+      80% {
+        -webkit-transform: translateY(-800%);
+        transform: translateY(-800%);
+      }
+
+      90% {
+        -webkit-transform: translateY(-900%);
+        transform: translateY(-900%);
       }
 
       100% {
-        filter: blur(4px);
-      }
-    }
-
-    /* Individual letter animations */
-    .loading-text-words:nth-child(1) {
-      animation: blur-text 1.5s 0s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(2) {
-      animation: blur-text 1.5s 0.2s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(3) {
-      animation: blur-text 1.5s 0.4s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(4) {
-      animation: blur-text 1.5s 0.6s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(5) {
-      animation: blur-text 1.5s 0.8s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(6) {
-      animation: blur-text 1.5s 1s infinite linear alternate;
-    }
-
-    .loading-text-words:nth-child(7) {
-      animation: blur-text 1.5s 1.2s infinite linear alternate;
-    }
-
-    /* Responsive and accessibility styles */
-    @media (max-width: 600px) {
-      .loading-text {
-        font-size: 24px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .loading-text-words {
-        animation: none;
+        -webkit-transform: translateY(-1000%);
+        transform: translateY(-1000%);
       }
     }
   </style>
 </head>
 
 <body>
-  <div id="loading">
-    <div class="loading-text">
-      <span class="loading-text-words">L</span>
-      <span class="loading-text-words">O</span>
-      <span class="loading-text-words">A</span>
-      <span class="loading-text-words">D</span>
-      <span class="loading-text-words">I</span>
-      <span class="loading-text-words">N</span>
-      <span class="loading-text-words">G</span>
+  <div id="flutter-container"></div>
+  <div class="card">
+    <div class="loader">
+      <p aria-live="polite">loading</p>
+      <div class="words">
+        <span class="word">Widgets</span>
+        <span class="word">UI Components</span>
+        <span class="word">Animations</span>
+        <span class="word">Assets</span>
+        <span class="word">Navigation</span>
+        <span class="word">Portfolio</span>
+        <span class="word">Projects</span>
+        <span class="word">Skills</span>
+        <span class="word">Experience</span>
+        <span class="word">Education</span>
+        <span class="word">Widgets</span>
+      </div>
     </div>
   </div>
-  <div id="flutter-app"></div>
 
+
+
+
+  <script src="flutter_bootstrap.js" async></script>
   <script>
-    // Wait for Flutter to initialize
+    // Handle smooth transition when Flutter app is ready
     window.addEventListener('flutter-first-frame', function () {
-      // Remove loading screen when Flutter app is ready
-      const loading = document.getElementById('loading');
-      if (loading) {
-        loading.style.opacity = '0';
-        setTimeout(() => {
-          loading.style.display = 'none';
-        }, 500);
-      }
+      const card = document.querySelector('.card');
+      const flutterContainer = document.querySelector('#flutter-container');
+
+      // Add hide class to card for fade-out effect
+      card.classList.add('hide');
+
+      // Show Flutter app with fade-in effect
+      flutterContainer.classList.add('show');
+
+      // Optional: Remove the loader from DOM after transition
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 1000); // Wait for transition to complete
     });
   </script>
-  <script src="flutter_bootstrap.js" async></script>
-
 </body>
 
 </html>
