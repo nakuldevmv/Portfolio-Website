@@ -1,6 +1,5 @@
 // Custom function for URL handling
 import 'package:nakul_dev/functions/Mouse_Tracker.dart';
-import 'package:nakul_dev/functions/animated_Grid_Dot.dart';
 import 'package:nakul_dev/functions/animated_blob.dart';
 import 'package:nakul_dev/functions/launch_url.dart';
 import 'package:nakul_dev/styles/styles.dart';
