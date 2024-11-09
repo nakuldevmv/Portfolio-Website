@@ -8,6 +8,9 @@
   <meta name="description"
     content="Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions.">
 
+  <!-- Viewport meta tag for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -27,30 +30,26 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      /* background-color: #212121; */
     }
 
     .card {
       --bg-color: #212121;
       background-color: var(--bg-color);
       width: 100vw;
-      /* Full viewport width */
-      height: 100vh;
-      /* Full viewport height */
+      min-height: 100vh;
+      /* Keep the minimum height */
+      max-height: 100vh;
+      /* Prevent it from exceeding viewport height */
       padding: 2rem 3rem;
-      /* border-radius: 1.25rem; */
       position: relative;
       z-index: 1;
       opacity: 1;
       transition: opacity 0.2s ease-out, transform 0.2s ease-out;
       box-sizing: border-box;
-
-      /* Centering content */
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
 
     .card.hide {
       opacity: 0;
@@ -87,8 +86,22 @@
     }
 
     @media screen and (max-width: 700px) {
+      .loader {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+        padding: 1rem;
+        /* Adjust padding as necessary */
+      }
+
+      .words {
+        height: 40px;
+        /* Adjust height for the words */
+      }
+
       .words::after {
+       
         background: none;
+       
       }
     }
 
@@ -97,7 +110,6 @@
       height: 100%;
       padding-left: 6px;
       color: #956afa;
-      /* change here */
       overflow: hidden;
       animation: spin_4991 10s infinite;
       line-height: 40px;
@@ -125,57 +137,46 @@
 
     @keyframes spin_4991 {
       0% {
-        -webkit-transform: translateY(0%);
         transform: translateY(0%);
       }
 
       10% {
-        -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
       }
 
       20% {
-        -webkit-transform: translateY(-200%);
         transform: translateY(-200%);
       }
 
       30% {
-        -webkit-transform: translateY(-300%);
         transform: translateY(-300%);
       }
 
       40% {
-        -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
       }
 
       50% {
-        -webkit-transform: translateY(-500%);
         transform: translateY(-500%);
       }
 
       60% {
-        -webkit-transform: translateY(-600%);
         transform: translateY(-600%);
       }
 
       70% {
-        -webkit-transform: translateY(-700%);
         transform: translateY(-700%);
       }
 
       80% {
-        -webkit-transform: translateY(-800%);
         transform: translateY(-800%);
       }
 
       90% {
-        -webkit-transform: translateY(-900%);
         transform: translateY(-900%);
       }
 
       100% {
-        -webkit-transform: translateY(-1000%);
         transform: translateY(-1000%);
       }
     }
@@ -203,13 +204,11 @@
     </div>
   </div>
 
-
-
-
   <script src="flutter_bootstrap.js" async></script>
   <script>
     // Handle smooth transition when Flutter app is ready
     window.addEventListener('flutter-first-frame', function () {
+      console.log('Flutter first frame event fired'); // Debugging log
       const card = document.querySelector('.card');
       const flutterContainer = document.querySelector('#flutter-container');
 
