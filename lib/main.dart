@@ -1,3 +1,4 @@
+import 'package:nakul_dev/error/notResp.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +23,8 @@ class _MyAppState extends State<MyApp> {
       ),
       debugShowCheckedModeBanner: false,
 
-      home: const toResponsiveLayout(), //Website Enabled
-      // home:  NotResp(), // Website Disabled
+      // home: const toResponsiveLayout(), //Website Enabled
+      home: const NotResp(), // Website Disabled
     );
   }
 }

@@ -10,28 +10,17 @@ Color GlobalColor = const Color.fromARGB(127, 37, 37, 37);
 Color SecondaryColor = const Color.fromARGB(255, 37, 37, 37);
 Color ResumeColor = const Color.fromARGB(127, 183, 183, 183);
 Color IconHClr = const Color.fromARGB(134, 0, 255, 213);
-Color FontColor = Colors.white70;
+Color FontColor = const Color.fromARGB(255, 246, 246, 246);
 Color FontBg = const Color.fromARGB(255, 136, 136, 136);
 
-BorderRadius GlobalBorderRadius =
-    BorderRadius.all(Radius.circular(rad as double));
-BorderRadius projectTopLBottomL = BorderRadius.only(
-    topLeft: Radius.circular(rad as double),
-    bottomLeft: Radius.circular(rad as double));
-BorderRadius projectTopRBottomR = BorderRadius.only(
-    topRight: Radius.circular(rad as double),
-    bottomRight: Radius.circular(rad as double));
-BorderRadius RadUp = BorderRadius.only(
-    topLeft: Radius.circular(rad as double),
-    topRight: Radius.circular(rad as double));
-BorderRadius RadBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(rad as double),
-    bottomRight: Radius.circular(rad as double));
-BorderRadius SecondaryBorderRadius =
-    BorderRadius.all(Radius.circular(Srad as double));
+BorderRadius GlobalBorderRadius = BorderRadius.all(Radius.circular(rad as double));
+BorderRadius projectTopLBottomL = BorderRadius.only(topLeft: Radius.circular(rad as double), bottomLeft: Radius.circular(rad as double));
+BorderRadius projectTopRBottomR = BorderRadius.only(topRight: Radius.circular(rad as double), bottomRight: Radius.circular(rad as double));
+BorderRadius RadUp = BorderRadius.only(topLeft: Radius.circular(rad as double), topRight: Radius.circular(rad as double));
+BorderRadius RadBottom = BorderRadius.only(bottomLeft: Radius.circular(rad as double), bottomRight: Radius.circular(rad as double));
+BorderRadius SecondaryBorderRadius = BorderRadius.all(Radius.circular(Srad as double));
 BoxShadow GlobalShadow = BoxShadow(
-  color: const Color.fromARGB(255, 0, 0, 0)
-      .withOpacity(0.5), // Shadow color with some transparency
+  color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5), // Shadow color with some transparency
   spreadRadius: 1, // How far the shadow spreads
   blurRadius: 5, // Smoothness of the shadow
   offset: const Offset(2, 2), // Horizontal and vertical offset
@@ -83,8 +72,7 @@ class rotating_container extends StatelessWidget {
           children: [
             Text(
               '$text ',
-              style: GoogleFonts.chakraPetch(
-                  textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
+              style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB, fontSize: kDefaultFontSize),
             ),
             Image.asset(
               emoji,
@@ -107,8 +95,7 @@ class navigation_containerStyle {
 }
 
 class mobile_containerStyle {
-  static EdgeInsets margin =
-      const EdgeInsets.only(top: 16, left: 16, right: 16);
+  static EdgeInsets margin = const EdgeInsets.only(top: 16, left: 16, right: 16);
   static BorderRadius borderRadius = GlobalBorderRadius;
   static EdgeInsets padding = const EdgeInsets.all(16);
   static Color color = GlobalColor;
@@ -141,8 +128,7 @@ class tablet_containerStyle {
   // static  EdgeInsets margin = EdgeInsets.symmetric(vertical: 16, horizontal: 16);
 
   static EdgeInsets margin = const EdgeInsets.only(top: 16, left: 16);
-  static EdgeInsets marginCol2 =
-      const EdgeInsets.only(top: 16, left: 16, right: 16);
+  static EdgeInsets marginCol2 = const EdgeInsets.only(top: 16, left: 16, right: 16);
 
   static BorderRadius borderRadius = GlobalBorderRadius;
   static EdgeInsets padding = const EdgeInsets.all(16);
@@ -172,8 +158,7 @@ class containerStyle {
   static BorderRadius borderRadiusBottom = RadBottom;
   static BorderRadius borderRadiusRadup = RadUp;
   static EdgeInsets padding = const EdgeInsets.all(16);
-  static EdgeInsets paddingNew =
-      const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
+  static EdgeInsets paddingNew = const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 0.5);
   static EdgeInsets paddingNewHeading = const EdgeInsets.only(
     top: 16,
     left: 16,
@@ -186,8 +171,7 @@ class containerStyle {
 
   // static  double width = 0.2;
   //mobile property
-  static EdgeInsets margin_mobile =
-      const EdgeInsets.only(top: 10, left: 10, right: 5);
+  static EdgeInsets margin_mobile = const EdgeInsets.only(top: 10, left: 10, right: 5);
   static EdgeInsets padding_mobile = const EdgeInsets.all(12);
   static double width_mobile = 0.455;
   static double height_mobile = 0.25;
@@ -292,8 +276,7 @@ class MyProject_containerStyle {
 }
 
 class EducationcontainerStyle {
-  static EdgeInsets margin =
-      const EdgeInsets.only(bottom: 10, left: 10, right: 10);
+  static EdgeInsets margin = const EdgeInsets.only(bottom: 10, left: 10, right: 10);
   static BorderRadius borderRadius = SecondaryBorderRadius;
   static EdgeInsets padding = const EdgeInsets.all(10);
   static Color color = SecondaryColor;

@@ -1,4 +1,3 @@
-import 'package:nakul_dev/functions/animated_Grid_Dot.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:math' as math;
@@ -12,26 +11,46 @@ class CursorTracker extends StatefulWidget {
   const CursorTracker({
     super.key,
     required this.child,
-    this.delayFactors = const [0.1, 0.2, 0.4],
-    this.circleSizes = const [200, 64, 15], // Sizes for circles
+    this.delayFactors = const [
+      0.1,
+      0.2,
+      0.4
+    ],
+    this.circleSizes = const [
+      170,
+      64,
+      15
+    ], // Sizes for circles
     this.gradientDuration = const Duration(seconds: 30), // Default duration
-  }) : assert(delayFactors.length == circleSizes.length,
-            'Mismatch in delay factors and circle sizes.');
+  }) : assert(delayFactors.length == circleSizes.length, 'Mismatch in delay factors and circle sizes.');
 
   @override
   State<CursorTracker> createState() => _CursorTrackerState();
 }
 
-class _CursorTrackerState extends State<CursorTracker>
-    with SingleTickerProviderStateMixin {
+class _CursorTrackerState extends State<CursorTracker> with SingleTickerProviderStateMixin {
   List<Offset> _currentPositions = [];
   Offset _targetPosition = Offset.zero;
   late AnimationController _controller;
   late Animation<double> _rotationAnimation;
+  // final List<Color> _gradientColors = [
+  //   Color.fromARGB(
+  //     255,
+  //     Random().nextInt(256),
+  //     Random().nextInt(256),
+  //     Random().nextInt(256),
+  //   ),
+  //   Color.fromARGB(
+  //     255,
+  //     Random().nextInt(256),
+  //     Random().nextInt(256),
+  //     Random().nextInt(256),
+  //   ),
+  // ];
 
   final List<Color> _gradientColors = [
-    const Color(0xFF3EFFE8),
-    const Color(0xFF8C0FEE),
+    const Color.fromARGB(255, 0, 255, 225),
+    const Color.fromARGB(255, 225, 134, 255),
   ];
 
   @override
@@ -39,8 +58,7 @@ class _CursorTrackerState extends State<CursorTracker>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: widget
-          .gradientDuration, // Use the gradient duration from the attribute
+      duration: widget.gradientDuration, // Use the gradient duration from the attribute
     )..repeat();
 
     // Rotation animation from 0 to 2 * pi (full rotation)
@@ -83,8 +101,7 @@ class _CursorTrackerState extends State<CursorTracker>
     if (index >= _gradientColors.length - 1) {
       return _gradientColors.last;
     }
-    return Color.lerp(
-        _gradientColors[index], _gradientColors[index + 1], localT)!;
+    return Color.lerp(_gradientColors[index], _gradientColors[index + 1], localT)!;
   }
 
   @override
@@ -100,12 +117,11 @@ class _CursorTrackerState extends State<CursorTracker>
             _currentPositions[i] = _interpolatePosition(t, i);
           }
 
-          double animationProgress = (_controller.value * 9) %
-              9; // Animation progress for the gradient
+          double animationProgress = (_controller.value * 9) % 9; // Animation progress for the gradient
 
           return Stack(
             children: [
-              const AnimatedGridDotBackground(),
+              // const AnimatedGridDotBackground(),
               if (_currentPositions.any((pos) => pos != Offset.zero))
                 Positioned.fill(
                   child: IgnorePointer(
@@ -113,10 +129,8 @@ class _CursorTrackerState extends State<CursorTracker>
                       children: [
                         // Big circle with animated gradient and slow rotation
                         Positioned(
-                          left: _currentPositions[0].dx -
-                              widget.circleSizes[0] / 2,
-                          top: _currentPositions[0].dy -
-                              widget.circleSizes[0] / 2,
+                          left: _currentPositions[0].dx - widget.circleSizes[0] / 2,
+                          top: _currentPositions[0].dy - widget.circleSizes[0] / 2,
                           child: Transform.rotate(
                             angle: _rotationAnimation.value,
                             child: Container(
@@ -127,18 +141,14 @@ class _CursorTrackerState extends State<CursorTracker>
                                 gradient: LinearGradient(
                                   colors: [
                                     _getInterpolatedColor(animationProgress),
-                                    _getInterpolatedColor(
-                                        (animationProgress + 1) % 9),
+                                    _getInterpolatedColor((animationProgress + 1) % 9),
                                   ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: _getInterpolatedColor(
-                                            animationProgress)
-                                        .withOpacity(
-                                            0.5), // Shadow color based on the gradient
+                                    color: _getInterpolatedColor(animationProgress).withOpacity(0.5), // Shadow color based on the gradient
                                     blurRadius: 60,
                                     spreadRadius: 10,
                                   ),
@@ -167,7 +177,7 @@ class _CursorTrackerState extends State<CursorTracker>
                     width: widget.circleSizes[1],
                     height: widget.circleSizes[1],
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black),
+                      border: Border.all(color: Colors.black45),
                       shape: BoxShape.circle,
                     ),
                   ),

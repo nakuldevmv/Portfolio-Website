@@ -32,8 +32,7 @@ class _desktopState extends State<desktop> {
   Widget build(BuildContext context) {
     double isdeviceWidth = MediaQuery.of(context).size.width;
     // double isdeviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth =
-        isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
+    double deviceWidth = isdeviceWidth < 1315 ? (MediaQuery.of(context).size.width + 194) : 1536;
     double deviceHeight = 729.5;
     // print(isdeviceHeight);
 
@@ -50,9 +49,7 @@ class _desktopState extends State<desktop> {
                 padding: const EdgeInsets.all(16),
                 child: Center(
                   child: SizedBox(
-                    width: deviceWidth < 1365
-                        ? deviceWidth * 0.86
-                        : deviceWidth * 0.84,
+                    width: deviceWidth < 1365 ? deviceWidth * 0.86 : deviceWidth * 0.84,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -82,16 +79,12 @@ class _desktopState extends State<desktop> {
                                     // margin: containerStyle.margin,
                                     width: deviceWidth * containerStyle.width,
                                     child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
                                         Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.end,
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
                                             Icon(
                                               color: textStyles.B.color,
@@ -107,38 +100,23 @@ class _desktopState extends State<desktop> {
                                               children: [
                                                 TextSpan(
                                                   text: "Building the",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.B),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                 ),
                                                 TextSpan(
                                                   text: " Future",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.I),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                                 ),
                                                 TextSpan(
                                                   text: ",\nOne Line of ",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.B),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                 ),
                                                 TextSpan(
                                                   text: "Code",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.I),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                                 ),
                                                 TextSpan(
                                                   text: "\nat a Time",
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.B),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                 ),
                                               ],
                                             ),
@@ -158,8 +136,7 @@ class _desktopState extends State<desktop> {
                                       // ),
                                       decoration: BoxDecoration(
                                         color: containerStyle.color,
-                                        borderRadius:
-                                            containerStyle.borderRadius,
+                                        borderRadius: containerStyle.borderRadius,
                                       ),
                                       padding: containerStyle.padding,
                                       // height: 248.3,
@@ -167,10 +144,8 @@ class _desktopState extends State<desktop> {
                                       // margin: containerStyle.margin,
                                       width: deviceWidth * containerStyle.width,
                                       child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
                                         children: [
                                           Icon(
                                             color: textStyles.B.color,
@@ -184,59 +159,31 @@ class _desktopState extends State<desktop> {
                                                 children: [
                                                   TextSpan(
                                                     text: "\nFlutter",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.I),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.I),
                                                   ),
                                                   TextSpan(
                                                     text: " Developer     ",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.B),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B),
                                                   ),
                                                   TextSpan(
                                                     text: "\nB.E ",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.B,
-                                                            fontSize: 20),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 20),
                                                   ),
                                                   TextSpan(
                                                     text: "CSE",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.I,
-                                                            fontSize: 20),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.I, fontSize: 20),
                                                   ),
                                                   TextSpan(
                                                     text: " Student",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.B,
-                                                            fontSize: 20),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 20),
                                                   ),
                                                   TextSpan(
                                                     text: "\nKerala",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.I,
-                                                            fontSize:
-                                                                kDefaultFontSize),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.I, fontSize: kDefaultFontSize),
                                                   ),
                                                   TextSpan(
                                                     text: ", India",
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles.B,
-                                                            fontSize:
-                                                                kDefaultFontSize),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: kDefaultFontSize),
                                                   ),
                                                 ],
                                               ),
@@ -254,8 +201,7 @@ class _desktopState extends State<desktop> {
                               height: 317.0,
                               child: GestureDetector(
                                 onTap: () {
-                                  navigateTo(context,
-                                      const toResponsiveLayout_AboutMe());
+                                  navigateTo(context, const toResponsiveLayout_AboutMe());
                                 },
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
@@ -265,23 +211,18 @@ class _desktopState extends State<desktop> {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         color: containerStyle.color,
-                                        borderRadius:
-                                            containerStyle.borderRadius,
+                                        borderRadius: containerStyle.borderRadius,
                                       ),
                                       padding: containerStyle.padding,
                                       // margin: containerStyle.margin,
                                       width: deviceWidth * containerStyle.width,
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Expanded(
                                                 child: AutoSizeText.rich(
@@ -292,19 +233,11 @@ class _desktopState extends State<desktop> {
                                                     children: [
                                                       TextSpan(
                                                         text: 'About ',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingB),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                       ),
                                                       TextSpan(
                                                         text: 'Me',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingI),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                       )
                                                     ],
                                                   ),
@@ -321,8 +254,7 @@ class _desktopState extends State<desktop> {
                                             minFontSize: 10,
                                             maxFontSize: 15,
                                             maxLines: 10,
-                                            style: GoogleFonts.chakraPetch(
-                                                textStyle: textStyles.P1),
+                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
                                             "Computer engineer with a strong foundation in problem-solving and software development. Committed to building efficient, reliable solutions and continuously expanding my skills to stay current with evolving technologies.",
                                           ),
                                         ],
@@ -340,8 +272,7 @@ class _desktopState extends State<desktop> {
                               child: GestureDetector(
                                 onTap: () {
                                   downloadResume(rurl);
-                                  notifySnackBar(context,
-                                      "My Resume Will Be Downloaded Shortly");
+                                  notifySnackBar(context, "My Resume Will Be Downloaded Shortly");
                                 },
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
@@ -351,17 +282,14 @@ class _desktopState extends State<desktop> {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         color: containerStyle.colorR,
-                                        borderRadius:
-                                            containerStyle.borderRadius,
+                                        borderRadius: containerStyle.borderRadius,
                                       ),
                                       padding: containerStyle.padding,
                                       // margin: containerStyle.margin,
                                       width: deviceWidth * containerStyle.width,
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: [
                                           Icon(
                                             color: textStyles.B.color,
@@ -379,20 +307,12 @@ class _desktopState extends State<desktop> {
                                                     children: [
                                                       TextSpan(
                                                         text: "My ",
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingB,
-                                                                color: Colors
-                                                                    .black),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB, color: Colors.black),
                                                       ),
                                                       TextSpan(
                                                         text: "Resume",
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                          textStyle: textStyles
-                                                              .HeadingI,
+                                                        style: GoogleFonts.chakraPetch(
+                                                          textStyle: textStyles.HeadingI,
                                                           color: Colors.black,
                                                           // backgroundColor: const Color.fromARGB(255, 119, 119, 119)
                                                         ),
@@ -435,14 +355,8 @@ class _desktopState extends State<desktop> {
                                       fit: BoxFit.scaleDown,
                                       child: RichText(
                                           text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Nakul",
-                                            style: GoogleFonts.chakraPetch(
-                                                textStyle: textStyles.Name1)),
-                                        TextSpan(
-                                            text: "</Dev>",
-                                            style: GoogleFonts.chakraPetch(
-                                                textStyle: textStyles.Name2)),
+                                        TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1)),
+                                        TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2)),
                                       ])),
                                     ),
                                   ),
@@ -490,8 +404,7 @@ class _desktopState extends State<desktop> {
                               height: 240.5,
                               child: GestureDetector(
                                 onTap: () {
-                                  navigateTo(context,
-                                      const toResponsiveLayout_contactMe());
+                                  navigateTo(context, const toResponsiveLayout_contactMe());
                                 },
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
@@ -501,21 +414,17 @@ class _desktopState extends State<desktop> {
                                     child: Container(
                                       decoration: BoxDecoration(
                                         color: containerStyle.color,
-                                        borderRadius:
-                                            containerStyle.borderRadius,
+                                        borderRadius: containerStyle.borderRadius,
                                       ),
                                       padding: containerStyle.padding,
                                       // margin: containerStyle.margin,
                                       width: deviceWidth * containerStyle.width,
                                       child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
                                         children: [
                                           Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               Expanded(
                                                 child: AutoSizeText(
@@ -523,10 +432,7 @@ class _desktopState extends State<desktop> {
                                                   maxLines: 3,
                                                   maxFontSize: 15,
                                                   minFontSize: 10,
-                                                  style:
-                                                      GoogleFonts.chakraPetch(
-                                                          textStyle:
-                                                              textStyles.P1),
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
                                                 ),
                                               ),
                                               Icon(
@@ -547,19 +453,11 @@ class _desktopState extends State<desktop> {
                                                     children: [
                                                       TextSpan(
                                                         text: 'Contact ',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingB),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                       ),
                                                       TextSpan(
                                                         text: 'Me',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingI),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                       )
                                                     ],
                                                   ),
@@ -595,10 +493,8 @@ class _desktopState extends State<desktop> {
                                   // margin: containerStyle.margin,
                                   width: deviceWidth * containerStyle.width,
                                   child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       GestureDetector(
                                         onTap: () {
@@ -611,10 +507,8 @@ class _desktopState extends State<desktop> {
                                         child: MouseRegion(
                                           cursor: SystemMouseCursors.click,
                                           child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Expanded(
                                                 child: AutoSizeText.rich(
@@ -625,19 +519,11 @@ class _desktopState extends State<desktop> {
                                                     children: [
                                                       TextSpan(
                                                         text: 'My ',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingB),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                       ),
                                                       TextSpan(
                                                         text: 'Projects',
-                                                        style: GoogleFonts
-                                                            .chakraPetch(
-                                                                textStyle:
-                                                                    textStyles
-                                                                        .HeadingI),
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                       )
                                                     ],
                                                   ),
@@ -660,90 +546,46 @@ class _desktopState extends State<desktop> {
                                       ////
                                       Expanded(
                                           child: ScrollConfiguration(
-                                        behavior: const ScrollBehavior()
-                                            .copyWith(scrollbars: false),
+                                        behavior: const ScrollBehavior().copyWith(scrollbars: false),
                                         child: ListView.builder(
                                             itemCount: projects.length,
                                             itemBuilder: (context, index) {
                                               return GestureDetector(
                                                 onTap: () {
-                                                  navigateTo(
-                                                      context,
-                                                      toResponsiveLayout_project(
-                                                          initialIndex: index));
+                                                  navigateTo(context, toResponsiveLayout_project(initialIndex: index));
                                                 },
                                                 child: MouseRegion(
-                                                  cursor:
-                                                      SystemMouseCursors.click,
+                                                  cursor: SystemMouseCursors.click,
                                                   child: Container(
                                                     decoration: BoxDecoration(
-                                                      color:
-                                                          ProjectcontainerStyle
-                                                              .color,
-                                                      borderRadius:
-                                                          EducationcontainerStyle
-                                                              .borderRadius,
+                                                      color: ProjectcontainerStyle.color,
+                                                      borderRadius: EducationcontainerStyle.borderRadius,
                                                     ),
-                                                    padding:
-                                                        ProjectcontainerStyle
-                                                            .padding,
-                                                    margin:
-                                                        ProjectcontainerStyle
-                                                            .margin,
+                                                    padding: ProjectcontainerStyle.padding,
+                                                    margin: ProjectcontainerStyle.margin,
                                                     child: Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         Row(
                                                           children: [
                                                             Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                      .only(
-                                                                      right:
-                                                                          8.0),
+                                                              padding: const EdgeInsets.only(right: 8.0),
                                                               child: Icon(
-                                                                color:
-                                                                    textStyles.B
-                                                                        .color,
-                                                                projects[index]
-                                                                    .icon,
-                                                                size:
-                                                                    deviceWidth *
-                                                                        0.014,
+                                                                color: textStyles.B.color,
+                                                                projects[index].icon,
+                                                                size: deviceWidth * 0.014,
                                                               ),
                                                             ),
                                                             SizedBox(
-                                                              width:
-                                                                  deviceWidth *
-                                                                      0.115,
-                                                              child: AutoSizeText(
-                                                                  minFontSize:
-                                                                      5,
-                                                                  maxFontSize:
-                                                                      15,
-                                                                  maxLines: 1,
-                                                                  style: GoogleFonts.chakraPetch(
-                                                                      textStyle:
-                                                                          textStyles
-                                                                              .P2B),
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  projects[
-                                                                          index]
-                                                                      .title),
+                                                              width: deviceWidth * 0.115,
+                                                              child: AutoSizeText(minFontSize: 5, maxFontSize: 15, maxLines: 1, style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B), overflow: TextOverflow.ellipsis, projects[index].title),
                                                             ),
                                                           ],
                                                         ),
                                                         Icon(
-                                                          color: textStyles
-                                                              .B.color,
-                                                          Icons
-                                                              .arrow_forward_ios_rounded,
-                                                          size: deviceWidth *
-                                                              0.014,
+                                                          color: textStyles.B.color,
+                                                          Icons.arrow_forward_ios_rounded,
+                                                          size: deviceWidth * 0.014,
                                                         )
                                                       ],
                                                     ),
@@ -774,16 +616,12 @@ class _desktopState extends State<desktop> {
                                   // margin: containerStyle.margin,
                                   width: deviceWidth * containerStyle.width,
                                   child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Expanded(
                                             child: AutoSizeText.rich(
@@ -794,19 +632,11 @@ class _desktopState extends State<desktop> {
                                                 children: [
                                                   TextSpan(
                                                     text: 'Tech I',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingI),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                   ),
                                                   TextSpan(
                                                     text: ' Love',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingB),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                   )
                                                 ],
                                               ),
@@ -828,11 +658,9 @@ class _desktopState extends State<desktop> {
                                       Expanded(
                                         flex: 2,
                                         child: ScrollConfiguration(
-                                          behavior: const ScrollBehavior()
-                                              .copyWith(scrollbars: false),
+                                          behavior: const ScrollBehavior().copyWith(scrollbars: false),
                                           child: GridView.builder(
-                                            gridDelegate:
-                                                const SliverGridDelegateWithFixedCrossAxisCount(
+                                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                               crossAxisCount: 4,
                                               // crossAxisSpacing: 3,
                                               // mainAxisSpacing: 3,
@@ -842,8 +670,7 @@ class _desktopState extends State<desktop> {
                                               return Container(
                                                 decoration: BoxDecoration(
                                                   // color: containerStyle.color,
-                                                  borderRadius: containerStyle
-                                                      .borderRadius,
+                                                  borderRadius: containerStyle.borderRadius,
                                                 ),
                                                 child: Center(
                                                   child: SvgPicture.asset(
@@ -886,10 +713,8 @@ class _desktopState extends State<desktop> {
                                   child: Column(
                                     children: [
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Expanded(
                                             child: AutoSizeText.rich(
@@ -900,19 +725,11 @@ class _desktopState extends State<desktop> {
                                                 children: [
                                                   TextSpan(
                                                     text: 'My ',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingB),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                   ),
                                                   TextSpan(
                                                     text: 'Experience',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingI),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                   )
                                                 ],
                                               ),
@@ -933,69 +750,43 @@ class _desktopState extends State<desktop> {
                                       ////
                                       Expanded(
                                         child: ScrollConfiguration(
-                                          behavior: const ScrollBehavior()
-                                              .copyWith(scrollbars: false),
+                                          behavior: const ScrollBehavior().copyWith(scrollbars: false),
                                           child: ListView.builder(
                                             itemCount: Experiences.length,
                                             itemBuilder: (context, index) {
                                               return TimelineTile(
-                                                isFirst:
-                                                    Experiences[index].start,
+                                                isFirst: Experiences[index].start,
                                                 isLast: Experiences[index].end,
                                                 afterLineStyle: LineStyle(
                                                   thickness: 2,
-                                                  color: EducationcontainerStyle
-                                                      .color,
+                                                  color: EducationcontainerStyle.color,
                                                 ),
                                                 beforeLineStyle: LineStyle(
                                                   thickness: 2,
-                                                  color: EducationcontainerStyle
-                                                      .color,
+                                                  color: EducationcontainerStyle.color,
                                                 ),
                                                 indicatorStyle: IndicatorStyle(
-                                                  color: EducationcontainerStyle
-                                                      .color,
-                                                  iconStyle: IconStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 25,
-                                                      iconData: Icons
-                                                          .arrow_right_rounded),
+                                                  color: EducationcontainerStyle.color,
+                                                  iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
                                                 ),
                                                 alignment: TimelineAlign.start,
                                                 endChild: Expanded(
                                                   child: Container(
-                                                    padding:
-                                                        EducationcontainerStyle
-                                                            .padding,
-                                                    margin:
-                                                        EducationcontainerStyle
-                                                            .margin,
+                                                    padding: EducationcontainerStyle.padding,
+                                                    margin: EducationcontainerStyle.margin,
                                                     decoration: BoxDecoration(
-                                                      color:
-                                                          EducationcontainerStyle
-                                                              .color,
-                                                      borderRadius:
-                                                          EducationcontainerStyle
-                                                              .borderRadius,
+                                                      color: EducationcontainerStyle.color,
+                                                      borderRadius: EducationcontainerStyle.borderRadius,
                                                     ),
                                                     child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                      mainAxisAlignment: MainAxisAlignment.start,
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
                                                       children: [
                                                         FittedBox(
                                                           fit: BoxFit.scaleDown,
                                                           child: Text(
-                                                            Experiences[index]
-                                                                .role,
-                                                            style: GoogleFonts
-                                                                .chakraPetch(
-                                                                    textStyle:
-                                                                        textStyles
-                                                                            .edu_H_B),
+                                                            Experiences[index].role,
+                                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
                                                           ),
                                                         ),
                                                         FittedBox(
@@ -1003,67 +794,38 @@ class _desktopState extends State<desktop> {
                                                           child: Row(
                                                             children: [
                                                               Text(
-                                                                Experiences[
-                                                                        index]
-                                                                    .startTime,
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                Experiences[index].startTime,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                               Text(
                                                                 ' - ',
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                               Text(
-                                                                Experiences[
-                                                                        index]
-                                                                    .endTime,
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                Experiences[index].endTime,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                               Text(
                                                                 ' • ',
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                               Text(
-                                                                Experiences[
-                                                                        index]
-                                                                    .duration,
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                Experiences[index].duration,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                             ],
                                                           ),
                                                         ),
                                                         Row(
+                                                          mainAxisAlignment: MainAxisAlignment.start,
+                                                          crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
                                                             SizedBox(
-                                                              width:
-                                                                  deviceWidth *
-                                                                      0.1,
-                                                              child: FittedBox(
-                                                                fit: BoxFit
-                                                                    .scaleDown,
-                                                                child: Text(
-                                                                  Experiences[
-                                                                          index]
-                                                                      .companyName,
-                                                                  style: GoogleFonts.chakraPetch(
-                                                                      textStyle:
-                                                                          textStyles
-                                                                              .edu_P_N),
-                                                                ),
+                                                              // color: Colors.amber,
+                                                              width: deviceWidth * 0.1,
+                                                              child: Text(
+                                                                Experiences[index].companyName,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                                               ),
                                                             ),
                                                           ],
@@ -1101,10 +863,8 @@ class _desktopState extends State<desktop> {
                                   child: Column(
                                     children: [
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Expanded(
                                             child: AutoSizeText.rich(
@@ -1115,19 +875,11 @@ class _desktopState extends State<desktop> {
                                                 children: [
                                                   TextSpan(
                                                     text: 'My ',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingB),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
                                                   ),
                                                   TextSpan(
                                                     text: 'Education',
-                                                    style:
-                                                        GoogleFonts.chakraPetch(
-                                                            textStyle:
-                                                                textStyles
-                                                                    .HeadingI),
+                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
                                                   )
                                                 ],
                                               ),
@@ -1148,70 +900,44 @@ class _desktopState extends State<desktop> {
                                       ////
                                       Expanded(
                                         child: ScrollConfiguration(
-                                          behavior: const ScrollBehavior()
-                                              .copyWith(scrollbars: false),
+                                          behavior: const ScrollBehavior().copyWith(scrollbars: false),
                                           child: ListView.builder(
                                             itemCount: educations.length,
                                             itemBuilder: (context, index) {
                                               return TimelineTile(
-                                                isFirst:
-                                                    educations[index].start,
+                                                isFirst: educations[index].start,
                                                 isLast: educations[index].end,
                                                 afterLineStyle: LineStyle(
                                                   thickness: 2,
-                                                  color: EducationcontainerStyle
-                                                      .color,
+                                                  color: EducationcontainerStyle.color,
                                                 ),
                                                 beforeLineStyle: LineStyle(
                                                   thickness: 2,
-                                                  color: EducationcontainerStyle
-                                                      .color,
+                                                  color: EducationcontainerStyle.color,
                                                 ),
                                                 indicatorStyle: IndicatorStyle(
-                                                  color: EducationcontainerStyle
-                                                      .color,
-                                                  iconStyle: IconStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 25,
-                                                      iconData: Icons
-                                                          .arrow_right_rounded),
+                                                  color: EducationcontainerStyle.color,
+                                                  iconStyle: IconStyle(color: Colors.white, fontSize: 25, iconData: Icons.arrow_right_rounded),
                                                 ),
                                                 alignment: TimelineAlign.start,
                                                 endChild: Expanded(
                                                   flex: 5,
                                                   child: Container(
-                                                    padding:
-                                                        EducationcontainerStyle
-                                                            .padding,
-                                                    margin:
-                                                        EducationcontainerStyle
-                                                            .margin,
+                                                    padding: EducationcontainerStyle.padding,
+                                                    margin: EducationcontainerStyle.margin,
                                                     decoration: BoxDecoration(
-                                                      color:
-                                                          EducationcontainerStyle
-                                                              .color,
-                                                      borderRadius:
-                                                          EducationcontainerStyle
-                                                              .borderRadius,
+                                                      color: EducationcontainerStyle.color,
+                                                      borderRadius: EducationcontainerStyle.borderRadius,
                                                     ),
                                                     child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                      mainAxisAlignment: MainAxisAlignment.start,
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
                                                       children: [
                                                         FittedBox(
                                                           fit: BoxFit.scaleDown,
                                                           child: Text(
-                                                            educations[index]
-                                                                .institutionName,
-                                                            style: GoogleFonts
-                                                                .chakraPetch(
-                                                                    textStyle:
-                                                                        textStyles
-                                                                            .edu_H_B),
+                                                            educations[index].institutionName,
+                                                            style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_H_B),
                                                           ),
                                                         ),
                                                         FittedBox(
@@ -1219,58 +945,32 @@ class _desktopState extends State<desktop> {
                                                           child: Row(
                                                             children: [
                                                               Text(
-                                                                educations[
-                                                                        index]
-                                                                    .startTime,
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                educations[index].startTime,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                               const Text(" - "),
                                                               Text(
-                                                                educations[
-                                                                        index]
-                                                                    .endTime,
-                                                                style: GoogleFonts
-                                                                    .chakraPetch(
-                                                                        textStyle:
-                                                                            textStyles.edu_P_L),
+                                                                educations[index].endTime,
+                                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_L),
                                                               ),
                                                             ],
                                                           ),
                                                         ),
-                                                        educations[index]
-                                                                    .department !=
-                                                                ''
+                                                        educations[index].department != ''
                                                             ? FittedBox(
-                                                                fit: BoxFit
-                                                                    .scaleDown,
+                                                                fit: BoxFit.scaleDown,
                                                                 child: Text(
-                                                                  educations[
-                                                                          index]
-                                                                      .department,
-                                                                  style: GoogleFonts.chakraPetch(
-                                                                      textStyle:
-                                                                          textStyles
-                                                                              .edu_P_N),
+                                                                  educations[index].department,
+                                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                                                 ),
                                                               )
                                                             : const Offstage(),
-                                                        educations[index]
-                                                                    .grade !=
-                                                                ''
+                                                        educations[index].grade != ''
                                                             ? FittedBox(
-                                                                fit: BoxFit
-                                                                    .scaleDown,
+                                                                fit: BoxFit.scaleDown,
                                                                 child: Text(
-                                                                  educations[
-                                                                          index]
-                                                                      .grade,
-                                                                  style: GoogleFonts.chakraPetch(
-                                                                      textStyle:
-                                                                          textStyles
-                                                                              .edu_P_N),
+                                                                  educations[index].grade,
+                                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N),
                                                                 ),
                                                               )
                                                             : const Offstage(),

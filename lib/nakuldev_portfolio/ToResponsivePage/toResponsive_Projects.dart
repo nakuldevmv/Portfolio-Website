@@ -11,8 +11,7 @@ class toResponsiveLayout_project extends StatelessWidget {
   final int currentIndex;
   final int initialIndex; // Accept the initial index
 
-  const toResponsiveLayout_project(
-      {super.key, required this.initialIndex, this.currentIndex = 1});
+  const toResponsiveLayout_project({super.key, required this.initialIndex, this.currentIndex = 1});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +22,6 @@ class toResponsiveLayout_project extends StatelessWidget {
         baseSpeed: 0.5,
         blobSizeMultiplier: 1,
         orbitRadius: 0.2,
-        blobConfigs: const [
-          BlobConfig(colors: [Colors.purple, Colors.transparent]),
-          BlobConfig(colors: [Colors.blue, Colors.transparent]),
-          BlobConfig(colors: [Colors.purpleAccent, Colors.transparent]),
-          BlobConfig(colors: [Colors.indigo, Colors.transparent]),
-        ],
         child: CursorTracker(
           child: NavigationWrapper(
             currentIndex: currentIndex,

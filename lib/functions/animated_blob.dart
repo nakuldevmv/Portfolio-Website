@@ -34,19 +34,26 @@ class AnimatedBlobBackground extends StatefulWidget {
     List<BlobConfig>? blobConfigs,
   })  : blobConfigs = blobConfigs ??
             const [
-              BlobConfig(colors: [Colors.purple, Colors.transparent]),
-              BlobConfig(colors: [Colors.blue, Colors.transparent]),
-              BlobConfig(colors: [Colors.indigo, Colors.transparent]),
+              BlobConfig(colors: [
+                Colors.purple,
+                Colors.transparent
+              ]),
+              BlobConfig(colors: [
+                Colors.blue,
+                Colors.transparent
+              ]),
+              BlobConfig(colors: [
+                Colors.indigo,
+                Colors.transparent
+              ]),
             ],
-        assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs,
-            'Must provide at least as many blob configs as number of blobs');
+        assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs, 'Must provide at least as many blob configs as number of blobs');
 
   @override
   State<AnimatedBlobBackground> createState() => _AnimatedBlobBackgroundState();
 }
 
-class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
-    with TickerProviderStateMixin {
+class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with TickerProviderStateMixin {
   late final List<AnimationController> _controllers;
   late final List<Animation<double>> _animations;
   late final List<Animation<double>> _secondaryAnimations;
@@ -60,8 +67,7 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
     _controllers = List.generate(
       widget.numberOfBlobs,
       (index) => AnimationController(
-        duration: Duration(
-            milliseconds: (12000 / widget.baseSpeed).round() + index * 3000),
+        duration: Duration(milliseconds: (12000 / widget.baseSpeed).round() + index * 3000),
         vsync: this,
       )..repeat(), // Start immediately with repeat
     );
@@ -70,8 +76,7 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
     final secondaryControllers = List.generate(
       widget.numberOfBlobs,
       (index) => AnimationController(
-        duration: Duration(
-            milliseconds: (8000 / widget.baseSpeed).round() + index * 2000),
+        duration: Duration(milliseconds: (8000 / widget.baseSpeed).round() + index * 2000),
         vsync: this,
       )..repeat(), // Start immediately with repeat
     );
@@ -80,8 +85,7 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
     final tertiaryControllers = List.generate(
       widget.numberOfBlobs,
       (index) => AnimationController(
-        duration: Duration(
-            milliseconds: (15000 / widget.baseSpeed).round() + index * 1500),
+        duration: Duration(milliseconds: (15000 / widget.baseSpeed).round() + index * 1500),
         vsync: this,
       )..repeat(), // Start immediately with repeat
     );
@@ -117,8 +121,7 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
     super.dispose();
   }
 
-  Offset _calculateBlobPosition(double primaryValue, double secondaryValue,
-      double tertiaryValue, int index, Size size) {
+  Offset _calculateBlobPosition(double primaryValue, double secondaryValue, double tertiaryValue, int index, Size size) {
     final centerX = size.width / 2;
     final centerY = size.height / 2;
 
@@ -126,32 +129,24 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
     final secondaryRadius = baseRadius * widget.gravitationalPull * 0.3;
 
     // Smooth continuous rotation
-    final primaryAngle = primaryValue * 2 * math.pi +
-        (2 * math.pi / widget.numberOfBlobs * index);
+    final primaryAngle = primaryValue * 2 * math.pi + (2 * math.pi / widget.numberOfBlobs * index);
     final secondaryAngle = secondaryValue * 4 * math.pi;
 
     // Add smooth tertiary movement
-    final tertiaryOffset = math.sin(tertiaryValue * 2 * math.pi) *
-        (baseRadius * 0.15 * widget.gravitationalPull);
+    final tertiaryOffset = math.sin(tertiaryValue * 2 * math.pi) * (baseRadius * 0.15 * widget.gravitationalPull);
 
-    final x = centerX +
-        math.cos(primaryAngle) * (baseRadius + tertiaryOffset) +
-        math.cos(secondaryAngle) * secondaryRadius;
+    final x = centerX + math.cos(primaryAngle) * (baseRadius + tertiaryOffset) + math.cos(secondaryAngle) * secondaryRadius;
 
-    final y = centerY +
-        math.sin(primaryAngle) * (baseRadius + tertiaryOffset) +
-        math.sin(secondaryAngle) * secondaryRadius;
+    final y = centerY + math.sin(primaryAngle) * (baseRadius + tertiaryOffset) + math.sin(secondaryAngle) * secondaryRadius;
 
     // Smooth vertical oscillation
-    final oscillation = math.sin(primaryValue * 4 * math.pi) *
-        (size.height * 0.03 * widget.gravitationalPull);
+    final oscillation = math.sin(primaryValue * 4 * math.pi) * (size.height * 0.03 * widget.gravitationalPull);
 
     return Offset(x, y + oscillation);
   }
 
   double _calculateBlobSize(Size size, double tertiaryValue) {
-    final baseSize =
-        math.min(size.width, size.height) * widget.blobSizeMultiplier;
+    final baseSize = math.min(size.width, size.height) * widget.blobSizeMultiplier;
     // Add subtle size pulsing
     final pulseFactor = 1.0 + (math.sin(tertiaryValue * 2 * math.pi) * 0.1);
     return baseSize * pulseFactor;
@@ -181,10 +176,8 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
                 size,
               );
 
-              final blobSize =
-                  _calculateBlobSize(size, _tertiaryAnimations[index].value);
-              final dynamicOpacity = config.baseOpacity +
-                  (_animations[index].value * config.dynamicOpacity);
+              final blobSize = _calculateBlobSize(size, _tertiaryAnimations[index].value);
+              final dynamicOpacity = config.baseOpacity + (_animations[index].value * config.dynamicOpacity);
 
               return Positioned(
                 left: position.dx - (blobSize / 2),
@@ -194,13 +187,11 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
                   height: blobSize,
                   decoration: BoxDecoration(
                     gradient: RadialGradient(
-                      colors: config.colors
-                          .map((color) => color.withOpacity(
-                              color == Colors.transparent
-                                  ? 0.0
-                                  : dynamicOpacity))
-                          .toList(),
-                      stops: const [0.2, 1.0],
+                      colors: config.colors.map((color) => color.withOpacity(color == Colors.transparent ? 0.0 : dynamicOpacity)).toList(),
+                      stops: const [
+                        0.2,
+                        1.0
+                      ],
                     ),
                     borderRadius: BorderRadius.circular(blobSize / 2),
                   ),

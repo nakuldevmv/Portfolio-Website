@@ -19,12 +19,6 @@ class toResponsiveLayout_contactMe extends StatelessWidget {
         baseSpeed: 0.5,
         blobSizeMultiplier: 1,
         orbitRadius: 0.2,
-        blobConfigs: const [
-          BlobConfig(colors: [Colors.purple, Colors.transparent]),
-          BlobConfig(colors: [Colors.blue, Colors.transparent]),
-          BlobConfig(colors: [Colors.purpleAccent, Colors.transparent]),
-          BlobConfig(colors: [Colors.indigo, Colors.transparent]),
-        ],
         child: CursorTracker(
           child: NavigationWrapper(
             currentIndex: currentIndex,
