@@ -55,7 +55,8 @@ class _myProject_mobileState extends State<myProject> {
                       final isLastItem = index == projects.length - 1;
 
                       return Padding(
-                        padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16, right: 16),
+                        padding: const EdgeInsets.only(
+                            top: 8, bottom: 8, left: 16, right: 16),
                         child: Column(
                           children: [
                             Row(
@@ -80,20 +81,22 @@ class _myProject_mobileState extends State<myProject> {
                                     ),
                                     //////
                                     Stack(
-                                      alignment: AlignmentDirectional.bottomCenter,
+                                      alignment:
+                                          AlignmentDirectional.bottomCenter,
                                       children: [
                                         Container(
                                           width: (deviceWidth / 4) - 40,
                                           height: 300 - 40,
                                           decoration: BoxDecoration(
-                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(10)),
                                             image: DecorationImage(
-                                              image: AssetImage(projects[index].image),
+                                              image: AssetImage(
+                                                  projects[index].image),
                                               fit: BoxFit.cover,
                                             ),
-                                            boxShadow: [
-                                              GlobalShadow
-                                            ],
+                                            boxShadow: [GlobalShadow],
                                           ),
                                         ),
                                         Container(
@@ -135,16 +138,21 @@ class _myProject_mobileState extends State<myProject> {
                                     child: Padding(
                                       padding: const EdgeInsets.only(left: 10),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           //title
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 15),
+                                            padding: const EdgeInsets.only(
+                                                left: 8, right: 8, top: 15),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index].title,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .projectTitle),
                                                 minFontSize: 10,
                                                 maxFontSize: 25,
                                                 maxLines: 1,
@@ -153,11 +161,14 @@ class _myProject_mobileState extends State<myProject> {
                                           ),
                                           //description
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 8, right: 8, top: 10),
                                             child: SizedBox(
                                               child: AutoSizeText(
                                                 projects[index].description,
-                                                style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                                                style: GoogleFonts.chakraPetch(
+                                                    textStyle: textStyles
+                                                        .descriptions),
                                                 minFontSize: 5,
                                                 maxFontSize: 15,
                                                 maxLines: 3,
@@ -166,10 +177,13 @@ class _myProject_mobileState extends State<myProject> {
                                           ),
                                           //key features
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 8, right: 8, top: 10),
                                             child: AutoSizeText(
                                               "Key Features",
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.Dheadings),
                                               minFontSize: 10,
                                               maxFontSize: 18,
                                               maxLines: 1,
@@ -177,10 +191,13 @@ class _myProject_mobileState extends State<myProject> {
                                           ),
                                           //keyfetures
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
+                                            padding: const EdgeInsets.only(
+                                                left: 8, right: 8, top: 10),
                                             child: AutoSizeText(
                                               projects[index].keyFeatures,
-                                              style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                                              style: GoogleFonts.chakraPetch(
+                                                  textStyle:
+                                                      textStyles.descriptions),
                                               minFontSize: 5,
                                               maxFontSize: 15,
                                               maxLines: 4,
@@ -189,15 +206,25 @@ class _myProject_mobileState extends State<myProject> {
 
                                           //techstack
                                           Padding(
-                                            padding: const EdgeInsets.only(left: 8, right: 8, top: 10, bottom: 8),
+                                            padding: const EdgeInsets.only(
+                                                left: 8,
+                                                right: 8,
+                                                top: 10,
+                                                bottom: 8),
                                             child: SizedBox(
                                               width: 200,
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   AutoSizeText(
                                                     "Tech Stack :",
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                                                    style:
+                                                        GoogleFonts.chakraPetch(
+                                                            textStyle:
+                                                                textStyles
+                                                                    .Dheadings),
                                                     minFontSize: 10,
                                                     maxFontSize: 18,
                                                     maxLines: 1,

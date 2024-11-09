@@ -65,7 +65,8 @@ class NotResp extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             color: ContactMe_containerStyle_tablet.color,
-                            borderRadius: ContactMe_containerStyle_tablet.borderRadius,
+                            borderRadius:
+                                ContactMe_containerStyle_tablet.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_tablet.padding,
                           margin: ContactMe_containerStyle_tablet.margin,
@@ -84,7 +85,8 @@ class NotResp extends StatelessWidget {
                               const SizedBox(width: 10), // Add some spacing
                               Text(
                                 "LinkedIn", // Corrected spelling
-                                style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
+                                style: GoogleFonts.chakraPetch(
+                                    textStyle: textStyles.P2B),
                               ),
                             ],
                           ),
