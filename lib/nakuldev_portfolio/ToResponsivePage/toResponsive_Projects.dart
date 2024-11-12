@@ -15,24 +15,43 @@ class toResponsiveLayout_project extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Detect screen width
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      body: AnimatedBlobBackground(
-        numberOfBlobs: 4,
-        gravitationalPull: 1.0,
-        baseSpeed: 0.5,
-        blobSizeMultiplier: 1,
-        orbitRadius: 0.2,
-        child: CursorTracker(
-          child: NavigationWrapper(
-            currentIndex: currentIndex,
-            child: ResponsiveLayout(
-              desktopBody: myProject(initialIndex: initialIndex),
-              mobileBody: myProject_mobile(initialIndex: initialIndex),
-              tabletBody: myProject_tablet(initialIndex: initialIndex),
+      body: screenWidth >= 600
+          ? AnimatedBlobBackground(
+              numberOfBlobs: 4,
+              gravitationalPull: 1.0,
+              baseSpeed: 0.5,
+              blobSizeMultiplier: 1,
+              orbitRadius: 0.2,
+              child: CursorTracker(
+                child: NavigationWrapper(
+                  currentIndex: currentIndex,
+                  child: ResponsiveLayout(
+                    desktopBody: myProject(initialIndex: initialIndex),
+                    mobileBody: myProject_mobile(initialIndex: initialIndex),
+                    tabletBody: myProject_tablet(initialIndex: initialIndex),
+                  ),
+                ),
+              ),
+            )
+          : AnimatedBlobBackground(
+              numberOfBlobs: 4,
+              gravitationalPull: 1.0,
+              baseSpeed: 0.5,
+              blobSizeMultiplier: 1,
+              orbitRadius: 0.2,
+              child: NavigationWrapper(
+                currentIndex: currentIndex,
+                child: ResponsiveLayout(
+                  desktopBody: myProject(initialIndex: initialIndex),
+                  mobileBody: myProject_mobile(initialIndex: initialIndex),
+                  tabletBody: myProject_tablet(initialIndex: initialIndex),
+                ),
+              ),
             ),
-          ),
-        ),
-      ),
     );
   }
 }

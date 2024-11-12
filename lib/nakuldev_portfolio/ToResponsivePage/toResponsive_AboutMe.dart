@@ -14,24 +14,41 @@ class toResponsiveLayout_AboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      body: AnimatedBlobBackground(
-        numberOfBlobs: 4,
-        gravitationalPull: 1.0,
-        baseSpeed: 0.5,
-        blobSizeMultiplier: 1,
-        orbitRadius: 0.2,
-        child: CursorTracker(
-          child: NavigationWrapper(
-            currentIndex: currentIndex,
-            child: const ResponsiveLayout(
-              mobileBody: AboutMeMobile(),
-              tabletBody: AboutMeTablet(),
-              desktopBody: AboutMe(),
-            ),
-          ),
-        ),
-      ),
-    );
+        body: screenWidth >= 600
+            ? AnimatedBlobBackground(
+                numberOfBlobs: 4,
+                gravitationalPull: 1.0,
+                baseSpeed: 0.5,
+                blobSizeMultiplier: 1,
+                orbitRadius: 0.2,
+                child: CursorTracker(
+                  child: NavigationWrapper(
+                    currentIndex: currentIndex,
+                    child: const ResponsiveLayout(
+                      mobileBody: AboutMeMobile(),
+                      tabletBody: AboutMeTablet(),
+                      desktopBody: AboutMe(),
+                    ),
+                  ),
+                ),
+              )
+            : AnimatedBlobBackground(
+                numberOfBlobs: 4,
+                gravitationalPull: 1.0,
+                baseSpeed: 0.5,
+                blobSizeMultiplier: 1,
+                orbitRadius: 0.2,
+                child: NavigationWrapper(
+                  currentIndex: currentIndex,
+                  child: const ResponsiveLayout(
+                    mobileBody: AboutMeMobile(),
+                    tabletBody: AboutMeTablet(),
+                    desktopBody: AboutMe(),
+                  ),
+                ),
+              ));
   }
 }
