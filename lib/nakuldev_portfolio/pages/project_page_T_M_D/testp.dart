@@ -7,7 +7,6 @@
 // import 'package:nakul_dev/functions/demo_code_btn_widget.dart';
 // import 'package:nakul_dev/styles/styles.dart';
 
-   
 //     Padding(
 
 //                            padding = const EdgeInsets.only(right: 8, top: 8),
@@ -146,4 +145,3 @@
 //                                 ],
 //                               ),
 //                             ),
-                       

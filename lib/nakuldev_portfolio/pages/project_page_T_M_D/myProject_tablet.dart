@@ -50,7 +50,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                     itemCount: (projects.length + 1) ~/ 2,
                     itemScrollController: _scrollController,
                     itemBuilder: (context, index) {
-                      final isLastItem = index == (projects.length + 1) ~/ 2 - 1;
+                      final isLastItem =
+                          index == (projects.length + 1) ~/ 2 - 1;
 
                       return Column(
                         children: [
@@ -60,13 +61,17 @@ class _myProject_tabletState extends State<myProject_tablet> {
                             children: [
                               if (index * 2 < projects.length)
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 8, top: 8),
-                                  child: buildProjectCard(index * 2, deviceWidth),
+                                  padding:
+                                      const EdgeInsets.only(right: 8, top: 8),
+                                  child:
+                                      buildProjectCard(index * 2, deviceWidth),
                                 ),
                               if (index * 2 + 1 < projects.length)
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8, top: 8),
-                                  child: buildProjectCard(index * 2 + 1, deviceWidth),
+                                  padding:
+                                      const EdgeInsets.only(left: 8, top: 8),
+                                  child: buildProjectCard(
+                                      index * 2 + 1, deviceWidth),
                                 ),
                             ],
                           ),
@@ -115,15 +120,15 @@ class _myProject_tabletState extends State<myProject_tablet> {
                       image: AssetImage(projects[index].image),
                       fit: BoxFit.cover,
                     ),
-                    boxShadow: [
-                      GlobalShadow
-                    ],
+                    boxShadow: [GlobalShadow],
                   ),
                 ),
                 Container(
                   width: (deviceWidth / 2.179) - 39.5,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
                     gradient: LinearGradient(
                       colors: [
                         Color.fromARGB(0, 0, 0, 0),
@@ -148,7 +153,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
           child: Container(
             height: 170,
             width: deviceWidth / 2.179,
-            decoration: BoxDecoration(color: mobile_ProjectContainer.color, borderRadius: RadBottom),
+            decoration: BoxDecoration(
+                color: mobile_ProjectContainer.color, borderRadius: RadBottom),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -158,7 +164,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                   child: SizedBox(
                     child: AutoSizeText(
                       projects[index].title,
-                      style: GoogleFonts.chakraPetch(textStyle: textStyles.projectTitle),
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: textStyles.projectTitle),
                       minFontSize: 10,
                       maxFontSize: 25,
                       maxLines: 1,
@@ -170,7 +177,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                   child: SizedBox(
                     child: AutoSizeText(
                       projects[index].description,
-                      style: GoogleFonts.chakraPetch(textStyle: textStyles.descriptions),
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: textStyles.descriptions),
                       minFontSize: 5,
                       maxFontSize: 15,
                       maxLines: 3,
@@ -178,7 +186,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 8, top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(
+                      left: 16, right: 8, top: 10, bottom: 10),
                   child: SizedBox(
                     width: 200,
                     child: Row(
@@ -186,7 +195,8 @@ class _myProject_tabletState extends State<myProject_tablet> {
                       children: [
                         AutoSizeText(
                           "Tech Stack :",
-                          style: GoogleFonts.chakraPetch(textStyle: textStyles.Dheadings),
+                          style: GoogleFonts.chakraPetch(
+                              textStyle: textStyles.Dheadings),
                           minFontSize: 10,
                           maxFontSize: 18,
                           maxLines: 1,
