@@ -113,6 +113,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                       MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: CustomBox(
+                          isHover: true,
+                          hoverColor: ResumeColor,
                           borderRadius:
                               ContactMe_containerStyle_tablet.borderRadius,
                           margin: ContactMe_containerStyle_tablet.margin,
@@ -207,6 +209,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                 "https://www.linkedin.com/in/nakuldevmv/");
                           },
                           child: CustomBox(
+                            isHover: true,
+                            hoverColor: ResumeColor,
                             margin: ContactMe_containerStyle_tablet.margin,
                             borderRadius:
                                 ContactMe_containerStyle_tablet.borderRadius,
@@ -263,6 +267,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                     "https://www.instagram.com/jo.cly.n/");
                               },
                               child: CustomBox(
+                                isHover: true,
+                                hoverColor: ResumeColor,
                                 margin: ContactMe_containerStyle_tablet.margin,
                                 borderRadius: ContactMe_containerStyle_tablet
                                     .borderRadius,
@@ -303,6 +309,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                     "https://leetcode.com/u/nakuldev1561/");
                               },
                               child: CustomBox(
+                                isHover: true,
+                                hoverColor: ResumeColor,
                                 margin: ContactMe_containerStyle_tablet.margin,
                                 borderRadius: ContactMe_containerStyle_tablet
                                     .borderRadius,
@@ -348,6 +356,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                             urlLaunch("https://github.com/nakuldevmv");
                           },
                           child: CustomBox(
+                            isHover: true,
+                            hoverColor: ResumeColor,
                             margin: ContactMe_containerStyle_tablet.margin,
                             borderRadius:
                                 ContactMe_containerStyle_tablet.borderRadius,
@@ -384,6 +394,8 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                 "https://www.hackerrank.com/profile/nakuldev1561");
                           },
                           child: CustomBox(
+                            isHover: true,
+                            hoverColor: ResumeColor,
                             margin: ContactMe_containerStyle_tablet.margin,
                             borderRadius:
                                 ContactMe_containerStyle_tablet.borderRadius,

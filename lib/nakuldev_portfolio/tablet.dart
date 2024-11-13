@@ -515,6 +515,8 @@ class _tabletState extends State<tablet> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomBox(
+                  isHover: true,
+                  hoverColor: ResumeColor,
                   borderRadius: tablet_containerStyle.borderRadius,
                   margin: tablet_containerStyle.margin,
                   child: Container(
@@ -1181,6 +1183,8 @@ class _tabletState extends State<tablet> {
                             context, const toResponsiveLayout_contactMe());
                       },
                       child: CustomBox(
+                        isHover: true,
+                        hoverColor: ResumeColor,
                         borderRadius: containerStyle.borderRadius,
                         margin: tablet_containerStyle.marginCol2,
                         child: Container(

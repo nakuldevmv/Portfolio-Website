@@ -459,6 +459,8 @@ class _mobileState extends State<mobile> {
             ),
             //my projects
             CustomBox(
+              isHover: true,
+              hoverColor: ResumeColor,
               borderRadius: mobile_containerStyle.borderRadius,
               margin: mobile_containerStyle.margin,
               child: Container(
@@ -1035,6 +1037,8 @@ class _mobileState extends State<mobile> {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: CustomBox(
+                  isHover: true,
+                  hoverColor: ResumeColor,
                   borderRadius: mobile_containerStyle.borderRadius,
                   margin: mobile_containerStyle.margin,
                   child: Container(

@@ -96,6 +96,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: CustomBox(
+                      isHover: true,
+                      hoverColor: ResumeColor,
                       borderRadius:
                           ContactMe_containerStyle_mobile.borderRadius,
                       margin: ContactMe_containerStyle_mobile.margin,
@@ -183,6 +185,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         urlLaunch("https://www.linkedin.com/in/nakuldevmv/");
                       },
                       child: CustomBox(
+                        isHover: true,
+                        hoverColor: ResumeColor,
                         borderRadius:
                             ContactMe_containerStyle_mobile.borderRadius,
                         margin: ContactMe_containerStyle_mobile.margin,
@@ -238,6 +242,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                               urlLaunch("https://www.instagram.com/jo.cly.n/");
                             },
                             child: CustomBox(
+                              isHover: true,
+                              hoverColor: ResumeColor,
                               borderRadius:
                                   ContactMe_containerStyle_mobile.borderRadius,
                               margin: ContactMe_containerStyle_mobile.margin,
@@ -275,6 +281,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                               urlLaunch("https://leetcode.com/u/nakuldev1561/");
                             },
                             child: CustomBox(
+                              isHover: true,
+                              hoverColor: ResumeColor,
                               margin: ContactMe_containerStyle_mobile.margin,
                               borderRadius:
                                   ContactMe_containerStyle_mobile.borderRadius,
@@ -319,6 +327,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         urlLaunch("https://github.com/nakuldevmv");
                       },
                       child: CustomBox(
+                        isHover: true,
+                        hoverColor: ResumeColor,
                         margin: ContactMe_containerStyle_mobile.margin,
                         borderRadius:
                             ContactMe_containerStyle_mobile.borderRadius,
@@ -355,6 +365,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             "https://www.hackerrank.com/profile/nakuldev1561");
                       },
                       child: CustomBox(
+                        isHover: true,
+                        hoverColor: ResumeColor,
                         margin: ContactMe_containerStyle_mobile.margin,
                         borderRadius:
                             ContactMe_containerStyle_mobile.borderRadius,

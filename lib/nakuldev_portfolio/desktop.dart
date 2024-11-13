@@ -260,6 +260,8 @@ class _desktopState extends State<desktop> {
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: CustomBox(
+                                    isHover: true,
+                                    hoverColor: ResumeColor,
                                     margin: containerStyle.margin,
                                     borderRadius: containerStyle.borderRadius,
                                     child: Container(
@@ -346,6 +348,10 @@ class _desktopState extends State<desktop> {
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: CustomBox(
+                                    // color: containerStyle.colorR,
+                                    hoverColor: const Color.fromARGB(
+                                        255, 255, 255, 255),
+                                    isHover: true,
                                     borderRadius: containerStyle.borderRadius,
                                     margin: containerStyle.margin,
                                     child: Container(
@@ -496,6 +502,8 @@ class _desktopState extends State<desktop> {
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: CustomBox(
+                                    isHover: true,
+                                    hoverColor: ResumeColor,
                                     borderRadius: containerStyle.borderRadius,
                                     margin: containerStyle.margin,
                                     child: Container(
@@ -584,6 +592,8 @@ class _desktopState extends State<desktop> {
                             SizedBox(
                               height: 378.6,
                               child: CustomBox(
+                                isHover: true,
+                                hoverColor: ResumeColor,
                                 borderRadius: containerStyle.borderRadius,
                                 margin: containerStyle.margin,
                                 child: Container(
