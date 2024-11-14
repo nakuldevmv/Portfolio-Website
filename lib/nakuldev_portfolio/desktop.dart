@@ -690,15 +690,11 @@ class _desktopState extends State<desktop> {
                                                   //     height: deviceHeight * 0.06,
                                                   //   ),
                                                   // ),
-                                                  child: Tooltip(
-                                                    //rich test here
-                                                    message: skills[index],
-                                                    child: SvgPicture.asset(
-                                                      skills[index],
-                                                      // color: textStyles.B.color,
-                                                      width: deviceWidth * 0.06,
-                                                      height: deviceHeight * 0.06,
-                                                    ),
+                                                  child: SvgPicture.asset(
+                                                    skills[index],
+                                                    // color: textStyles.B.color,
+                                                    width: deviceWidth * 0.06,
+                                                    height: deviceHeight * 0.06,
                                                   ),
                                                 ),
                                               );
