@@ -4,6 +4,7 @@ import 'package:nakul_dev/Data/profilePic_book.dart';
 import 'package:nakul_dev/Data/projects.dart';
 import 'package:nakul_dev/Data/skill.dart';
 import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
+import 'package:nakul_dev/functions/custom_tooltip.dart';
 import 'package:nakul_dev/functions/downloadResume.dart';
 import 'package:nakul_dev/functions/navigate.dart';
 import 'package:nakul_dev/functions/notifySnackBar.dart';
@@ -277,12 +278,15 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[0],
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                  child: Custom_tooltip(
+                                    message: skills[0].name,
+                                    child: SvgPicture.asset(
+                                      skills[0].svgPath,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -290,13 +294,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[1],
+                                  child: Custom_tooltip(
+                                    message: skills[1].name,
+                                    child: SvgPicture.asset(
+                                      skills[1].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -304,13 +311,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[2],
+                                  child: Custom_tooltip(
+                                    message: skills[2].name,
+                                    child: SvgPicture.asset(
+                                      skills[2].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -318,13 +328,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[3],
+                                  child: Custom_tooltip(
+                                    message: skills[3].name,
+                                    child: SvgPicture.asset(
+                                      skills[3].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -332,13 +345,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[4],
+                                  child: Custom_tooltip(
+                                    message: skills[4].name,
+                                    child: SvgPicture.asset(
+                                      skills[4].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -346,13 +362,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[5],
+                                  child: Custom_tooltip(
+                                    message: skills[5].name,
+                                    child: SvgPicture.asset(
+                                      skills[5].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -368,13 +387,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[6],
+                                  child: Custom_tooltip(
+                                    message: skills[6].name,
+                                    child: SvgPicture.asset(
+                                      skills[6].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -382,13 +404,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[7],
+                                  child: Custom_tooltip(
+                                    message: skills[7].name,
+                                    child: SvgPicture.asset(
+                                      skills[7].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -396,13 +421,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[8],
+                                  child: Custom_tooltip(
+                                    message: skills[8].name,
+                                    child: SvgPicture.asset(
+                                      skills[8].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -410,13 +438,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[9],
+                                  child: Custom_tooltip(
+                                    message: skills[9].name,
+                                    child: SvgPicture.asset(
+                                      skills[9].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -424,13 +455,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[10],
+                                  child: Custom_tooltip(
+                                    message: skills[10].name,
+                                    child: SvgPicture.asset(
+                                      skills[10].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    //height: deviceWidth * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      //height: deviceWidth * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -438,13 +472,16 @@ class _mobileState extends State<mobile> {
                                 width: deviceWidth * mobile_SVGContainer.width,
                                 //height: deviceWidth * mobile_SVGContainer.height,
                                 child: Center(
-                                  child: SvgPicture.asset(
-                                    skills[11],
+                                  child: Custom_tooltip(
+                                    message: skills[11].name,
+                                    child: SvgPicture.asset(
+                                      skills[11].svgPath,
 
-                                    // color: textStyles.B.color,
-                                    width:
-                                        deviceWidth * mobile_SVGContainer.width,
-                                    // height: devi * mobile_SVGContainer.height,
+                                      // color: textStyles.B.color,
+                                      width: deviceWidth *
+                                          mobile_SVGContainer.width,
+                                      // height: devi * mobile_SVGContainer.height,
+                                    ),
                                   ),
                                 ),
                               ),

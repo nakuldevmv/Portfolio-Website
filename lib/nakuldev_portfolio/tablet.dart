@@ -4,6 +4,7 @@ import 'package:nakul_dev/Data/profilePic_book.dart';
 import 'package:nakul_dev/Data/projects.dart';
 import 'package:nakul_dev/Data/skill.dart';
 import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
+import 'package:nakul_dev/functions/custom_tooltip.dart';
 import 'package:nakul_dev/functions/downloadResume.dart';
 import 'package:nakul_dev/functions/navigate.dart';
 import 'package:nakul_dev/functions/next_prev_controller.dart';
@@ -305,12 +306,15 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
-                                      child: SvgPicture.asset(
-                                        skills[0],
-                                        // color: textStyles.B.color,
-                                        width: deviceWidth *
-                                            tablet_SVGContainer.width,
-                                        //height: deviceWidth * tablet_SVGContainer.height,
+                                      child: Custom_tooltip(
+                                        message: skills[0].name,
+                                        child: SvgPicture.asset(
+                                          skills[0].svgPath,
+                                          // color: textStyles.B.color,
+                                          width: deviceWidth *
+                                              tablet_SVGContainer.width,
+                                          //height: deviceWidth * tablet_SVGContainer.height,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -320,15 +324,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[1].name,
                                       child: SvgPicture.asset(
-                                        skills[1],
+                                        skills[1].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -336,15 +342,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[2].name,
                                       child: SvgPicture.asset(
-                                        skills[2],
+                                        skills[2].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -352,15 +360,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[3].name,
                                       child: SvgPicture.asset(
-                                        skills[3],
+                                        skills[3].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -368,15 +378,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[4].name,
                                       child: SvgPicture.asset(
-                                        skills[4],
+                                        skills[4].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -384,15 +396,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[5].name,
                                       child: SvgPicture.asset(
-                                        skills[5],
+                                        skills[5].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                 ],
                               ),
@@ -409,15 +423,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[6].name,
                                       child: SvgPicture.asset(
-                                        skills[6],
+                                        skills[6].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -425,15 +441,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[7].name,
                                       child: SvgPicture.asset(
-                                        skills[7],
+                                        skills[7].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -441,15 +459,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[8].name,
                                       child: SvgPicture.asset(
-                                        skills[8],
+                                        skills[8].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -457,15 +477,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[9].name,
                                       child: SvgPicture.asset(
-                                        skills[9],
+                                        skills[9].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -473,15 +495,17 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
+                                        child: Custom_tooltip(
+                                      message: skills[10].name,
                                       child: SvgPicture.asset(
-                                        skills[10],
+                                        skills[10].svgPath,
 
                                         // color: textStyles.B.color,
                                         width: deviceWidth *
                                             tablet_SVGContainer.width,
                                         //height: deviceWidth * tablet_SVGContainer.height,
                                       ),
-                                    ),
+                                    )),
                                   ),
                                   SizedBox(
                                     //color: tablet_SVGContainer.color,
@@ -489,13 +513,16 @@ class _tabletState extends State<tablet> {
                                         deviceWidth * tablet_SVGContainer.width,
                                     //height: deviceWidth * tablet_SVGContainer.height,
                                     child: Center(
-                                      child: SvgPicture.asset(
-                                        skills[11],
+                                      child: Custom_tooltip(
+                                        message: skills[11].name,
+                                        child: SvgPicture.asset(
+                                          skills[11].svgPath,
 
-                                        // color: textStyles.B.color,
-                                        width: deviceWidth *
-                                            tablet_SVGContainer.width,
-                                        // height: devi * tablet_SVGContainer.height,
+                                          // color: textStyles.B.color,
+                                          width: deviceWidth *
+                                              tablet_SVGContainer.width,
+                                          // height: devi * tablet_SVGContainer.height,
+                                        ),
                                       ),
                                     ),
                                   ),
