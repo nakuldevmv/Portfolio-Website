@@ -12,7 +12,7 @@ class CursorTracker extends StatefulWidget {
     super.key,
     required this.child,
     this.delayFactors = const [0.1, 0.2, 0.4],
-    this.circleSizes = const [170, 64, 15], // Sizes for circles
+    this.circleSizes = const [100, 50, 10], // Sizes for circles
     this.gradientDuration = const Duration(seconds: 30), // Default duration
   }) : assert(delayFactors.length == circleSizes.length,
             'Mismatch in delay factors and circle sizes.');
@@ -43,8 +43,8 @@ class _CursorTrackerState extends State<CursorTracker>
   // ];
 
   final List<Color> _gradientColors = [
-    const Color.fromARGB(255, 0, 255, 225),
-    const Color.fromARGB(255, 225, 134, 255),
+    const Color.fromARGB(255, 0, 81, 255),
+    const Color.fromARGB(255, 134, 227, 255),
   ];
 
   @override
