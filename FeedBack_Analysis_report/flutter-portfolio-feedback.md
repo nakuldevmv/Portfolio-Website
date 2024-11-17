@@ -1,6 +1,5 @@
 # Flutter Portfolio Feedback Analysis
 
-![Divider](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxsaW5lIHgxPSIwIiB5MT0iMSIgeDI9IjEwMDAlIiB5Mj0iMSIgc3Ryb2tlPSIjOEI1Q0Y2IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=)
 
 ## 📊 Categorization of Feedback
 
