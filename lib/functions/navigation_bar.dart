@@ -80,7 +80,8 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
             : const Offstage(),
         widget.showNavBar
             ? Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Container(
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
@@ -88,10 +89,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         Color.fromARGB(255, 74, 79, 188),
                         Color.fromARGB(255, 136, 141, 238),
                       ],
-                      stops: [
-                        0,
-                        1
-                      ],
+                      stops: [0, 1],
                       begin: Alignment.bottomRight,
                       end: Alignment.topLeft,
                     ),
@@ -106,7 +104,9 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                   ),
                   height: navigation_containerStyle.height,
                   padding: navigation_containerStyle.padding,
-                  width: deviceWidth < 412 ? deviceWidth * navigation_containerStyle.width : 412,
+                  width: deviceWidth < 412
+                      ? deviceWidth * navigation_containerStyle.width
+                      : 412,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: GNav(
@@ -115,12 +115,17 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                       backgroundColor: Colors.transparent,
                       gap: 8.5,
                       color: Colors.white30,
-                      activeColor: Colors.white, // Soft aqua for active tab text                      rippleColor: Colors.white54,
+                      activeColor: Colors
+                          .white, // Soft aqua for active tab text                      rippleColor: Colors.white54,
                       hoverColor: Colors.white10,
-                      iconSize: deviceWidth < 412 ? deviceWidth * 0.07 : 24, // Adjust icon size
+                      iconSize: deviceWidth < 412
+                          ? deviceWidth * 0.07
+                          : 24, // Adjust icon size
                       textStyle: GoogleFonts.chakraPetch(
                         textStyle: textStyles.B,
-                        fontSize: deviceWidth < 412 ? deviceWidth * 0.04 : 16, // Adjust text size
+                        fontSize: deviceWidth < 412
+                            ? deviceWidth * 0.04
+                            : 16, // Adjust text size
                       ),
                       tabBackgroundColor: Colors.grey[900]!,
                       padding: const EdgeInsets.all(12), // Adjust padding
@@ -158,16 +163,26 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
                         });
                         switch (index) {
                           case 0:
-                            navigateTo(context, const toResponsiveLayout(currentIndex: 0));
+                            navigateTo(context,
+                                const toResponsiveLayout(currentIndex: 0));
                             break;
                           case 1:
-                            navigateTo(context, const toResponsiveLayout_project(initialIndex: 0, currentIndex: 1));
+                            navigateTo(
+                                context,
+                                const toResponsiveLayout_project(
+                                    initialIndex: 0, currentIndex: 1));
                             break;
                           case 2:
-                            navigateTo(context, const toResponsiveLayout_AboutMe(currentIndex: 2));
+                            navigateTo(
+                                context,
+                                const toResponsiveLayout_AboutMe(
+                                    currentIndex: 2));
                             break;
                           case 3:
-                            navigateTo(context, const toResponsiveLayout_contactMe(currentIndex: 3));
+                            navigateTo(
+                                context,
+                                const toResponsiveLayout_contactMe(
+                                    currentIndex: 3));
                             break;
                         }
                       },

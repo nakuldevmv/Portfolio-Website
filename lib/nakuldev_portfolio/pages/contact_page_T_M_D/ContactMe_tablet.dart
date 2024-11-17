@@ -239,7 +239,7 @@ class _ContactMe_tablet extends State<ContactMe_tablet> {
                                   ),
                                   Expanded(
                                     child: AutoSizeText(
-                                      '   LinkdIn',
+                                      '   LinkedIn',
                                       minFontSize: 10,
                                       maxFontSize: 15,
                                       maxLines: 1,

@@ -214,7 +214,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                               ),
                               Expanded(
                                 child: AutoSizeText(
-                                  ' LinkdIn',
+                                  ' LinkedIn',
                                   minFontSize: 10,
                                   maxFontSize: 15,
                                   maxLines: 1,
