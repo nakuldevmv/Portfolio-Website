@@ -24618,7 +24618,7 @@ case 3:return A.O(null,r)}})
 return A.P($async$eS,r)},
 apH(){var s=0,r=A.Q(t.H)
 var $async$apH=A.R(function(a,b){if(a===1)return A.N(b,r)
-while(true)switch(s){case 0:A.apx(A.EV(null,"nakuldev1561@gmail.com",null,"mailto"))
+while(true)switch(s){case 0:A.apx(A.EV(null,"nakuldevmv@gmail.com",null,"mailto"))
 return A.O(null,r)}})
 return A.P($async$apH,r)},
 aBo(a,b){var s=$.aoO
@@ -72208,7 +72208,7 @@ k=$.FV()
 s=$.Hy
 r=l*0.59
 q=A.bI("assets/svg/email.svg",B.cH,$.bp().b,24,m)
-p=A.c2(m,A.av(A.cc(B.w,A.aN(" nakuldev1561@gmail.com",m,m,m,m,m,m,m,A.n().$1$textStyle($.o_()),m,m,m),B.f,B.M),m,l*0.36),B.C,!1,m,m,m,m,m,new A.ahO(a),m,m,m,m,m,m,new A.ahP(),m,m,m)
+p=A.c2(m,A.av(A.cc(B.w,A.aN(" nakuldevmv@gmail.com",m,m,m,m,m,m,m,A.n().$1$textStyle($.o_()),m,m,m),B.f,B.M),m,l*0.36),B.C,!1,m,m,m,m,m,new A.ahO(a),m,m,m,m,m,m,new A.ahP(),m,m,m)
 o=$.bp().b
 n=A.bD(B.ms,o,m)
 o=A.bD(B.mr,o,m)
@@ -72230,7 +72230,7 @@ A.ahN.prototype={
 $0(){A.eS(u.X)},
 $S:0}
 A.ahO.prototype={
-$1(a){A.rp(new A.ro("nakuldev1561@gmail.com"))
+$1(a){A.rp(new A.ro("nakuldevmv@gmail.com"))
 A.nX(this.a,"Text copied to clipboard")},
 $S:14}
 A.ahP.prototype={
@@ -72239,7 +72239,7 @@ $S:0}
 A.ahQ.prototype={
 $0(){var s=this.a
 s.ao(new A.ahL(s))
-A.rp(new A.ro("nakuldev1561@gmail.com"))
+A.rp(new A.ro("nakuldevmv@gmail.com"))
 A.nX(this.b,"Text copied to clipboard")
 A.ci(B.ma,new A.ahM(s))},
 $S:0}
@@ -72278,7 +72278,7 @@ l=A.c2(n,A.cP(B.ag,A.a([A.a8(n,A.oj(l,B.t3),B.f,n,n,new A.ai(m,n,n,l,n,n,B.m),n,
 m=$.w1()
 s=$.Hz
 r=A.bI("assets/svg/email.svg",B.cH,$.bp().b,24,n)
-q=A.c2(n,A.av(A.cc(B.w,A.aN("nakuldev1561@gmail.com",n,n,n,n,n,n,n,A.n().$1$textStyle($.o_()),B.cs,n,n),B.f,B.M),n,216),B.C,!1,n,n,n,n,n,new A.ai_(a),n,n,n,n,n,n,new A.ai0(),n,n,n)
+q=A.c2(n,A.av(A.cc(B.w,A.aN("nakuldevmv@gmail.com",n,n,n,n,n,n,n,A.n().$1$textStyle($.o_()),B.cs,n,n),B.f,B.M),n,216),B.C,!1,n,n,n,n,n,new A.ai_(a),n,n,n,n,n,n,new A.ai0(),n,n,n)
 p=$.bp().b
 o=A.bD(B.ms,p,n)
 p=A.bD(B.mr,p,n)
@@ -72298,7 +72298,7 @@ A.ahZ.prototype={
 $0(){A.eS(u.X)},
 $S:0}
 A.ai_.prototype={
-$1(a){A.rp(new A.ro("nakuldev1561@gmail.com"))
+$1(a){A.rp(new A.ro("nakuldevmv@gmail.com"))
 A.nX(this.a,"Text copied to clipboard")},
 $S:14}
 A.ai0.prototype={
@@ -72307,7 +72307,7 @@ $S:0}
 A.ai1.prototype={
 $0(){var s=this.a
 s.ao(new A.ahX(s))
-A.rp(new A.ro("nakuldev1561@gmail.com"))
+A.rp(new A.ro("nakuldevmv@gmail.com"))
 A.nX(this.b,"Text copied to clipboard")
 A.ci(B.ma,new A.ahY(s))},
 $S:0}
