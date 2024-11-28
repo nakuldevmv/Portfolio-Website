@@ -46,15 +46,9 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                   ),
                   // padding: ContactMe_containerStyle_mobile.padding,
                   margin: ContactMe_containerStyle_mobile.margin,
-                  width:
-                      deviceWidth * ContactMe_containerStyle_mobile.loc_width,
+                  width: deviceWidth * ContactMe_containerStyle_mobile.loc_width,
                   height: 250,
-                  child: ClipRRect(
-                      borderRadius:
-                          ContactMe_containerStyle_tablet.borderRadius,
-                      child: const MouseRegion(
-                          cursor: SystemMouseCursors.grab,
-                          child: RandomLocationMap())),
+                  child: ClipRRect(borderRadius: ContactMe_containerStyle_tablet.borderRadius, child: const MouseRegion(cursor: SystemMouseCursors.grab, child: RandomLocationMap())),
                   // height: deviceHeight * ContactMe_containerStyle_mobile.loc_height,
                 ),
                 Positioned(
@@ -67,16 +61,13 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         color: Color.fromARGB(130, 167, 167, 167),
                         borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      padding: const EdgeInsets.only(
-                          left: 8, right: 8, top: 5, bottom: 5),
+                      padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
                       child: Row(
                         children: [
                           const Icon(color: Colors.red, Icons.place_rounded),
                           Text(
                             ' Kerala, India',
-                            style: GoogleFonts.chakraPetch(
-                                textStyle: textStyles.edu_P_N,
-                                fontWeight: FontWeight.bold),
+                            style: GoogleFonts.chakraPetch(textStyle: textStyles.edu_P_N, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -98,19 +89,15 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     child: CustomBox(
                       isHover: true,
                       hoverColor: ResumeColor,
-                      borderRadius:
-                          ContactMe_containerStyle_mobile.borderRadius,
+                      borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                       margin: ContactMe_containerStyle_mobile.margin,
                       child: Container(
                           decoration: BoxDecoration(
                             color: ContactMe_containerStyle_mobile.color,
-                            borderRadius:
-                                ContactMe_containerStyle_mobile.borderRadius,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_mobile.padding,
-                          width: deviceWidth *
-                              ContactMe_containerStyle_mobile
-                                  .width_mail_Linkedin,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
@@ -118,15 +105,13 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                 "assets/svg/email.svg",
                                 clipBehavior: Clip.antiAlias,
                                 color: textStyles.B.color,
-                                height: ContactMe_containerStyle_tablet
-                                    .svgcontHeight,
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
                               ), // SizedBox(
                               //   width: deviceWidth * 0.005,
                               // ),
                               GestureDetector(
                                 onHorizontalDragUpdate: (details) {
-                                  copyTextToClipboard(
-                                      context, 'nakuldev1561@gmail.com');
+                                  copyTextToClipboard(context, 'nakuldevmv@gmail.com');
                                 },
                                 onTap: () {
                                   openEmail();
@@ -136,9 +121,8 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                   child: FittedBox(
                                     fit: BoxFit.scaleDown,
                                     child: Text(
-                                      " nakuldev1561@gmail.com",
-                                      style: GoogleFonts.chakraPetch(
-                                          textStyle: textStyles.P2B),
+                                      " nakuldevmv@gmail.com",
+                                      style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                     ),
                                   ),
                                 ),
@@ -150,25 +134,18 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                     isTick = !isTick;
                                   });
                                   //
-                                  copyTextToClipboard(
-                                      context, 'nakuldev1561@gmail.com');
+                                  copyTextToClipboard(context, 'nakuldevmv@gmail.com');
                                   //
-                                  Timer(
-                                      const Duration(
-                                          seconds: 2, milliseconds: 500), () {
+                                  Timer(const Duration(seconds: 2, milliseconds: 500), () {
                                     setState(() {
                                       isTick = !isTick;
                                     });
                                   });
                                 },
                                 child: AnimatedCrossFade(
-                                  firstChild: Icon(
-                                      color: textStyles.B.color, Icons.copy),
-                                  secondChild: Icon(
-                                      color: textStyles.B.color, Icons.check),
-                                  crossFadeState: isTick
-                                      ? CrossFadeState.showFirst
-                                      : CrossFadeState.showSecond,
+                                  firstChild: Icon(color: textStyles.B.color, Icons.copy),
+                                  secondChild: Icon(color: textStyles.B.color, Icons.check),
+                                  crossFadeState: isTick ? CrossFadeState.showFirst : CrossFadeState.showSecond,
                                   duration: const Duration(milliseconds: 150),
                                 ),
                               )
@@ -187,27 +164,22 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                       child: CustomBox(
                         isHover: true,
                         hoverColor: ResumeColor,
-                        borderRadius:
-                            ContactMe_containerStyle_mobile.borderRadius,
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                         margin: ContactMe_containerStyle_mobile.margin,
                         child: Container(
                           decoration: BoxDecoration(
                             color: ContactMe_containerStyle_mobile.color,
-                            borderRadius:
-                                ContactMe_containerStyle_mobile.borderRadius,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_mobile.padding,
-                          width: deviceWidth *
-                              ContactMe_containerStyle_mobile
-                                  .width_mail_Linkedin,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.width_mail_Linkedin,
                           child: Row(
                             children: [
                               SvgPicture.asset(
                                 "assets/svg/linkedin.svg",
                                 // ignore: deprecated_member_use
                                 // color: textStyles.B.color,
-                                height: ContactMe_containerStyle_tablet
-                                    .svgcontHeight,
+                                height: ContactMe_containerStyle_tablet.svgcontHeight,
                               ),
                               SizedBox(
                                 width: deviceWidth * 0.005,
@@ -219,8 +191,7 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                                   maxFontSize: 15,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.chakraPetch(
-                                      textStyle: textStyles.P2B),
+                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.P2B),
                                 ),
                               )
                             ],
@@ -244,25 +215,19 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                             child: CustomBox(
                               isHover: true,
                               hoverColor: ResumeColor,
-                              borderRadius:
-                                  ContactMe_containerStyle_mobile.borderRadius,
+                              borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                               margin: ContactMe_containerStyle_mobile.margin,
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: ContactMe_containerStyle_mobile.color,
-                                  borderRadius: ContactMe_containerStyle_mobile
-                                      .borderRadius,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                                 ),
-                                padding:
-                                    ContactMe_containerStyle_mobile.padding,
-                                width: deviceWidth *
-                                    ContactMe_containerStyle_mobile
-                                        .bottom_icon_width,
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
                                 child: SvgPicture.asset(
                                   "assets/svg/instagram.svg",
                                   // color: textStyles.B.color,
-                                  height: ContactMe_containerStyle_tablet
-                                      .svgcontHeight,
+                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
                                 ),
                               ),
                             ),
@@ -284,23 +249,17 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                               isHover: true,
                               hoverColor: ResumeColor,
                               margin: ContactMe_containerStyle_mobile.margin,
-                              borderRadius:
-                                  ContactMe_containerStyle_mobile.borderRadius,
+                              borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: ContactMe_containerStyle_mobile.color,
-                                  borderRadius: ContactMe_containerStyle_mobile
-                                      .borderRadius,
+                                  borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                                 ),
-                                padding:
-                                    ContactMe_containerStyle_mobile.padding,
-                                width: deviceWidth *
-                                    ContactMe_containerStyle_mobile
-                                        .bottom_icon_width,
+                                padding: ContactMe_containerStyle_mobile.padding,
+                                width: deviceWidth * ContactMe_containerStyle_mobile.bottom_icon_width,
                                 child: SvgPicture.asset(
                                   "assets/svg/x.svg",
-                                  height: ContactMe_containerStyle_tablet
-                                      .svgcontHeight,
+                                  height: ContactMe_containerStyle_tablet.svgcontHeight,
 
                                   // ignore: deprecated_member_use
                                   // color: textStyles.B.color,
@@ -330,19 +289,16 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                         isHover: true,
                         hoverColor: ResumeColor,
                         margin: ContactMe_containerStyle_mobile.margin,
-                        borderRadius:
-                            ContactMe_containerStyle_mobile.borderRadius,
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                         child: Container(
                           decoration: BoxDecoration(
                             // color: ContactMe_containerStyle_mobile.color,
                             color: containerStyle.colorR,
 
-                            borderRadius:
-                                ContactMe_containerStyle_mobile.borderRadius,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_mobile.padding,
-                          width: deviceWidth *
-                              ContactMe_containerStyle_mobile.githubsizeW,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
                           height: 122,
                           // height: deviceHeight * ContactMe_containerStyle_mobile.githubsizeH,
                           child: SvgPicture.asset(
@@ -361,27 +317,22 @@ class _ContactMe_mobileState extends State<ContactMe_mobile> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: () {
-                        urlLaunch(
-                            "https://www.hackerrank.com/profile/nakuldev1561");
+                        urlLaunch("https://www.hackerrank.com/profile/nakuldev1561");
                       },
                       child: CustomBox(
                         isHover: true,
                         hoverColor: ResumeColor,
                         margin: ContactMe_containerStyle_mobile.margin,
-                        borderRadius:
-                            ContactMe_containerStyle_mobile.borderRadius,
+                        borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                         child: Container(
                           decoration: BoxDecoration(
                             color: ContactMe_containerStyle_mobile.color,
-                            borderRadius:
-                                ContactMe_containerStyle_mobile.borderRadius,
+                            borderRadius: ContactMe_containerStyle_mobile.borderRadius,
                           ),
                           padding: ContactMe_containerStyle_mobile.padding,
-                          width: deviceWidth *
-                              ContactMe_containerStyle_mobile.githubsizeW,
+                          width: deviceWidth * ContactMe_containerStyle_mobile.githubsizeW,
                           child: SvgPicture.asset(
-                            height:
-                                ContactMe_containerStyle_tablet.svgcontHeight,
+                            height: ContactMe_containerStyle_tablet.svgcontHeight,
 
                             "assets/svg/hackerrank.svg",
                             // ignore: deprecated_member_use
