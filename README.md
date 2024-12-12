@@ -71,5 +71,5 @@ Portfolio-Website/
 
 For any inquiries or feedback, feel free to reach out:
 
-- **Email:** nakuldev1561@gmail.com
+- **Email:** nakuldevmv@gmail.com
 - **GitHub:** [nakuldevmv](https://github.com/nakuldevmv)
