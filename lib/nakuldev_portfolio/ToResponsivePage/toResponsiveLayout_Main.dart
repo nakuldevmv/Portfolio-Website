@@ -1,3 +1,4 @@
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nakul_dev/functions/Alert_Box.dart';
 import 'package:nakul_dev/functions/Mouse_Tracker.dart';
 import 'package:nakul_dev/functions/navigation_bar.dart';
@@ -17,7 +18,7 @@ class toResponsiveLayout extends StatefulWidget {
 }
 
 class _toResponsiveLayoutState extends State<toResponsiveLayout> {
-  //Comment out this code to temporarily disable the alert box
+  //I have Comment out this code to temporarily disable the alert box
   //I will enable it once I have completed the redesigned website.
   // @override
   // void initState() {
