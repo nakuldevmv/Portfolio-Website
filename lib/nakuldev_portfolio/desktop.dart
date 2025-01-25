@@ -346,151 +346,154 @@ class _desktopState extends State<desktop> {
                             //Name
                             //
                             RepaintBoundary(
-                              child: SizedBox(
-                                height: 96.3,
-                                child: CustomBox(
-                                  borderRadius: containerStyle.borderRadius,
-                                  margin: containerStyle.margin,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: containerStyle.color,
-                                      borderRadius: containerStyle.borderRadius,
-                                    ),
-                                    padding: containerStyle.padding,
-                                    // margin: containerStyle.margin,
-                                    width: deviceWidth * containerStyle.width,
-                                    child: Center(
-                                      child: FittedBox(
-                                        fit: BoxFit.scaleDown,
-                                        child: RichText(
-                                            text: TextSpan(children: [
-                                          TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1)),
-                                          TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2)),
-                                        ])),
-                                      ),
+                                child: SizedBox(
+                              height: 96.3,
+                              child: CustomBox(
+                                borderRadius: containerStyle.borderRadius,
+                                margin: containerStyle.margin,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: containerStyle.color,
+                                    borderRadius: containerStyle.borderRadius,
+                                  ),
+                                  padding: containerStyle.padding,
+                                  // margin: containerStyle.margin,
+                                  width: deviceWidth * containerStyle.width,
+                                  child: Center(
+                                    child: FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      child: RichText(
+                                          text: TextSpan(children: [
+                                        TextSpan(text: "Nakul", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name1)),
+                                        TextSpan(text: "</Dev>", style: GoogleFonts.chakraPetch(textStyle: textStyles.Name2)),
+                                      ])),
                                     ),
                                   ),
                                 ),
-                              ).animate().fadeIn().move(begin: const Offset(0, -50)
-                                  //animation here
-                                  ),
-                            ),
+                              ),
+                            )
+                                // .animate().fadeIn().move(begin: const Offset(0, -50)
+                                //     //animation here
+                                //     ),
+                                ),
                             //Animation here (Experimental),
                             //
                             //Pfp
                             //
                             RepaintBoundary(
-                              child: SizedBox(
-                                height: 340.8,
-                                child: CustomBox(
-                                  borderRadius: containerStyle.borderRadius,
-                                  margin: containerStyle.margin,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: containerStyle.color,
-                                      borderRadius: containerStyle.borderRadius,
-                                      image: const DecorationImage(
-                                        image: AssetImage(profilepic),
-                                        fit: BoxFit.fitHeight,
-                                      ),
-                                    ),
-                                    padding: containerStyle.padding,
-                                    // margin: containerStyle.margin,
-                                    width: deviceWidth * containerStyle.width,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.end,
-                                      children: [
-                                        Icon(
-                                          color: textStyles.B.color,
-                                          Icons.verified_rounded,
-                                          size: deviceWidth * 0.014,
-                                        ),
-                                      ],
+                                child: SizedBox(
+                              height: 340.8,
+                              child: CustomBox(
+                                borderRadius: containerStyle.borderRadius,
+                                margin: containerStyle.margin,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: containerStyle.color,
+                                    borderRadius: containerStyle.borderRadius,
+                                    image: const DecorationImage(
+                                      image: AssetImage(profilepic),
+                                      fit: BoxFit.fitHeight,
                                     ),
                                   ),
+                                  padding: containerStyle.padding,
+                                  // margin: containerStyle.margin,
+                                  width: deviceWidth * containerStyle.width,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        color: textStyles.B.color,
+                                        Icons.verified_rounded,
+                                        size: deviceWidth * 0.014,
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ).animate().fadeIn(),
-                            ),
+                              ),
+                            )
+                                // .animate().fadeIn(),
+                                ),
                             //
                             //Contact Me
                             //
                             RepaintBoundary(
-                              child: SizedBox(
-                                height: 240.5,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    navigateTo(context, const toResponsiveLayout_contactMe());
-                                  },
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: CustomBox(
-                                      isHover: true,
-                                      hoverColor: ResumeColor,
-                                      borderRadius: containerStyle.borderRadius,
-                                      margin: containerStyle.margin,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color: containerStyle.color,
-                                          borderRadius: containerStyle.borderRadius,
-                                        ),
-                                        padding: containerStyle.padding,
-                                        // margin: containerStyle.margin,
-                                        width: deviceWidth * containerStyle.width,
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment: CrossAxisAlignment.end,
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Expanded(
-                                                  child: AutoSizeText(
-                                                    "Have some\nQuestions?",
-                                                    maxLines: 3,
-                                                    maxFontSize: 15,
-                                                    minFontSize: 10,
-                                                    style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
+                                child: SizedBox(
+                              height: 240.5,
+                              child: GestureDetector(
+                                onTap: () {
+                                  navigateTo(context, const toResponsiveLayout_contactMe());
+                                },
+                                child: MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: CustomBox(
+                                    isHover: true,
+                                    hoverColor: ResumeColor,
+                                    borderRadius: containerStyle.borderRadius,
+                                    margin: containerStyle.margin,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: containerStyle.color,
+                                        borderRadius: containerStyle.borderRadius,
+                                      ),
+                                      padding: containerStyle.padding,
+                                      // margin: containerStyle.margin,
+                                      width: deviceWidth * containerStyle.width,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Expanded(
+                                                child: AutoSizeText(
+                                                  "Have some\nQuestions?",
+                                                  maxLines: 3,
+                                                  maxFontSize: 15,
+                                                  minFontSize: 10,
+                                                  style: GoogleFonts.chakraPetch(textStyle: textStyles.P1),
+                                                ),
+                                              ),
+                                              Icon(
+                                                color: IconHClr,
+                                                Icons.arrow_outward_rounded,
+                                                size: deviceWidth * 0.014,
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Expanded(
+                                                child: AutoSizeText.rich(
+                                                  maxFontSize: 23,
+                                                  minFontSize: 5,
+                                                  maxLines: 1,
+                                                  TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text: 'Contact ',
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
+                                                      ),
+                                                      TextSpan(
+                                                        text: 'Me',
+                                                        style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
+                                                      )
+                                                    ],
                                                   ),
                                                 ),
-                                                Icon(
-                                                  color: IconHClr,
-                                                  Icons.arrow_outward_rounded,
-                                                  size: deviceWidth * 0.014,
-                                                ),
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Expanded(
-                                                  child: AutoSizeText.rich(
-                                                    maxFontSize: 23,
-                                                    minFontSize: 5,
-                                                    maxLines: 1,
-                                                    TextSpan(
-                                                      children: [
-                                                        TextSpan(
-                                                          text: 'Contact ',
-                                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingB),
-                                                        ),
-                                                        TextSpan(
-                                                          text: 'Me',
-                                                          style: GoogleFonts.chakraPetch(textStyle: textStyles.HeadingI),
-                                                        )
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
                                 ),
-                              ).animate().fadeIn().move(begin: const Offset(0, 50)).effect(curve: Easing.emphasizedDecelerate),
-                            ),
+                              ),
+                            )
+                                // .animate().fadeIn().move(begin: const Offset(0, 50)).effect(curve: Easing.emphasizedDecelerate),
+                                ),
                           ],
                         ),
                         Column(
