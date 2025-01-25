@@ -371,7 +371,9 @@ class _desktopState extends State<desktop> {
                                     ),
                                   ),
                                 ),
-                              ).animate().fadeIn().move(begin: const Offset(0, -50)),
+                              ).animate().fadeIn().move(begin: const Offset(0, -50)
+                                  //animation here
+                                  ),
                             ),
                             //Animation here (Experimental),
                             //
