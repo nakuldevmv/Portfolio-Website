@@ -11,8 +11,7 @@ class toResponsiveLayout_project extends StatelessWidget {
   final int currentIndex;
   final int initialIndex; // Accept the initial index
 
-  const toResponsiveLayout_project(
-      {super.key, required this.initialIndex, this.currentIndex = 1});
+  const toResponsiveLayout_project({super.key, required this.initialIndex, this.currentIndex = 1});
 
   @override
   Widget build(BuildContext context) {

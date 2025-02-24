@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    Animate.restartOnHotReload = true;
+    // Animate.restartOnHotReload = true;
     return MaterialApp(
       title: "Nakul Dev",
       theme: ThemeData(
