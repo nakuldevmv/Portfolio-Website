@@ -20,26 +20,26 @@ class toResponsiveLayout extends StatefulWidget {
 class _toResponsiveLayoutState extends State<toResponsiveLayout> {
   // I have Comment out this code to temporarily disable the alert box
   // I will enable it once I have completed the redesigned website.
-  @override
-  void initState() {
-    super.initState();
-    future_delay_dialog(5);
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   future_delay_dialog(5);
+  // }
 
-  Future<Null> future_delay_dialog(int duration_seconds) {
-    return Future.delayed(Duration(seconds: duration_seconds), () {
-      if (mounted) {
-        // Display the dialog with a builder function
-        showDialog(
-          context: context,
-          barrierDismissible: false, // Prevent closing by tapping outside
-          builder: (BuildContext context) {
-            return const AnimatedDialog();
-          },
-        );
-      }
-    });
-  }
+  // Future<Null> future_delay_dialog(int duration_seconds) {
+  //   return Future.delayed(Duration(seconds: duration_seconds), () {
+  //     if (mounted) {
+  //       // Display the dialog with a builder function
+  //       showDialog(
+  //         context: context,
+  //         barrierDismissible: false, // Prevent closing by tapping outside
+  //         builder: (BuildContext context) {
+  //           return const AnimatedDialog();
+  //         },
+  //       );
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
