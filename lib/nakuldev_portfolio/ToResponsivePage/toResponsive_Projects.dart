@@ -20,29 +20,15 @@ class toResponsiveLayout_project extends StatelessWidget {
 
     return Scaffold(
       body: screenWidth >= 600
-          ? AnimatedBlobBackground(
-              numberOfBlobs: 4,
-              gravitationalPull: 1.0,
-              baseSpeed: 0.5,
-              blobSizeMultiplier: 1,
-              orbitRadius: 0.2,
-              child: CursorTracker(
-                child: NavigationWrapper(
-                  currentIndex: currentIndex,
-                  child: ResponsiveLayout(
-                    desktopBody: myProject(initialIndex: initialIndex),
-                    mobileBody: myProject_mobile(initialIndex: initialIndex),
-                    tabletBody: myProject_tablet(initialIndex: initialIndex),
-                  ),
-                ),
-              ),
-            )
-          : AnimatedBlobBackground(
-              numberOfBlobs: 4,
-              gravitationalPull: 1.0,
-              baseSpeed: 0.5,
-              blobSizeMultiplier: 1,
-              orbitRadius: 0.2,
+          ?
+          // AnimatedBlobBackground(
+          //     numberOfBlobs: 4,
+          //     gravitationalPull: 1.0,
+          //     baseSpeed: 0.5,
+          //     blobSizeMultiplier: 1,
+          //     orbitRadius: 0.2,
+          //     child:
+          CursorTracker(
               child: NavigationWrapper(
                 currentIndex: currentIndex,
                 child: ResponsiveLayout(
@@ -51,6 +37,24 @@ class toResponsiveLayout_project extends StatelessWidget {
                   tabletBody: myProject_tablet(initialIndex: initialIndex),
                 ),
               ),
+              // ),
+            )
+          :
+          // AnimatedBlobBackground(
+          //     numberOfBlobs: 4,
+          //     gravitationalPull: 1.0,
+          //     baseSpeed: 0.5,
+          //     blobSizeMultiplier: 1,
+          //     orbitRadius: 0.2,
+          //     child:
+          NavigationWrapper(
+              currentIndex: currentIndex,
+              child: ResponsiveLayout(
+                desktopBody: myProject(initialIndex: initialIndex),
+                mobileBody: myProject_mobile(initialIndex: initialIndex),
+                tabletBody: myProject_tablet(initialIndex: initialIndex),
+              ),
+              // ),
             ),
     );
   }
