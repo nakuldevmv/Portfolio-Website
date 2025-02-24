@@ -32,9 +32,7 @@ class _SimpleHoverState extends State<SimpleHover> {
         duration: const Duration(milliseconds: 300),
         margin: widget.margin,
         decoration: BoxDecoration(
-          color: isHovered
-              ? widget.hoverColor ?? Colors.grey[400]
-              : widget.color ?? Colors.transparent,
+          color: isHovered ? widget.hoverColor ?? Colors.grey[400] : widget.color ?? Colors.transparent,
           borderRadius: widget.borderRadius,
         ),
         child: widget.child,

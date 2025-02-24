@@ -17,8 +17,7 @@ class AnimatedSnackBar extends StatefulWidget {
   State<AnimatedSnackBar> createState() => _AnimatedSnackBarState();
 }
 
-class _AnimatedSnackBarState extends State<AnimatedSnackBar>
-    with SingleTickerProviderStateMixin {
+class _AnimatedSnackBarState extends State<AnimatedSnackBar> with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
 
@@ -38,7 +37,6 @@ class _AnimatedSnackBarState extends State<AnimatedSnackBar>
 
     _animationController.forward();
 
-    // Schedule the dismissal
     Future.delayed(widget.duration - const Duration(milliseconds: 400), () {
       if (mounted) {
         _animationController.reverse();
@@ -93,8 +91,7 @@ class _AnimatedSnackBarState extends State<AnimatedSnackBar>
                         maxFontSize: 22,
                         maxLines: 2,
                         style: GoogleFonts.chakraPetch(
-                          textStyle:
-                              textStyles.P2B.copyWith(color: Colors.white),
+                          textStyle: textStyles.P2B.copyWith(color: Colors.white),
                         ),
                       ),
                     ),
