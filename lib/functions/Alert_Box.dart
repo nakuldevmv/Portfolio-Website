@@ -189,7 +189,8 @@ class AnimatedDialog extends StatefulWidget {
   State<AnimatedDialog> createState() => _AnimatedDialogState();
 }
 
-class _AnimatedDialogState extends State<AnimatedDialog> with SingleTickerProviderStateMixin {
+class _AnimatedDialogState extends State<AnimatedDialog>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
   late Animation<double> _fadeAnimation;
@@ -243,11 +244,13 @@ class _AnimatedDialogState extends State<AnimatedDialog> with SingleTickerProvid
                 isDeviceWidth <= 500
                     ? Text(
                         'Exciting Updates Coming Soon!',
-                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 15),
+                        style: GoogleFonts.chakraPetch(
+                            textStyle: textStyles.B, fontSize: 15),
                       )
                     : Text(
                         'Exciting Updates Coming Soon!',
-                        style: GoogleFonts.chakraPetch(textStyle: textStyles.B, fontSize: 18),
+                        style: GoogleFonts.chakraPetch(
+                            textStyle: textStyles.B, fontSize: 18),
                       ),
                 GestureDetector(
                   onTap: () {

@@ -34,26 +34,19 @@ class AnimatedBlobBackground extends StatefulWidget {
     List<BlobConfig>? blobConfigs,
   })  : blobConfigs = blobConfigs ??
             const [
-              BlobConfig(colors: [
-                Colors.purple,
-                Colors.transparent
-              ]),
-              BlobConfig(colors: [
-                Colors.blue,
-                Colors.transparent
-              ]),
-              BlobConfig(colors: [
-                Colors.indigo,
-                Colors.transparent
-              ]),
+              BlobConfig(colors: [Colors.purple, Colors.transparent]),
+              BlobConfig(colors: [Colors.blue, Colors.transparent]),
+              BlobConfig(colors: [Colors.indigo, Colors.transparent]),
             ],
-        assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs, 'Must provide at least as many blob configs as number of blobs');
+        assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs,
+            'Must provide at least as many blob configs as number of blobs');
 
   @override
   State<AnimatedBlobBackground> createState() => _AnimatedBlobBackgroundState();
 }
 
-class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with TickerProviderStateMixin {
+class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground>
+    with TickerProviderStateMixin {
   late final List<AnimationController> _controllers;
   late final List<Animation<double>> _animations;
 
@@ -64,7 +57,8 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
     _controllers = List.generate(
       widget.numberOfBlobs,
       (index) => AnimationController(
-        duration: Duration(milliseconds: (12000 / widget.baseSpeed).round() + index * 3000),
+        duration: Duration(
+            milliseconds: (12000 / widget.baseSpeed).round() + index * 3000),
         vsync: this,
       )..repeat(),
     );
@@ -92,7 +86,8 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
     final baseRadius = math.min(size.width, size.height) * widget.orbitRadius;
 
     // Smooth continuous rotation
-    final primaryAngle = primaryValue * 2 * math.pi + (2 * math.pi / widget.numberOfBlobs * index);
+    final primaryAngle = primaryValue * 2 * math.pi +
+        (2 * math.pi / widget.numberOfBlobs * index);
 
     final x = centerX + math.cos(primaryAngle) * baseRadius;
     final y = centerY + math.sin(primaryAngle) * baseRadius;
@@ -101,7 +96,8 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
   }
 
   double _calculateBlobSize(Size size) {
-    final baseSize = math.min(size.width, size.height) * widget.blobSizeMultiplier;
+    final baseSize =
+        math.min(size.width, size.height) * widget.blobSizeMultiplier;
     return baseSize;
   }
 
@@ -124,7 +120,8 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
               );
 
               final blobSize = _calculateBlobSize(size);
-              final dynamicOpacity = config.baseOpacity + (_animations[index].value * config.dynamicOpacity);
+              final dynamicOpacity = config.baseOpacity +
+                  (_animations[index].value * config.dynamicOpacity);
 
               return Positioned(
                 left: position.dx - (blobSize / 2),
@@ -134,11 +131,13 @@ class _AnimatedBlobBackgroundState extends State<AnimatedBlobBackground> with Ti
                   height: blobSize,
                   decoration: BoxDecoration(
                     gradient: RadialGradient(
-                      colors: config.colors.map((color) => color.withOpacity(color == Colors.transparent ? 0.0 : dynamicOpacity)).toList(),
-                      stops: const [
-                        0.2,
-                        1.0
-                      ],
+                      colors: config.colors
+                          .map((color) => color.withOpacity(
+                              color == Colors.transparent
+                                  ? 0.0
+                                  : dynamicOpacity))
+                          .toList(),
+                      stops: const [0.2, 1.0],
                     ),
                     borderRadius: BorderRadius.circular(blobSize / 2),
                   ),

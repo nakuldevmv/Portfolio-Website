@@ -47,15 +47,30 @@ class _toResponsiveLayoutState extends State<toResponsiveLayout> {
 
     return Scaffold(
       body: screenWidth >= 600
-          ?
-          // AnimatedBlobBackground(
-          //     numberOfBlobs: 4,
-          //     gravitationalPull: 1.0,
-          //     baseSpeed: 0.5,
-          //     blobSizeMultiplier: 1,
-          //     orbitRadius: 0.2,
-          //     child:
-          CursorTracker(
+          ? AnimatedBlobBackground(
+              numberOfBlobs: 4,
+              gravitationalPull: 1.0,
+              baseSpeed: 0.5,
+              blobSizeMultiplier: 1,
+              orbitRadius: 0.2,
+              child: CursorTracker(
+                child: NavigationWrapper(
+                  showNavBar: false,
+                  currentIndex: widget.currentIndex,
+                  child: const ResponsiveLayout(
+                    desktopBody: desktop(),
+                    mobileBody: mobile(),
+                    tabletBody: tablet(),
+                  ),
+                ),
+              ),
+            )
+          : AnimatedBlobBackground(
+              numberOfBlobs: 4,
+              gravitationalPull: 1.0,
+              baseSpeed: 0.5,
+              blobSizeMultiplier: 1,
+              orbitRadius: 0.2,
               child: NavigationWrapper(
                 showNavBar: false,
                 currentIndex: widget.currentIndex,
@@ -65,25 +80,6 @@ class _toResponsiveLayoutState extends State<toResponsiveLayout> {
                   tabletBody: tablet(),
                 ),
               ),
-              // ),
-            )
-          :
-          // AnimatedBlobBackground(
-          //     numberOfBlobs: 4,
-          //     gravitationalPull: 1.0,
-          //     baseSpeed: 0.5,
-          //     blobSizeMultiplier: 1,
-          //     orbitRadius: 0.2,
-          //     child:
-          NavigationWrapper(
-              showNavBar: false,
-              currentIndex: widget.currentIndex,
-              child: const ResponsiveLayout(
-                desktopBody: desktop(),
-                mobileBody: mobile(),
-                tabletBody: tablet(),
-              ),
-              // ),
             ),
     );
   }
