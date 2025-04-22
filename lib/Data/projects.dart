@@ -37,10 +37,10 @@ List<Project> projects = [
         "Spamurai is a Node.js-powered digital blade that auto-unsubscribes spam emails using IMAP, Puppeteer, and MongoDB Atlas.",
     icon: Icons.shield_rounded,
     flutterSvg:
-        "assets/svg/node.svg", // Replace with actual Node icon if you got one
+        "assets/svg/nodejs.svg", // Replace with actual Node icon if you got one
     dartSvg: "assets/svg/mongodb.svg", // Replace with MongoDB logo
     keyFeatures:
-        "• Connects via IMAP (Gmail ready)\n• Finds and clicks unsubscribe links\n• Checks link safety with IPQualityScore\n• Logs actions to MongoDB Atlas\n• Moves spam to Trash or deletes it",
+        "• Automatically unsubscribes from emails via IMAP\n• Ensures link safety using IPQualityScore\n• Stores activity logs in MongoDB Atlas",
     githubLink: "https://github.com/nakuldevmv/Spamurai",
     demoVideoLink: "", // Swap with actual demo if diff
     screenshot1: "assets/ss/spamurai1.png",
