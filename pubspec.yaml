@@ -46,6 +46,7 @@ flutter:
      - assets/ss/weather.jpg
      - assets/ss/portWeb.jpg
      - assets/ss/findx.jpg
+     - assets/ss/spam.jpg
 
      - assets/i.png
      - assets/pfp2.png
@@ -76,5 +77,7 @@ flutter:
      - assets/svg/404.svg
      - assets/svg/email.svg
      - assets/svg/google.svg
+     - assets/svg/mongodb.svg
+     - assets/svg/nodejs.svg
 
 

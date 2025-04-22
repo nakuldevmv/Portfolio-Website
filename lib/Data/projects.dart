@@ -31,6 +31,23 @@ class Project {
 
 List<Project> projects = [
   Project(
+    image: "assets/ss/spamurai.jpg",
+    title: "Spamurai",
+    description:
+        "Spamurai is a Node.js-powered digital blade that auto-unsubscribes spam emails using IMAP, Puppeteer, and MongoDB Atlas.",
+    icon: Icons.shield_rounded,
+    flutterSvg:
+        "assets/svg/node.svg", // Replace with actual Node icon if you got one
+    dartSvg: "assets/svg/mongodb.svg", // Replace with MongoDB logo
+    keyFeatures:
+        "• Connects via IMAP (Gmail ready)\n• Finds and clicks unsubscribe links\n• Checks link safety with IPQualityScore\n• Logs actions to MongoDB Atlas\n• Moves spam to Trash or deletes it",
+    githubLink: "https://github.com/nakuldevmv/Spamurai",
+    demoVideoLink: "", // Swap with actual demo if diff
+    screenshot1: "assets/ss/spamurai1.png",
+    screenshot2: "assets/ss/spamurai2.png",
+  ),
+
+  Project(
     image: "assets/ss/findx.jpg",
     title: "FindX",
     description:
