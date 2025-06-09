@@ -29,11 +29,7 @@
   <title>Nakul Dev</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#212121">
-  <!-- <script>
-    window.addEventListener('load', function() {
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FF5733'); // Replace with your preferred color
-    });
-</script> -->
+
 
   <style>
     body {
@@ -50,9 +46,7 @@
       background-color: var(--bg-color);
       width: 100vw;
       min-height: 100vh;
-      /* Keep the minimum height */
       max-height: 100vh;
-      /* Prevent it from exceeding viewport height */
       padding: 2rem 3rem;
       position: relative;
       z-index: 1;
@@ -101,14 +95,11 @@
     @media screen and (max-width: 700px) {
       .loader {
         font-size: 20px;
-        /* Adjust font size for smaller screens */
         padding: 1rem;
-        /* Adjust padding as necessary */
       }
 
       .words {
         height: 40px;
-        /* Adjust height for the words */
       }
 
       .words::after {
@@ -219,22 +210,17 @@
 
   <script src="flutter_bootstrap.js" async></script>
   <script>
-    // Handle smooth transition when Flutter app is ready
     window.addEventListener('flutter-first-frame', function () {
-      console.log('Flutter first frame event fired'); // Debugging log
       const card = document.querySelector('.card');
       const flutterContainer = document.querySelector('#flutter-container');
 
-      // Add hide class to card for fade-out effect
       card.classList.add('hide');
 
-      // Show Flutter app with fade-in effect
       flutterContainer.classList.add('show');
 
-      // Optional: Remove the loader from DOM after transition
       setTimeout(() => {
         card.style.display = 'none';
-      }, 1000); // Wait for transition to complete
+      }, 1000); 
     });
   </script>
 </body>

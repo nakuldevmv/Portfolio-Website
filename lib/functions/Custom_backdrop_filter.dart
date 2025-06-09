@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:nakul_dev/functions/Simple_Hover.dart';
-import 'package:nakul_dev/styles/styles.dart';
 
 class CustomBox extends StatelessWidget {
   final Widget child;

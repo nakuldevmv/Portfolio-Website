@@ -1,4 +1,4 @@
-import 'package:flutter_animate/flutter_animate.dart';
+import 'package:nakul_dev/error/notResp.dart';
 import 'package:nakul_dev/functions/Alert_Box.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';

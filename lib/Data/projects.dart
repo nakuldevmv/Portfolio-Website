@@ -42,7 +42,8 @@ List<Project> projects = [
     keyFeatures:
         "• Automatically unsubscribes from emails via IMAP\n• Ensures link safety using IPQualityScore\n• Stores activity logs in MongoDB Atlas",
     githubLink: "https://github.com/nakuldevmv/Spamurai",
-    demoVideoLink: "", // Swap with actual demo if diff
+    demoVideoLink:
+        "https://spamurai.vercel.app/", // Swap with actual demo if diff
     screenshot1: "assets/ss/spamurai1.png",
     screenshot2: "assets/ss/spamurai2.png",
   ),

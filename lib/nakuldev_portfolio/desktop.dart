@@ -1,4 +1,3 @@
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nakul_dev/Data/education.dart';
 import 'package:nakul_dev/Data/exp.dart';
 import 'package:nakul_dev/Data/profilePic_book.dart';

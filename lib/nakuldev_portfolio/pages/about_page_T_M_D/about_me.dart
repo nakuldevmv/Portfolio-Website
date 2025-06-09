@@ -1,4 +1,3 @@
-import 'package:latlong2/latlong.dart';
 import 'package:nakul_dev/Data/profilePic_book.dart';
 import 'package:nakul_dev/functions/Custom_backdrop_filter.dart';
 import 'package:nakul_dev/functions/GoogleMap_Integration.dart';
