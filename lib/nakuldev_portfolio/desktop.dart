@@ -11,7 +11,6 @@ import 'package:nakul_dev/functions/notifySnackBar.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_AboutMe.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
-import 'package:nakul_dev/functions/hover%20effect.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
